@@ -47,6 +47,7 @@ class FEvento_p extends FDatabase
             return null;
     }
 
+    //ffvfvdfvdaffvdfv
     public function loadById($nome, $data){
         $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e= '".$data."' ;";
         $result = parent::loadSingle($sql);
