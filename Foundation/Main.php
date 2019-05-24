@@ -1,0 +1,44 @@
+<?php
+    //include_once 'EEvento_p.php';
+    //include_once 'EEvento_g.php';
+    //include_once 'ECarta.php';
+    //include_once 'EAcquisto.php';
+    //include_once 'EUtente_R.php';
+    require_once "C:\Users\Emanuele\Desktop\Never_home\include.php";
+    //include_once 'FDatabase.php';
+    //include_once 'Fluogo.php';
+    //$luogo = new ELuogo("b","mo","a@gmail.com","aa","psw");
+    //$categoria = new ECategoria("house","musica");
+    $data = new DateTime('12-04-1996');
+    //$evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
+    //$dat = FEvento_p::getInstance();
+    //$dat->store1($evento);
+    //$eventocaricato = $dat->loadById("pinewood",$data->format('Y-m-d H:i:s'));
+    //print $eventocaricato->toString();
+    $utente = new EUtente_R("gianluca","nannus","nnn","nan","gng","30000");
+    $carta=new ECarta("cc",11,$data,321);
+    $acquisto=new EAcquisto($data,65.2,$carta,$utente,1);
+    $dat = FAcquisto::getInstance();
+    //$dat->store1($acquisto);
+    //print $dat->loadById(1)->toString();
+    $dat->delete(1);
+    //$user = $dat->loadById("nnn");
+    //print $user->toString();
+    //$dat->delete("nnn");
+    //print $evento->getData()->format('Y-m-d');
+    //print $data->format('Y-m-d');
+    //print $dat->getValues();
+    //print $evento->getLuogo()->getIndirizzo();
+    //print $evento->getCategoria()->getNome();
+    //print $data->format('Y-m-d H:i:s');
+    //$dat->store1($evento);
+    //$dat->delete_event("pinewood",$data->format('Y-m-d H:i:s'));
+    //$evento = $dat->loadById("pinewood",$data->format('Y-m-d H:i:s'));
+    //print $evento->toString();
+    //$carta=new ECarta("cc",11,$data,321);
+    //$dat = FCarta::getInstance();
+    //$dat->store1($carta);
+    //$dat->delete(321);
+    //print $dat->loadById(321)->toString();
+    
+?>
