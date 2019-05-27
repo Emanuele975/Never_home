@@ -1,5 +1,5 @@
 <?php
-//controllare la modifica
+
     class ECarta{
         private $CF_titolare;
         private $ccv;

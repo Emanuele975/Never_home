@@ -1,4 +1,5 @@
 <?php
+include_once "C:\Users\user\Desktop\Never_home\include.php";
 
 class FCategoria extends FDatabase{
     
