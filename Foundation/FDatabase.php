@@ -9,7 +9,7 @@ class FDatabase
     
     protected $db;
     
-    protected static $UpPath="Upload/";
+    //protected static $UpPath="Upload/";
     
     protected $table;
     protected $values;
@@ -145,10 +145,6 @@ class FDatabase
         }
     }
 
-
-    public static function getUpPath(){
-        return static::$UpPath;
-    }
 
     public function closeDbConnection(){
         static::$instance=null;

@@ -1,5 +1,5 @@
 <?php
-    include_once "C:\Users\Emanuele\Desktop\Never_home\include.php";
+    include_once 'include.php';
     $luogo = new ELuogo("bliss","monticchio","a@gmail.com","aa","psw");
     $categoria = new ECategoria("techno","musica demmerda");
     //$event = new EEvento("Easter event","20:00","12/06/2019",$luogo,$categoria);
