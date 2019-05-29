@@ -90,5 +90,14 @@ class ECommento {
                 //"Utente: ".$this->utente->toString();"\n".
                 //"Evento: ".$this->evento->toString()."\n";
     }
-    
+
+
+    function getF(){
+        return "FCommento";
+    }
+
+    function getKey(){
+
+        return '"$this->id","$this->getEvento()->getNome()","$this->getEvento()->getData()"';
+    }
 }

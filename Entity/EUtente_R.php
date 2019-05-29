@@ -86,6 +86,15 @@ class EUtente_R {
                     "la password: ".$this->password."\n".
                     "il punteggio: ".$this->punteggio."\n";
     }
+
+    function getF(){
+        return "FUtente_R";
+    }
+
+    function getKey(){
+
+        return $this->CF;
+    }
                     
 
             

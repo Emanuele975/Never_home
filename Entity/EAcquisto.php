@@ -89,6 +89,15 @@ class EAcquisto{
         
     }
 
+    function getF(){
+        return "FAcquisto";
+    }
+
+    function getKey(){
+
+        return $this->id;
+    }
+
 
 
 }      

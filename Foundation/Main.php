@@ -8,29 +8,29 @@
     //include_once 'FDatabase.php';
     //include_once 'Fluogo.php';
      include_once "C:\Users\user\Desktop\Never_home\include.php";
-    $luogo = new ELuogo("b","mo","a@gmail.com","aa","psw");
+    //$luogo = new ELuogo("b","mo","a@gmail.com","aa","psw");
     //$dat4=FLuogo::getInstance();
     //$dat4->store1($luogo);
-    $categoria = new ECategoria("house","musica");
+    //$categoria = new ECategoria("house","musica");
     //$dat5=FCategoria::getInstance();
     //$dat5->store1($categoria);
-    $data = new DateTime('12-04-1996');
-    $evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
+    $data = new DateTime('13-04-1996');
+    //$evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
     //$dat = FEvento_p::getInstance();
     //$dat->store1($evento);
     //$eventocaricato = $dat->loadById("pinewood",$data->format('Y-m-d H:i:s'));
     //print $eventocaricato->toString();
-    $utente = new EUtente_R("gianluca","nannus","nnn","nan","gng","30000");
+    //$utente = new EUtente_R("gianluca","nannus","nnn","nan","gng","30000");
     //$dat2=FUtente_R::getInstance();
     //$dat2->store1($utente);
-    $carta=new ECarta("cc",11,$data,321);
+    //$carta=new ECarta("cc",11,$data,321);
     //$dat7=FCarta::getInstance();
     //$dat7->store1($carta);
-    $acquisto=new EAcquisto($data,65.2,$carta,$utente,1);
+    //$acquisto=new EAcquisto($data,65.2,$carta,$utente,1);
     //$dat3=FAcquisto::getInstance();
     //$dat3->store1($acquisto);
-    $biglietto=new EBiglietto(6.50,1234,$evento,$acquisto,$utente);
-    $dat6=FBiglietto::getInstance();
+    //$biglietto=new EBiglietto(6.50,1234,$evento,$acquisto,$utente);
+    //$dat6=FBiglietto::getInstance();
     //$dat6->store1($biglietto);
     //print $dat6->loadById(1234)->toString();
      //$dat6->delete(1234);
@@ -52,10 +52,17 @@
     //$dat->delete_event("pinewood",$data->format('Y-m-d H:i:s'));
     //$evento = $dat->loadById("pinewood",$data->format('Y-m-d H:i:s'));
     //print $evento->toString();
-    //$carta=new ECarta("cc",11,$data,321);
-    //$dat = FCarta::getInstance();
+    $carta=new ECarta("dwifwb",123,$data,0000);
+    $dat = FCarta::getInstance();
     //$dat->store1($carta);
     //$dat->delete(321);
     //print $dat->loadById(321)->toString();
+    $man=new PersistenceManager();
+    //$man->store($carta);
+    //print $carta->getKey();
+     //$man->delete($carta->getKey(),"FCarta");
+    //print FCarta::getInstance()->loadById(0,"FCarta")->toString();
+     print $man->Load(0,"FCarta")->toString();
+
     
 ?>

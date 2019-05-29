@@ -35,5 +35,14 @@ class ECategoria {
             function toString(){
                 return "il nome della categoria: ".$this->nome."\n".
                         "la descrizione: ".$this->descrizione."\n";
-            } 
+            }
+
+            function getF(){
+                 return "FCategoria";
+            }
+
+            function getKey(){
+
+             return $this->nome;
+            }
 }

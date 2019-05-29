@@ -60,6 +60,15 @@
                     "posti disponibili: ".$this->posti_disponibili."\n".
                     "posti totali: ".$this->posti_totali."\n";
         }
+
+        function getF(){
+            return "FEvento_p";
+        }
+
+        function getKey(){
+
+            return '"$this->nome","$this->data"';
+        }
         
     }
 

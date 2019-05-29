@@ -63,6 +63,15 @@
                     "il numero della carta: ".$this->numerocarta."\n";
         }
 
+        function getF(){
+            return "FCarta";
+        }
+
+        function getKey(){
+
+            return $this->numerocarta;
+        }
+
       
     }        
 ?>

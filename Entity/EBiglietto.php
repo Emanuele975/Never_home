@@ -65,4 +65,13 @@ class EBiglietto {
                 "Evento: ".$this->evento->toString()."\n".
                 "Acquisto: ".$this->acquisto->toString()."\n";
     }
+
+    function getF(){
+        return "FBiglietto";
+    }
+
+    function getKey(){
+
+        return $this->id;
+    }
 }

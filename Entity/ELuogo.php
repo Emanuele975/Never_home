@@ -63,6 +63,14 @@
                     "l username: ".$this->username."\n".
                     "la password: ".$this->password."\n";
         }
+
+        function getF(){
+            return "FLuogo";
+        }
+        function getKey(){
+
+            return $this->indirizzo;
+        }
        
         
     }
