@@ -7,16 +7,16 @@
     //require_once "..\include.php";
     //include_once 'FDatabase.php';
     //include_once 'Fluogo.php';
-     include_once "C:\Users\Emanuele\Desktop\Never_home\include.php";
-    //$luogo = new ELuogo("b","mo","a@gmail.com","aa","psw");
+     include_once "include.php";
+    $luogo = new ELuogo("b","mo","a@gmail.com","aa","psw");
     //$dat4=FLuogo::getInstance();
     //$dat4->store1($luogo);
-    //$categoria = new ECategoria("house","musica");
+    $categoria = new ECategoria("house","musica");
     //$dat5=FCategoria::getInstance();
     //$dat5->store1($categoria);
-    //$data = new DateTime('12-04-1996');
-    //$evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
-    //$evento1 = new EEvento_g("pinewood",$data,$luogo,$categoria);
+    $data = new DateTime('12-04-1996');
+    $evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
+    $evento1 = new EEvento_g("pinewood",$data,$luogo,$categoria);
     //$dat = FEvento_p::getInstance();
     //$dat->store1($evento);
     //$eventocaricato = $dat->loadById("pinewood",$data->format('Y-m-d H:i:s'));
@@ -31,6 +31,7 @@
     //$datcommento->delete1(1,$data->format('Y-m-d'),"pinewood","EEvento_g");
     //print $datcommento->loadById(5,$data->format('Y-m-d'),"pinewood","EEvento_p")->toString();
     $dat=FCarta::getInstance();
-    $dat->delete(321);
+
+    //$dat->delete(321);
     
 ?>
