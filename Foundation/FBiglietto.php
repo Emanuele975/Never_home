@@ -1,5 +1,5 @@
 <?php
-
+include_once "C:\Users\Emanuele\Desktop\Never_home\include.php";
 include_once "C:\Users\user\Desktop\Never_home\include.php";
 
 class FBiglietto extends FDatabase{
@@ -75,6 +75,6 @@ class FBiglietto extends FDatabase{
     }
         else return  null;
     }
-    
+
 
 }
