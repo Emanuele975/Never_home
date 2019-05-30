@@ -1,11 +1,13 @@
 <?php
-include_once "C:\Users\user\Desktop\Never_home\include.php";
+//include_once "C:\Users\user\Desktop\Never_home\include.php";
+include_once "C:\Users\Emanuele\Desktop\Never_home\include.php";
+
 
 class FCategoria extends FDatabase{
     
     protected static $instance=null;
     
-    private function __construct(){
+    protected function __construct(){
         parent::__construct();
         $this->table = "categoria";
         $this->values="(:nome,:descrizione)";

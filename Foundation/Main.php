@@ -7,20 +7,31 @@
     //require_once "..\include.php";
     //include_once 'FDatabase.php';
     //include_once 'Fluogo.php';
+<<<<<<< HEAD
      include_once "C:\Users\user\Desktop\Never_home\include.php";
+=======
+     include_once "C:\Users\Emanuele\Desktop\Never_home\include.php";
+>>>>>>> 06f308ddb1ea59812c2074dbfa194ad7324784fd
     //$luogo = new ELuogo("b","mo","a@gmail.com","aa","psw");
     //$dat4=FLuogo::getInstance();
     //$dat4->store1($luogo);
     //$categoria = new ECategoria("house","musica");
     //$dat5=FCategoria::getInstance();
     //$dat5->store1($categoria);
+<<<<<<< HEAD
     $data = new DateTime('13-04-1996');
     //$evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
+=======
+    //$data = new DateTime('12-04-1996');
+    //$evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
+    //$evento1 = new EEvento_g("pinewood",$data,$luogo,$categoria);
+>>>>>>> 06f308ddb1ea59812c2074dbfa194ad7324784fd
     //$dat = FEvento_p::getInstance();
     //$dat->store1($evento);
     //$eventocaricato = $dat->loadById("pinewood",$data->format('Y-m-d H:i:s'));
     //print $eventocaricato->toString();
     //$utente = new EUtente_R("gianluca","nannus","nnn","nan","gng","30000");
+<<<<<<< HEAD
     //$dat2=FUtente_R::getInstance();
     //$dat2->store1($utente);
     //$carta=new ECarta("cc",11,$data,321);
@@ -64,5 +75,17 @@
     //print FCarta::getInstance()->loadById(0,"FCarta")->toString();
      print $man->Load(0,"FCarta")->toString();
 
+=======
+    //$commento = new ECommento("primo commento",12,"bell evento",
+        //$utente,$evento);
+    //$commento1 = new ECommento("primo commento",12,"bell evento",
+        //$utente,$evento1);
+    //$datcommento = FCommento::getInstance();
+    //$datcommento->store1($commento1);
+    //$datcommento->delete1(1,$data->format('Y-m-d'),"pinewood","EEvento_g");
+    //print $datcommento->loadById(5,$data->format('Y-m-d'),"pinewood","EEvento_p")->toString();
+    $dat=FCarta::getInstance();
+    $dat->delete(321);
+>>>>>>> 06f308ddb1ea59812c2074dbfa194ad7324784fd
     
 ?>
