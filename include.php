@@ -17,5 +17,8 @@
    include_once 'Foundation/FEvento_p.php';
    include_once 'Foundation/FUtente_R.php';
    include_once 'Foundation/FAcquisto.php';
+   include_once 'Foundation/FBiglietto.php';
+   include_once 'Foundation/FCommento.php';
+   include_once 'Foundation/PersistenceManager.php';
    
 ?>
