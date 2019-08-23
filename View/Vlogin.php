@@ -18,8 +18,8 @@ class Vlogin
 
         $dati=array();
 
-        if(isset($_POST['username']) && isset($_POST['password'])){
-            $dati['username'] =  $_POST['username'];
+        if(isset($_POST['email']) && isset($_POST['password'])){
+            $dati['email'] =  $_POST['email'];
             $dati['password'] =  $_POST['password'];
         }
         return $dati;
@@ -27,10 +27,7 @@ class Vlogin
     }
 
     public function mostraFormLogin(){
-
-        //$this->smarty->assign('ruolo', $ruolo);
-        //$this->smarty->assign('errore', $errore);
-        $this->smarty->display("Login.tpl");
+        $this->smarty->display("login.tpl");
 
     }
 
