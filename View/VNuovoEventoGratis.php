@@ -35,6 +35,7 @@ class VNuovoEventoGratis
         if(isset($_POST['Descrizione'])){
             $dati['Descrizione'] = $_POST['Descrizione'];
         }
+
         return $dati;
     }
 

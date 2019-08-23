@@ -18,12 +18,12 @@
    include_once 'Foundation/FEvento_p.php';
    include_once 'Foundation/FUtente_R.php';
    include_once 'Foundation/FAcquisto.php';
-
+   include_once 'Foundation/FPersistenceManager.php';
    include_once 'Foundation/FBiglietto.php';
    include_once 'Foundation/FCommento.php';
-   include_once 'Foundation/PersistenceManager.php';
 
-   include_once 'Foundation/FCommento.php';
+   include_once 'View/VVisualizzaEventoP.php';
 
-   
+   include_once 'Smarty/smarty-libs/libs/Smarty.class.php';
+
 ?>

@@ -1,10 +1,18 @@
 <?php
 
-include_once "C:\Users\user\Desktop\Never_home\include.php";
 
-
-class PersistenceManager
+class FPersistenceManager
 {
+    private static $instance = null;
+
+
+    public static function getInstance(){ //restituisce l'unica istanza (creandola se non esiste gia)
+        if(static::$instance==null){
+            static::$instance=new FPersistenceManager();
+        }
+        return static::$instance;
+    }
+
     public function  store ($eobj){
 
        $f=$eobj->getF();
