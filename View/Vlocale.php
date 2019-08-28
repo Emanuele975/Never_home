@@ -1,7 +1,7 @@
 <?php
 
 
-class Vlogin
+class Vlocale
 {
     private $smarty;
 
@@ -14,22 +14,25 @@ class Vlogin
         $this->smarty->setConfigDir($GLOBALS["ROOT"].'/Smarty/smarty-dir/configs');
     }
 
-    public  function recuperadatiLogin(){
+    public function creaevento()
+    {
 
-        $dati=array();
-
-        if(isset($_POST['email']) && isset($_POST['password'])){
-            $dati['email'] =  $_POST['email'];
-            $dati['password'] =  $_POST['password'];
+        if (isset($_POST['name']) && $_POST["name"] = 'EventoG') {
+            $this->smarty->display("FormNEg.tpl");
+        } elseif (isset($_POST['name']) && $_POST["name"] = 'EventoP') {
+            $this->smarty->display("FormNep.tpl");
         }
-        return $dati;
-
     }
 
-    public function mostraFormLogin(){
-        $this->smarty->display("login.tpl");
-
+    public function mostraevento(EEvento $evento){
+        $this->smarty->assign('evento',$evento);
+        $this->smarty->display("Evento.tpl");
     }
+
+
+
+
+
 
 
 }

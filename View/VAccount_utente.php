@@ -14,4 +14,9 @@ class VAccount_utente
         $this->smarty->setConfigDir($GLOBALS["ROOT"].'Smarty/smarty-dir/configs');
     }
 
+    public function modificaprofilo(){
+
+
+    }
+
 }

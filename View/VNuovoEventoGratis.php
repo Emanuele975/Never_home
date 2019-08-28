@@ -16,7 +16,7 @@ class VNuovoEventoGratis
 
     public function recuperaDatiEvento(){
         $dati = array();
-        //costruzione dell'array con i dati della ricetta
+
         if(isset($_POST['NomeE'])){
             $dati['NomeE'] = $_POST['NomeE'];
         }
