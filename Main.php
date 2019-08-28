@@ -18,8 +18,8 @@
     $data = new DateTime('12-04-1996');
     $evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
     $evento1 = new EEvento_g("pinewood",$data,$luogo,$categoria);
-    //$man = FPersistenceManager::getInstance();
-    //$man->store($evento1);
+    $man = FPersistenceManager::getInstance();
+    $man->store($evento1);
     //$dat = FEvento_p::getInstance();
     //$dat->store1($evento);
     //$eventocaricato = $dat->loadById("pinewood",$data->format('Y-m-d H:i:s'));
@@ -35,9 +35,12 @@
     //print $datcommento->loadById(5,$data->format('Y-m-d'),"pinewood","EEvento_p")->toString();
     //$dat=FCarta::getInstance();
     //echo $GLOBALS['ROOT'];
-    $view = new VVisualizzaEventoP();
-    $view->visualizza($evento);
+    //$view = new Vlogin();
+    //$view->mostraFormLogin($evento);
+
     //$dat->delete(321);
 
-    
+    //$img = new EImmagine(treno.jpg,jpg);
+
+
 ?>
