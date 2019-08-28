@@ -1,7 +1,7 @@
 <?php
 
-include_once "C:\Users\Emanuele\Desktop\Never_home\include.php";
-//include_once "C:\Users\user\Desktop\Never_home\include.php";
+//include_once "C:\Users\Emanuele\Desktop\Never_home\include.php";
+include_once "C:\Users\user\Desktop\Never_home\include.php";
     
 class FEvento_g extends FDatabase{
     
