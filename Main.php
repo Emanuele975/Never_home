@@ -35,10 +35,15 @@
     //print $datcommento->loadById(5,$data->format('Y-m-d'),"pinewood","EEvento_p")->toString();
     //$dat=FCarta::getInstance();
     //echo $GLOBALS['ROOT'];
-    //$view = new Vlogin();
-    //$view->mostraFormLogin($evento);
-
     //$dat->delete(321);
+    //echo $GLOBALS['ROOT'];
+   //$_POST['name']='EventoG';
+   $view2= new Vlocale();
+   //$view2->creaevento();
+$view2->mostraevento($evento);
+
+
+
 
     //$img = new EImmagine(treno.jpg,jpg);
 

@@ -14,6 +14,7 @@
             $this->data_e=$data;
             $this->luogo=$luogo;
             $this->categoria=$categoria;
+
             
         }
 

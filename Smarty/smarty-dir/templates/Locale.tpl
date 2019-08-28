@@ -32,41 +32,39 @@
 </nav>
 <div class="container ">
   <div class="row">
-    <pre>
-
-    </pre>
+    <br><br>
   </div>
   <div class="row mx-md-n5">
     <div class="col-sm-8">
-      <button type="button" class="btn btn-primary btn-lg btn-block">Crea evento gratis</button>
-      <button type="button" class="btn btn-secondary btn-lg btn-block">Crea evento a pagamento</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block" name="EventoG" >Crea evento gratis</button>
+      <button type="button" class="btn btn-secondary btn-lg btn-block" name="EventoP" >Crea evento a pagamento</button>
     </div>
     <div class="col-sm-4">
       <div class="container">
         <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">List group item heading</h5>
-              <small>3 days ago</small>
+              <h5 class="mb-1" >nome evento: {$evento->getNome()}</h5>
+              <small>data evento : {$evento->getData()}    </small>
             </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small>Donec id elit non mi porta.</small>
+            <p class="mb-1">descrizione</p>
+            <small>...</small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between" >
+              <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
+              <small class="text-muted">data evento : {$evento->getData()}</small>
+            </div>
+            <p class="mb-1">descrizione </p>
+            <small class="text-muted">...</small>
           </a>
           <a href="#" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">List group item heading</h5>
-              <small class="text-muted">3 days ago</small>
+              <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
+              <small class="text-muted">data evento : {$evento->getData()}</small>
             </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small class="text-muted">Donec id elit non mi porta.</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">List group item heading</h5>
-              <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small class="text-muted">Donec id elit non mi porta.</small>
+            <p class="mb-1">descrizione</p>
+            <small class="text-muted">...</small>
           </a>
         </div>
       </div>
