@@ -28,7 +28,6 @@ class Vlogin
 
     public function mostraFormLogin(){
         $this->smarty->display("login.tpl");
-
     }
 
 
