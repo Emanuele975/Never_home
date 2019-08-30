@@ -1,7 +1,7 @@
 <?php
 
 
-class VAccount_utente
+class VEvento
 {
     private $smarty;
 
@@ -14,12 +14,11 @@ class VAccount_utente
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
-    public function modificaprofilo()
+    public function Acquista()
     {
 
-        if (isset($_POST['name']) && $_POST["name"] = 'Modifica') {
-            $this->smarty->display("FormReg.tpl");
+        if (isset($_POST['name']) && $_POST["name"] = 'acquista') {
+            $this->smarty->display("AcquistaEvento.tpl");
         }
-
     }
 }

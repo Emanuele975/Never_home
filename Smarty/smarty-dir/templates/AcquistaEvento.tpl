@@ -21,7 +21,7 @@
                 <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Notifiche </a>
+                <a class="nav-link" href="#">notifiche</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -47,7 +47,7 @@
         </div>
         <div class="col-sm">
             <div class="row my-4">
-                <div class="mx-auto"> disponibilità  </div>
+                <div class="mx-auto"> Posti disponibili:{$evento->getPosti_disponibili()}  </div>
             </div>
             <div class="row my-4">
                 <div class="input-group mb-3">

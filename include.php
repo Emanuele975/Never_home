@@ -25,6 +25,8 @@
 
    include_once 'View/VVisualizzaEventoP.php';
    include_once 'View/Vlogin.php';
+include_once 'View/VAccount_utente.php';
+
 
    include_once 'Smarty/smarty-libs/libs/Smarty.class.php';
 

@@ -26,7 +26,7 @@ class Vlocale
 
     public function mostraevento(EEvento $evento){
         $this->smarty->assign('evento',$evento);
-        $this->smarty->display("Evento.tpl");
+        $this->smarty->display("EventoLocale.tpl");
     }
 
 

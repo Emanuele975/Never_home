@@ -39,10 +39,17 @@
     //$view->visualizza($evento);
     //$dat->delete(321);
     //echo $GLOBALS['ROOT'];
-   //$_POST['name']='EventoG';
-   $view2= new Vlocale();
-   //$view2->creaevento();
-$view2->mostraevento($evento);
+    //$_POST['name']='EventoG';
+    //$view2= new Vlocale();
+    //$view2->creaevento();
+    //$view2->mostraevento($evento);
+    //$_POST['name']='registrazione';
+    //$view=new Vlogin();
+    //$view->mostraFormReg();
+     $_POST['name']='modifica';
+     $view=new VAccount_utente();
+     $view->modificaprofilo();
+
 
 
 
