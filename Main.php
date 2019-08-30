@@ -38,9 +38,19 @@
     //$dat->delete(321);
     //echo $GLOBALS['ROOT'];
    //$_POST['name']='EventoG';
-   $view2= new Vlocale();
+   //$controller = new CGestioneLuogo();
+   //$info=$controller->NuovoEventoGratis();
+   //if ($info!=null)
+    //   echo 'info recuperate';
+    //else
+     //   echo 'info non recuperate';
    //$view2->creaevento();
-$view2->mostraevento($evento);
+    //$view2->visualizza($evento);
+    $_SERVER['REQUEST_URI'] = '/Never_home/Luogo/Form';
+    $fc = new CFrontController();
+    $fc->run();
+    //$v = new VNuovoEventoGratis();
+    //$v->MostraForm();
 
 
 

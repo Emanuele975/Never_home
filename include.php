@@ -10,6 +10,8 @@
    include_once 'Entity/EUtente_R.php';
    include_once 'Entity/ECommento.php';
    include_once 'Entity/EImmagine.php';
+
+   include_once 'Controller/CGestioneLuogo.php';
    
    include_once 'Foundation/FDatabase.php';
    include_once 'Foundation/FCategoria.php';
@@ -25,6 +27,12 @@
 
    include_once 'View/VVisualizzaEventoP.php';
    include_once 'View/Vlogin.php';
+   include_once 'View/VNuovoEventoGratis.php';
+   include_once 'View/VHomePage.php';
+
+   include_once 'Controller/CFrontController.php';
+   include_once 'Controller/CGestioneLuogo.php';
+   include_once 'Controller/CHomepage.php';
 
    include_once 'Smarty/smarty-libs/libs/Smarty.class.php';
 

@@ -20,51 +20,45 @@ class CFrontController
 
         array_shift($array);
 
-        $client = $array[1];
+
+
+        $count = count($array);
 
 
 
-        if ($client == 'web') {
-            $count = count($array);
-            if ($array[$count - 1] == null) {
-                unset($array[$count - 1]);
-            }
-            if (count($array) != 2) {
-                $controller = $array[2];
-                $controller = "CGestione" . $controller;
-                if (class_exists($controller)) {
-                    $metodo = $array[3];
-                    if (method_exists($controller, $metodo)) {
-                        $c = new $controller();
-                        if (isset($array[4])) {
-                            $parametro = $array[4];
-                            $c->$metodo($parametro);
-                        } else {
-                            $c->$metodo();
-                        }
-                    } else {
-                        header('HTTP/1.1 405 Method Not Allowed');
-                        exit;
-                    }
-                }else {
-
-                    $errore="Pagina non trovata";
-                    $view = new VErrore();
-                    $view->mostraErrore($errore);
-                }
-
-            } else { //richiesta per la Homepage
-                $controller = new CHomepage();
-                $controller->impostaPagina();
-            }
-
-        } else{
-
-            $errore="Pagina non trovata";
-            $view = new VErrore();
-            $view->mostraErrore($errore);
-
+        if ($array[$count - 1] == null) {
+            unset($array[$count - 1]);
         }
+        if (count($array) != 1) {
+            $controller = $array[1];
+            $controller = "CGestione" . $controller;
+            if (class_exists($controller)) {
+                $metodo = $array[2];
+                if (method_exists($controller, $metodo)) {
+                    $c = new $controller();
+                    if (isset($array[3])) {
+                        $parametro = $array[3];
+                        $c->$metodo($parametro);
+                    } else {
+                        $c->$metodo();
+                    }
+                } else {
+                    header('HTTP/1.1 405 Method Not Allowed');
+                    exit;
+                }
+            }else {
+
+                $errore="Pagina non trovata";
+                $view = new VErrore();
+                $view->mostraErrore($errore);
+            }
+
+        } else { //richiesta per la Homepage
+            $controller = new CHomepage();
+            $controller->impostaPagina();
+        }
+
+
     }
 
 }
