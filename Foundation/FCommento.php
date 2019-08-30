@@ -1,6 +1,5 @@
 <?php
 
-
 class FCommento extends FDatabase
 {
     protected $table1;

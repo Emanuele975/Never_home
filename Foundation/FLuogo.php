@@ -1,6 +1,5 @@
 <?php
 
-
 class FLuogo extends FDatabase{
     
     protected static $instance=null;

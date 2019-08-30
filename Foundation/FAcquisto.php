@@ -1,6 +1,5 @@
 <?php
 
-
 class FAcquisto extends FDatabase
 {
 

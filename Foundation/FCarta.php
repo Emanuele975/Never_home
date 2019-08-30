@@ -1,7 +1,6 @@
 <?php
 
 
-
 class FCarta extends FDatabase{
     
     protected static $instance=null;

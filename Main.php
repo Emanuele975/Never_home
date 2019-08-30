@@ -18,8 +18,8 @@
     $data = new DateTime('12-04-1996');
     $evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
     $evento1 = new EEvento_g("pinewood",$data,$luogo,$categoria);
-    //$man = FPersistenceManager::getInstance();
-    //$man->store($evento1);
+    $man = FPersistenceManager::getInstance();
+    $man->store($evento1);
     //$dat = FEvento_p::getInstance();
     //$dat->store1($evento);
     //$eventocaricato = $dat->loadById("pinewood",$data->format('Y-m-d H:i:s'));
@@ -35,24 +35,27 @@
     //print $datcommento->loadById(5,$data->format('Y-m-d'),"pinewood","EEvento_p")->toString();
     //$dat=FCarta::getInstance();
     //echo $GLOBALS['ROOT'];
-    //$view = new VVisualizzaEventoP();
-    //$view->visualizza($evento);
     //$dat->delete(321);
     //echo $GLOBALS['ROOT'];
-    //$_POST['name']='EventoG';
-    //$view2= new Vlocale();
-    //$view2->creaevento();
-    //$view2->mostraevento($evento);
-    //$_POST['name']='registrazione';
-    //$view=new Vlogin();
-    //$view->mostraFormReg();
-     $_POST['name']='modifica';
-     $view=new VAccount_utente();
-     $view->modificaprofilo();
+   //$_POST['name']='EventoG';
+   //$controller = new CGestioneLuogo();
+   //$info=$controller->NuovoEventoGratis();
+   //if ($info!=null)
+    //   echo 'info recuperate';
+    //else
+     //   echo 'info non recuperate';
+   //$view2->creaevento();
+    //$view2->visualizza($evento);
+    $_SERVER['REQUEST_URI'] = '/Never_home/Luogo/Form';
+    $fc = new CFrontController();
+    $fc->run();
+    //$v = new VNuovoEventoGratis();
+    //$v->MostraForm();
 
 
 
 
+    //$img = new EImmagine(treno.jpg,jpg);
 
-    
+
 ?>

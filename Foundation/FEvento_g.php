@@ -1,7 +1,6 @@
 <?php
 
 
-    
 class FEvento_g extends FDatabase{
     
     protected static $instance=null;

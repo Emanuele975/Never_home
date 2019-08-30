@@ -1,7 +1,6 @@
 <?php
 
 
-
 class FCategoria extends FDatabase{
     
     protected static $instance=null;

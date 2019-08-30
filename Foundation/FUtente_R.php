@@ -2,7 +2,6 @@
 
 
 
-
 class FUtente_R extends FDatabase
 {
     protected static $instance=null;

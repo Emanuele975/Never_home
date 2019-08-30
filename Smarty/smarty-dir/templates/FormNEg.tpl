@@ -30,7 +30,7 @@
     </form>
   </div>
 </nav>
-<form action="/NeverHome" method="post" enctype="multipart/form-data">
+<form action='/Never_home/Main.php' method="post" enctype="multipart/form-data">
   <div class="container">
     <br><br>
     <div class="row">
@@ -84,7 +84,7 @@
     </div>
     <div class="row my-5">
       <div class="mx-auto">
-        <button type="submit" class="btn btn-dark">Crea o modifica Evento</button>
+        <button type="submit" class="btn btn-dark" >Crea o modifica Evento</button>
       </div>
     </div>
   </div>

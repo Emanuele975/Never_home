@@ -15,6 +15,7 @@ class VNuovoEventoGratis
     }
 
     public function recuperaDatiEvento(){
+
         $dati = array();
 
         if(isset($_POST['NomeE'])){
@@ -37,6 +38,10 @@ class VNuovoEventoGratis
         }
 
         return $dati;
+    }
+
+    public function MostraForm(){
+        $this->smarty->display("FormNEg.tpl");
     }
 
 }
