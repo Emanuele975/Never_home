@@ -14,7 +14,7 @@ class Vlocale
         $this->smarty->setConfigDir($GLOBALS["ROOT"].'/Smarty/smarty-dir/configs');
     }
 
-    public function creaevento()
+    public function mostraformevento()
     {
 
         if (isset($_POST['name']) && $_POST["name"] = 'EventoG') {

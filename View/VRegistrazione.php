@@ -1,7 +1,7 @@
 <?php
 
 
-class VHomePage
+class VRegistrazione
 {
     private $smarty;
 
@@ -14,14 +14,8 @@ class VHomePage
         $this->smarty->setConfigDir('Smarty/smarty-dir/configs');
     }
 
-    public function Home(){
-        $this->smarty->display("login.tpl");
+    public function registrazione(){
+        $this->smarty->display("FormReg.tpl");
     }
-
-    public function mostraevento(EEvento $evento){
-        $this->smarty->assign('evento',$evento);
-        $this->smarty->display("Evento.tpl");
-    }
-
 
 }

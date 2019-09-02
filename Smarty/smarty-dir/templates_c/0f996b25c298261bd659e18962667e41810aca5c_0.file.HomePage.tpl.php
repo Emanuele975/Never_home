@@ -1,4 +1,27 @@
-﻿<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-09-02 10:44:48
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5d6cd680ed0c55_31840573',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0f996b25c298261bd659e18962667e41810aca5c' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
+      1 => 1567413882,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5d6cd680ed0c55_31840573 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
 
 <head>
@@ -41,8 +64,10 @@
             <div class="card" style="width: 18rem;">
                 <img src="localenight.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">{$evento->getNome()}</h5>
-                    <p class="card-text">Descrizione:{$evento->getCategoria()->toString()}</p>
+                    <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
+</h5>
+                    <p class="card-text">Descrizione:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getCategoria()->toString();?>
+</p>
                     <a href="#" class="btn btn-primary">Vai all'evento</a>
                 </div>
             </div>
@@ -51,8 +76,10 @@
             <div class="card" style="width: 18rem;">
                 <img src="localenight.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">{$evento->getNome()}</h5>
-                    <p class="card-text">Descrizione:{$evento->getCategoria()->toString()}</p>
+                    <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
+</h5>
+                    <p class="card-text">Descrizione:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getCategoria()->toString();?>
+</p>
                     <a href="#" class="btn btn-primary">Vai all'evento</a>
                 </div>
             </div>
@@ -61,8 +88,10 @@
             <div class="card" style="width: 18rem;">
                 <img src="localenight.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">{$evento->getNome()}</h5>
-                    <p class="card-text">Descrizione:{$evento->getCategoria()->toString()}</p>
+                    <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
+</h5>
+                    <p class="card-text">Descrizione:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getCategoria()->toString();?>
+</p>
                     <a href="#" class="btn btn-primary">Vai all'evento</a>
                 </div>
             </div>
@@ -95,9 +124,16 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}
