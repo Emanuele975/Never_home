@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.33, created on 2019-08-30 17:10:17
+=======
+/* Smarty version 3.1.33, created on 2019-08-30 15:50:22
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormNEg.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
+<<<<<<< HEAD
   'unifunc' => 'content_5d693c59d06535_64150707',
+=======
+  'unifunc' => 'content_5d69299eddd950_49168249',
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b8a9437c4230cce2d7a40a7de11f97ea55f32cb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormNEg.tpl',
+<<<<<<< HEAD
       1 => 1567172184,
+=======
+      1 => 1567173008,
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_5d693c59d06535_64150707 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_5d69299eddd950_49168249 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
 ?><!DOCTYPE html>
 <html>
 
@@ -53,7 +69,11 @@ function content_5d693c59d06535_64150707 (Smarty_Internal_Template $_smarty_tpl)
     </form>
   </div>
 </nav>
+<<<<<<< HEAD
 <form action='/Never_home/Main.php' method="post" enctype="multipart/form-data">
+=======
+<form action='/Never_home/Luogo/NuovoEventoGratis' method="post" enctype="multipart/form-data">
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
   <div class="container">
     <br><br>
     <div class="row">
@@ -107,7 +127,11 @@ function content_5d693c59d06535_64150707 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <div class="row my-5">
       <div class="mx-auto">
+<<<<<<< HEAD
         <button type="submit" class="btn btn-dark" >Crea o modifica Evento</button>
+=======
+        <button type="submit" class="btn btn-dark" >Crea Evento</button>
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
       </div>
     </div>
   </div>

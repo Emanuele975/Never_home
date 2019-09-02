@@ -54,7 +54,7 @@ class CFrontController
             }
 
         } else { //richiesta per la Homepage
-            $controller = new CHomepage();
+            $controller = new CGestioneHomepage();
             $controller->impostaPagina();
         }
 

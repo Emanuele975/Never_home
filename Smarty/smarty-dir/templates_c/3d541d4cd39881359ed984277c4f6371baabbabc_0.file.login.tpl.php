@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.33, created on 2019-09-02 16:43:52
+=======
+/* Smarty version 3.1.33, created on 2019-08-30 17:17:09
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
+<<<<<<< HEAD
   'unifunc' => 'content_5d6d2aa86ffba7_32598895',
+=======
+  'unifunc' => 'content_5d693df5357b71_26252966',
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d541d4cd39881359ed984277c4f6371baabbabc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\login.tpl',
+<<<<<<< HEAD
       1 => 1567435424,
+=======
+      1 => 1567178223,
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_5d6d2aa86ffba7_32598895 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_5d693df5357b71_26252966 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
 ?><!DOCTYPE html>
 <html>
 
@@ -33,7 +49,11 @@ function content_5d6d2aa86ffba7_32598895 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<<<<<<< HEAD
   <a class="navbar-brand" href="/Never_home/Homepage">NH</a>
+=======
+  <a class="navbar-brand" href="#">NH</a>
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -41,10 +61,17 @@ function content_5d6d2aa86ffba7_32598895 (Smarty_Internal_Template $_smarty_tpl)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
+<<<<<<< HEAD
         <a class="nav-link" href="#">Registrati <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Login </a>
+=======
+        <a class="nav-link" href="/Never_home/Luogo/Form">Registrati <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Never_home/Homepage/Login">Login </a>
+>>>>>>> fb119fe5ce27acdda03a0e230651e0d802e7f487
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
