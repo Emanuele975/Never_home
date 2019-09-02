@@ -57,7 +57,7 @@
             </div>
             <div class="row my-4">
                 <div class="mx-auto">
-                    <button type="button" class="btn btn-dark">Acquista biglietto</button>
+                    <button type="button" class="btn btn-dark" name="acquista">Acquista biglietto</button>
                 </div>
             </div>
         </div>
