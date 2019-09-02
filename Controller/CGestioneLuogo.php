@@ -5,10 +5,9 @@ class CGestioneLuogo
 {
     public function NuovoEventoGratis(){
         $view = new VNuovoEventoGratis();
-        echo "nella function";
         $dati = $view->recuperaDatiEvento();
         //$pm = FPersistenceManager::getInstance();
-        return $dati;
+        print_r( $dati );
     }
 
     public function Form(){
