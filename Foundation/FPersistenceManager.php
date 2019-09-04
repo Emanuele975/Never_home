@@ -34,4 +34,9 @@ class FPersistenceManager
         $obj=$dat->loadById($key);
         return $obj;
     }
+
+    public function esisteutente($name,$cf){
+        $dat = FUtente_R::getInstance();
+        return $dat->esisteutente($name,$cf);
+    }
 }

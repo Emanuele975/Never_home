@@ -12,7 +12,7 @@ class Session
      */
     public static function getInstance(){ //restituisce l'unica istanza (creandola se non esiste gia)
         if(static::$instance==null){
-            static::$instance=new Sessione();
+            static::$instance=new Session();
         }
         return static::$instance;
     }

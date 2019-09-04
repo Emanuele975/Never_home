@@ -1,5 +1,4 @@
 <?php
-
    include_once 'Entity/ELuogo.php';
    include_once 'Entity/ECategoria.php';
    include_once 'Entity/EEvento_p.php';
@@ -29,10 +28,16 @@
    include_once 'View/Vlogin.php';
    include_once 'View/VNuovoEventoGratis.php';
    include_once 'View/VHomePage.php';
+   include_once 'View/VRegistrazione.php';
 
    include_once 'Controller/CFrontController.php';
    include_once 'Controller/CGestioneLuogo.php';
-   include_once 'Controller/CHomepage.php';
+   include_once 'Controller/CGestioneHomepage.php';
+   include_once 'Controller/CGestioneUtente.php';
+
+   include_once 'Session.php';
+   include_once 'Token.php';
+   //include_once 'vendor/autoload.php';
 
    include_once 'Smarty/smarty-libs/libs/Smarty.class.php';
 

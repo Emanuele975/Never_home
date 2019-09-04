@@ -15,7 +15,11 @@ class VHomePage
     }
 
     public function Home(){
-        $this->smarty->display("login.tpl");
+        $this->smarty->display("HomePage.tpl");
     }
 
+    public function utentereg($utente){
+        $this->smarty->assign('utente',$utente);
+        $this->smarty->display("UtenteLoggato.tpl");
+    }
 }

@@ -1,7 +1,7 @@
 <?php
 
 
-class Vlogin
+class VRegistrazione
 {
     private $smarty;
 
@@ -14,31 +14,29 @@ class Vlogin
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
-    public function recuperadatiLogin()
+    public function Form()
     {
+        $this->smarty->display("FormReg.tpl");
+    }
 
+    public function getDati()
+    {
         $dati = array();
 
-        if (isset($_POST['user']) && isset($_POST['psw'])) {
-            $dati['user'] = $_POST['user'];
+        if(isset($_POST['nome'])){
+            $dati['nome'] = $_POST['nome'];
+        }
+        if(isset($_POST['mail'])){
+            $dati['mail'] = $_POST['mail'];
+        }
+        if(isset($_POST['psw'])){
             $dati['psw'] = $_POST['psw'];
         }
+        if(isset($_POST['user'])){
+            $dati['user'] = $_POST['user'];
+        }
+
         return $dati;
 
     }
-
-    public function mostraFormLogin()
-    {
-        $this->smarty->display("login.tpl");
-    }
-
-    public function mostraFormReg()
-    {
-
-        if (isset($_POST['name']) && $_POST["name"] = 'registrazione') {
-            $this->smarty->display("FormReg.tpl");
-        }
-
-    }
-
 }

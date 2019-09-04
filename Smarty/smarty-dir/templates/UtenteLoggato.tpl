@@ -18,10 +18,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Utente/FormRegistrazione" name="registrazione">Registrati <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Utente/Login">Login </a>
+        <a class="nav-link" href="#">Notifiche </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Never_home/Utente/Logout">Logout <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -29,9 +32,11 @@
       <button class="btn btn-light" type="submit">Search</button>
     </form>
   </div>
-  </nav>
-  Home page del sito
-  <div class="fixed-bottom" >
+</nav>
+{$utente->getNome()}
+<br>
+{$utente->getCognome()}
+  <div class="fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-30 15:50:22
+/* Smarty version 3.1.33, created on 2019-09-04 15:29:06
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormNEg.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d69299eddd950_49168249',
+  'unifunc' => 'content_5d6fbc22cec2f9_93060788',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b8a9437c4230cce2d7a40a7de11f97ea55f32cb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormNEg.tpl',
-      1 => 1567173008,
+      1 => 1567603726,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d69299eddd950_49168249 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6fbc22cec2f9_93060788 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -33,7 +33,7 @@ function content_5d69299eddd950_49168249 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">NH</a>
+  <a class="navbar-brand" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-04 15:29:04
-  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\login.tpl' */
+/* Smarty version 3.1.33, created on 2019-09-04 17:12:46
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\UtenteLoggato.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d6fbc20a70ff2_76793179',
+  'unifunc' => 'content_5d6fd46e6e6489_13168526',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '3d541d4cd39881359ed984277c4f6371baabbabc' => 
+    '8825acfbb290856257f59dfea7d912d0f4d44a74' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\login.tpl',
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\UtenteLoggato.tpl',
       1 => 1567603726,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d6fbc20a70ff2_76793179 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6fd46e6e6489_13168526 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -41,10 +41,13 @@ function content_5d6fbc20a70ff2_76793179 (Smarty_Internal_Template $_smarty_tpl)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Luogo/Form">Registrati <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Homepage/Login">Login </a>
+        <a class="nav-link" href="#">Notifiche </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Never_home/Utente/Logout">Logout <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -52,23 +55,13 @@ function content_5d6fbc20a70ff2_76793179 (Smarty_Internal_Template $_smarty_tpl)
       <button class="btn btn-light" type="submit">Search</button>
     </form>
   </div>
-  </nav>
-  <div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
-    <div class="container">
-      <div class="row">
-        <div class="mx-auto col-md-6 col-10 bg-white p-5">
-          <h1 class="mb-4">Log in</h1>
-          <form action="/Never_home/Utente/Entra" method="post" enctype="multipart/form-data">
-            <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
-            <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
-                <a href="/Never_home/Homepage/Login"> Recover password</a>
-              </small> </div> <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-3">
+</nav>
+<?php echo $_smarty_tpl->tpl_vars['utente']->value->getNome();?>
+
+<br>
+<?php echo $_smarty_tpl->tpl_vars['utente']->value->getCognome();?>
+
+  <div class="fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">

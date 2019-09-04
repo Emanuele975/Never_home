@@ -69,6 +69,17 @@ class FUtente_R extends FDatabase
             return false;
     }
 
+    public function esisteutente($name,$cf)
+    {
+        $sql = "SELECT * FROM ".static::getTables()." WHERE nome= '".$name."'and CF= '".$cf."' ;";
+        $result = parent::exist($sql);
+        if ($result!=null)
+            return true;
+        else
+            return false;
+
+    }
+
 }
 
 ?>
