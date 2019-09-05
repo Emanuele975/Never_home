@@ -3,6 +3,7 @@
 
 class CGestioneUtente
 {
+<<<<<<< HEAD
     public function Login(){
         $sessione = Session::getInstance();
         if($_SERVER['REQUEST_METHOD']=="GET"){
@@ -94,6 +95,12 @@ class CGestioneUtente
         //redirect a login in entrambi i casi
         header('Location: /Never_home');
 
+=======
+
+    public function HomePage(){
+        $view= new VHomePage();
+        $view->Home();
+>>>>>>> 96be94248c04dc253cb8ef42196119e5a4e06066
     }
 
 

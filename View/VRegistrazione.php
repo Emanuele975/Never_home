@@ -8,6 +8,7 @@ class VRegistrazione
     public function __construct()
     {
         $this->smarty = new Smarty();
+<<<<<<< HEAD
         $this->smarty->setTemplateDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/templates');
         $this->smarty->setCompileDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/templates_c');
         $this->smarty->setCacheDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/cache');
@@ -39,4 +40,16 @@ class VRegistrazione
         return $dati;
 
     }
+=======
+        $this->smarty->setTemplateDir('Smarty/smarty-dir/templates');
+        $this->smarty->setCompileDir('Smarty/smarty-dir/templates_c');
+        $this->smarty->setCacheDir('Smarty/smarty-dir/cache');
+        $this->smarty->setConfigDir('Smarty/smarty-dir/configs');
+    }
+
+    public function registrazione(){
+        $this->smarty->display("FormReg.tpl");
+    }
+
+>>>>>>> 96be94248c04dc253cb8ef42196119e5a4e06066
 }

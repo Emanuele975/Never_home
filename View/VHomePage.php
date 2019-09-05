@@ -18,8 +18,17 @@ class VHomePage
         $this->smarty->display("HomePage.tpl");
     }
 
+<<<<<<< HEAD
     public function utentereg($utente){
         $this->smarty->assign('utente',$utente);
         $this->smarty->display("UtenteLoggato.tpl");
     }
+=======
+    public function mostraevento(EEvento $evento){
+        $this->smarty->assign('evento',$evento);
+        $this->smarty->display("Evento.tpl");
+    }
+
+
+>>>>>>> 96be94248c04dc253cb8ef42196119e5a4e06066
 }
