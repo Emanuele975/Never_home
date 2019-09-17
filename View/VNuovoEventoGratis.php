@@ -36,7 +36,20 @@ class VNuovoEventoGratis
         if(isset($_POST['Descrizione'])){
             $dati['Descrizione'] = $_POST['Descrizione'];
         }
-
+        if(isset($_FILES["file_inviato"]["tmp_name"]))
+        {
+            $dati['nometmp'] = $_FILES["file_inviato"]["tmp_name"];
+        }
+        if(isset($_FILES["file_inviato"]["name"]))
+        {
+            $dati['nomeimg'] = $_FILES["file_inviato"]["name"];
+        }
+        if(isset($_FILES["file_inviato"]["type"]))
+        {
+            $dati['tipo'] = $_FILES["file_inviato"]["type"];
+        }
+        $img = file_get_contents($dati['nometmp']);
+        $dati['img'] = addslashes($img);
         return $dati;
     }
 

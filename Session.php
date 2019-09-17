@@ -21,6 +21,20 @@ class Session
      * Metodo che verifica se l'utente è loggato, ovvero se la componente 'utente' di $_SESSION, è settata
      * @return bool
      */
+    public function isLoggedLuogo()
+    {
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
+
+        if(isset($_SESSION['luogo'])){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
     public function isLoggedUtente(){
         if(session_status()==PHP_SESSION_NONE){
             session_start();
@@ -62,6 +76,15 @@ class Session
         return $utente;
     }
 
+    public function getLuogo(){
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
+        $l = $_SESSION['luogo']; //stringa
+        $luogo = unserialize($l);
+        return $luogo;
+    }
+
     /**
      * Metodo che salva nei dati di sessione l'utente (quando il login utente ha successo)
      * @param $utente da salvare in $_SESSION
@@ -72,6 +95,14 @@ class Session
         }
         $u = serialize($utente);
         $_SESSION['utente'] = $u;
+    }
+
+    public function setLuogoLoggato($luogo){
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
+        $l = serialize($luogo);
+        $_SESSION['luogo'] = $l;
     }
 
     /**

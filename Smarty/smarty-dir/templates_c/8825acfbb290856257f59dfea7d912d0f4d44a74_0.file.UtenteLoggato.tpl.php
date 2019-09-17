@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-04 17:12:46
+/* Smarty version 3.1.33, created on 2019-09-16 10:36:09
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\UtenteLoggato.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d6fd46e6e6489_13168526',
+  'unifunc' => 'content_5d7f49795dd830_17539773',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d6fd46e6e6489_13168526 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d7f49795dd830_17539773 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 

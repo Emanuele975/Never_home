@@ -23,6 +23,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Notifiche </a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Never_home/Luogo/Logout">Logout </a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -81,6 +84,12 @@
             <textarea name="Descrizione" class="form-control" aria-label="With textarea"></textarea>
           </div>
         </div>
+      </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="exampleFormControlFile1"> inserisci foto evento  </label>
+        <input type="file" class="form-control-file" name="file_inviato" id="exampleFormControlFile1"><br>
+      </div>
     </div>
     <div class="row my-5">
       <div class="mx-auto">

@@ -16,23 +16,28 @@ class Vlocale
 
     public function mostraformevento()
     {
-
-        if (isset($_POST['name']) && $_POST["name"] = 'EventoG') {
+        if (isset($_POST['EventoG']) && $_POST["EventoG"] == "G") {
             $this->smarty->display("FormNEg.tpl");
-        } elseif (isset($_POST['name']) && $_POST["name"] = 'EventoP') {
-            $this->smarty->display("FormNep.tpl");
+        } else if (isset($_POST['EventoP']) && $_POST["EventoP"] == "P") {
+            $this->smarty->display("FormNEp.tpl");
         }
     }
 
-    public function mostraevento(EEvento $evento){
+    public function mostraevento(EEvento $evento)
+    {
         $this->smarty->assign('evento',$evento);
         $this->smarty->display("EventoLocale.tpl");
     }
 
+    public function LuogoLoggato($luogo)
+    {
+        $this->smarty->assign('luogo',$luogo);
+        $this->smarty->display("LuogoLoggato.tpl");
+    }
 
-
-
-
-
+    public function HomeLocale()
+    {
+        $this->smarty->display("Locale.tpl");
+    }
 
 }

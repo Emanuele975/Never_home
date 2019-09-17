@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-23 17:22:57
-  from 'C:\Users\user\Desktop\Never_home\Smarty\smarty-dir\templates\login.tpl' */
+/* Smarty version 3.1.33, created on 2019-09-16 14:55:57
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\loginLuogo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d6004d1e20362_87318451',
+  'unifunc' => 'content_5d7f865d999503_46390771',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '3672f5086bc61787e2d2c3173381e534cb53f529' => 
+    'aeb7f6b037d80e5dc401eb1dfca303662e44bf25' => 
     array (
-      0 => 'C:\\Users\\user\\Desktop\\Never_home\\Smarty\\smarty-dir\\templates\\login.tpl',
-      1 => 1566569508,
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\loginLuogo.tpl',
+      1 => 1568629701,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d6004d1e20362_87318451 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d7f865d999503_46390771 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -33,7 +33,7 @@ function content_5d6004d1e20362_87318451 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">NH</a>
+  <a class="navbar-brand" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -41,10 +41,10 @@ function content_5d6004d1e20362_87318451 (Smarty_Internal_Template $_smarty_tpl)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Registrati <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/Never_home/Luogo/Form">Registrati <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Login </a>
+        <a class="nav-link" href="/Never_home/Homepage/Login">Login </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -57,11 +57,10 @@ function content_5d6004d1e20362_87318451 (Smarty_Internal_Template $_smarty_tpl)
     <div class="container">
       <div class="row">
         <div class="mx-auto col-md-6 col-10 bg-white p-5">
-          <h1 class="mb-4">Log in</h1>
-          <form action="/NeverHome" method="post" enctype="multipart/form-data">
-            <div class="form-group"> <input type="email" class="form-control" placeholder="Enter email" id="form9"> </div>
-            <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" id="form10"> <small class="form-text text-muted text-right">
-                <a href="#"> Recover password</a>
+          <h1 class="mb-4">Log in Luogo</h1>
+          <form action="/Never_home/Luogo/Entra" method="post" enctype="multipart/form-data">
+            <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
+            <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
               </small> </div> <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>

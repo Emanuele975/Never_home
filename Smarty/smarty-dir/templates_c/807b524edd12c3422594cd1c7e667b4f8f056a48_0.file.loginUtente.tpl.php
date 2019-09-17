@@ -1,4 +1,27 @@
-﻿<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-09-16 12:50:06
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\loginUtente.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5d7f68de945cf3_47671321',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '807b524edd12c3422594cd1c7e667b4f8f056a48' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\loginUtente.tpl',
+      1 => 1568629701,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5d7f68de945cf3_47671321 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
 
 <head>
@@ -34,11 +57,10 @@
     <div class="container">
       <div class="row">
         <div class="mx-auto col-md-6 col-10 bg-white p-5">
-          <h1 class="mb-4">Log in</h1>
+          <h1 class="mb-4">Log in Utente</h1>
           <form action="/Never_home/Utente/Entra" method="post" enctype="multipart/form-data">
             <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
             <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
-                <a href="/Never_home/Homepage/Login"> Recover password</a>
               </small> </div> <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
@@ -60,9 +82,16 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

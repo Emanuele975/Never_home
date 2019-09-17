@@ -48,7 +48,7 @@ class FLuogo extends FDatabase{
     }
     
     public function loadById($indirizzo){
-        $sql="SELECT * FROM ".static::getTables()." WHERE indirizzo= '".$indirizzo."' ;";
+        $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$indirizzo."' ;";
         $result = parent::loadSingle($sql);
         if($result!=null){
             $luogo = new ELuogo($result['nome'],$result['indirizzo'], $result['email'], $result['username'], $result['password']);
@@ -62,6 +62,16 @@ class FLuogo extends FDatabase{
         if(parent::delete($sql)) 
             return true;
         else 
+            return false;
+    }
+
+    public function esisteluogo($nome)
+    {
+        $sql = "SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' ;";
+        $result = parent::exist($sql);
+        if ($result!=null)
+            return true;
+        else
             return false;
     }
     

@@ -36,8 +36,10 @@
   </div>
   <div class="row mx-md-n5">
     <div class="col-sm-8">
-      <button type="button" class="btn btn-primary btn-lg btn-block" name="EventoG" >Crea evento gratis</button>
-      <button type="button" class="btn btn-secondary btn-lg btn-block" name="EventoP" >Crea evento a pagamento</button>
+      <form action="/Never_home/Evento/FormEvento" method="post">
+      <button type="submit" class="btn btn-primary btn-lg btn-block" name="EventoG" value="G">Crea evento gratis</button>
+      <button type="submit" class="btn btn-secondary btn-lg btn-block" name="EventoP" value="P">Crea evento a pagamento</button>
+      </form>
     </div>
     <div class="col-sm-4">
       <div class="container">

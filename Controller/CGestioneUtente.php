@@ -3,7 +3,6 @@
 
 class CGestioneUtente
 {
-<<<<<<< HEAD
     public function Login(){
         $sessione = Session::getInstance();
         if($_SERVER['REQUEST_METHOD']=="GET"){
@@ -22,7 +21,7 @@ class CGestioneUtente
                 }
                 $sessione->setPath($loc); //salvo nei dati di sessione il path che stavo visitando
                 $view = new Vlogin();
-                $view->mostraFormLogin();
+                $view->mostraFormLoginUtente();
             }
         }
         else if($_SERVER['REQUEST_METHOD']=="POST"){
@@ -63,7 +62,7 @@ class CGestioneUtente
         }
         else {
             $viewerr = new VLogin();
-            $viewerr->mostraFormLogin("utente","Username e/o password errati");
+            $viewerr->mostraFormLoginUtente("utente","Username e/o password errati");
         }
     }
 
@@ -87,20 +86,20 @@ class CGestioneUtente
         $pm->store($utente);
     }
 
-    public function Logout(){
+    public function Logout()
+    {
         $sessione = Session::getInstance();
-        if($sessione->isLoggedUtente()){
+        if ($sessione->isLoggedUtente()) {
             $sessione->logout(); //cancello i dati di sessione
         }
         //redirect a login in entrambi i casi
         header('Location: /Never_home');
+    }
 
-=======
 
     public function HomePage(){
         $view= new VHomePage();
         $view->Home();
->>>>>>> 96be94248c04dc253cb8ef42196119e5a4e06066
     }
 
 

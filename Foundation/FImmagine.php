@@ -8,12 +8,21 @@
  */
 class FImmagine extends FDatabase
 {
+    protected static $instance=null;
+
     /**costruttore */
     public function __construct()
     {
         parent::__construct(); //estende la superclasse FDatabase
         $this->table = "immagine";
         $this->values = "(:id, :data, :type, :idesterno)";
+    }
+
+    public static function getInstance(){
+        if(static::$instance==null){
+            static::$instance=new FImmagine();
+        }
+        return static::$instance;
     }
 
     /**
@@ -57,6 +66,24 @@ class FImmagine extends FDatabase
             $img = $this->getObjectFromRow($arrimg);
             return $img; // oggetto di tipo EImmagine
         } else return null;
+    }
+
+    public function store1(EImmagine $img)
+    {
+        $sql = "INSERT INTO ".static::getTables()." VALUES ".static::getValues().";" ;
+        $id = parent::store($sql,'FImmagine',$img);
+        if($id)
+            return $id;
+        else
+            return null;
+    }
+
+    public function getTables(){
+        return $this->table;
+    }
+
+    public function getValues(){
+        return $this->values;
     }
 
 }

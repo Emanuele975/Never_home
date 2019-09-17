@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-28 11:20:00
-  from 'C:\Users\user\Desktop\Never_home\Smarty\smarty-dir\templates\FormNEg.tpl' */
+/* Smarty version 3.1.33, created on 2019-09-16 16:32:19
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Locale.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d664740668fb1_42307297',
+  'unifunc' => 'content_5d7f9cf39c0077_54215244',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '4d0194f73e7d0cea97dc37a26c43cbd4e2066841' => 
+    '08880dbce1aa5b60bb514f2b300e94388c2beab6' => 
     array (
-      0 => 'C:\\Users\\user\\Desktop\\Never_home\\Smarty\\smarty-dir\\templates\\FormNEg.tpl',
-      1 => 1566981728,
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Locale.tpl',
+      1 => 1568644337,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d664740668fb1_42307297 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d7f9cf39c0077_54215244 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -33,7 +33,7 @@ function content_5d664740668fb1_42307297 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">NH</a>
+  <a class="navbar-brand" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -53,66 +53,56 @@ function content_5d664740668fb1_42307297 (Smarty_Internal_Template $_smarty_tpl)
     </form>
   </div>
 </nav>
-<form action="/NeverHome" method="post" enctype="multipart/form-data">
-  <div class="container">
+<div class="container ">
+  <div class="row">
     <br><br>
-    <div class="row">
-      <div class="col-sm">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Nome Evento</span>
-          </div>
-          <input type="text" name="NomeE" aria-label="First name" class="form-control">
-        </div>
-      </div>
-        <div class="col-sm">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
-            </div>
-            <select class="custom-select" id="inputGroupSelect01" name="Categoria">
-              <option selected>Choose...</option>
-              <option value="Teatro">Teatro</option>
-              <option value="Concerto">Concerto</option>
-              <option value="Partita">Partita</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <div class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Data evento</span>
-            </div>
-            <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping0">/</span>
-            </div>
-            <input type="text" class="form-control" name="Mese" placeholder="MM" aria-label="MM" aria-describedby="addon-wrapping">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping1">/</span>
-            </div>
-            <input type="text" class="form-control" name="Anno" placeholder="AAAA" aria-label="AAAA" aria-describedby="addon-wrapping">
-          </div>
-        </div>
-        <div class="col-sm">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Descrizione</span>
-            </div>
-            <textarea name="Descrizione" class="form-control" aria-label="With textarea"></textarea>
-          </div>
-        </div>
+  </div>
+  <div class="row mx-md-n5">
+    <div class="col-sm-8">
+      <form action="/Never_home/Evento/FormEvento" method="post">
+      <button type="submit" class="btn btn-primary btn-lg btn-block" name="EventoG" value="G">Crea evento gratis</button>
+      <button type="submit" class="btn btn-secondary btn-lg btn-block" name="EventoP" value="P">Crea evento a pagamento</button>
+      </form>
     </div>
-    <div class="row my-5">
-      <div class="mx-auto">
-        <button type="submit" class="btn btn-dark">Crea o modifica Evento</button>
+    <div class="col-sm-4">
+      <div class="container">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1" >nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
+</h5>
+              <small>data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData();?>
+    </small>
+            </div>
+            <p class="mb-1">descrizione</p>
+            <small>...</small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between" >
+              <h5 class="mb-1">nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
+</h5>
+              <small class="text-muted">data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData();?>
+</small>
+            </div>
+            <p class="mb-1">descrizione </p>
+            <small class="text-muted">...</small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
+</h5>
+              <small class="text-muted">data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData();?>
+</small>
+            </div>
+            <p class="mb-1">descrizione</p>
+            <small class="text-muted">...</small>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</form>
-  <div class="fixed-bottom">
+</div>
+  <div class="py-3">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">

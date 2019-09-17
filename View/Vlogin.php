@@ -27,9 +27,14 @@ class Vlogin
 
     }
 
-    public function mostraFormLogin()
+    public function mostraFormLoginUtente()
     {
-        $this->smarty->display("login.tpl");
+        $this->smarty->display("loginUtente.tpl");
+    }
+
+    public function mostraFormLoginLuogo()
+    {
+        $this->smarty->display("loginLuogo.tpl");
     }
 
     public function mostraFormReg()

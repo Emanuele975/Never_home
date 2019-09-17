@@ -15,10 +15,11 @@ class EImmagine
     private $idesterno;
 
     /**costruttore*/
-    public function __construct($d, $t)
+    public function __construct($d, $t, $ide)
     {
         $this->data = $d;
         $this->type = $t;
+        $this->idesterno = $ide;
     }
 
     /**
@@ -94,6 +95,11 @@ class EImmagine
         $st = "ID: " . $this->id . "content-type: " . $this->type . " Data: " . $this->data . "Id esterno " . $this->idesterno;
         return $st;
     }
+
+    function getF(){
+        return "FImmagine";
+    }
+
 }
 
 ?>

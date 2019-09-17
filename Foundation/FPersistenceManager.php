@@ -17,7 +17,8 @@ class FPersistenceManager
 
        $f=$eobj->getF();
        $dat=$f::getInstance();
-       $dat->store1($eobj);
+       $id = $dat->store1($eobj);
+       return $id;
 
     }
 
@@ -33,10 +34,17 @@ class FPersistenceManager
         $dat=$f::getInstance();
         $obj=$dat->loadById($key);
         return $obj;
+
     }
 
     public function esisteutente($name,$cf){
         $dat = FUtente_R::getInstance();
         return $dat->esisteutente($name,$cf);
     }
+
+    public function esisteluogo($name){
+        $dat = FLuogo::getInstance();
+        return $dat->esisteluogo($name);
+    }
+
 }
