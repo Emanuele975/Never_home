@@ -8,8 +8,6 @@ class CGestioneUtente
         if($_SERVER['REQUEST_METHOD']=="GET"){
 
             if($sessione->isLoggedUtente()){
-                //redirect alla home page
-                //header('Location: /Never_home');
                 $view = new VHomePage();
                 $view->utentereg($sessione->getUtente());
             } else {
@@ -27,7 +25,7 @@ class CGestioneUtente
         else if($_SERVER['REQUEST_METHOD']=="POST"){
             if($sessione->isLoggedUtente()){
                 //redirect alla home page
-                header('Location: /myRecipes/web');
+                header('Location: /Never_home');
             } else {
                 $this->Entra();
             }
@@ -49,16 +47,13 @@ class CGestioneUtente
         if($id){
             //login avvenuto con successo, mostrare la pagina che stava vedendo l'utente
             // o la homepage se non stava vedendo pagine particolari
-
-            //login utente avvenuto con successo, salvataggio nei dati di sessione
-            $utente = $pm->Load($credenziali['psw'],"FUtente_R");
+            $utente = $pm->LoadByUserPswU($credenziali['psw'],$credenziali['user']);
             $sessione->setUtenteLoggato($utente);
 
             $location = $sessione->getPath(); //recupero il path salvato precedentemente
             $sessione->removePath(); //cancello il path dai dati di sessione
             $view2=new VHomePage();
-            $view2->utentereg($sessione->getUtente());
-
+            $view2->utentereg($utente);
         }
         else {
             $viewerr = new VLogin();
@@ -69,21 +64,18 @@ class CGestioneUtente
     public function FormRegistrazione()
     {
         $view = new VRegistrazione();
-        $view->Form();
+        $view->FormUtente();
     }
 
     public function Registrazione()
     {
-        echo 'nella function';
         $view = new VRegistrazione();
-        $dati = $view->getDati();
-        $utente = new EUtente_R($dati['nome'],"",$dati['mail'],$dati['user'],$dati['psw'],0);
-        //$utente->setNome($dati['nome']);
-        //$utente->setPassword($dati['psw']);
-        //$utente->setUsername($dati['user']);
-        //$utente->setCognome($dati['mail']);
+        $dati = $view->getDatiUtente();
+        $utente = new EUtente_R($dati['nome'],$dati['cognome'],$dati['cf'],$dati['user'],$dati['psw'],0,$dati['mail']);
         $pm = FPersistenceManager::getInstance();
         $pm->store($utente);
+        $view2 = new VAccount_utente();
+        $view2->utenteloggato($utente);
     }
 
     public function Logout()
@@ -95,7 +87,6 @@ class CGestioneUtente
         //redirect a login in entrambi i casi
         header('Location: /Never_home');
     }
-
 
     public function HomePage(){
         $view= new VHomePage();

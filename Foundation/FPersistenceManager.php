@@ -5,7 +5,6 @@ class FPersistenceManager
 {
     private static $instance = null;
 
-
     public static function getInstance(){ //restituisce l'unica istanza (creandola se non esiste gia)
         if(static::$instance==null){
             static::$instance=new FPersistenceManager();
@@ -13,7 +12,7 @@ class FPersistenceManager
         return static::$instance;
     }
 
-    public function  store ($eobj){
+    public function store ($eobj){
 
        $f=$eobj->getF();
        $dat=$f::getInstance();
@@ -37,14 +36,45 @@ class FPersistenceManager
 
     }
 
-    public function esisteutente($name,$cf){
-        $dat = FUtente_R::getInstance();
-        return $dat->esisteutente($name,$cf);
+    public function LoadbyUserPswU($psw,$user)
+    {
+        $dat=FUtente_R::getInstance();
+        $obj=$dat->LoadByUserPsw($psw,$user);
+        return $obj;
     }
 
-    public function esisteluogo($name){
-        $dat = FLuogo::getInstance();
-        return $dat->esisteluogo($name);
+    public function LoadbyUserPswL($psw,$user)
+    {
+        $dat=FLuogo::getInstance();
+        $obj=$dat->LoadByUserPsw($psw,$user);
+        return $obj;
     }
+
+    public function esisteutente($user,$psw){
+        $dat = FUtente_R::getInstance();
+        return $dat->esisteutente($user,$psw);
+    }
+
+    public function esisteluogo($user,$psw){
+        $dat = FLuogo::getInstance();
+        return $dat->esisteluogo($user,$psw);
+    }
+
+    public function EventobyLuogo($id)
+    {
+        $dat = FEvento_g::getInstance();
+        $evento = $dat->loadByLuogo($id);
+        return $evento;
+    }
+
+    public function Loadcat($nome)
+    {
+        $dat = FCategoria::getInstance();
+        $categoria = $dat->loadByNome($nome);
+        return $categoria;
+    }
+
+
+
 
 }

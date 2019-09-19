@@ -10,55 +10,78 @@ class EUtente_R {
     private $username;
     private $password;
     private $punteggio;
+    private $email;
+    private $id;
             
-    function __construct(String $nome,String $cognome, String $CF, String $username,String $password,int $punteggio) {
+    function __construct(String $nome,String $cognome, String $CF, String $username,String $password,int $punteggio,String $email)
+    {
         $this->nome=$nome;
         $this->cognome=$cognome;
         $this->CF=$CF;
         $this->username=$username;
         $this->password=$password;
         $this->punteggio=$punteggio;
-
+        $this->email=$email;
     }
     
     function setNome(String $a ){
         $this->nome=$a;
     }
+
     function  setCognome(String $b){
         $this->cognome=$b;
     }
+
     function setCF(String $c){
         $this->CF=$c;
     }
+
     function setUsername(String $d){
         $this->username=$d;
     }
+
     function setPassword(String $e){
         $this->password=$e;
     }
+
     function  setPunteggio(int $f){
         $this->punteggio=$f;
     }
+
     function getNome(){
         return $this->nome;
     }
+
     function  getCognome(){
         return $this->cognome;
     }
+
     function getCF(){
         return $this->CF;
     }
+
     function getUsername(){
         return $this->username;
     }
+
     function  getPassword(){
         return $this->password;
     }
+
     function  getPunteggio(){
         return $this->punteggio;
     }
 
-    
+    function getEmail()
+    {
+        return $this->email;
+    }
+
+    function setId($id)
+    {
+        $this->id=$id;
+    }
+
     function commenta(EEvento $evento,String $descrizione, int $punteggio, String $testo){
         $commento = new ECommento($descrizione,$punteggio,$testo,$this,$evento);
         return $commento;
@@ -77,7 +100,6 @@ class EUtente_R {
         return $biglietti;
     }
             
-            
     function toString(){
             return  "il nome: ".$this->nome."\n".
                     "il cognome: ".$this->cognome."\n".
@@ -95,9 +117,5 @@ class EUtente_R {
 
         return $this->CF;
     }
-                    
 
-            
-            
-            
  }

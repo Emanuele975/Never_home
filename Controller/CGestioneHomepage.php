@@ -15,7 +15,6 @@ class CGestioneHomepage
     public function registrazione(){
         $view=new VRegistrazione();
         $view->registrazione();
-
     }
 
 }

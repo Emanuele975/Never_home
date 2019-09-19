@@ -23,6 +23,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Notifiche </a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -47,7 +50,7 @@
           <a href="#" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1" >nome evento: {$evento->getNome()}</h5>
-              <small>data evento : {$evento->getData()}    </small>
+              <small>data evento : {$evento->getData()->format('d-m-Y')}    </small>
             </div>
             <p class="mb-1">descrizione</p>
             <small>...</small>
@@ -55,15 +58,16 @@
           <a href="#" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between" >
               <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
-              <small class="text-muted">data evento : {$evento->getData()}</small>
+              <small class="text-muted">data evento : {$evento->getData()->format('d-m-Y')}</small>
             </div>
             <p class="mb-1">descrizione </p>
-            <small class="text-muted">...</small>
+            {$img = base64_encode($row['data']) }
+            <img class="img-fluid d-block w-100 h-100" src="data:{$row['type']};base64,{$img}" style="width: 200px;	height: 200px;">
           </a>
           <a href="#" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
-              <small class="text-muted">data evento : {$evento->getData()}</small>
+              <small class="text-muted">data evento : {$evento->getData()->format('d-m-Y')}</small>
             </div>
             <p class="mb-1">descrizione</p>
             <small class="text-muted">...</small>
@@ -73,7 +77,7 @@
     </div>
   </div>
 </div>
-  <div class="py-3">
+  <div class="fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">

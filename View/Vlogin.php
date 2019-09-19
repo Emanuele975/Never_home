@@ -39,11 +39,9 @@ class Vlogin
 
     public function mostraFormReg()
     {
-
         if (isset($_POST['name']) && $_POST["name"] = 'registrazione') {
-            $this->smarty->display("FormReg.tpl");
+            $this->smarty->display("RegUtente.tpl");
         }
-
     }
 
 }

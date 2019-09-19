@@ -35,8 +35,9 @@ class Vlocale
         $this->smarty->display("LuogoLoggato.tpl");
     }
 
-    public function HomeLocale()
+    public function HomeLocale($evento)
     {
+        $this->smarty->assign("evento",$evento);
         $this->smarty->display("Locale.tpl");
     }
 

@@ -8,15 +8,16 @@ class FEvento_g extends FDatabase{
     protected function __construct(){
         parent::__construct();
         $this->table = "evento_g";
-        $this->values="(:nome,:data_e,:indirizzo_luogo,:nome_categoria)";
+        $this->values="(:nome,:data_e,:id_luogo,:id_categoria,:descrizione,:id)";
     }
     
     public static function bind($stmt,EEvento_g $evento){
-        //$stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
+        $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':nome', $evento->getNome(), PDO::PARAM_STR);
         $stmt->bindValue(':data_e', $evento->getData()->format('Y-m-d'), PDO::PARAM_STR);
-        $stmt->bindValue(':indirizzo_luogo', $evento->getLuogo()->getIndirizzo(), PDO::PARAM_STR);
-        $stmt->bindValue(':nome_categoria', $evento->getCategoria()->getNome(), PDO::PARAM_STR);
+        $stmt->bindValue(':id_luogo', $evento->getLuogo()->getId(), PDO::PARAM_INT);
+        $stmt->bindValue(':id_categoria', $evento->getCategoria()->getId(), PDO::PARAM_INT);
+        $stmt->bindValue(':descrizione', $evento->getDescrizione(), PDO::PARAM_STR);
         
     }
     
@@ -44,7 +45,8 @@ class FEvento_g extends FDatabase{
             return null;
     }
     
-    public function loadById($nome, $data){
+    public function loadById($nome, $data)
+    {
         $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e= '".$data."' ;";
         $result = parent::loadSingle($sql);
         if($result!=null){
@@ -65,7 +67,22 @@ class FEvento_g extends FDatabase{
         else 
             return false;
     }
-}
 
+    public function loadByLuogo($id)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE id_luogo= '".$id."' ;";
+        $result = parent::loadSingle($sql);
+        if($result!=null){
+            $datluogo = FLuogo::getInstance();
+            $luogo = $datluogo->loadById($result['indirizzo_luogo']);
+            $datcategoria = FCategoria::getInstance();
+            $categoria = $datcategoria->loadById($result['nome_categoria']);
+            $evento = new EEvento_g($result['nome'], new DateTime( $result['data_e'] ) ,$luogo, $categoria);
+            return $evento;
+        }
+        else return null;
+    }
+
+}
 
 ?>

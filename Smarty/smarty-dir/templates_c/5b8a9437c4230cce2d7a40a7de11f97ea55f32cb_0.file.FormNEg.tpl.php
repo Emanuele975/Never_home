@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-17 11:38:44
+/* Smarty version 3.1.33, created on 2019-09-19 15:16:21
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormNEg.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d80a9a48ff839_19730162',
+  'unifunc' => 'content_5d837fa57e8978_64676862',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b8a9437c4230cce2d7a40a7de11f97ea55f32cb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormNEg.tpl',
-      1 => 1568708372,
+      1 => 1568898973,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d80a9a48ff839_19730162 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d837fa57e8978_64676862 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -104,7 +104,7 @@ function content_5d80a9a48ff839_19730162 (Smarty_Internal_Template $_smarty_tpl)
             <div class="input-group-prepend">
               <span class="input-group-text">Descrizione</span>
             </div>
-            <textarea name="Descrizione" class="form-control" aria-label="With textarea"></textarea>
+            <textarea name="descrizione" class="form-control" aria-label="With textarea"></textarea>
           </div>
         </div>
       </div>

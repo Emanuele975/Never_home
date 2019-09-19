@@ -1,7 +1,7 @@
 <?php
-    $GLOBALS['database']= 'myRecipes';
+    $GLOBALS['database']= 'never_home';
     $GLOBALS['username']=  'root';
-    $GLOBALS['password']= 'pippo';
+    $GLOBALS['password']= '';
     $GLOBALS["ROOT"]=dirname(__FILE__);
 
 ?>

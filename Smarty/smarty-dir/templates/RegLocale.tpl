@@ -1,27 +1,4 @@
-<?php
-/* Smarty version 3.1.33, created on 2019-09-18 16:30:24
-  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\RegUtente.tpl' */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d823f80946b36_70414000',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    '3e9c7481d1a6becadebb2fc99f79a3fa5d7bc0f1' => 
-    array (
-      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\RegUtente.tpl',
-      1 => 1568812599,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_5d823f80946b36_70414000 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -55,7 +32,7 @@ function content_5d823f80946b36_70414000 (Smarty_Internal_Template $_smarty_tpl)
 </nav>
 <div class="container">
     <br><br>
-        <form action="/Never_home/Utente/Registrazione" method="post">
+        <form action="/Never_home/Luogo/Registrazione" method="post">
             <div class="row">
                 <div class="col-md-6">
                     <label for="inputEmail4">Nome</label>
@@ -63,30 +40,26 @@ function content_5d823f80946b36_70414000 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
 
                 <div class="col-md-6">
-                    <label for="inputPassword3">Cognome</label>
-                    <input type="text" class="form-control" name="cognome"  placeholder="Cognome">
+                    <label for="inputPassword3">Indirizzo</label>
+                    <input type="text" class="form-control" name="indirizzo"  placeholder="Indirizzo">
                 </div>
 
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <label for="inputAddress">Username</label>
-                    <input type="text" name="user" class="form-control"  placeholder="Username">
+                    <label for="inputAddress">Email</label>
+                    <input type="email" name="mail" class="form-control"  placeholder="Email">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputAddress">Password</label>
-                    <input type="password" name="psw" class="form-control" placeholder="Password">
+                    <label for="inputAddress">Username</label>
+                    <input type="text" name="user" class="form-control" placeholder="Username">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <label for="inputAddress2">email</label>
-                    <input type="email" name="mail" class="form-control"  placeholder="Email">
+                    <label for="inputAddress2">Password</label>
+                    <input type="password" name="psw" class="form-control"  placeholder="Password">
                 </div>
-            <div class="col-md-6">
-                <label for="inputPassword3">Codice Fiscale</label>
-                <input type="text" class="form-control" name="cf"  placeholder="Codice Fiscale">
-            </div>
             </div>
             <br>
             <br>
@@ -111,16 +84,9 @@ function content_5d823f80946b36_70414000 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
 
-    <?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
-</html><?php }
-}
+</html>

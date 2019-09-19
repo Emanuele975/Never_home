@@ -9,15 +9,19 @@ class CGestioneLuogo
         $pm = FPersistenceManager::getInstance();
         $sessione = Session::getInstance();
         $luogo=$sessione->getLuogo();
+        //echo $luogo->getNome();
         $data = $dati['Giorno'].'/'.$dati['Mese'].'/'.$dati['Anno'];
         $data = new DateTime($data);
-        $categoria = $pm->Load($dati['Categoria'],'FCategoria');
-        $evento = new EEvento_g($dati['NomeE'],$data,$luogo,$categoria);
-        $pm->store($evento);
-        $img = new EImmagine($dati['img'],$dati['tipo'],$dati['NomeE']);
+        $categoria = $pm->Loadcat($dati['Categoria']);
+        $evento = new EEvento_g($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione']);
+        //echo $evento->toString();
+        //echo $luogo->getId()."   ".$categoria->getId();
+        $id = $pm->store($evento);
+        //if ($id==null) echo 'id non esiste';
+        $img = new EImmagine($dati['img'],$dati['tipo'],$id,'EEvento_g');
         $pm->store($img);
         $view = new Vlocale();
-        $view->HomeLocale();
+        $view->HomeLocale($evento);
     }
 
     public function Form(){
@@ -32,8 +36,7 @@ class CGestioneLuogo
             if($sessione->isLoggedLuogo()){
                 //redirect alla home page
                 //header('Location: /Never_home');
-                $view = new Vlocale();
-                $view->HomeLocale();
+                $this->Home();
             } else {
                 if(isset($_SERVER['HTTP_REFERER'])) {
                     $referer = $_SERVER['HTTP_REFERER']; //indirizzo che stavo visitando
@@ -67,19 +70,18 @@ class CGestioneLuogo
         $credenziali = $view->recuperadatiLogin();
         $pm = FPersistenceManager::getInstance();
         $sessione = Session::getInstance();
-        $id = $pm->esisteluogo($credenziali['user']);
+        $id = $pm->esisteluogo($credenziali['user'],$credenziali['psw']);
         if($id){
             //login avvenuto con successo, mostrare la pagina che stava vedendo l'utente
             // o la homepage se non stava vedendo pagine particolari
 
             //login utente avvenuto con successo, salvataggio nei dati di sessione
-            $luogo = $pm->Load($credenziali['user'],"FLuogo");
+            $luogo = $pm->LoadByUserPswL($credenziali['psw'],$credenziali['user']);
             $sessione->setLuogoLoggato($luogo);
 
             $location = $sessione->getPath(); //recupero il path salvato precedentemente
             $sessione->removePath(); //cancello il path dai dati di sessione
-            $view2=new Vlocale();
-            $view2->HomeLocale();
+            $this->Home();
 
         }
         else {
@@ -96,6 +98,33 @@ class CGestioneLuogo
         }
         //redirect a login in entrambi i casi
         header('Location: /Never_home');
+    }
+
+    public function Home()
+    {
+        $sessione = Session::getInstance();
+        $luogo = $sessione->getLuogo();
+        $pm = FPersistenceManager::getInstance();
+        $evento = $pm->EventobyLuogo($luogo->getId());
+        $view=new Vlocale();
+        $view->HomeLocale($evento);
+    }
+
+    public function FormRegistrazione()
+    {
+        $view = new VRegistrazione();
+        $view->FormLocale();
+    }
+
+    public function Registrazione()
+    {
+        $view = new VRegistrazione();
+        $dati = $view->getDatiLocale();
+        $locale = new ELuogo($dati['nome'],$dati['indirizzo'],$dati['mail'],$dati['user'],$dati['psw']);
+        $pm = FPersistenceManager::getInstance();
+        $pm->store($locale);
+        $view2 = new Vlocale();
+        $view2->LuogoLoggato($locale);
     }
 
 

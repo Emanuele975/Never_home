@@ -26,8 +26,7 @@ class EBiglietto {
     function setid (String $id){
         $this->id=$id;
     }
-    
-    
+
     function setEvento( EEvento $event1){
         $this->evento=$event1;
     }
@@ -74,4 +73,5 @@ class EBiglietto {
 
         return $this->id;
     }
+
 }

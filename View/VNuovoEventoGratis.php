@@ -33,8 +33,8 @@ class VNuovoEventoGratis
         if(isset($_POST['Anno'])){
             $dati['Anno'] = $_POST['Anno'];
         }
-        if(isset($_POST['Descrizione'])){
-            $dati['Descrizione'] = $_POST['Descrizione'];
+        if(isset($_POST['descrizione'])){
+            $dati['descrizione'] = $_POST['descrizione'];
         }
         if(isset($_FILES["file_inviato"]["tmp_name"]))
         {

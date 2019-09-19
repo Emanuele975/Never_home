@@ -10,16 +10,16 @@
     include 'config.inc.php';
     include_once "include.php";
     $luogo = new ELuogo("b","mo","a@gmail.com","aa","psw");
-    //$dat4=FLuogo::getInstance();
-    //$dat4->store1($luogo);
-    $categoria = new ECategoria("house","musica");
+    $dat4=FPersistenceManager::getInstance();
+    $dat4->store($luogo);
+    //$categoria = new ECategoria("house","musica");
     //$dat5=FCategoria::getInstance();
     //$dat5->store1($categoria);
-    $data = new DateTime('12-04-1996');
-    $evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
-    $evento1 = new EEvento_g("pinewood",$data,$luogo,$categoria);
-    $man = FPersistenceManager::getInstance();
-    $man->store($evento1);
+    //$data = new DateTime('12-04-1996');
+    //$evento = new EEvento_p("pinewood",$data,$luogo,$categoria,34.5,40,50);
+    //$evento1 = new EEvento_g("pinewood",$data,$luogo,$categoria);
+    //$man = FPersistenceManager::getInstance();
+    //$man->store($evento1);
     //$dat = FEvento_p::getInstance();
     //$dat->store1($evento);
     //$eventocaricato = $dat->loadById("pinewood",$data->format('Y-m-d H:i:s'));
@@ -46,13 +46,11 @@
      //   echo 'info non recuperate';
    //$view2->creaevento();
     //$view2->visualizza($evento);
-    $_SERVER['REQUEST_URI'] = '/Never_home/Luogo/Form';
-    $fc = new CFrontController();
-    $fc->run();
+    //$_SERVER['REQUEST_URI'] = '/Never_home/Luogo/Form';
+    //$fc = new CFrontController();
+    //$fc->run();
     //$v = new VNuovoEventoGratis();
     //$v->MostraForm();
-
-
 
 
     //$img = new EImmagine(treno.jpg,jpg);

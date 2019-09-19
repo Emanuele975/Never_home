@@ -18,8 +18,15 @@ class VAccount_utente
     {
 
         if (isset($_POST['name']) && $_POST["name"] = 'Modifica') {
-            $this->smarty->display("FormReg.tpl");
+            $this->smarty->display("RegUtente.tpl");
         }
 
     }
+
+    public function utenteloggato($utente)
+    {
+        $this->smarty->assign("utente",$utente);
+        $this->smarty->display("UtenteLoggato.tpl");
+    }
+
 }

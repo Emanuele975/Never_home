@@ -81,7 +81,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Descrizione</span>
             </div>
-            <textarea name="Descrizione" class="form-control" aria-label="With textarea"></textarea>
+            <textarea name="descrizione" class="form-control" aria-label="With textarea"></textarea>
           </div>
         </div>
       </div>

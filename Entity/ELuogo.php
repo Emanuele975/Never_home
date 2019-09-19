@@ -6,8 +6,8 @@
         private $email;
         private $username;
         private $password;
-        
-        
+        private $id;
+
         function __construct(String $nome,String $indirizzo,String $email,String $username,String $password){
             $this->nome=$nome;
             $this->indirizzo=$indirizzo;
@@ -55,7 +55,17 @@
         function getPassword(){
             return $this->password;
         }
-        
+
+        function getId()
+        {
+            return $this->id;
+        }
+
+        function setId($id)
+        {
+            $this->id=$id;
+        }
+
         function toString(){
             return "il nome del luogo: ".$this->nome."\n".
                     "l indirizzo: ".$this->indirizzo."\n".
@@ -67,6 +77,7 @@
         function getF(){
             return "FLuogo";
         }
+
         function getKey(){
 
             return $this->indirizzo;

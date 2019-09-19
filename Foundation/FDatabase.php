@@ -8,9 +8,7 @@ class FDatabase
     protected $password= '';
     
     protected $db;
-    
-    //protected static $UpPath="Upload/";
-    
+
     protected $table;
     protected $values;
     
@@ -31,14 +29,10 @@ class FDatabase
             $this->db->beginTransaction();
             $stmt=$this->db->prepare($sql);
             $class::bind($stmt,$eobj);
-            //print $class."\n\n";
-            //print "\n\n".$stmt."\n\n";
             $stmt->execute();
             $id=$this->db->lastInsertId();
-            //print $id."\n";
             $this->db->commit();
             $this->closeDbConnection();
-            //print "\n ffff".$id."\n";
             return $id;
         }
         catch(PDOException $e){
@@ -144,7 +138,6 @@ class FDatabase
             return null;
         }
     }
-
 
     public function closeDbConnection(){
         static::$instance=null;

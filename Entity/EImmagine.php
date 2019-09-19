@@ -14,12 +14,15 @@ class EImmagine
     /**id dell'oggetto al quale l'immagine si riferisce */
     private $idesterno;
 
+    private $classe;
+
     /**costruttore*/
-    public function __construct($d, $t, $ide)
+    public function __construct($d, $t, $ide, $ce)
     {
         $this->data = $d;
         $this->type = $t;
         $this->idesterno = $ide;
+        $this->classe = $ce;
     }
 
     /**
@@ -70,7 +73,6 @@ class EImmagine
         $this->type = $type;
     }
 
-
     /**
      * @return int idesterno
      */
@@ -85,6 +87,16 @@ class EImmagine
     public function setIdesterno($idesterno)
     {
         $this->idesterno = $idesterno;
+    }
+
+    public function getClasse()
+    {
+        return $this->classe;
+    }
+
+    public function setClasse($classe)
+    {
+        $this->classe = $classe;
     }
 
     /**

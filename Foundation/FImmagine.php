@@ -15,7 +15,7 @@ class FImmagine extends FDatabase
     {
         parent::__construct(); //estende la superclasse FDatabase
         $this->table = "immagine";
-        $this->values = "(:id, :data, :type, :idesterno)";
+        $this->values = "(:id, :data, :type, :id_esterno, :classe_esterna)";
     }
 
     public static function getInstance(){
@@ -36,7 +36,8 @@ class FImmagine extends FDatabase
         $stmt->bindValue(':id', NULL, PDO::PARAM_INT);
         $stmt->bindValue(':data', $immagine->getData(), PDO::PARAM_LOB);
         $stmt->bindValue(':type', $immagine->getType(), PDO::PARAM_STR);
-        $stmt->bindValue(':idesterno', $immagine->getIdesterno(), PDO::PARAM_INT);
+        $stmt->bindValue(':id_esterno', $immagine->getIdesterno(), PDO::PARAM_INT);
+        $stmt->bindValue(':classe_esterna', $immagine->getClasse(), PDO::PARAM_STR);
 
     }
 

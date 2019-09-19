@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-16 16:32:19
+/* Smarty version 3.1.33, created on 2019-09-17 19:40:25
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Locale.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d7f9cf39c0077_54215244',
+  'unifunc' => 'content_5d811a89e4ec90_57927463',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '08880dbce1aa5b60bb514f2b300e94388c2beab6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Locale.tpl',
-      1 => 1568644337,
+      1 => 1568741838,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d7f9cf39c0077_54215244 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d811a89e4ec90_57927463 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -45,6 +45,9 @@ function content_5d7f9cf39c0077_54215244 (Smarty_Internal_Template $_smarty_tpl)
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Notifiche </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -71,7 +74,7 @@ function content_5d7f9cf39c0077_54215244 (Smarty_Internal_Template $_smarty_tpl)
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1" >nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
 </h5>
-              <small>data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData();?>
+              <small>data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData()->format('d-m-Y');?>
     </small>
             </div>
             <p class="mb-1">descrizione</p>
@@ -81,17 +84,20 @@ function content_5d7f9cf39c0077_54215244 (Smarty_Internal_Template $_smarty_tpl)
             <div class="d-flex w-100 justify-content-between" >
               <h5 class="mb-1">nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
 </h5>
-              <small class="text-muted">data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData();?>
+              <small class="text-muted">data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData()->format('d-m-Y');?>
 </small>
             </div>
             <p class="mb-1">descrizione </p>
-            <small class="text-muted">...</small>
+            <?php $_smarty_tpl->_assignInScope('img', base64_encode($_smarty_tpl->tpl_vars['row']->value['data']));?>
+            <img class="img-fluid d-block w-100 h-100" src="data:<?php echo $_smarty_tpl->tpl_vars['row']->value['type'];?>
+;base64,<?php echo $_smarty_tpl->tpl_vars['img']->value;?>
+" style="width: 200px;	height: 200px;">
           </a>
           <a href="#" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
 </h5>
-              <small class="text-muted">data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData();?>
+              <small class="text-muted">data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData()->format('d-m-Y');?>
 </small>
             </div>
             <p class="mb-1">descrizione</p>
@@ -102,7 +108,7 @@ function content_5d7f9cf39c0077_54215244 (Smarty_Internal_Template $_smarty_tpl)
     </div>
   </div>
 </div>
-  <div class="py-3">
+  <div class="fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">

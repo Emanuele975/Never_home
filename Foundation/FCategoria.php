@@ -42,11 +42,23 @@ class FCategoria extends FDatabase{
             return null;
     }
     
-    public function loadById($nome){
+    public function loadById($id){
+        $sql="SELECT * FROM ".static::getTables()." WHERE id= '".$id."' ;";
+        $result = parent::loadSingle($sql);
+        if($result!=null){
+            $categoria = new ECategoria($result['nome'],$result['descrizione']);
+            $categoria->setId($result['id']);
+            return $categoria;
+        }
+        else return null;
+    }
+
+    public function loadByNome($nome){
         $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' ;";
         $result = parent::loadSingle($sql);
         if($result!=null){
             $categoria = new ECategoria($result['nome'],$result['descrizione']);
+            $categoria->setId($result['id']);
             return $categoria;
         }
         else return null;

@@ -30,47 +30,46 @@
         </form>
     </div>
 </nav>
-<div class="container ">
-    <div class="row"> <br><br>
-    </div>
-    <div class="row">
+<div class="container">
+    <br><br>
         <form action="/Never_home/Utente/Registrazione" method="post">
-            <div class="form-row">
-                <div class="form-group col-md-6">
+            <div class="row">
+                <div class="col-md-6">
                     <label for="inputEmail4">Nome</label>
-                    <input type="text" name="nome" class="form-control" id="inputEmail4" placeholder="Nome">
-
+                    <input type="text" name="nome" class="form-control"  placeholder="Nome">
                 </div>
 
-                <div class="form-group col-md-6">
-                    <label for="inputPassword3"> Email</label>
-                    <input type="email" class="form-control" name="mail" id="inputPassword3" placeholder="Password">
+                <div class="col-md-6">
+                    <label for="inputPassword3">Cognome</label>
+                    <input type="text" class="form-control" name="cognome"  placeholder="Cognome">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="inputAddress">Username</label>
+                    <input type="text" name="user" class="form-control"  placeholder="Username">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputAddress">Password</label>
+                    <input type="password" name="psw" class="form-control" placeholder="Password">
                 </div>
             </div>
-            <div class="form-group">
-                <label for="inputAddress">Password</label>
-                <input type="password" name="psw" class="form-control" id="inputAddress" placeholder="via">
-            </div>
-            <div class="form-group">
-                <label for="inputAddress2">Username</label>
-                <input type="text" name="user" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="form-row">
-
-
-
-            </div>
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Check me out
-                    </label>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="inputAddress2">email</label>
+                    <input type="email" name="mail" class="form-control"  placeholder="Email">
                 </div>
+            <div class="col-md-6">
+                <label for="inputPassword3">Codice Fiscale</label>
+                <input type="text" class="form-control" name="cf"  placeholder="Codice Fiscale">
             </div>
-            <button type="submit" class="btn btn-primary">Registrati o modifica</button>
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Registrati </button>
         </form>
-    </div>
+</div>
 
 
     <div class="fixed-bottom">

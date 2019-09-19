@@ -1,17 +1,18 @@
 <?php
 
-class FLuogo extends FDatabase{
-    
+class FLuogo extends FDatabase
+{
+
     protected static $instance=null;
     
     protected function __construct(){
         parent::__construct();
         $this->table = "luogo";
-        $this->values="(:nome,:indirizzo,:email,:username,:password)";
+        $this->values="(:nome,:indirizzo,:email,:username,:password,:id)";
     }
     
     public static function bind($stmt,ELuogo $luogo){
-        //$stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
+        $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':nome', $luogo->getNome(), PDO::PARAM_STR);
         $stmt->bindValue(':indirizzo', $luogo->getIndirizzo(), PDO::PARAM_STR);
         $stmt->bindValue(':email', $luogo->getEmail(), PDO::PARAM_STR);
@@ -38,20 +39,31 @@ class FLuogo extends FDatabase{
     
     public function store1(ELuogo $luogo){
         $sql = "INSERT INTO ".static::getTables()." VALUES ".static::getValues().";";
-        //print "\n\n".$sql."\n\n";
         $id = parent::store($sql,'FLuogo',$luogo);
-        //print "l id:   ".$id;
-        if($id) 
+        if($id)
             return $id;
         else 
             return null;
     }
     
-    public function loadById($indirizzo){
-        $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$indirizzo."' ;";
+    public function loadById($id){
+        $sql="SELECT * FROM ".static::getTables()." WHERE id= '".$id."' ;";
         $result = parent::loadSingle($sql);
         if($result!=null){
             $luogo = new ELuogo($result['nome'],$result['indirizzo'], $result['email'], $result['username'], $result['password']);
+            $luogo->setId($result['id']);
+            return $luogo;
+        }
+        else return null;
+    }
+
+    public function loadByUserPsw($psw,$user){
+        $sql="SELECT * FROM ".static::getTables()." WHERE password= '".$psw."' and username= '".$user."' ;";
+        $result = parent::loadSingle($sql);
+        if($result!=null){
+            $luogo = new ELuogo($result['nome'],$result['indirizzo'],($result['email']),
+                $result['username'],$result['password'],);
+            $luogo->setId($result['id']);
             return $luogo;
         }
         else return null;
@@ -65,20 +77,16 @@ class FLuogo extends FDatabase{
             return false;
     }
 
-    public function esisteluogo($nome)
+    public function esisteluogo($user,$psw)
     {
-        $sql = "SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' ;";
+        $sql = "SELECT * FROM ".static::getTables()." WHERE username= '".$user."'and password= '".$psw."' ;";
         $result = parent::exist($sql);
         if ($result!=null)
             return true;
         else
             return false;
     }
-    
-    
-}    
 
-
-
+}
 
 ?>

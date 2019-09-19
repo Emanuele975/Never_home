@@ -33,6 +33,9 @@
     </form>
   </div>
 </nav>
+<br>
+Utente registrato con successo
+<br>
 {$utente->getNome()}
 <br>
 {$utente->getCognome()}
