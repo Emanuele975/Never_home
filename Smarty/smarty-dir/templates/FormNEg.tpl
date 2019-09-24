@@ -33,11 +33,15 @@
     </form>
   </div>
 </nav>
-<form action='/Never_home/Luogo/NuovoEventoGratis' method="post" enctype="multipart/form-data">
+
+<form action='/Never_home/Evento/NuovoEventoGratis' method="post" enctype="multipart/form-data">
+
+  <br><br>
+
   <div class="container">
-    <br><br>
+
     <div class="row">
-      <div class="col-sm">
+      <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text">Nome Evento</span>
@@ -45,59 +49,70 @@
           <input type="text" name="NomeE" aria-label="First name" class="form-control">
         </div>
       </div>
-        <div class="col-sm">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
-            </div>
-            <select class="custom-select" id="inputGroupSelect01" name="Categoria">
-              <option selected>Choose...</option>
-              <option value="Teatro">Teatro</option>
-              <option value="Concerto">Concerto</option>
-              <option value="Partita">Partita</option>
-            </select>
+      <div class="form-group col-md">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
           </div>
+          <select class="custom-select" id="inputGroupSelect01" name="Categoria">
+            <option selected>Choose...</option>
+            <option value="Teatro">Teatro</option>
+            <option value="Concerto">Concerto</option>
+            <option value="Partita">Partita</option>
+          </select>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <div class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Data evento</span>
-            </div>
-            <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping0">/</span>
-            </div>
-            <input type="text" class="form-control" name="Mese" placeholder="MM" aria-label="MM" aria-describedby="addon-wrapping">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping1">/</span>
-            </div>
-            <input type="text" class="form-control" name="Anno" placeholder="AAAA" aria-label="AAAA" aria-describedby="addon-wrapping">
-          </div>
-        </div>
-        <div class="col-sm">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Descrizione</span>
-            </div>
-            <textarea name="descrizione" class="form-control" aria-label="With textarea"></textarea>
-          </div>
-        </div>
-      </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <label for="exampleFormControlFile1"> inserisci foto evento  </label>
-        <input type="file" class="form-control-file" name="file_inviato" id="exampleFormControlFile1"><br>
       </div>
     </div>
+
+    <div class="row">
+      <div class="form-group col-md">
+        <div class="input-group flex-nowrap">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Data evento</span>
+          </div>
+          <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping0">/</span>
+          </div>
+          <input type="text" class="form-control" name="Mese" placeholder="MM" aria-label="MM" aria-describedby="addon-wrapping">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping1">/</span>
+          </div>
+          <input type="text" class="form-control" name="Anno" placeholder="AAAA" aria-label="AAAA" aria-describedby="addon-wrapping">
+        </div>
+      </div>
+      <div class="form-group col-md">
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="form-control-file" id="inputGroupFile0" name="file_inviato" aria-describedby="inputGroupFileAddon0" >
+            <label class="custom-file-label" for="inputGroupFile0">Choose file</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Descrizione</span>
+          </div>
+          <textarea name="descrizione" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
     <div class="row my-5">
       <div class="mx-auto">
         <button type="submit" class="btn btn-dark" >Crea Evento</button>
       </div>
     </div>
-  </div>
+  .
 </form>
+
   <div class="fixed-bottom">
     <div class="container">
       <div class="row">
@@ -113,6 +128,7 @@
       </div>
     </div>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

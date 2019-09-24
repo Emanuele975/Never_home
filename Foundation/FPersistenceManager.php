@@ -60,6 +60,13 @@ class FPersistenceManager
         return $dat->esisteluogo($user,$psw);
     }
 
+    public function getImgByidEvento($id)
+    {
+        $dat = FImmagine::getInstance();
+        $img = $dat->getImgByidEvento($id);
+        return $img;
+    }
+
     public function EventobyLuogo($id)
     {
         $dat = FEvento_g::getInstance();

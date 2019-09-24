@@ -39,6 +39,8 @@ Utente registrato con successo
 {$utente->getNome()}
 <br>
 {$utente->getCognome()}
+
+
   <div class="fixed-bottom">
     <div class="container">
       <div class="row">

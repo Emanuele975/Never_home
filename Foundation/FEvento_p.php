@@ -7,18 +7,20 @@ class FEvento_p extends FDatabase
     protected function __construct(){
         parent::__construct();
         $this->table = "evento_p";
-        $this->values="(:nome,:data_e,:prezzo,:posti_disponibili,:posti_totali, :indirizzo_luogo, :nome_categoria)";
+        $this->values="(:nome,:data_e,:prezzo,:posti_disponibili,:posti_totali,:id_luogo,:id_categoria
+        ,:descrizione,:id)";
     }
 
     public static function bind($stmt,EEvento_p $evento){
-        //$stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
+        $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':nome', $evento->getNome(), PDO::PARAM_STR);
         $stmt->bindValue(':data_e', $evento->getData()->format('Y-m-d'), PDO::PARAM_STR);
         $stmt->bindValue(':prezzo', $evento->getPrezzo());
         $stmt->bindValue(':posti_disponibili', $evento->getPosti_disponibili(), PDO::PARAM_INT);
         $stmt->bindValue(':posti_totali', $evento->getPosti_totali(), PDO::PARAM_INT);
-        $stmt->bindValue(':indirizzo_luogo', $evento->getLuogo()->getIndirizzo(), PDO::PARAM_STR);
-        $stmt->bindValue(':nome_categoria', $evento->getCategoria()->getNome(), PDO::PARAM_STR);
+        $stmt->bindValue(':id_luogo', $evento->getLuogo()->getId(), PDO::PARAM_INT);
+        $stmt->bindValue(':id_categoria', $evento->getCategoria()->getId(), PDO::PARAM_INT);
+        $stmt->bindValue(':descrizione', $evento->getDescrizione(), PDO::PARAM_STR);
 
     }
 
@@ -46,7 +48,6 @@ class FEvento_p extends FDatabase
             return null;
     }
 
-    //ffvfvdfvdaffvdfv
     public function loadById($nome, $data){
         $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e= '".$data."' ;";
         $result = parent::loadSingle($sql);
@@ -57,6 +58,7 @@ class FEvento_p extends FDatabase
             $categoria = $datcategoria->loadById($result['nome_categoria']);
             $evento = new EEvento_p($result['nome'], new DateTime( $result['data_e'] ) , $luogo, $categoria,
                 $result['prezzo'],$result['posti_disponibili'],$result['posti_totali']);
+            $evento->setId($result['id']);
             return $evento;
         }
         else return null;

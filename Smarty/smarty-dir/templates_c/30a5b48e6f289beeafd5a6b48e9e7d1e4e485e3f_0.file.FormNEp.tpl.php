@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-16 16:32:59
+/* Smarty version 3.1.33, created on 2019-09-23 17:33:55
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormNEp.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d7f9d1bbd62c2_94843214',
+  'unifunc' => 'content_5d88e5e3e61314_61756157',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30a5b48e6f289beeafd5a6b48e9e7d1e4e485e3f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormNEp.tpl',
-      1 => 1567603726,
+      1 => 1569252809,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,20 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d7f9d1bbd62c2_94843214 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d88e5e3e61314_61756157 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,82 +55,118 @@ function content_5d7f9d1bbd62c2_94843214 (Smarty_Internal_Template $_smarty_tpl)
     </form>
   </div>
 </nav>
-<div class="container">
-  <div class="row">
-    <pre>
 
-    </pre>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Nome Evento</span>
+<br><br>
+
+<form action='/Never_home/Evento/NuovoEventoPagamento' method="post" enctype="multipart/form-data">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="form-group col-md">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Nome Evento</span>
+          </div>
+          <input type="text" name="NomeE" aria-label="First name" class="form-control">
         </div>
-        <input type="text" aria-label="First name" class="form-control">
       </div>
-    </div>
-      <div class="col-sm">
-        <div class="input-group mb-3">
+      <div class="form-group col-md">
+        <div class="input-group">
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
+          <select class="custom-select" id="inputGroupSelect01" name="Categoria">
             <option selected>Choose...</option>
-            <option value="1">Teatro</option>
-            <option value="2">Concerto</option>
-            <option value="3">Partita</option>
+            <option value="Teatro">Teatro</option>
+            <option value="Concerto">Concerto</option>
+            <option value="Partita">Partita</option>
           </select>
         </div>
       </div>
     </div>
+
     <div class="row">
-      <div class="col-sm">
-        <div class="input-group ">
+      <div class="form-group col-md">
+        <div class="input-group flex-nowrap">
           <div class="input-group-prepend">
             <span class="input-group-text">Data evento</span>
           </div>
-          <input type="text" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
+          <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
           <div class="input-group-prepend">
             <span class="input-group-text" id="addon-wrapping0">/</span>
           </div>
-          <input type="text" class="form-control" placeholder="MM" aria-label="MM" aria-describedby="addon-wrapping">
+          <input type="text" class="form-control" name="Mese" placeholder="MM" aria-label="MM" aria-describedby="addon-wrapping">
           <div class="input-group-prepend">
             <span class="input-group-text" id="addon-wrapping1">/</span>
           </div>
-          <input type="text" class="form-control" placeholder="AAAA" aria-label="AAAA" aria-describedby="addon-wrapping">
-
+          <input type="text" class="form-control" name="Anno" placeholder="AAAA" aria-label="AAAA" aria-describedby="addon-wrapping">
         </div>
       </div>
-      <div class="col-sm">
+      <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Numero posti</span>
+            <span class="input-group-text">Prezzo</span>
           </div>
-          <input type="text" aria-label="First name" class="form-control">
+          <input type="text" name="Prezzo" aria-label="Prezzo" class="form-control">
         </div>
       </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Posti disponibili</span>
+          </div>
+          <input type="text" name="Posti" aria-label="Posti disponibili" class="form-control">
+        </div>
+      </div>
+      <div class="form-group col-md">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                   aria-describedby="inputGroupFileAddon01" name="file_inviato">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Descrizione</span>
+          </div>
+          <textarea name="descrizione" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="row">
-    <div class="col-sm">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">prezzo</span>
-          <span class="input-group-text">€</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-      </div>
+
+  <div class="row my-5">
+    <div class="mx-auto">
+      <button type="submit" class="btn btn-dark" >Crea Evento</button>
     </div>
-    <div class="col-sm">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Descrizione</span>
-        </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
-      </div>
-    </div>
+  </div>
+
+</form>
+
+<div class="btn-group" role="group">
+  <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+    <a class="dropdown-item" href="#">Dropdown link</a>
+    <a class="dropdown-item" href="#">Dropdown link</a>
   </div>
 </div>
+
   <div class="fixed-bottom">
     <div class="container">
       <div class="row">
@@ -144,6 +182,7 @@ function content_5d7f9d1bbd62c2_94843214 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </div>
   </div>
+
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >

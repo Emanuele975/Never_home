@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-19 10:25:09
+/* Smarty version 3.1.33, created on 2019-09-23 17:35:57
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d833b65ba8796_95358953',
+  'unifunc' => 'content_5d88e65d574fe6_39151796',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f996b25c298261bd659e18962667e41810aca5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-      1 => 1568881506,
+      1 => 1569252954,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d833b65ba8796_95358953 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d88e65d574fe6_39151796 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -40,6 +40,17 @@ function content_5d833b65ba8796_95358953 (Smarty_Internal_Template $_smarty_tpl)
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+        <li>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#">Dropdown link</a>
+                    <a class="dropdown-item" href="#">Dropdown link</a>
+                </div>
+            </div>
+        </li>
       <li class="nav-item active">
         <a class="nav-link" href="/Never_home/Utente/FormRegistrazione" name="registrazione">Registrazione utente <span class="sr-only">(current)</span></a>
       </li>
@@ -61,50 +72,22 @@ function content_5d833b65ba8796_95358953 (Smarty_Internal_Template $_smarty_tpl)
 </nav>
   Home page del sito
 <br><br>
+<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <button type="button" class="btn btn-secondary">1</button>
+    <button type="button" class="btn btn-secondary">2</button>
 
-<div class="container">
-    <div class="row">
-        <br>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img src="" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
-</h5>
-                    <p class="card-text">Descrizione:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getCategoria()->toString();?>
-</p>
-                    <a href="#" class="btn btn-primary">Vai all'evento</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img src="" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
-</h5>
-                    <p class="card-text">Descrizione:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getCategoria()->toString();?>
-</p>
-                    <a href="#" class="btn btn-primary">Vai all'evento</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img src="" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
-</h5>
-                    <p class="card-text">Descrizione:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getCategoria()->toString();?>
-</p>
-                    <a href="#" class="btn btn-primary">Vai all'evento</a>
-                </div>
-            </div>
+    <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item" href="#">Dropdown link</a>
+            <a class="dropdown-item" href="#">Dropdown link</a>
         </div>
     </div>
 </div>
+
+
 <div class="fixed-bottom">
     <div class="container">
         <div class="row">
@@ -124,7 +107,7 @@ function content_5d833b65ba8796_95358953 (Smarty_Internal_Template $_smarty_tpl)
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"><?php echo '</script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>

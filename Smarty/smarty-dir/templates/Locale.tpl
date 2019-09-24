@@ -48,30 +48,14 @@
       <div class="container">
         <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1" >nome evento: {$evento->getNome()}</h5>
-              <small>data evento : {$evento->getData()->format('d-m-Y')}    </small>
-            </div>
-            <p class="mb-1">descrizione</p>
-            <small>...</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between" >
               <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
               <small class="text-muted">data evento : {$evento->getData()->format('d-m-Y')}</small>
             </div>
             <p class="mb-1">descrizione </p>
-            {$img = base64_encode($row['data']) }
-            <img class="img-fluid d-block w-100 h-100" src="data:{$row['type']};base64,{$img}" style="width: 200px;	height: 200px;">
           </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
-              <small class="text-muted">data evento : {$evento->getData()->format('d-m-Y')}</small>
-            </div>
-            <p class="mb-1">descrizione</p>
-            <small class="text-muted">...</small>
-          </a>
+          {$img2 = base64_encode($img->getData())}
+          <img class="img-fluid d-block " src="data:{$img->getType()};base64,{$img2}" style="width: 400px;	height: 250px;">
         </div>
       </div>
     </div>

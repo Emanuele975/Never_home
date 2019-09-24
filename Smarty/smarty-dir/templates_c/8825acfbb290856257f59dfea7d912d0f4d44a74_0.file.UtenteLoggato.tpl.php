@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-18 15:00:43
+/* Smarty version 3.1.33, created on 2019-09-23 10:18:15
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\UtenteLoggato.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d822a7b0b5a67_36332969',
+  'unifunc' => 'content_5d887fc7385b49_45683357',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8825acfbb290856257f59dfea7d912d0f4d44a74' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\UtenteLoggato.tpl',
-      1 => 1568811640,
+      1 => 1569226690,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d822a7b0b5a67_36332969 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d887fc7385b49_45683357 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -63,6 +63,15 @@ Utente registrato con successo
 
 <br>
 <?php echo $_smarty_tpl->tpl_vars['utente']->value->getCognome();?>
+
+
+<div class="input-group">
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+  </div>
+</div>
+
 
   <div class="fixed-bottom">
     <div class="container">

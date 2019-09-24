@@ -74,15 +74,15 @@ class FEvento_g extends FDatabase{
         $result = parent::loadSingle($sql);
         if($result!=null){
             $datluogo = FLuogo::getInstance();
-            $luogo = $datluogo->loadById($result['indirizzo_luogo']);
+            $luogo = $datluogo->loadById($id);
             $datcategoria = FCategoria::getInstance();
-            $categoria = $datcategoria->loadById($result['nome_categoria']);
-            $evento = new EEvento_g($result['nome'], new DateTime( $result['data_e'] ) ,$luogo, $categoria);
+            $categoria = $datcategoria->loadById($result['id_categoria']);
+            $evento = new EEvento_g($result['nome'], new DateTime( $result['data_e'] ) ,$luogo, $categoria,$result['descrizione']);
+            $evento->setId($result['id']);
             return $evento;
         }
         else return null;
     }
 
 }
-
 ?>

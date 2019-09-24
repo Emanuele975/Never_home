@@ -1,7 +1,7 @@
 <?php
 
 
-class VNuovoEventoGratis
+class VNuovoEventoPagamento
 {
     private $smarty;
 
@@ -48,10 +48,17 @@ class VNuovoEventoGratis
         {
             $dati['tipo'] = $_FILES["file_inviato"]["type"];
         }
+        if(isset($_POST['Prezzo']))
+        {
+            $dati['Prezzo'] = $_POST['Prezzo'];
+        }
+        if(isset($_POST['Posti']))
+        {
+            $dati['Posti'] = $_POST['Posti'];
+        }
         $img = file_get_contents($dati['nometmp']);
         $dati['img'] = $img;
         return $dati;
     }
-
 
 }

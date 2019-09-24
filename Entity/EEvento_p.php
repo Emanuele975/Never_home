@@ -6,9 +6,9 @@
         private $posti_disponibili;
         private $posti_totali;
                 
-        function __construct(String $nome, DateTime $data,ELuogo $luogo,ECategoria $categoria,float $prezzo,
-                int $posti_disponibili,int $posti_totali ){
-            parent::__construct($nome,$data,$luogo,$categoria);
+        function __construct(String $nome, DateTime $data,ELuogo $luogo,ECategoria $categoria,$descrizione,
+                             float $prezzo, int $posti_disponibili,int $posti_totali ){
+            parent::__construct($nome,$data,$luogo,$categoria,$descrizione);
             $this->prezzo=$prezzo;
             $this->posti_disponibili=$posti_disponibili;
             $this->posti_totali = $posti_totali;

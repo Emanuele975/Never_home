@@ -3,26 +3,6 @@
 
 class CGestioneLuogo
 {
-    public function NuovoEventoGratis(){
-        $view = new VNuovoEventoGratis();
-        $dati = $view->recuperaDatiEvento();
-        $pm = FPersistenceManager::getInstance();
-        $sessione = Session::getInstance();
-        $luogo=$sessione->getLuogo();
-        //echo $luogo->getNome();
-        $data = $dati['Giorno'].'/'.$dati['Mese'].'/'.$dati['Anno'];
-        $data = new DateTime($data);
-        $categoria = $pm->Loadcat($dati['Categoria']);
-        $evento = new EEvento_g($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione']);
-        //echo $evento->toString();
-        //echo $luogo->getId()."   ".$categoria->getId();
-        $id = $pm->store($evento);
-        //if ($id==null) echo 'id non esiste';
-        $img = new EImmagine($dati['img'],$dati['tipo'],$id,'EEvento_g');
-        $pm->store($img);
-        $view = new Vlocale();
-        $view->HomeLocale($evento);
-    }
 
     public function Form(){
         $view = new VNuovoEventoGratis();
@@ -106,8 +86,10 @@ class CGestioneLuogo
         $luogo = $sessione->getLuogo();
         $pm = FPersistenceManager::getInstance();
         $evento = $pm->EventobyLuogo($luogo->getId());
+        $img = $pm->getImgByidEvento($evento->getId());
+        //echo $img->getType();
         $view=new Vlocale();
-        $view->HomeLocale($evento);
+        $view->HomeLocale($evento,$img);
     }
 
     public function FormRegistrazione()
@@ -127,6 +109,26 @@ class CGestioneLuogo
         $view2->LuogoLoggato($locale);
     }
 
+    public function CercadaNome()
+    {
+        if(($_SERVER['REQUEST_METHOD']=="POST")){
+            $view = new VRisultati();
+            $nome = $view->recuperaNome(); //nome inserito nella barra di ricerca
+            $pm = FPersistentManager::getInstance();
+            $ricette = $pm->search("ricetta", $nome, "nome");
+            if($ricette!=null){
+                $msg = "";
+            } else {
+                $msg = "Non ci sono ricette che soddisfano questi parametri";
+            }
+            $view->mostraRisultati($ricette, $msg);
+
+        }
+        else{
+            header('HTTP/1.1 405 Method Not Allowed');
+            header('Allow: POST');
+        }
+    }
 
 }
 

@@ -34,7 +34,7 @@ class FImmagine extends FDatabase
     public static function bind($stmt, EImmagine $immagine)
     {
         $stmt->bindValue(':id', NULL, PDO::PARAM_INT);
-        $stmt->bindValue(':data', $immagine->getData(), PDO::PARAM_LOB);
+        $stmt->bindValue(':data', $immagine->getData());
         $stmt->bindValue(':type', $immagine->getType(), PDO::PARAM_STR);
         $stmt->bindValue(':id_esterno', $immagine->getIdesterno(), PDO::PARAM_INT);
         $stmt->bindValue(':classe_esterna', $immagine->getClasse(), PDO::PARAM_STR);
@@ -87,4 +87,15 @@ class FImmagine extends FDatabase
         return $this->values;
     }
 
+    public function getImgByidEvento($id)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE id_esterno= '".$id."' ;";
+        $result = parent::loadSingle($sql);
+        if($result!=null){
+            $immagine = new EImmagine($result['data'],$result['type'],$result['id_esterno'],$result['classe_esterna']);
+            $immagine->getId($result['id']);
+            return $immagine;
+        }
+        else return null;
+    }
 }

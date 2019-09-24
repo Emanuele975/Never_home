@@ -32,6 +32,7 @@
    include_once 'View/VRegistrazione.php';
    include_once 'View/Vlocale.php';
    include_once 'View/VAccount_utente.php';
+   include_once 'View/VNuovoEventoPagamento.php';
 
    include_once 'Controller/CFrontController.php';
    include_once 'Controller/CGestioneLuogo.php';
