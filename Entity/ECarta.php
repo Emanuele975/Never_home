@@ -5,6 +5,7 @@
         private $ccv;
         private $data_di_scadenza;
         private $numerocarta;
+        private $id;
       
       
         function __construct(String $CF_titolare, int $ccv, DateTime $data_di_scadenza, int $numerocarta ){
@@ -13,47 +14,47 @@
             $this->data_di_scadenza = $data_di_scadenza;
             $this->numerocarta = $numerocarta;
         }    
-      
-      
+
         function setCF_titolare(String $CF_titolare){
             $this->CF_titolare = $CF_titolare;
         }
-         
 
         function getCF_titolare(){
             return $this->CF_titolare;
         }
-          
-          
+
         function setCcv(int $ccv){
             $this->ccv=ccv;
         }
-         
 
         function getCcv(){
             return $this->ccv;    
         }
 
-
-
         function setData_di_scadenza(DateTime $data_di_scadenza){
             $this->data_di_scadenza = $data_di_scadenza;
         }
-         
 
         function getData_di_scadenza(){
             return $this->data_di_scadenza;
         } 
-          
-          
-          
+
          function setNumerocarta(int $numerocarta){
             $this->numerocarta = $numerocarta;
         }
-         
 
         function getNumerocarta(){
             return $this->numerocarta; 
+        }
+
+        function setId($id)
+        {
+            $this->id=$id;
+        }
+
+        function getId($id)
+        {
+            return $this->id;
         }
         
         function toString(){
@@ -67,9 +68,9 @@
             return "FCarta";
         }
 
-        function getKey(){
-
-            return $this->numerocarta;
+        function getKey()
+        {
+            return $this->id;
         }
 
       

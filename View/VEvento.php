@@ -17,7 +17,7 @@ class VEvento
     public function Acquista()
     {
         if (isset($_POST['name']) && $_POST["name"] = 'acquista') {
-            $this->smarty->display("AcquistaEvento.tpl");
+            $this->smarty->display("FormAcquisto.tpl");
         }
     }
 

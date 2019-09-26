@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-25 13:06:31
-  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormNEp.tpl' */
+/* Smarty version 3.1.33, created on 2019-09-26 12:01:14
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormPagamento.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d8b4a37ed4205_82191910',
+  'unifunc' => 'content_5d8c8c6aa982d3_81179608',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '30a5b48e6f289beeafd5a6b48e9e7d1e4e485e3f' => 
+    'db2d2966394569c739bef4e54bcf701b4cabeaed' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormNEp.tpl',
-      1 => 1569252898,
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormPagamento.tpl',
+      1 => 1569483778,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d8b4a37ed4205_82191910 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d8c8c6aa982d3_81179608 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
 </head>
 
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,6 +46,9 @@ function content_5d8b4a37ed4205_82191910 (Smarty_Internal_Template $_smarty_tpl)
       <li class="nav-item active">
         <a class="nav-link" href="#">Notifiche </a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Never_home/Luogo/Logout">Logout </a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -56,9 +57,9 @@ function content_5d8b4a37ed4205_82191910 (Smarty_Internal_Template $_smarty_tpl)
   </div>
 </nav>
 
-<br><br>
+<form action='/Never_home/Evento/Acquisto' method="post" enctype="multipart/form-data">
 
-<form action='/Never_home/Evento/NuovoEventoPagamento' method="post" enctype="multipart/form-data">
+  <br><br>
 
   <div class="container">
 
@@ -66,49 +67,17 @@ function content_5d8b4a37ed4205_82191910 (Smarty_Internal_Template $_smarty_tpl)
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Nome Evento</span>
+            <span class="input-group-text">Numero carta</span>
           </div>
-          <input type="text" name="NomeE" aria-label="First name" class="form-control">
+          <input type="text" name="numero" aria-label="Numero carta" class="form-control">
         </div>
       </div>
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+            <span class="input-group-text">CF titolare</span>
           </div>
-          <select class="custom-select" id="inputGroupSelect01" name="Categoria">
-            <option selected>Choose...</option>
-            <option value="Teatro">Teatro</option>
-            <option value="Concerto">Concerto</option>
-            <option value="Partita">Partita</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="form-group col-md">
-        <div class="input-group flex-nowrap">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Data evento</span>
-          </div>
-          <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="addon-wrapping0">/</span>
-          </div>
-          <input type="text" class="form-control" name="Mese" placeholder="MM" aria-label="MM" aria-describedby="addon-wrapping">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="addon-wrapping1">/</span>
-          </div>
-          <input type="text" class="form-control" name="Anno" placeholder="AAAA" aria-label="AAAA" aria-describedby="addon-wrapping">
-        </div>
-      </div>
-      <div class="form-group col-md">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Prezzo</span>
-          </div>
-          <input type="text" name="Prezzo" aria-label="Prezzo" class="form-control">
+          <input type="text" name="cf" aria-label="CF titolare" class="form-control">
         </div>
       </div>
     </div>
@@ -117,44 +86,37 @@ function content_5d8b4a37ed4205_82191910 (Smarty_Internal_Template $_smarty_tpl)
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Posti disponibili</span>
+            <span class="input-group-text">Data di scadenza</span>
           </div>
-          <input type="text" name="Posti" aria-label="Posti disponibili" class="form-control">
+          <input type="text" name="data" aria-label="Data di scadenza" class="form-control">
         </div>
       </div>
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            <span class="input-group-text">CCV</span>
           </div>
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="inputGroupFile01"
-                   aria-describedby="inputGroupFileAddon01" name="file_inviato">
-            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-          </div>
+          <input type="password" name="ccv" aria-label="CCV" class="form-control">
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="form-group col-md-6">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Descrizione</span>
-          </div>
-          <textarea name="descrizione" class="form-control" aria-label="With textarea"></textarea>
-        </div>
+      <div class="col-md-6">
+        Prezzo totale:<?php echo $_smarty_tpl->tpl_vars['prezzo']->value;?>
+
       </div>
     </div>
+
 
   </div>
 
-  <div class="row my-5">
-    <div class="mx-auto">
-      <button type="submit" class="btn btn-dark" >Crea Evento</button>
+    <div class="row my-5">
+      <div class="mx-auto">
+        <button type="submit" class="btn btn-dark" >Procedi</button>
+      </div>
     </div>
-  </div>
-
+  .
 </form>
 
   <div class="fixed-bottom">

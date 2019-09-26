@@ -52,6 +52,57 @@ class CGestioneEvento
         $view->HomeLocale($evento,$img);
     }
 
+    public function CercadaNome()
+    {
+        if(($_SERVER['REQUEST_METHOD']=="POST")){
+            $view = new VRicerca();
+            $nome = $view->getNomericerca(); //nome inserito nella barra di ricerca
+            $pm = FPersistenceManager::getInstance();
+            $evento = $pm->EventoByNome($nome);
+            if($evento!=null){
+                $msg = "";
+                $immagine = $pm->getImgByidEvento($evento->getId());
+            } else {
+                $msg = "Non ci sono ricette che soddisfano questi parametri";
+            }
+            $view->mostraRisultati($evento, $immagine, $msg);
+
+        }
+        else{
+            header('HTTP/1.1 405 Method Not Allowed');
+            header('Allow: POST');
+        }
+    }
+
+    public function FormAcquisto()
+    {
+        $view = new VAcquisto();
+        $id = $_POST['evento'];
+        $pm = FPersistenceManager::getInstance();
+        $evento = $pm->Load($id,'FEvento_p');
+        $immagine = $pm->getImgByidEvento($evento->getId());
+        $view->FormAcquisto($evento,$immagine);
+
+    }
+
+    public function FormPagamento()
+    {
+        $view = new VAcquisto();
+        $prezzo = $_POST['prezzotot'];
+        $prezzo = $prezzo*$_POST['num'];
+        $view->FormPagamento($prezzo);
+    }
+
+    public function Acquisto()
+    {
+        $view = new VAcquisto();
+        $dati = $view->getDati();
+        $pm = FPersistenceManager::getInstance();
+        if ($pm->CartaValida($dati['cf'],$dati['ccv'],$dati['data'],$dati['numero']))
+        {
+            $acquisto = new EAcquisto();
+        }
+    }
 
 
 }

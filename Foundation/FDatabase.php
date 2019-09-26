@@ -6,9 +6,7 @@ class FDatabase
     protected $database= 'never_home';
     protected $username= 'root';
     protected $password= '';
-    
     protected $db;
-
     protected $table;
     protected $values;
     

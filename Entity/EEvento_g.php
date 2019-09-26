@@ -3,7 +3,8 @@
     
     class EEvento_g extends EEvento{
         
-        function __construct(String $nome, DateTime $data,ELuogo $luogo,ECategoria $categoria,$descrizione){
+        function __construct(String $nome, DateTime $data,ELuogo $luogo,ECategoria $categoria,$descrizione)
+        {
             parent::__construct($nome,$data,$luogo,$categoria,$descrizione);
         }
 

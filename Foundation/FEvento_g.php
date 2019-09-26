@@ -45,16 +45,17 @@ class FEvento_g extends FDatabase{
             return null;
     }
     
-    public function loadById($nome, $data)
+    public function loadById($id)
     {
-        $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e= '".$data."' ;";
+        $sql="SELECT * FROM ".static::getTables()." WHERE id= '".$id."' ;";
         $result = parent::loadSingle($sql);
         if($result!=null){
             $datluogo = FLuogo::getInstance();
-            $luogo = $datluogo->loadById($result['indirizzo_luogo']);
+            $luogo = $datluogo->loadById($result['id_luogo']);
             $datcategoria = FCategoria::getInstance();
-            $categoria = $datcategoria->loadById($result['nome_categoria']);
+            $categoria = $datcategoria->loadById($result['id_categoria']);
             $evento = new EEvento_g($result['nome'], new DateTime( $result['data_e'] ) , $luogo, $categoria);
+            $evento->setId($id);
             return $evento;
         }
         else return null;
@@ -78,6 +79,22 @@ class FEvento_g extends FDatabase{
             $datcategoria = FCategoria::getInstance();
             $categoria = $datcategoria->loadById($result['id_categoria']);
             $evento = new EEvento_g($result['nome'], new DateTime( $result['data_e'] ) ,$luogo, $categoria,$result['descrizione']);
+            $evento->setId($result['id']);
+            return $evento;
+        }
+        else return null;
+    }
+
+    public function loadByNome($nome)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' ;";
+        $result = parent::loadSingle($sql);
+        if($result!=null){
+            $datluogo = FLuogo::getInstance();
+            $luogo = $datluogo->loadById($result['id_luogo']);
+            $datcategoria = FCategoria::getInstance();
+            $categoria = $datcategoria->loadById($result['id_categoria']);
+            $evento = new EEvento_g($result['nome'], new DateTime( $result['data_e'] ) , $luogo, $categoria);
             $evento->setId($result['id']);
             return $evento;
         }

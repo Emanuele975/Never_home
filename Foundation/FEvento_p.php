@@ -48,16 +48,16 @@ class FEvento_p extends FDatabase
             return null;
     }
 
-    public function loadById($nome, $data){
-        $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e= '".$data."' ;";
+    public function loadById($id){
+        $sql="SELECT * FROM ".static::getTables()." WHERE id= '".$id."' ;";
         $result = parent::loadSingle($sql);
         if($result!=null){
             $datluogo = FLuogo::getInstance();
-            $luogo = $datluogo->loadById($result['indirizzo_luogo']);
+            $luogo = $datluogo->loadById($result['id_luogo']);
             $datcategoria = FCategoria::getInstance();
-            $categoria = $datcategoria->loadById($result['nome_categoria']);
+            $categoria = $datcategoria->loadById($result['id_categoria']);
             $evento = new EEvento_p($result['nome'], new DateTime( $result['data_e'] ) , $luogo, $categoria,
-                $result['prezzo'],$result['posti_disponibili'],$result['posti_totali']);
+                $result['descrizione'], $result['prezzo'],$result['posti_disponibili'],$result['posti_totali']);
             $evento->setId($result['id']);
             return $evento;
         }
@@ -70,6 +70,23 @@ class FEvento_p extends FDatabase
             return true;
         else
             return false;
+    }
+
+    public function loadByNome($nome)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' ;";
+        $result = parent::loadSingle($sql);
+        if($result!=null){
+            $datluogo = FLuogo::getInstance();
+            $luogo = $datluogo->loadById($result['id_luogo']);
+            $datcategoria = FCategoria::getInstance();
+            $categoria = $datcategoria->loadById($result['id_categoria']);
+            $evento = new EEvento_p($result['nome'], new DateTime( $result['data_e'] ) , $luogo, $categoria,
+                $result['descrizione'],$result['prezzo'],$result['posti_disponibili'],$result['posti_totali']);
+            $evento->setId($result['id']);
+            return $evento;
+        }
+        else return null;
     }
 
 }

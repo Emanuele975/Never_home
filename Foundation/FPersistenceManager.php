@@ -81,6 +81,24 @@ class FPersistenceManager
         return $categoria;
     }
 
+    public function EventoByNome($nome)
+    {
+        $dat = FEvento_g::getInstance();
+        $evento = $dat->loadByNome($nome);
+        if ($evento==null)
+        {
+            $dat = FEvento_p::getInstance();
+            $evento = $dat->loadByNome($nome);
+        }
+        return $evento;
+    }
+
+    public function CartaValida($CF, $ccv, $data, $numerocarta)
+    {
+        $dat = FCarta::getInstance();
+        return $dat->valida($CF, $ccv, $data, $numerocarta);
+    }
+
 
 
 

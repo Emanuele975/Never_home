@@ -1,4 +1,27 @@
-﻿<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-09-26 11:34:27
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\CartaCaricata.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5d8c8623848fe5_39273495',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'd6175cf5b2fe0d0af2bf2152e9e870e3927f0df3' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\CartaCaricata.tpl',
+      1 => 1569488330,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5d8c8623848fe5_39273495 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
 
 <head>
@@ -23,6 +46,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Notifiche </a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
+            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -30,42 +56,9 @@
         </form>
     </div>
 </nav>
-<div class="container">
-    <div class="row">
-        <pre>
 
-        </pre>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            <div class="card mb-3" style="">
-                {$img2 = base64_encode($img->getData())}
-                <img class="card-img-top" src="data:{$img->getType()};base64,{$img2}" style="width: 550px;	height: 300px;">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="row my-4">
-                <div class="mx-auto"> nome evento: {$evento->getNome()} </div>
-            </div>
-            <div class="row my-4">
-                <div class="mx-auto"> descrizione: {$evento->getCategoria()->toString()} </div>
-            </div>
-            <div class="row my-4">
-                <div class="mx-auto"> prezzo: {$evento->getPrezzo()} </div>
-            </div>
-            <div class="row my-4">
-                <div class="mx-auto">
-                    <form action="/Never_home/Evento/FormAcquisto" enctype="multipart/form-data" method="post">
-                    <button  type="submit" class="btn btn-dark" name="evento" value="{$evento->getId()}">Acquista biglietto</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<br>
+carta caricata correttamente
 <div class="fixed-bottom">
     <div class="container">
         <div class="row">
@@ -81,9 +74,16 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

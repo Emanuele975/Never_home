@@ -93,5 +93,24 @@ class CGestioneUtente
         $view->Home();
     }
 
+    public function FormCarta()
+    {
+        $view = new VCarta();
+        $view->FormCarta();
+    }
+
+    public function AggiungiCarta()
+    {
+        $view = new VCarta();
+        $dati = $view->getDati();
+        $sessione = Session::getInstance();
+        $utente = $sessione->getUtente();
+        $carta = new ECarta($utente->getCF(),$dati['ccv'],new DateTime($dati['data']),$dati['numero']);
+        $pm = FPersistenceManager::getInstance();
+        $pm->store($carta);
+        $view->cartacaricata();
+
+    }
+
 
 }

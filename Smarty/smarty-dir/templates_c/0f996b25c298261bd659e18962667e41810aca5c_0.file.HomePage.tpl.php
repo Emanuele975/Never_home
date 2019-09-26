@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-23 17:35:57
+/* Smarty version 3.1.33, created on 2019-09-24 11:03:19
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d88e65d574fe6_39151796',
+  'unifunc' => 'content_5d89dbd7a5e1e0_14393268',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f996b25c298261bd659e18962667e41810aca5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-      1 => 1569252954,
+      1 => 1569315788,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d88e65d574fe6_39151796 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d89dbd7a5e1e0_14393268 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -64,8 +64,8 @@ function content_5d88e65d574fe6_39151796 (Smarty_Internal_Template $_smarty_tpl)
             <a class="nav-link" href="/Never_home/Luogo/Login">Login Locale </a>
         </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
       <button class="btn btn-light" type="submit">Search</button>
     </form>
   </div>

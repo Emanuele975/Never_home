@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-25 09:12:24
-  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\UtenteLoggato.tpl' */
+/* Smarty version 3.1.33, created on 2019-09-26 09:49:35
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomeUtente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d8b135844ecc6_63282690',
+  'unifunc' => 'content_5d8c6d8f56e786_36248436',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8825acfbb290856257f59dfea7d912d0f4d44a74' => 
+    'a2b2abff98ec256f90830d2c7fd08b177679539b' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\UtenteLoggato.tpl',
-      1 => 1569310200,
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomeUtente.tpl',
+      1 => 1569484067,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d8b135844ecc6_63282690 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d8c6d8f56e786_36248436 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -56,14 +56,18 @@ function content_5d8b135844ecc6_63282690 (Smarty_Internal_Template $_smarty_tpl)
     </form>
   </div>
 </nav>
-<br>
-Utente registrato con successo
-<br>
+<br><br>
+
 <?php echo $_smarty_tpl->tpl_vars['utente']->value->getNome();?>
 
 <br>
 <?php echo $_smarty_tpl->tpl_vars['utente']->value->getCognome();?>
 
+
+
+<form action="/Never_home/Utente/FormCarta" method="post">
+  <button type="submit" class="btn btn-primary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
+</form>
 
 
   <div class="fixed-bottom">

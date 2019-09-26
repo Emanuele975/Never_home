@@ -1,7 +1,8 @@
 <?php
 include_once 'ECarta.php';
 include_once 'EUtente_R.php';
-//aggiungere id acquisto    
+//aggiungere id acquisto
+
 class EAcquisto{
     private $data;
     private $importo;
@@ -9,43 +10,34 @@ class EAcquisto{
     private $utente;
     private $id;
      
-    function __construct(DateTime $data, float $importo, ECarta $carta, EUtente_R $utente, int $id){
+    function __construct(DateTime $data, float $importo, ECarta $carta, EUtente_R $utente){
         $this->data = $data;
         $this->importo = $importo;
         $this->carta = $carta;
         $this->utente = $utente;
-        $this->id=$id;
     }
-
-    
-    
     
     function setData(DateTime $data){
         $this->data=$data;
     }
-         
 
     function getData(){
         return $this->data;
     }
         
-        
-        
-        
     function setImporto(float $importo){
             $this->importo=$importo;
         }
-         
 
-        function getImporto(){
-          return $this->importo;
-        }
-        
-        
-    function setCarta(ECarta $carta){
+    function getImporto(){
+        return $this->importo;
+    }
+
+    function setCarta(ECarta $carta)
+    {
             $this->carta=$carta;
-        }
-         
+
+    }
 
     function getCarta(){
         $c =   $this->carta;
@@ -55,7 +47,6 @@ class EAcquisto{
     function setUtente(EUtente_R $utente){
             $this->utente=$utente;
     }
-         
 
     function getUtente(){
         $u = $this->utente;
@@ -97,8 +88,6 @@ class EAcquisto{
 
         return $this->id;
     }
-
-
 
 }      
 ?>

@@ -86,8 +86,8 @@ class CGestioneLuogo
         $luogo = $sessione->getLuogo();
         $pm = FPersistenceManager::getInstance();
         $evento = $pm->EventobyLuogo($luogo->getId());
-        $img = $pm->getImgByidEvento($evento->getId());
-        //echo $img->getType();
+        if ($evento!=null)
+            $img = $pm->getImgByidEvento($evento->getId());
         $view=new Vlocale();
         $view->HomeLocale($evento,$img);
     }
@@ -109,26 +109,6 @@ class CGestioneLuogo
         $view2->LuogoLoggato($locale);
     }
 
-    public function CercadaNome()
-    {
-        if(($_SERVER['REQUEST_METHOD']=="POST")){
-            $view = new VRisultati();
-            $nome = $view->recuperaNome(); //nome inserito nella barra di ricerca
-            $pm = FPersistentManager::getInstance();
-            $ricette = $pm->search("ricetta", $nome, "nome");
-            if($ricette!=null){
-                $msg = "";
-            } else {
-                $msg = "Non ci sono ricette che soddisfano questi parametri";
-            }
-            $view->mostraRisultati($ricette, $msg);
-
-        }
-        else{
-            header('HTTP/1.1 405 Method Not Allowed');
-            header('Allow: POST');
-        }
-    }
 
 }
 

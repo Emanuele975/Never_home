@@ -88,4 +88,5 @@ class VRegistrazione
     {
         $this->smarty->display("RegLocale.tpl");
     }
+
 }

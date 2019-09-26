@@ -21,7 +21,7 @@
                 <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Notifiche </a>
+                <a class="nav-link" href="#">notifiche</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -31,11 +31,8 @@
     </div>
 </nav>
 <div class="container">
-    <div class="row">
-        <pre>
-
-        </pre>
-    </div>
+    <br><br>
+    <form action="/Never_home/Evento/FormPagamento" method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-sm">
             <div class="card mb-3" style="">
@@ -48,23 +45,34 @@
         </div>
         <div class="col-sm">
             <div class="row my-4">
-                <div class="mx-auto"> nome evento: {$evento->getNome()} </div>
+                <div class="mx-auto"> Posti disponibili:{$evento->getPosti_disponibili()}  </div>
             </div>
             <div class="row my-4">
-                <div class="mx-auto"> descrizione: {$evento->getCategoria()->toString()} </div>
+                <div class="mx-auto"> Prezzo biglietto:{$evento->getPrezzo()}  </div>
             </div>
             <div class="row my-4">
-                <div class="mx-auto"> prezzo: {$evento->getPrezzo()} </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text " for="inputGroupSelect01">Quantità</label>
+                    </div>
+                    <select class="custom-select " id="inputGroupSelect01" name="num">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
             </div>
             <div class="row my-4">
                 <div class="mx-auto">
-                    <form action="/Never_home/Evento/FormAcquisto" enctype="multipart/form-data" method="post">
-                    <button  type="submit" class="btn btn-dark" name="evento" value="{$evento->getId()}">Acquista biglietto</button>
-                    </form>
+                    <button type="submit" class="btn btn-dark" name="prezzotot" value={$evento->getPrezzo()}>
+                        Effettua prenotazione
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+    </form>
 </div>
 <div class="fixed-bottom">
     <div class="container">

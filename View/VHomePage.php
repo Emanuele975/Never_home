@@ -21,7 +21,7 @@ class VHomePage
 
     public function utentereg($utente){
         $this->smarty->assign('utente',$utente);
-        $this->smarty->display("UtenteLoggato.tpl");
+        $this->smarty->display("HomeUtente.tpl");
     }
 
     public function mostraevento(EEvento $evento){
