@@ -89,6 +89,18 @@ class FEvento_p extends FDatabase
         else return null;
     }
 
+    public function decrementaposti($id,$posti)
+    {
+        $sql = " UPDATE ".static::getTables()." SET posti_disponibili = posti_disponibili -  ".$posti." WHERE id = ".$id." ; ";
+        return $result = parent::update($sql);
+    }
+
+    public function incrementaposti($id,$posti)
+    {
+        $sql = " UPDATE ".static::getTables()." SET posti_disponibili = posti_disponibili +  ".$posti." WHERE id = ".$id." ; ";
+        return $result = parent::update($sql);
+    }
+
 }
 
 ?>

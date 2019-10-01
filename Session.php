@@ -105,6 +105,42 @@ class Session
         $_SESSION['luogo'] = $l;
     }
 
+    public function setInfoVendita($prezzo,$quantita)
+    {
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
+        $_SESSION['prezzo'] = $prezzo;
+        $_SESSION['quantita'] = $quantita;
+    }
+
+    public function getInfoVendita()
+    {
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
+        $dati = array();
+        $dati['prezzo'] = $_SESSION['prezzo'];
+        $dati['quantita'] = $_SESSION['quantita'];
+        return $dati;
+    }
+
+    public function prenotaposti($posti)
+    {
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
+        $_SESSION['posti'] = $posti;
+    }
+
+    public function getposti()
+    {
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
+        return $_SESSION['posti'];
+    }
+
     /**
      * Metodo che provvede ad eliminare i dati di sessione (quando l'utente fa logout)
      */
@@ -148,7 +184,6 @@ class Session
         $path = $_SESSION['path']; //stringa
         return $path;
     }
-
 
     /**
      * Metodo che rimuove il path dai dati di sessione (appena l'utente effettua il login)

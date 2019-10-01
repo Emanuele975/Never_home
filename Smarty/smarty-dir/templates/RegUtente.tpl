@@ -66,8 +66,11 @@
             </div>
             </div>
             <br>
-            <br>
-            <button type="submit" class="btn btn-primary">Registrati </button>
+            <div class="row my-5">
+                <div class="mx-auto">
+                    <button type="submit" class="btn btn-dark" >Registrati</button>
+                </div>
+            </div
         </form>
 </div>
 

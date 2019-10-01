@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-19 09:49:12
+/* Smarty version 3.1.33, created on 2019-10-01 15:44:45
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\RegUtente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d8332f8a03207_86770365',
+  'unifunc' => 'content_5d93584d000bf0_16764660',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f7f2bb062009f096cfebf2a1254d146666c49424' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\RegUtente.tpl',
-      1 => 1568812599,
+      1 => 1569937480,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d8332f8a03207_86770365 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d93584d000bf0_16764660 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -89,8 +89,11 @@ function content_5d8332f8a03207_86770365 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             </div>
             <br>
-            <br>
-            <button type="submit" class="btn btn-primary">Registrati </button>
+            <div class="row my-5">
+                <div class="mx-auto">
+                    <button type="submit" class="btn btn-dark" >Registrati</button>
+                </div>
+            </div
         </form>
 </div>
 

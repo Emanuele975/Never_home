@@ -71,8 +71,8 @@ class FCarta extends FDatabase{
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE numerocarta= '".$numerocarta."' and CF_titolare= '".$CF."'
          and ccv='".$ccv."' ";
-        $result = parent::exist($sql);
-        if ($result!=null) return true;
+        $result = parent::loadSingle($sql);
+        if ($result!=null) return $result['id'];
         else return false;
     }
     

@@ -11,34 +11,30 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/Never_home">NH</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse"  id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li>
+        <div class="btn-group btn-dark" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Registrazione
+                </button>
+                <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class=" dropdown-item" href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
+                    <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
+                </div>
+        </div>
+      </li>
         <li>
             <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
                 </button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                    <a class="dropdown-item" href="#">Dropdown link</a>
+                <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dark dropdown-item" href="/Never_home/Utente/Login">Login utente</a>
+                    <a class="dark dropdown-item" href="/Never_home/Luogo/Login">Login locale</a>
                 </div>
             </div>
-        </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Utente/FormRegistrazione" name="registrazione">Registrazione utente <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-          <a class="nav-link" href="/Never_home/Luogo/FormRegistrazione" name="registrazione">Registrazione locale <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Utente/Login">Login Utente </a>
-      </li>
-        <li class="nav-item active">
-            <a class="nav-link" href="/Never_home/Luogo/Login">Login Locale </a>
         </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -49,19 +45,10 @@
 </nav>
   Home page del sito
 <br><br>
-<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
+<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
+    <br>
+    <br>
 
-    <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-        </button>
-        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-            <a class="dropdown-item" href="#">Dropdown link</a>
-        </div>
-    </div>
 </div>
 
 

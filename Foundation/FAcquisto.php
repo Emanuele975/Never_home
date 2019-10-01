@@ -10,19 +10,17 @@ class FAcquisto extends FDatabase
 
         parent::__construct();
         $this->table = "acquisto";
-        $this->values = "(:data,:importo,:id,:cardnumber,:CFutente)";
+        $this->values = "(:data,:importo,:id,:id_carta,:id_utente)";
 
     }
 
     public static function bind($stmt, EAcquisto $acquisto){
-
+        $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':data', $acquisto->getData()->format('Y-m-d'), PDO::PARAM_STR);
         $stmt->bindValue(':importo', $acquisto->getImporto());
-        $stmt->bindValue(':id', $acquisto->getId(), PDO::PARAM_INT);
-        $stmt->bindValue(':cardnumber', $acquisto->getCarta()->getNumerocarta(), PDO::PARAM_INT);
-        $stmt->bindValue(':CFutente', $acquisto->getUtente()->getCF(), PDO::PARAM_STR);
+        $stmt->bindValue(':id_carta', $acquisto->getCarta()->getId(), PDO::PARAM_INT);
+        $stmt->bindValue(':id_utente', $acquisto->getUtente()->getId(), PDO::PARAM_INT);
         }
-
 
     public static function getInstance()
     {
@@ -42,22 +40,15 @@ class FAcquisto extends FDatabase
         return $this->values;
     }
 
-
     public function store1(EAcquisto $acquisto)
     {
         $sql = " INSERT INTO " . static::getTables() . " VALUES " . static::getValues() . ";";
-        //print $sql;
         $id = parent::store($sql, 'FAcquisto', $acquisto);
-        //print "jhvdblsbkbfdk";
         if ($id)
-            //print"uyyyevfiye";
             return $id;
         else
             return null;
-        //print"2";
-
     }
-
 
     public function loadById($id){
         $sql = "SELECT * FROM " . static::getTables() . " WHERE id= '" . $id . "' ;";
@@ -73,7 +64,6 @@ class FAcquisto extends FDatabase
         else
             return null;
     }
-
 
     public function delete($id){
         $sql = " DELETE FROM " . static::getTables() . "    WHERE id= '" . $id . "' ;";

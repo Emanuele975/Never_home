@@ -34,6 +34,7 @@
   </div>
 </nav>
 
+<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
 <form action='/Never_home/Evento/NuovoEventoGratis' method="post" enctype="multipart/form-data">
 
   <br><br>
@@ -112,6 +113,7 @@
     </div>
   .
 </form>
+</div>
 
   <div class="fixed-bottom">
     <div class="container">

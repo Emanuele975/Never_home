@@ -29,7 +29,7 @@
       <button class="btn btn-light" type="submit">Search</button>
     </form>
   </div>
-  </nav>
+</nav>
   <div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
     <div class="container">
       <div class="row">

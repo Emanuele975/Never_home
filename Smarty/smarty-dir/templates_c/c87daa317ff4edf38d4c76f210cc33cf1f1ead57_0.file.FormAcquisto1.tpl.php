@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-25 11:13:00
+/* Smarty version 3.1.33, created on 2019-10-01 11:06:42
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormAcquisto1.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d8b2f9c0ca8e5_83830695',
+  'unifunc' => 'content_5d931722f19838_92597837',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '673d790ce572218174ec52517cc6e9aa8b22ee07' => 
+    'c87daa317ff4edf38d4c76f210cc33cf1f1ead57' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormAcquisto1.tpl',
-      1 => 1569402769,
+      1 => 1569920628,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d931722f19838_92597837 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -92,7 +92,7 @@ function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <div class="row my-4">
                 <div class="mx-auto">
-                    <button type="submit" class="btn btn-dark" name="prezzotot" value=<?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
+                    <button type="submit" class="btn btn-dark" name="id_evento" value=<?php echo $_smarty_tpl->tpl_vars['evento']->value->getId();?>
 >
                         Effettua prenotazione
                     </button>

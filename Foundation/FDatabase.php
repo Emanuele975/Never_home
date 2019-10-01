@@ -66,7 +66,7 @@ class FDatabase
         }
     }
 
-       /**
+    /**
      * Funzione che viene utilizzata per la load quando ci si aspetta che la query produca un solo risultato (esempio load per id).
      * 
      * @param $sql query da eseguire

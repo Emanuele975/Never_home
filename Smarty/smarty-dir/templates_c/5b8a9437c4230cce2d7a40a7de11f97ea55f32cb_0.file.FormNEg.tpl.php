@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-23 17:33:49
+/* Smarty version 3.1.33, created on 2019-10-01 15:58:16
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormNEg.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d88e5dd106b13_55609994',
+  'unifunc' => 'content_5d935b782e2d85_04012207',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b8a9437c4230cce2d7a40a7de11f97ea55f32cb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormNEg.tpl',
-      1 => 1569244988,
+      1 => 1569938279,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d88e5dd106b13_55609994 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d935b782e2d85_04012207 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -57,6 +57,7 @@ function content_5d88e5dd106b13_55609994 (Smarty_Internal_Template $_smarty_tpl)
   </div>
 </nav>
 
+<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
 <form action='/Never_home/Evento/NuovoEventoGratis' method="post" enctype="multipart/form-data">
 
   <br><br>
@@ -135,6 +136,7 @@ function content_5d88e5dd106b13_55609994 (Smarty_Internal_Template $_smarty_tpl)
     </div>
   .
 </form>
+</div>
 
   <div class="fixed-bottom">
     <div class="container">

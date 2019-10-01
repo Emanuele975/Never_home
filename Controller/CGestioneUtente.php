@@ -48,6 +48,7 @@ class CGestioneUtente
             //login avvenuto con successo, mostrare la pagina che stava vedendo l'utente
             // o la homepage se non stava vedendo pagine particolari
             $utente = $pm->LoadByUserPswU($credenziali['psw'],$credenziali['user']);
+            $sessione->logout();
             $sessione->setUtenteLoggato($utente);
 
             $location = $sessione->getPath(); //recupero il path salvato precedentemente

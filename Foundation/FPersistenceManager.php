@@ -99,6 +99,18 @@ class FPersistenceManager
         return $dat->valida($CF, $ccv, $data, $numerocarta);
     }
 
+    public function decrementaposti($id,$posti)
+    {
+        $dat = FEvento_p::getInstance();
+        $dat->decrementaposti($id,$posti);
+    }
+
+    public function incrementaposti($id,$posti)
+    {
+        $dat = FEvento_p::getInstance();
+        $dat->incrementaposti($id,$posti);
+    }
+
 
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-01 15:59:03
-  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\loginUtente.tpl' */
+/* Smarty version 3.1.33, created on 2019-10-01 11:07:09
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormAcquisto2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d935ba7080036_78715637',
+  'unifunc' => 'content_5d93173df1a967_61304831',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '807b524edd12c3422594cd1c7e667b4f8f056a48' => 
+    '7d1618c9e0e22e93c3b3679138ef0e2982a78d9d' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\loginUtente.tpl',
-      1 => 1569937915,
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormAcquisto2.tpl',
+      1 => 1569483778,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d935ba7080036_78715637 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d93173df1a967_61304831 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -41,10 +41,13 @@ function content_5d935ba7080036_78715637 (Smarty_Internal_Template $_smarty_tpl)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Luogo/Form">Registrati <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Homepage/Login">Login </a>
+        <a class="nav-link" href="#">Notifiche </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Never_home/Luogo/Logout">Logout </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -53,21 +56,70 @@ function content_5d935ba7080036_78715637 (Smarty_Internal_Template $_smarty_tpl)
     </form>
   </div>
 </nav>
-  <div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
-    <div class="container">
-      <div class="row">
-        <div class="mx-auto col-md-6 col-10 bg-white p-5">
-          <h1 class="mb-4">Log in Utente</h1>
-          <form action="/Never_home/Utente/Entra" method="post" enctype="multipart/form-data">
-            <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
-            <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
-              </small> </div> <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+
+<form action='/Never_home/Evento/Acquisto' method="post" enctype="multipart/form-data">
+
+  <br><br>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="form-group col-md">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Numero carta</span>
+          </div>
+          <input type="text" name="numero" aria-label="Numero carta" class="form-control">
+        </div>
+      </div>
+      <div class="form-group col-md">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">CF titolare</span>
+          </div>
+          <input type="text" name="cf" aria-label="CF titolare" class="form-control">
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="form-group col-md">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Data di scadenza</span>
+          </div>
+          <input type="text" name="data" aria-label="Data di scadenza" class="form-control">
+        </div>
+      </div>
+      <div class="form-group col-md">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">CCV</span>
+          </div>
+          <input type="password" name="ccv" aria-label="CCV" class="form-control">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        Prezzo totale:<?php echo $_smarty_tpl->tpl_vars['prezzo']->value;?>
+
+      </div>
+    </div>
+
+
   </div>
-  <div class="py-3">
+
+    <div class="row my-5">
+      <div class="mx-auto">
+        <button type="submit" class="btn btn-dark" >Procedi</button>
+      </div>
+    </div>
+  .
+</form>
+
+  <div class="fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">
@@ -82,6 +134,7 @@ function content_5d935ba7080036_78715637 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </div>
   </div>
+
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >

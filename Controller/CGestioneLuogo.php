@@ -57,6 +57,7 @@ class CGestioneLuogo
 
             //login utente avvenuto con successo, salvataggio nei dati di sessione
             $luogo = $pm->LoadByUserPswL($credenziali['psw'],$credenziali['user']);
+            $sessione->logout();
             $sessione->setLuogoLoggato($luogo);
 
             $location = $sessione->getPath(); //recupero il path salvato precedentemente

@@ -33,15 +33,21 @@
     </form>
   </div>
 </nav>
+
+<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
 <div class="container ">
   <div class="row">
-    <br><br>
+    <br>
   </div>
   <div class="row mx-md-n5">
     <div class="col-sm-8">
       <form action="/Never_home/Evento/FormEvento" method="post">
-      <button type="submit" class="btn btn-primary btn-lg btn-block" name="EventoG" value="G">Crea evento gratis</button>
-      <button type="submit" class="btn btn-secondary btn-lg btn-block" name="EventoP" value="P">Crea evento a pagamento</button>
+      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoG" value="G" style="width: 200px;	height: 50px;">
+        Crea evento gratis
+      </button>
+      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoP" value="P" style="width: 300px;	height: 50px;">
+        Crea evento a pagamento
+      </button>
       </form>
     </div>
     <div class="col-sm-4">
@@ -60,6 +66,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
   <div class="fixed-bottom">
     <div class="container">

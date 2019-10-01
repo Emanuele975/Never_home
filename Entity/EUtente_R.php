@@ -82,6 +82,11 @@ class EUtente_R {
         $this->id=$id;
     }
 
+    function getId()
+    {
+        return $this->id;
+    }
+
     function commenta(EEvento $evento,String $descrizione, int $punteggio, String $testo){
         $commento = new ECommento($descrizione,$punteggio,$testo,$this,$evento);
         return $commento;

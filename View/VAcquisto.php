@@ -18,13 +18,13 @@ class VAcquisto
     {
         $this->smarty->assign("evento",$evento);
         $this->smarty->assign("img",$img);
-        $this->smarty->display("FormAcquisto.tpl");
+        $this->smarty->display("FormAcquisto1.tpl");
     }
 
     public function FormPagamento($prezzo)
     {
         $this->smarty->assign("prezzo",$prezzo);
-        $this->smarty->display("FormPagamento.tpl");
+        $this->smarty->display("FormAcquisto2.tpl");
     }
 
     public function getDati()
@@ -45,6 +45,12 @@ class VAcquisto
         }
 
         return $dati;
+    }
+
+    public function AcquistoEffettuato($acquisto)
+    {
+        $this->smarty->assign("acquisto",$acquisto);
+        $this->smarty->display("AcquistoEffettuato.tpl");
     }
 
 

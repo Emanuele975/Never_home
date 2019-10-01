@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-25 11:13:00
-  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormAcquisto1.tpl' */
+/* Smarty version 3.1.33, created on 2019-10-01 12:07:52
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\AcquistoEffettuato.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d8b2f9c0ca8e5_83830695',
+  'unifunc' => 'content_5d932578e00883_65110511',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '673d790ce572218174ec52517cc6e9aa8b22ee07' => 
+    '06cc4f88009b8cc019b8aaaf0550d231ca29bf3c' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormAcquisto1.tpl',
-      1 => 1569402769,
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\AcquistoEffettuato.tpl',
+      1 => 1569920935,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d932578e00883_65110511 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -44,7 +44,10 @@ function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl)
                 <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">notifiche</a>
+                <a class="nav-link" href="#">Notifiche </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -53,55 +56,15 @@ function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl)
         </form>
     </div>
 </nav>
-<div class="container">
-    <br><br>
-    <form action="/Never_home/Evento/FormPagamento" method="post" enctype="multipart/form-data">
-    <div class="row">
-        <div class="col-sm">
-            <div class="card mb-3" style="">
-                <?php $_smarty_tpl->_assignInScope('img2', base64_encode($_smarty_tpl->tpl_vars['img']->value->getData()));?>
-                <img class="card-img-top" src="data:<?php echo $_smarty_tpl->tpl_vars['img']->value->getType();?>
-;base64,<?php echo $_smarty_tpl->tpl_vars['img2']->value;?>
-" style="width: 550px;	height: 300px;">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="row my-4">
-                <div class="mx-auto"> Posti disponibili:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getPosti_disponibili();?>
-  </div>
-            </div>
-            <div class="row my-4">
-                <div class="mx-auto"> Prezzo biglietto:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
-  </div>
-            </div>
-            <div class="row my-4">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text " for="inputGroupSelect01">Quantità</label>
-                    </div>
-                    <select class="custom-select " id="inputGroupSelect01" name="num">
-                        <option selected>Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row my-4">
-                <div class="mx-auto">
-                    <button type="submit" class="btn btn-dark" name="prezzotot" value=<?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
->
-                        Effettua prenotazione
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    </form>
-</div>
+acquisto effettuato con successo in data
+<br>
+<?php echo $_smarty_tpl->tpl_vars['acquisto']->value->getData()->format('Y-m-d');?>
+
+<br>
+importo
+<br>
+<?php echo $_smarty_tpl->tpl_vars['acquisto']->value->getImporto();?>
+
 <div class="fixed-bottom">
     <div class="container">
         <div class="row">

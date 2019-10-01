@@ -1,27 +1,4 @@
-<?php
-/* Smarty version 3.1.33, created on 2019-09-25 11:13:00
-  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormAcquisto1.tpl' */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d8b2f9c0ca8e5_83830695',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    '673d790ce572218174ec52517cc6e9aa8b22ee07' => 
-    array (
-      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormAcquisto1.tpl',
-      1 => 1569402769,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -59,10 +36,8 @@ function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl)
     <div class="row">
         <div class="col-sm">
             <div class="card mb-3" style="">
-                <?php $_smarty_tpl->_assignInScope('img2', base64_encode($_smarty_tpl->tpl_vars['img']->value->getData()));?>
-                <img class="card-img-top" src="data:<?php echo $_smarty_tpl->tpl_vars['img']->value->getType();?>
-;base64,<?php echo $_smarty_tpl->tpl_vars['img2']->value;?>
-" style="width: 550px;	height: 300px;">
+                {$img2 = base64_encode($img->getData())}
+                <img class="card-img-top" src="data:{$img->getType()};base64,{$img2}" style="width: 550px;	height: 300px;">
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
@@ -70,12 +45,10 @@ function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <div class="col-sm">
             <div class="row my-4">
-                <div class="mx-auto"> Posti disponibili:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getPosti_disponibili();?>
-  </div>
+                <div class="mx-auto"> Posti disponibili:{$evento->getPosti_disponibili()}  </div>
             </div>
             <div class="row my-4">
-                <div class="mx-auto"> Prezzo biglietto:<?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
-  </div>
+                <div class="mx-auto"> Prezzo biglietto:{$evento->getPrezzo()}  </div>
             </div>
             <div class="row my-4">
                 <div class="input-group mb-3">
@@ -92,8 +65,7 @@ function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <div class="row my-4">
                 <div class="mx-auto">
-                    <button type="submit" class="btn btn-dark" name="prezzotot" value=<?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
->
+                    <button type="submit" class="btn btn-dark" name="id_evento" value={$evento->getId()}>
                         Effettua prenotazione
                     </button>
                 </div>
@@ -117,16 +89,9 @@ function content_5d8b2f9c0ca8e5_83830695 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
 </div>
-<?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
-</html><?php }
-}
+</html>

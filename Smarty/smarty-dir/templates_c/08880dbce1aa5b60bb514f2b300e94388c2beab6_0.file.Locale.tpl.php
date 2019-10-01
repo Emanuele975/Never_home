@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-20 17:06:26
+/* Smarty version 3.1.33, created on 2019-10-01 16:34:27
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Locale.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d84eaf23d12a0_29469597',
+  'unifunc' => 'content_5d9363f3b8e850_40781716',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '08880dbce1aa5b60bb514f2b300e94388c2beab6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Locale.tpl',
-      1 => 1568991981,
+      1 => 1569940402,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d84eaf23d12a0_29469597 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d9363f3b8e850_40781716 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -56,15 +56,21 @@ function content_5d84eaf23d12a0_29469597 (Smarty_Internal_Template $_smarty_tpl)
     </form>
   </div>
 </nav>
+
+<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
 <div class="container ">
   <div class="row">
-    <br><br>
+    <br>
   </div>
   <div class="row mx-md-n5">
     <div class="col-sm-8">
       <form action="/Never_home/Evento/FormEvento" method="post">
-      <button type="submit" class="btn btn-primary btn-lg btn-block" name="EventoG" value="G">Crea evento gratis</button>
-      <button type="submit" class="btn btn-secondary btn-lg btn-block" name="EventoP" value="P">Crea evento a pagamento</button>
+      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoG" value="G" style="width: 200px;	height: 50px;">
+        Crea evento gratis
+      </button>
+      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoP" value="P" style="width: 300px;	height: 50px;">
+        Crea evento a pagamento
+      </button>
       </form>
     </div>
     <div class="col-sm-4">
@@ -87,6 +93,7 @@ function content_5d84eaf23d12a0_29469597 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </div>
   </div>
+</div>
 </div>
   <div class="fixed-bottom">
     <div class="container">

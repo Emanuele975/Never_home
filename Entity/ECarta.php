@@ -52,7 +52,7 @@
             $this->id=$id;
         }
 
-        function getId($id)
+        function getId()
         {
             return $this->id;
         }

@@ -21,7 +21,10 @@
                 <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">notifiche</a>
+                <a class="nav-link" href="#">Notifiche </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -30,50 +33,11 @@
         </form>
     </div>
 </nav>
-<div class="container">
-    <br><br>
-    <form action="/Never_home/Evento/FormPagamento" method="post" enctype="multipart/form-data">
-    <div class="row">
-        <div class="col-sm">
-            <div class="card mb-3" style="">
-                {$img2 = base64_encode($img->getData())}
-                <img class="card-img-top" src="data:{$img->getType()};base64,{$img2}" style="width: 550px;	height: 300px;">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="row my-4">
-                <div class="mx-auto"> Posti disponibili:{$evento->getPosti_disponibili()}  </div>
-            </div>
-            <div class="row my-4">
-                <div class="mx-auto"> Prezzo biglietto:{$evento->getPrezzo()}  </div>
-            </div>
-            <div class="row my-4">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text " for="inputGroupSelect01">Quantità</label>
-                    </div>
-                    <select class="custom-select " id="inputGroupSelect01" name="num">
-                        <option selected>Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row my-4">
-                <div class="mx-auto">
-                    <button type="submit" class="btn btn-dark" name="prezzotot" value={$evento->getPrezzo()}>
-                        Effettua prenotazione
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    </form>
-</div>
+
+<br><br>
+{$msg}
+
+
 <div class="fixed-bottom">
     <div class="container">
         <div class="row">

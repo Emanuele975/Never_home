@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-24 11:03:19
+/* Smarty version 3.1.33, created on 2019-10-01 15:58:57
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d89dbd7a5e1e0_14393268',
+  'unifunc' => 'content_5d935ba1dadcc5_20151100',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f996b25c298261bd659e18962667e41810aca5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-      1 => 1569315788,
+      1 => 1569938279,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d89dbd7a5e1e0_14393268 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d935ba1dadcc5_20151100 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -34,34 +34,30 @@ function content_5d89dbd7a5e1e0_14393268 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/Never_home">NH</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse"  id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li>
+        <div class="btn-group btn-dark" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Registrazione
+                </button>
+                <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class=" dropdown-item" href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
+                    <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
+                </div>
+        </div>
+      </li>
         <li>
             <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
                 </button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                    <a class="dropdown-item" href="#">Dropdown link</a>
+                <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dark dropdown-item" href="/Never_home/Utente/Login">Login utente</a>
+                    <a class="dark dropdown-item" href="/Never_home/Luogo/Login">Login locale</a>
                 </div>
             </div>
-        </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Utente/FormRegistrazione" name="registrazione">Registrazione utente <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-          <a class="nav-link" href="/Never_home/Luogo/FormRegistrazione" name="registrazione">Registrazione locale <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Utente/Login">Login Utente </a>
-      </li>
-        <li class="nav-item active">
-            <a class="nav-link" href="/Never_home/Luogo/Login">Login Locale </a>
         </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -72,19 +68,10 @@ function content_5d89dbd7a5e1e0_14393268 (Smarty_Internal_Template $_smarty_tpl)
 </nav>
   Home page del sito
 <br><br>
-<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
+<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
+    <br>
+    <br>
 
-    <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-        </button>
-        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-            <a class="dropdown-item" href="#">Dropdown link</a>
-        </div>
-    </div>
 </div>
 
 

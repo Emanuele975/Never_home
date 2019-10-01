@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.33, created on 2019-09-25 10:49:55
-  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormAcquisto.tpl' */
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormAcquisto1.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'cde0da4765e43f8180979b49fd43e3bbc22ee8c3' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormAcquisto.tpl',
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormAcquisto1.tpl',
       1 => 1569401385,
       2 => 'file',
     ),

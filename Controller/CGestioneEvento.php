@@ -76,21 +76,37 @@ class CGestioneEvento
 
     public function FormAcquisto()
     {
-        $view = new VAcquisto();
-        $id = $_POST['evento'];
-        $pm = FPersistenceManager::getInstance();
-        $evento = $pm->Load($id,'FEvento_p');
-        $immagine = $pm->getImgByidEvento($evento->getId());
-        $view->FormAcquisto($evento,$immagine);
-
+        $sessione = Session::getInstance();
+        if ($sessione->isLoggedUtente())
+        {
+            $view = new VAcquisto();
+            $id = $_POST['evento'];
+            $pm = FPersistenceManager::getInstance();
+            $evento = $pm->Load($id,'FEvento_p');
+            $immagine = $pm->getImgByidEvento($evento->getId());
+            $view->FormAcquisto($evento,$immagine);
+        }
     }
 
     public function FormPagamento()
     {
-        $view = new VAcquisto();
-        $prezzo = $_POST['prezzotot'];
-        $prezzo = $prezzo*$_POST['num'];
-        $view->FormPagamento($prezzo);
+        $sessione = Session::getInstance();
+        if ($sessione->isLoggedUtente())
+        {
+            $view = new VAcquisto();
+            $pm = FPersistenceManager::getInstance();
+            $evento = $pm->Load($_POST['id_evento'],'FEvento_p');
+            if($evento->getPosti_disponibili() >= $_POST['num'])
+            {
+                $sessione->prenotaposti($_POST['num']);
+                $pm->decrementaposti($_POST['id_evento'],$_POST['num']);
+                $prezzo = $evento->getPrezzo();
+                $prezzotot = $prezzo*$_POST['num'];
+                $sessione = Session::getInstance();
+                $sessione->setInfoVendita($prezzo,$_POST['num']);
+                $view->FormPagamento($prezzotot);
+            }
+        }
     }
 
     public function Acquisto()
@@ -98,11 +114,25 @@ class CGestioneEvento
         $view = new VAcquisto();
         $dati = $view->getDati();
         $pm = FPersistenceManager::getInstance();
-        if ($pm->CartaValida($dati['cf'],$dati['ccv'],$dati['data'],$dati['numero']))
+        $sessione = Session::getInstance();
+        $info = $sessione->getInfoVendita();
+        $utente = $sessione->getUtente();
+        $prezzo = $info['prezzo']*$info['quantita'];
+        $id = $pm->CartaValida($dati['cf'],$dati['ccv'],$dati['data'],$dati['numero']);
+        if ($id!=null)
         {
-            $acquisto = new EAcquisto();
+            $carta = $pm->Load($id,'FCarta');
+            $acquisto = new EAcquisto(new DateTime('NOW'),$prezzo,$carta,$utente);
+            $pm->store($acquisto);
+            $msg = "acquisto effettuato con successo";
         }
+        else
+        {
+            $pm->incrementaposti($utente->getId(),$sessione->getposti());
+            $msg = "si sono verificati problemi nell acquisto";
+        }
+        $sessione->prenotaposti(0);
+        $view->AcquistoEffettuato($msg);
     }
-
 
 }
