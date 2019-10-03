@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-25 09:29:31
+/* Smarty version 3.1.33, created on 2019-10-01 17:30:13
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Evento.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d8b175ba0a556_82122706',
+  'unifunc' => 'content_5d9371051fe7f5_85008179',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a84918596cbcb832bea89ea5fad5df62cc15ea90' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Evento.tpl',
-      1 => 1569396566,
+      1 => 1569943807,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d8b175ba0a556_82122706 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d9371051fe7f5_85008179 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -81,7 +81,8 @@ function content_5d8b175ba0a556_82122706 (Smarty_Internal_Template $_smarty_tpl)
  </div>
             </div>
             <div class="row my-4">
-                <div class="mx-auto"> prezzo: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
+                <?php if ($_smarty_tpl->tpl_vars['evento']->value->getTipo() == 'EEvento_p') {?>
+                <div class="mx-auto">prezzo : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
  </div>
             </div>
             <div class="row my-4">
@@ -92,6 +93,11 @@ function content_5d8b175ba0a556_82122706 (Smarty_Internal_Template $_smarty_tpl)
                     </form>
                 </div>
             </div>
+            <?php } else { ?>
+                <div class="mx-auto">evento gratuito </div>
+            </div>
+        <?php }?>
+
         </div>
     </div>
 </div>

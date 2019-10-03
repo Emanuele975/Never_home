@@ -26,4 +26,5 @@ class VEvento
         $this->smarty->assign("evento",$evento);
         $this->smarty->display("Evento.tpl");
     }
+
 }

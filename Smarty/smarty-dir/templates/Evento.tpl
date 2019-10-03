@@ -54,7 +54,8 @@
                 <div class="mx-auto"> descrizione: {$evento->getCategoria()->toString()} </div>
             </div>
             <div class="row my-4">
-                <div class="mx-auto"> prezzo: {$evento->getPrezzo()} </div>
+                {if $evento->getTipo() eq 'EEvento_p'}
+                <div class="mx-auto">prezzo : {$evento->getPrezzo()} </div>
             </div>
             <div class="row my-4">
                 <div class="mx-auto">
@@ -63,6 +64,11 @@
                     </form>
                 </div>
             </div>
+            {else}
+                <div class="mx-auto">evento gratuito </div>
+            </div>
+        {/if}
+
         </div>
     </div>
 </div>
