@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,6 +36,7 @@
       <div class="row">
         <div class="mx-auto col-md-6 col-10 bg-white p-5">
           <h1 class="mb-4">Log in Luogo</h1>
+          {$msg}
           <form action="/Never_home/Luogo/Entra" method="post" enctype="multipart/form-data">
             <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
             <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
@@ -44,7 +46,8 @@
       </div>
     </div>
   </div>
-  <div class="py-3">
+
+  <div class="fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">

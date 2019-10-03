@@ -21,8 +21,9 @@ class VAcquisto
         $this->smarty->display("FormAcquisto1.tpl");
     }
 
-    public function FormPagamento($prezzo)
+    public function FormPagamento($prezzo,$id)
     {
+        $this->smarty->assign("id_evento",$id);
         $this->smarty->assign("prezzo",$prezzo);
         $this->smarty->display("FormAcquisto2.tpl");
     }
@@ -47,9 +48,9 @@ class VAcquisto
         return $dati;
     }
 
-    public function AcquistoEffettuato($acquisto)
+    public function AcquistoEffettuato($msg)
     {
-        $this->smarty->assign("acquisto",$acquisto);
+        $this->smarty->assign("msg",$msg);
         $this->smarty->display("AcquistoEffettuato.tpl");
     }
 

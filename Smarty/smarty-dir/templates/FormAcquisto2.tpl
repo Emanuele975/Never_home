@@ -34,7 +34,7 @@
   </div>
 </nav>
 
-<form action='/Never_home/Evento/Acquisto' method="post" enctype="multipart/form-data">
+<form action='/Never_home/Evento/Acquisto/{$id_evento}' method="post" enctype="multipart/form-data">
 
   <br><br>
 

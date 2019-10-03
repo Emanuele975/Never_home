@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-01 15:59:03
+/* Smarty version 3.1.33, created on 2019-10-03 15:47:50
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\loginUtente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d935ba7080036_78715637',
+  'unifunc' => 'content_5d95fc062911f0_56039652',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '807b524edd12c3422594cd1c7e667b4f8f056a48' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\loginUtente.tpl',
-      1 => 1569937915,
+      1 => 1570110468,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d935ba7080036_78715637 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d95fc062911f0_56039652 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -58,6 +58,8 @@ function content_5d935ba7080036_78715637 (Smarty_Internal_Template $_smarty_tpl)
       <div class="row">
         <div class="mx-auto col-md-6 col-10 bg-white p-5">
           <h1 class="mb-4">Log in Utente</h1>
+          <?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
           <form action="/Never_home/Utente/Entra" method="post" enctype="multipart/form-data">
             <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
             <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">

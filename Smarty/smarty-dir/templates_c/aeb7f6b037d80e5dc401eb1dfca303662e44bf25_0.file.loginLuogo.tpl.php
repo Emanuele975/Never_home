@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-16 14:55:57
+/* Smarty version 3.1.33, created on 2019-10-03 15:43:30
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\loginLuogo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d7f865d999503_46390771',
+  'unifunc' => 'content_5d95fb02af1393_46951337',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aeb7f6b037d80e5dc401eb1dfca303662e44bf25' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\loginLuogo.tpl',
-      1 => 1568629701,
+      1 => 1570110206,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d7f865d999503_46390771 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d95fb02af1393_46951337 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -32,6 +32,7 @@ function content_5d7f865d999503_46390771 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,6 +59,9 @@ function content_5d7f865d999503_46390771 (Smarty_Internal_Template $_smarty_tpl)
       <div class="row">
         <div class="mx-auto col-md-6 col-10 bg-white p-5">
           <h1 class="mb-4">Log in Luogo</h1>
+          <?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+          <br>
           <form action="/Never_home/Luogo/Entra" method="post" enctype="multipart/form-data">
             <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
             <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
@@ -67,7 +71,8 @@ function content_5d7f865d999503_46390771 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </div>
   </div>
-  <div class="py-3">
+
+  <div class="fixed-bottom">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">

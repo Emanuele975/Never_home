@@ -9,10 +9,9 @@ class EBiglietto {
     private $evento;
     private $utente;
    
-    function __construct(float $prezzo,int $id, EEvento $event, EAcquisto $acquisto, EUtente_R $utente) {
+    function __construct(float $prezzo, EEvento $evento, EAcquisto $acquisto, EUtente_R $utente) {
         $this->prezzo=$prezzo;
-        $this->id = $id;
-        $this->evento=$event;
+        $this->evento=$evento;
         $this->acquisto=$acquisto;
         $this->utente=$utente;
         
@@ -69,8 +68,8 @@ class EBiglietto {
         return "FBiglietto";
     }
 
-    function getKey(){
-
+    function getKey()
+    {
         return $this->id;
     }
 

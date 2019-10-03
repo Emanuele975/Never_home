@@ -27,13 +27,15 @@ class Vlogin
 
     }
 
-    public function mostraFormLoginUtente()
+    public function mostraFormLoginUtente($msg)
     {
+        $this->smarty->assign("msg",$msg);
         $this->smarty->display("loginUtente.tpl");
     }
 
-    public function mostraFormLoginLuogo()
+    public function mostraFormLoginLuogo($msg)
     {
+        $this->smarty->assign("msg",$msg);
         $this->smarty->display("loginLuogo.tpl");
     }
 

@@ -1,7 +1,7 @@
 <?php
 
 
-class VEvento
+class VError
 {
     private $smarty;
 
@@ -14,18 +14,10 @@ class VEvento
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
-    public function Acquista()
+    public function mostraErrore($msg)
     {
-        if (isset($_POST['name']) && $_POST["name"] = 'acquista') {
-            $this->smarty->display("FormAcquisto1.tpl");
-        }
-    }
-
-    public function Home($evento,$immagine)
-    {
-        $this->smarty->assign("evento",$evento);
-        $this->smarty->assign("img",$immagine);
-        $this->smarty->display("Evento.tpl");
+        $this->smarty->assign("msg",$msg);
+        $this->smarty->display("Error.tpl");
     }
 
 }

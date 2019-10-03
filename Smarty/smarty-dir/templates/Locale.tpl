@@ -53,7 +53,7 @@
     <div class="col-sm-4">
       <div class="container">
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">
+          <a href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between" >
               <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
               <small class="text-muted">data evento : {$evento->getData()->format('d-m-Y')}</small>

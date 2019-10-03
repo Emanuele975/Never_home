@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-01 11:07:09
+/* Smarty version 3.1.33, created on 2019-10-03 17:07:53
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormAcquisto2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d93173df1a967_61304831',
+  'unifunc' => 'content_5d960ec9c63a69_02154008',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d1618c9e0e22e93c3b3679138ef0e2982a78d9d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormAcquisto2.tpl',
-      1 => 1569483778,
+      1 => 1570115092,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d93173df1a967_61304831 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d960ec9c63a69_02154008 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -57,7 +57,8 @@ function content_5d93173df1a967_61304831 (Smarty_Internal_Template $_smarty_tpl)
   </div>
 </nav>
 
-<form action='/Never_home/Evento/Acquisto' method="post" enctype="multipart/form-data">
+<form action='/Never_home/Evento/Acquisto/<?php echo $_smarty_tpl->tpl_vars['id_evento']->value;?>
+' method="post" enctype="multipart/form-data">
 
   <br><br>
 

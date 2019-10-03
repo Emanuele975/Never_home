@@ -14,8 +14,6 @@ class CGestioneLuogo
         if($_SERVER['REQUEST_METHOD']=="GET"){
 
             if($sessione->isLoggedLuogo()){
-                //redirect alla home page
-                //header('Location: /Never_home');
                 $this->Home();
             } else {
                 if(isset($_SERVER['HTTP_REFERER'])) {
@@ -26,7 +24,7 @@ class CGestioneLuogo
                 }
                 $sessione->setPath($loc); //salvo nei dati di sessione il path che stavo visitando
                 $view = new Vlogin();
-                $view->mostraFormLoginLuogo();
+                $view->mostraFormLoginLuogo("");
             }
         }
         else if($_SERVER['REQUEST_METHOD']=="POST"){
@@ -60,14 +58,14 @@ class CGestioneLuogo
             $sessione->logout();
             $sessione->setLuogoLoggato($luogo);
 
-            $location = $sessione->getPath(); //recupero il path salvato precedentemente
-            $sessione->removePath(); //cancello il path dai dati di sessione
+            //$location = $sessione->getPath(); //recupero il path salvato precedentemente
+            //$sessione->removePath(); //cancello il path dai dati di sessione
             $this->Home();
 
         }
         else {
             $viewerr = new VLogin();
-            $viewerr->mostraFormLoginLuogo("utente","Username e/o password errati");
+            $viewerr->mostraFormLoginLuogo("Username e/o password errati");
         }
     }
 
@@ -105,7 +103,13 @@ class CGestioneLuogo
         $dati = $view->getDatiLocale();
         $locale = new ELuogo($dati['nome'],$dati['indirizzo'],$dati['mail'],$dati['user'],$dati['psw']);
         $pm = FPersistenceManager::getInstance();
-        $pm->store($locale);
+        $id = $pm->store($locale);
+        if ($id==null)
+        {
+            $msg = "registrazione non riuscita";
+            $view2 = new VError();
+            $view2->mostraErrore($msg);
+        }
         $view2 = new Vlocale();
         $view2->LuogoLoggato($locale);
     }

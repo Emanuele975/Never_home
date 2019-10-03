@@ -54,7 +54,8 @@ class FEvento_g extends FDatabase{
             $luogo = $datluogo->loadById($result['id_luogo']);
             $datcategoria = FCategoria::getInstance();
             $categoria = $datcategoria->loadById($result['id_categoria']);
-            $evento = new EEvento_g($result['nome'], new DateTime( $result['data_e'] ) , $luogo, $categoria);
+            $evento = new EEvento_g($result['nome'], new DateTime( $result['data_e'] ) , $luogo
+                , $categoria , $result['descrizione']);
             $evento->setId($id);
             return $evento;
         }

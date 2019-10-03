@@ -19,7 +19,7 @@ class CGestioneUtente
                 }
                 $sessione->setPath($loc); //salvo nei dati di sessione il path che stavo visitando
                 $view = new Vlogin();
-                $view->mostraFormLoginUtente();
+                $view->mostraFormLoginUtente("");
             }
         }
         else if($_SERVER['REQUEST_METHOD']=="POST"){
@@ -51,14 +51,14 @@ class CGestioneUtente
             $sessione->logout();
             $sessione->setUtenteLoggato($utente);
 
-            $location = $sessione->getPath(); //recupero il path salvato precedentemente
-            $sessione->removePath(); //cancello il path dai dati di sessione
+            //$location = $sessione->getPath(); //recupero il path salvato precedentemente
+            //$sessione->removePath(); //cancello il path dai dati di sessione
             $view2=new VHomePage();
             $view2->utentereg($utente);
         }
         else {
             $viewerr = new VLogin();
-            $viewerr->mostraFormLoginUtente("utente","Username e/o password errati");
+            $viewerr->mostraFormLoginUtente("Username e/o password errati");
         }
     }
 
@@ -74,7 +74,13 @@ class CGestioneUtente
         $dati = $view->getDatiUtente();
         $utente = new EUtente_R($dati['nome'],$dati['cognome'],$dati['cf'],$dati['user'],$dati['psw'],0,$dati['mail']);
         $pm = FPersistenceManager::getInstance();
-        $pm->store($utente);
+        $id = $pm->store($utente);
+        if ($id==null)
+        {
+            $msg = "registrazione non riuscita";
+            $view2 = new VError();
+            $view2->mostraErrore($msg);
+        }
         $view2 = new VAccount_utente();
         $view2->utenteloggato($utente);
     }
@@ -108,7 +114,13 @@ class CGestioneUtente
         $utente = $sessione->getUtente();
         $carta = new ECarta($utente->getCF(),$dati['ccv'],new DateTime($dati['data']),$dati['numero']);
         $pm = FPersistenceManager::getInstance();
-        $pm->store($carta);
+        $id = $pm->store($carta);
+        if ($id==null)
+        {
+            $msg = "errore nella registrazione della carta";
+            $view2 = new VError();
+            $view2->mostraErrore($msg);
+        }
         $view->cartacaricata();
 
     }

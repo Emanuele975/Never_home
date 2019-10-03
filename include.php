@@ -36,6 +36,7 @@
    include_once 'View/VRicerca.php';
    include_once 'View/VAcquisto.php';
    include_once 'View/VCarta.php';
+   include_once 'View/VEvento.php';
 
    include_once 'Controller/CFrontController.php';
    include_once 'Controller/CGestioneLuogo.php';

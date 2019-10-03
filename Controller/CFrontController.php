@@ -38,10 +38,17 @@ class CFrontController
                     $c = new $controller();
                     if (isset($array[3])) {
                         $parametro = $array[3];
-                        $c->$metodo($parametro);
+                        if (isset($array[4]))
+                        {
+                            $parametro2 = $array[4];
+                            $c->$metodo($parametro,$parametro2);
+                        }
+                        else
+                            $c->$metodo($parametro);
                     } else {
                         $c->$metodo();
                     }
+
                 } else {
                     header('HTTP/1.1 405 Method Not Allowed');
                     exit;

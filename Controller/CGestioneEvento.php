@@ -9,10 +9,19 @@ class CGestioneEvento
         $view->mostraformevento();
     }
 
-    public function HomeEvento($evento)
+    public function HomeEvento($id,$classe)
     {
+        $pm = FPersistenceManager::getInstance();
+        $evento = $pm->Load($id,$classe);
+        if($evento!=null){
+            $immagine = $pm->getImgByidEvento($evento->getId());
+        } else {
+            $msg = "non esiste questo evento";
+            $view2 = new VError();
+            $view2->mostraErrore($msg);
+        }
         $view = new VEvento();
-        $view->Home($evento);
+        $view->Home($evento,$immagine);
     }
 
     public function NuovoEventoGratis(){
@@ -63,9 +72,12 @@ class CGestioneEvento
                 $msg = "";
                 $immagine = $pm->getImgByidEvento($evento->getId());
             } else {
-                $msg = "Non ci sono ricette che soddisfano questi parametri";
+                $msg = "Non esistono eventi con questo nome";
+                $view2 = new VError();
+                $view2->mostraErrore($msg);
             }
-            $view->mostraRisultati($evento, $immagine, $msg);
+            $view3 = new VEvento();
+            $view3->Home($evento, $immagine, $msg);
 
         }
         else{
@@ -86,6 +98,12 @@ class CGestioneEvento
             $immagine = $pm->getImgByidEvento($evento->getId());
             $view->FormAcquisto($evento,$immagine);
         }
+        else
+        {
+            $msg = "Utente non loggato";
+            $view2 = new VError();
+            $view2->mostraErrore($msg);
+        }
     }
 
     public function FormPagamento()
@@ -104,12 +122,18 @@ class CGestioneEvento
                 $prezzotot = $prezzo*$_POST['num'];
                 $sessione = Session::getInstance();
                 $sessione->setInfoVendita($prezzo,$_POST['num']);
-                $view->FormPagamento($prezzotot);
+                $view->FormPagamento($prezzotot,$_POST['id_evento']);
             }
+        }
+        else
+        {
+            $msg = "Utente non loggato";
+            $view2 = new VError();
+            $view2->mostraErrore($msg);
         }
     }
 
-    public function Acquisto()
+    public function Acquisto($id_evento)
     {
         $view = new VAcquisto();
         $dati = $view->getDati();
@@ -121,15 +145,20 @@ class CGestioneEvento
         $id = $pm->CartaValida($dati['cf'],$dati['ccv'],$dati['data'],$dati['numero']);
         if ($id!=null)
         {
+            $evento = $pm->Load($id_evento,'FEvento_p');
             $carta = $pm->Load($id,'FCarta');
             $acquisto = new EAcquisto(new DateTime('NOW'),$prezzo,$carta,$utente);
             $pm->store($acquisto);
+            $biglietto = new EBiglietto($prezzo,$evento,$acquisto,$utente);
+            $pm->store($biglietto);
             $msg = "acquisto effettuato con successo";
         }
         else
         {
             $pm->incrementaposti($utente->getId(),$sessione->getposti());
-            $msg = "si sono verificati problemi nell acquisto";
+            $msg2 = "si sono verificati problemi nell acquisto";
+            $view2 = new VError();
+            $view2->mostraErrore($msg2);
         }
         $sessione->prenotaposti(0);
         $view->AcquistoEffettuato($msg);
