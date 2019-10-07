@@ -10,69 +10,148 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/Never_home">NH</a>
+    <a class="navbar-brand" href="/Never_home">NH</a>
 
-  <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li>
-        <div class="btn-group btn-dark" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Registrazione
-                </button>
-                <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <a class=" dropdown-item" href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                    <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
+    <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li>
+                <div class="btn-group btn-dark" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Registrazione
+                    </button>
+                    <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class=" dropdown-item" href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
+                        <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
+                    </div>
                 </div>
-        </div>
-      </li>
-        <li>
-            <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Login
-                </button>
-                <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <a class="dark dropdown-item" href="/Never_home/Utente/Login">Login utente</a>
-                    <a class="dark dropdown-item" href="/Never_home/Luogo/Login">Login locale</a>
+            </li>
+            <li>
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </button>
+                    <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dark dropdown-item" href="/Never_home/Utente/Login">Login utente</a>
+                        <a class="dark dropdown-item" href="/Never_home/Luogo/Login">Login locale</a>
+                    </div>
                 </div>
-            </div>
-        </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
-      <button class="btn btn-light" type="submit">Search</button>
-    </form>
-  </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
+            <button class="btn btn-light" type="submit">Search</button>
+        </form>
+    </div>
 </nav>
-  Home page del sito
-<br><br>
 <div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
-    <br>
-    <br>
+    <div class="container">
+        <div class="row">
+            <br>
+        </div>
+        <div class="row mx-md-n5">
+            <div class="col-12 col-lg-4">
+                <!--start card-->
+                <div class="card-wrapper">
+                    <div class="card card-img no-after">
+                        <div class="img-responsive-wrapper">
+                            <div class="img-responsive">
+                                <figure class="img-wrapper">
+                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                                </figure>
+                                <div class="card-calendar d-flex flex-column justify-content-center">
+                                    <span class="card-date">data evento : {$evento->getData()->format('d-m-Y')}</span>
+                                    <!-- <span class="card-day">dicembre</span> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Descrizione: {$evento->getDescrizione()}</h5>
+                            <p class="card-text"></p><a class="read-more" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}"><span class="text">Leggi di più</span>
+                                <svg class="icon">
+                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
 
 </div>
 <form action='/Never_home/Homepage/prova' method="post" enctype="multipart/form-data">
     <input type="text" name="data" aria-label="First name" class="form-control">
 <button type="submit">bottone prova</button>
 </form>
-
-<div class="fixed-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center" >
-                <ul class="nav d-flex justify-content-center">
-                    <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-                </ul>
-                <p class="mb-0 py-1" >© 2014-2018 Pingendo. All rights reserved</p>
             </div>
-        </div>
-    </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <div class="col-12 col-lg-4">
+                <!--start card-->
+                <div class="card-wrapper">
+                    <div class="card card-img no-after">
+                        <div class="img-responsive-wrapper">
+                            <div class="img-responsive">
+                                <figure class="img-wrapper">
+                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                                </figure>
+                                <div class="card-calendar d-flex flex-column justify-content-center">
+                                    <span class="card-date">data evento : {$evento->getData()->format('d-m-Y')}</span>
+                                    <!--<span class="card-day">dicembre</span>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Descrizione: {$evento->getDescrizione()}</h5>
+                            <p class="card-text"></p><a class="read-more" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}"><span class="text">Leggi di più</span>
+                                <svg class="icon">
+                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-lg-4">
+                <!--start card-->
+                <div class="card-wrapper">
+                    <div class="card card-img no-after">
+                        <div class="img-responsive-wrapper">
+                            <div class="img-responsive">
+                                <figure class="img-wrapper">
+                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                                </figure>
+                                <div class="card-calendar d-flex flex-column justify-content-center">
+                                    <span class="card-date">data evento : {$evento->getData()->format('d-m-Y')}</span>
+                                    <!--<span class="card-day">dicembre</span>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Descrizione: {$evento->getDescrizione()}</h5>
+                            <p class="card-text"></p><a class="read-more" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}"><span class="text">Leggi di più</span>
+                                <svg class="icon">
+                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="fixed-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center" >
+                            <ul class="nav d-flex justify-content-center">
+                                <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+                            </ul>
+                            <p class="mb-0 py-1" >© 2014-2018 Pingendo. All rights reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
