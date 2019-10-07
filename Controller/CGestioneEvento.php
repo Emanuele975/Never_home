@@ -148,8 +148,10 @@ class CGestioneEvento
             $evento = $pm->Load($id_evento,'FEvento_p');
             $carta = $pm->Load($id,'FCarta');
             $acquisto = new EAcquisto(new DateTime('NOW'),$prezzo,$carta,$utente);
-            $pm->store($acquisto);
-            $biglietto = new EBiglietto($prezzo,$evento,$acquisto,$utente);
+            $id_a = $pm->store($acquisto);
+            $acquistobis = $pm->Load($id_a,'FAcquisto');
+            $biglietto = new EBiglietto($prezzo,$evento,$acquistobis,$utente);
+            //echo $biglietto->getEvento()->getId().$biglietto->getAcquisto()->getId(). $biglietto->getUtente()->getId();
             $pm->store($biglietto);
             $msg = "acquisto effettuato con successo";
         }

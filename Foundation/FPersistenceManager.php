@@ -28,12 +28,18 @@ class FPersistenceManager
 
     }
 
-    public function Load($key,$f){
-
+    public function Load($key,$f)
+    {
         $dat=$f::getInstance();
         $obj=$dat->loadById($key);
         return $obj;
+    }
 
+    public function LoadEvents($data)
+    {
+        $dat = FEvento_p::getInstance();
+        $result = $dat->loadevents($data);
+        return $result;
     }
 
     public function LoadbyUserPswU($psw,$user)
@@ -110,6 +116,7 @@ class FPersistenceManager
         $dat = FEvento_p::getInstance();
         $dat->incrementaposti($id,$posti);
     }
+
 
 
 

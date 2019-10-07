@@ -55,10 +55,11 @@ class FAcquisto extends FDatabase
         $result = parent::loadSingle($sql);
         if ($result != null) {
             $datcarta=FCarta::getInstance();
-            $carta=$datcarta->loadById($result['cardnumber']);
+            $carta=$datcarta->loadById($result['id_carta']);
             $datutente=FUtente_R::getInstance();
-            $utente=$datutente->loadById($result['CFutente']);
-            $acquisto=new EAcquisto(new DateTime($result['data']),$result['importo'],$carta,$utente,$result['id']);
+            $utente=$datutente->loadById($result['id_utente']);
+            $acquisto=new EAcquisto(new DateTime($result['data']),$result['importo'],$carta,$utente);
+            $acquisto->setId($result['id']);
             return $acquisto;
         }
         else

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-03 15:43:30
+/* Smarty version 3.1.33, created on 2019-10-04 16:10:55
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\loginLuogo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d95fb02af1393_46951337',
+  'unifunc' => 'content_5d9752efab01e1_50992094',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aeb7f6b037d80e5dc401eb1dfca303662e44bf25' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\loginLuogo.tpl',
-      1 => 1570110206,
+      1 => 1570110241,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d95fb02af1393_46951337 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d9752efab01e1_50992094 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -61,7 +61,6 @@ function content_5d95fb02af1393_46951337 (Smarty_Internal_Template $_smarty_tpl)
           <h1 class="mb-4">Log in Luogo</h1>
           <?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
 
-          <br>
           <form action="/Never_home/Luogo/Entra" method="post" enctype="multipart/form-data">
             <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
             <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">

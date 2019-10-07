@@ -50,7 +50,10 @@
     <br>
 
 </div>
-
+<form action='/Never_home/Homepage/prova' method="post" enctype="multipart/form-data">
+    <input type="text" name="data" aria-label="First name" class="form-control">
+<button type="submit">bottone prova</button>
+</form>
 
 <div class="fixed-bottom">
     <div class="container">

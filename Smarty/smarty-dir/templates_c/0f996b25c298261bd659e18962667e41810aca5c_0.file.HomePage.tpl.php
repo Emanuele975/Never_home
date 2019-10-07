@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-01 15:58:57
+/* Smarty version 3.1.33, created on 2019-10-07 15:27:12
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d935ba1dadcc5_20151100',
+  'unifunc' => 'content_5d9b3d300f8357_71582118',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f996b25c298261bd659e18962667e41810aca5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-      1 => 1569938279,
+      1 => 1570453852,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d935ba1dadcc5_20151100 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d9b3d300f8357_71582118 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -73,7 +73,10 @@ function content_5d935ba1dadcc5_20151100 (Smarty_Internal_Template $_smarty_tpl)
     <br>
 
 </div>
-
+<form action='/Never_home/Homepage/prova' method="post" enctype="multipart/form-data">
+    <input type="text" name="data" aria-label="First name" class="form-control">
+<button type="submit">bottone prova</button>
+</form>
 
 <div class="fixed-bottom">
     <div class="container">
