@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-09 11:35:46
+/* Smarty version 3.1.33, created on 2019-10-09 12:11:44
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomeUtente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d9da9f224a640_11431946',
+  'unifunc' => 'content_5d9db260aeccc7_24211910',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a2b2abff98ec256f90830d2c7fd08b177679539b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomeUtente.tpl',
-      1 => 1570613125,
+      1 => 1570615903,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9da9f224a640_11431946 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d9db260aeccc7_24211910 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 
@@ -52,7 +52,7 @@ function content_5d9da9f224a640_11431946 (Smarty_Internal_Template $_smarty_tpl)
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-light" type="submit">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -73,7 +73,7 @@ function content_5d9da9f224a640_11431946 (Smarty_Internal_Template $_smarty_tpl)
   <div class="row mx-md-n5">
      <div class="col-sm-6">
         <form action="/Never_home/Utente/FormCarta" method="post">
-          <button type="submit" class="btn  btn-dark btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
+          <button type="submit" class="btn  btn-secondary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
           <button type="submit" class="btn btn-dark btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
         </form>
      </div>
