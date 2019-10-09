@@ -1,5 +1,26 @@
 <?php
+/* Smarty version 3.1.33, created on 2019-10-09 12:58:28
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5d9dbd5480ee23_04814223',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0f996b25c298261bd659e18962667e41810aca5c' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
+      1 => 1570618706,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5d9dbd5480ee23_04814223 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -45,12 +66,8 @@
         </form>
     </div>
 </nav>
-<<<<<<< HEAD
 
-<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
-=======
-<div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;"><div class="badge badge-pill badge-dark text-wrap"  ><h1>Trova il tuo evento</h1></div>
->>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
+<div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:100% 100%;"><div class="badge badge-pill badge-dark text-wrap"  ><h1>Trova il tuo evento</h1></div>
     <div class="container">
         <div class="row">
             <br>
@@ -58,143 +75,70 @@
         <div class="row mx-md-n5">
             <div class="col-12 col-lg-4">
                 <!--start card-->
-<<<<<<< HEAD
-                <div class="card-wrapper">
-                    <div class="card card-img no-after">
-                        <div class="img-responsive-wrapper">
-                            <div class="img-responsive">
-                                <figure class="img-wrapper">
-                                    <?php $_smarty_tpl->_assignInScope('img_1', base64_encode($_smarty_tpl->tpl_vars['img1']->value->getData()));?>
-                                    <img src="data:<?php echo $_smarty_tpl->tpl_vars['img1']->value->getType();?>
+                <div class="card text-white bg-dark mb-3">
+                    <?php $_smarty_tpl->_assignInScope('img_1', base64_encode($_smarty_tpl->tpl_vars['img1']->value->getData()));?>
+                    <img class="card-img-top" src="data:<?php echo $_smarty_tpl->tpl_vars['img1']->value->getType();?>
 ;base64,<?php echo $_smarty_tpl->tpl_vars['img_1']->value;?>
-" title="img title" alt="imagealt">
-                                </figure>
-                                <div class="card-calendar d-flex flex-column justify-content-center">
-                                    <span class="card-date"><?php echo $_smarty_tpl->tpl_vars['evento1']->value->getData()->format('Y-m-d');?>
- </span>
-                                    <!-- <span class="card-day">dicembre</span> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento1']->value->getDescrizione();?>
-</h5>
-                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
-                                <svg class="icon">
-                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                                </svg></a>
-                        </div>
-=======
-                <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
+" style="height: 300px" alt="Card image cap" >
                     <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
->>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
+                        <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento1']->value->getNome();?>
+</h4>
+                        <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['evento1']->value->getDescrizione();?>
+</p>
+                        <a href="/Never_home/Evento/HomeEvento/<?php echo $_smarty_tpl->tpl_vars['evento1']->value->getId();?>
+/<?php echo $_smarty_tpl->tpl_vars['evento1']->value->getF();?>
+" class="btn btn-primary">Vai all evento</a>
                     </div>
                 </div>
 
             </div>
             <div class="col-12 col-lg-4">
-                <!--start card-->
-<<<<<<< HEAD
-                <div class="card-wrapper">
-                    <div class="card card-img no-after">
-                        <div class="img-responsive-wrapper">
-                            <div class="img-responsive">
-                                <figure class="img-wrapper">
-                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
-                                </figure>
-                                <div class="card-calendar d-flex flex-column justify-content-center">
-                                    <span class="card-date"><?php echo $_smarty_tpl->tpl_vars['evento2']->value->getData()->format('Y-m-d');?>
- </span>
-                                    <!--<span class="card-day">dicembre</span>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento2']->value->getDescrizione();?>
-</h5>
-                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
-                                <svg class="icon">
-                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                                </svg></a>
-                        </div>
-=======
-                <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
-                    <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
->>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
-                    </div>
+            <!--start card-->
+            <div class="card text-white bg-dark mb-3">
+                <?php $_smarty_tpl->_assignInScope('img_2', base64_encode($_smarty_tpl->tpl_vars['img2']->value->getData()));?>
+                <img class="card-img-top" src="data:<?php echo $_smarty_tpl->tpl_vars['img2']->value->getType();?>
+;base64,<?php echo $_smarty_tpl->tpl_vars['img_2']->value;?>
+" style="height: 300px" alt="Card image cap" >
+                <div class="card-body">
+                    <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento2']->value->getNome();?>
+</h4>
+                    <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['evento2']->value->getDescrizione();?>
+</p>
+                    <a href="/Never_home/Evento/HomeEvento/<?php echo $_smarty_tpl->tpl_vars['evento2']->value->getId();?>
+/<?php echo $_smarty_tpl->tpl_vars['evento2']->value->getF();?>
+" class="btn btn-primary">Vai all evento</a>
                 </div>
-
+            </div>
 
             </div>
             <div class="col-12 col-lg-4">
-                <!--start card-->
-<<<<<<< HEAD
-                <div class="card-wrapper">
-                    <div class="card card-img no-after">
-                        <div class="img-responsive-wrapper">
-                            <div class="img-responsive">
-                                <figure class="img-wrapper">
-                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
-                                </figure>
-                                <div class="card-calendar d-flex flex-column justify-content-center">
-                                    <span class="card-date">data evento </span>
-                                    <!--<span class="card-day">dicembre</span>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Descrizione</h5>
-                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
-                                <svg class="icon">
-                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                                </svg></a>
-                        </div>
-=======
-                <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
-                    <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
->>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
-                    </div>
+            <!--start card-->
+            <div class="card text-white bg-dark mb-3">
+                <?php $_smarty_tpl->_assignInScope('img_3', base64_encode($_smarty_tpl->tpl_vars['img3']->value->getData()));?>
+                <img class="card-img-top" src="data:<?php echo $_smarty_tpl->tpl_vars['img3']->value->getType();?>
+;base64,<?php echo $_smarty_tpl->tpl_vars['img_3']->value;?>
+" style="height: 300px" alt="Card image cap" >
+                <div class="card-body">
+                    <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento3']->value->getNome();?>
+</h4>
+                    <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['evento3']->value->getDescrizione();?>
+</p>
+                    <a href="/Never_home/Evento/HomeEvento/<?php echo $_smarty_tpl->tpl_vars['evento3']->value->getId();?>
+/<?php echo $_smarty_tpl->tpl_vars['evento3']->value->getF();?>
+" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
-        </div>
+            </div>
+            </div>
+
     </div>
-</div>
-
-
-
-<div class="fixed-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center" >
-                            <ul class="nav d-flex justify-content-center">
-                                <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-                            </ul>
-                            <p class="mb-0 py-1" >© 2014-2018 Pingendo. All rights reserved</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<<<<<<< HEAD
-<?php echo '<script'; ?>
-=======
-        </div>
-            <?php echo '<script'; ?>
->>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
+    <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-<?php echo '<script'; ?>
+    <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-<?php echo '<script'; ?>
+    <?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 </body>

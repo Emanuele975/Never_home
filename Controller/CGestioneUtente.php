@@ -125,5 +125,10 @@ class CGestioneUtente
 
     }
 
+    public function caricabiglietti()
+    {
+        
+    }
+
 
 }

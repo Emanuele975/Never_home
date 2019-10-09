@@ -76,5 +76,27 @@ class FBiglietto extends FDatabase{
         else return  null;
     }
 
+    public function loadbiglietti()
+    {
+        $sql="SELECT * FROM ".static::getTables()." ;";
+        $result = parent::loadMultiple($sql);
+        $biglietti = array();
+        if(($result!=null) && (count($result)>0) && (count($biglietti)<3)){
+            foreach($result as $i){
+                $datevento=FEvento_p::getInstance();
+                $evento=$datevento->loadById($result['id_evento']);
+                $datacquisto=FAcquisto::getInstance();
+                $acquisto=$datacquisto->loadById($result['id_acquisto']);
+                $datutente=FUtente_R::getInstance();
+                $utente=$datutente->loadById($result['id_utente']);
+                $biglietto = new EBiglietto($result['prezzo'],$evento,$acquisto,$utente);
+                $biglietto->setid($result['id']);
+                array_push($biglietti, $biglietto);
+            }
+            return $biglietti;
+        }
+        else return null;
+    }
+
 
 }

@@ -34,7 +34,7 @@
   </div>
 </nav>
 
-<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
+<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:100% 100%;">
 <div class="container ">
   <div class="row">
     <br>
@@ -42,10 +42,10 @@
   <div class="row mx-md-n5">
     <div class="col-sm-8">
       <form action="/Never_home/Evento/FormEvento" method="post">
-      <button type="button" class="btn btn-dark btn-lg btn-block" name="EventoG" value="G" style="width: 200px;	height: 50px;">
+      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoG" value="G" style="width: 200px;	height: 50px;">
         Crea evento gratis
       </button>
-      <button type="button" class="btn btn-dark btn-lg btn-block" name="EventoP" value="P" style="width: 300px;	height: 50px;">
+      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoP" value="P" style="width: 300px;	height: 50px;">
         Crea evento a pagamento
       </button>
         <button type="button" class="btn btn-dark btn-lg btn-block" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
@@ -70,7 +70,9 @@
     </div>
   </div>
 </div>
+  <br><br><br><br>
 </div>
+
   <div class="fixed-bottom">
     <div class="container">
       <div class="row">
