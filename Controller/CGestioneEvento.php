@@ -14,7 +14,7 @@ class CGestioneEvento
         $pm = FPersistenceManager::getInstance();
         $evento = $pm->Load($id,$classe);
         if($evento!=null){
-            $immagine = $pm->getImgByidEvento($evento->getId());
+            $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
         } else {
             $msg = "non esiste questo evento";
             $view2 = new VError();
@@ -70,7 +70,7 @@ class CGestioneEvento
             $evento = $pm->EventoByNome($nome);
             if($evento!=null){
                 $msg = "";
-                $immagine = $pm->getImgByidEvento($evento->getId());
+                $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
             } else {
                 $msg = "Non esistono eventi con questo nome";
                 $view2 = new VError();
@@ -95,7 +95,7 @@ class CGestioneEvento
             $id = $_POST['evento'];
             $pm = FPersistenceManager::getInstance();
             $evento = $pm->Load($id,'FEvento_p');
-            $immagine = $pm->getImgByidEvento($evento->getId());
+            $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
             $view->FormAcquisto($evento,$immagine);
         }
         else

@@ -87,9 +87,10 @@ class FImmagine extends FDatabase
         return $this->values;
     }
 
-    public function getImgByidEvento($id)
+    public function getImgByidEvento($id,$classe)
     {
-        $sql="SELECT * FROM ".static::getTables()." WHERE id_esterno= '".$id."' ;";
+        $sql="SELECT * FROM ".static::getTables()." WHERE id_esterno= '".$id."' 
+            and classe_esterna= '".$classe."' ;";
         $result = parent::loadSingle($sql);
         if($result!=null){
             $immagine = new EImmagine($result['data'],$result['type'],$result['id_esterno'],$result['classe_esterna']);

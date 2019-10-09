@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.33, created on 2019-10-07 15:27:12
-=======
-/* Smarty version 3.1.33, created on 2019-10-04 16:35:59
->>>>>>> ff5274fc75c48e11dbf0aa7fc483ad56292e6639
+/* Smarty version 3.1.33, created on 2019-10-07 17:24:01
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-<<<<<<< HEAD
-  'unifunc' => 'content_5d9b3d300f8357_71582118',
-=======
-  'unifunc' => 'content_5d9758cf4d0193_37459415',
->>>>>>> ff5274fc75c48e11dbf0aa7fc483ad56292e6639
+  'unifunc' => 'content_5d9b589164a537_40418928',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f996b25c298261bd659e18962667e41810aca5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-<<<<<<< HEAD
-      1 => 1570453852,
-=======
-      1 => 1570199751,
->>>>>>> ff5274fc75c48e11dbf0aa7fc483ad56292e6639
+      1 => 1570461838,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5d9b3d300f8357_71582118 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5d9758cf4d0193_37459415 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> ff5274fc75c48e11dbf0aa7fc483ad56292e6639
+function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -82,7 +66,8 @@ function content_5d9758cf4d0193_37459415 (Smarty_Internal_Template $_smarty_tpl)
         </form>
     </div>
 </nav>
-<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
+
+<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
     <div class="container">
         <div class="row">
             <br>
@@ -95,16 +80,21 @@ function content_5d9758cf4d0193_37459415 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="img-responsive-wrapper">
                             <div class="img-responsive">
                                 <figure class="img-wrapper">
-                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                                    <?php $_smarty_tpl->_assignInScope('img_1', base64_encode($_smarty_tpl->tpl_vars['img1']->value->getData()));?>
+                                    <img src="data:<?php echo $_smarty_tpl->tpl_vars['img1']->value->getType();?>
+;base64,<?php echo $_smarty_tpl->tpl_vars['img_1']->value;?>
+" title="img title" alt="imagealt">
                                 </figure>
                                 <div class="card-calendar d-flex flex-column justify-content-center">
-                                    <span class="card-date">31</span>
-                                    <span class="card-day">dicembre</span>
+                                    <span class="card-date"><?php echo $_smarty_tpl->tpl_vars['evento1']->value->getData()->format('Y-m-d');?>
+ </span>
+                                    <!-- <span class="card-day">dicembre</span> -->
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento1']->value->getDescrizione();?>
+</h5>
                             <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
                                 <svg class="icon">
                                     <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
@@ -113,71 +103,69 @@ function content_5d9758cf4d0193_37459415 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </div>
 
-<<<<<<< HEAD
+            </div>
+            <div class="col-12 col-lg-4">
+                <!--start card-->
+                <div class="card-wrapper">
+                    <div class="card card-img no-after">
+                        <div class="img-responsive-wrapper">
+                            <div class="img-responsive">
+                                <figure class="img-wrapper">
+                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                                </figure>
+                                <div class="card-calendar d-flex flex-column justify-content-center">
+                                    <span class="card-date"><?php echo $_smarty_tpl->tpl_vars['evento2']->value->getData()->format('Y-m-d');?>
+ </span>
+                                    <!--<span class="card-day">dicembre</span>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento2']->value->getDescrizione();?>
+</h5>
+                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+                                <svg class="icon">
+                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-12 col-lg-4">
+                <!--start card-->
+                <div class="card-wrapper">
+                    <div class="card card-img no-after">
+                        <div class="img-responsive-wrapper">
+                            <div class="img-responsive">
+                                <figure class="img-wrapper">
+                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                                </figure>
+                                <div class="card-calendar d-flex flex-column justify-content-center">
+                                    <span class="card-date">data evento </span>
+                                    <!--<span class="card-day">dicembre</span>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Descrizione</h5>
+                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+                                <svg class="icon">
+                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
-<form action='/Never_home/Homepage/prova' method="post" enctype="multipart/form-data">
-    <input type="text" name="data" aria-label="First name" class="form-control">
-<button type="submit">bottone prova</button>
-</form>
-=======
-            </div>
-            <div class="col-12 col-lg-4">
-                <!--start card-->
-                <div class="card-wrapper">
-                    <div class="card card-img no-after">
-                        <div class="img-responsive-wrapper">
-                            <div class="img-responsive">
-                                <figure class="img-wrapper">
-                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
-                                </figure>
-                                <div class="card-calendar d-flex flex-column justify-content-center">
-                                    <span class="card-date">31</span>
-                                    <span class="card-day">dicembre</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
-                                <svg class="icon">
-                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                                </svg></a>
-                        </div>
-                    </div>
-                </div>
-
->>>>>>> ff5274fc75c48e11dbf0aa7fc483ad56292e6639
-
-            </div>
-            <div class="col-12 col-lg-4">
-                <!--start card-->
-                <div class="card-wrapper">
-                    <div class="card card-img no-after">
-                        <div class="img-responsive-wrapper">
-                            <div class="img-responsive">
-                                <figure class="img-wrapper">
-                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
-                                </figure>
-                                <div class="card-calendar d-flex flex-column justify-content-center">
-                                    <span class="card-date">31</span>
-                                    <span class="card-day">dicembre</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
-                                <svg class="icon">
-                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                                </svg></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
 
-            <div class="fixed-bottom">
+
+<div class="fixed-bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center" >
@@ -192,13 +180,13 @@ function content_5d9758cf4d0193_37459415 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </div>
             </div>
-            <?php echo '<script'; ?>
+<?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-            <?php echo '<script'; ?>
+<?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-            <?php echo '<script'; ?>
+<?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 </body>

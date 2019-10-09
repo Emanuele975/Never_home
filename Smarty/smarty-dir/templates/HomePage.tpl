@@ -43,7 +43,8 @@
         </form>
     </div>
 </nav>
-<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
+
+<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
     <div class="container">
         <div class="row">
             <br>
@@ -56,17 +57,18 @@
                         <div class="img-responsive-wrapper">
                             <div class="img-responsive">
                                 <figure class="img-wrapper">
-                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                                    {$img_1 = base64_encode($img1->getData())}
+                                    <img src="data:{$img1->getType()};base64,{$img_1}" title="img title" alt="imagealt">
                                 </figure>
                                 <div class="card-calendar d-flex flex-column justify-content-center">
-                                    <span class="card-date">data evento : {$evento->getData()->format('d-m-Y')}</span>
+                                    <span class="card-date">{$evento1->getData()->format('Y-m-d')} </span>
                                     <!-- <span class="card-day">dicembre</span> -->
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Descrizione: {$evento->getDescrizione()}</h5>
-                            <p class="card-text"></p><a class="read-more" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}"><span class="text">Leggi di più</span>
+                            <h5 class="card-title">{$evento1->getDescrizione()}</h5>
+                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
                                 <svg class="icon">
                                     <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                 </svg></a>
@@ -74,67 +76,67 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="col-12 col-lg-4">
+                <!--start card-->
+                <div class="card-wrapper">
+                    <div class="card card-img no-after">
+                        <div class="img-responsive-wrapper">
+                            <div class="img-responsive">
+                                <figure class="img-wrapper">
+                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                                </figure>
+                                <div class="card-calendar d-flex flex-column justify-content-center">
+                                    <span class="card-date">{$evento2->getData()->format('Y-m-d')} </span>
+                                    <!--<span class="card-day">dicembre</span>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{$evento2->getDescrizione()}</h5>
+                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+                                <svg class="icon">
+                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-12 col-lg-4">
+                <!--start card-->
+                <div class="card-wrapper">
+                    <div class="card card-img no-after">
+                        <div class="img-responsive-wrapper">
+                            <div class="img-responsive">
+                                <figure class="img-wrapper">
+                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                                </figure>
+                                <div class="card-calendar d-flex flex-column justify-content-center">
+                                    <span class="card-date">data evento </span>
+                                    <!--<span class="card-day">dicembre</span>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Descrizione</h5>
+                            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+                                <svg class="icon">
+                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
-<form action='/Never_home/Homepage/prova' method="post" enctype="multipart/form-data">
-    <input type="text" name="data" aria-label="First name" class="form-control">
-<button type="submit">bottone prova</button>
-</form>
-            </div>
-            <div class="col-12 col-lg-4">
-                <!--start card-->
-                <div class="card-wrapper">
-                    <div class="card card-img no-after">
-                        <div class="img-responsive-wrapper">
-                            <div class="img-responsive">
-                                <figure class="img-wrapper">
-                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
-                                </figure>
-                                <div class="card-calendar d-flex flex-column justify-content-center">
-                                    <span class="card-date">data evento : {$evento->getData()->format('d-m-Y')}</span>
-                                    <!--<span class="card-day">dicembre</span>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Descrizione: {$evento->getDescrizione()}</h5>
-                            <p class="card-text"></p><a class="read-more" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}"><span class="text">Leggi di più</span>
-                                <svg class="icon">
-                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                                </svg></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-12 col-lg-4">
-                <!--start card-->
-                <div class="card-wrapper">
-                    <div class="card card-img no-after">
-                        <div class="img-responsive-wrapper">
-                            <div class="img-responsive">
-                                <figure class="img-wrapper">
-                                    <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
-                                </figure>
-                                <div class="card-calendar d-flex flex-column justify-content-center">
-                                    <span class="card-date">data evento : {$evento->getData()->format('d-m-Y')}</span>
-                                    <!--<span class="card-day">dicembre</span>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Descrizione: {$evento->getDescrizione()}</h5>
-                            <p class="card-text"></p><a class="read-more" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}"><span class="text">Leggi di più</span>
-                                <svg class="icon">
-                                    <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                                </svg></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
 
-            <div class="fixed-bottom">
+
+<div class="fixed-bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center" >
@@ -149,9 +151,9 @@
                     </div>
                 </div>
             </div>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

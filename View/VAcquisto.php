@@ -46,7 +46,6 @@ class VAcquisto
         if(isset($_POST['ccv'])){
             $dati['ccv'] = $_POST['ccv'];
         }
-
         return $dati;
     }
 

@@ -86,7 +86,7 @@ class CGestioneLuogo
         $pm = FPersistenceManager::getInstance();
         $evento = $pm->EventobyLuogo($luogo->getId());
         if ($evento!=null)
-            $img = $pm->getImgByidEvento($evento->getId());
+            $img = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
         $view=new Vlocale();
         $view->HomeLocale($evento,$img);
     }

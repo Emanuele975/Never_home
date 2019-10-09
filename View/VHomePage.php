@@ -14,7 +14,10 @@ class VHomePage
         $this->smarty->setConfigDir('Smarty/smarty-dir/configs');
     }
 
-    public function Home(){
+    public function Home($eventi,$imgs){
+        $this->smarty->assign("evento1",$eventi[0]);
+        $this->smarty->assign("evento2",$eventi[1]);
+        $this->smarty->assign("img1",$imgs[0]);
         $this->smarty->display("HomePage.tpl");
     }
 
