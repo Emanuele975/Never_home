@@ -41,21 +41,20 @@ class FUtente_R extends FDatabase
 
     public function store1(EUtente_R $utente){
         $sql = "INSERT INTO ".static::getTables()." VALUES ".static::getValues().";";
-        //print "\n\n".$sql."\n\n";
         $id = parent::store($sql,'FUtente_R',$utente);
-        //print "l id:   ".$id;
         if($id)
             return $id;
         else
             return null;
     }
 
-    public function loadById($CF){
-        $sql="SELECT * FROM ".static::getTables()." WHERE CF= '".$CF."' ;";
+    public function loadById($id){
+        $sql="SELECT * FROM ".static::getTables()." WHERE id= '".$id."' ;";
         $result = parent::loadSingle($sql);
         if($result!=null){
             $utente = new EUtente_R($result['nome'],$result['cognome'],($result['CF']),
-                $result['username'],$result['password'],$result['punti']);
+                $result['username'],$result['password'],$result['punti'],$result['email']);
+            $utente->setId($result['id']);
             return $utente;
         }
         else return null;

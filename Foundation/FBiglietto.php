@@ -8,14 +8,14 @@ class FBiglietto extends FDatabase{
     {
         parent::__construct();
         $this->table = "biglietto";
-        $this->values = "(:prezzo,:id,:id_evento,,:id_acquisto,:id_utente)";
+        $this->values = "(:prezzo, :id , :id_evento , :id_acquisto , :id_utente )";
 
     }
 
     public static function bind($stmt, EBiglietto $biglietto)
     {
-        $stmt->bindValue(':prezzo', $biglietto->getPrezzo(), PDO::PARAM_INT);
-        $stmt->bindValue(':id', $biglietto->getId(), PDO::PARAM_INT);
+        $stmt->bindValue(':prezzo', $biglietto->getPrezzo());
+        $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':id_evento', $biglietto->getEvento()->getId(), PDO::PARAM_INT);
         $stmt->bindValue(':id_acquisto', $biglietto->getAcquisto()->getId(), PDO::PARAM_INT);
         $stmt->bindValue(':id_utente', $biglietto->getUtente()->getId(), PDO::PARAM_INT);
@@ -41,8 +41,9 @@ class FBiglietto extends FDatabase{
 
     public function store1(EBiglietto $biglietto)
     {
-        $sql = " INSERT INTO " . static::getTables() . " VALUES " . static::getValues() . ";";
-        $id = parent::store($sql, 'FBiglietto', $biglietto);
+        $sql = "INSERT INTO ".static::getTables()." VALUES ".static::getValues().";";
+        //echo $sql;
+        $id = parent::store($sql,'FBiglietto',$biglietto);
         if ($id)
             return $id;
         else

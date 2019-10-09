@@ -71,6 +71,11 @@ class EAcquisto{
     function getId(){
         return $this->id;
     }
+
+    function setId($id)
+    {
+        $this->id=$id;
+    }
     
     function toString(){
         return "la data dell acquisto: ".$this->data->format('d-m-Y')."\n".

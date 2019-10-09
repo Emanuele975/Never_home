@@ -58,6 +58,11 @@
                     </div>
                 </div>
 
+</div>
+<form action='/Never_home/Homepage/prova' method="post" enctype="multipart/form-data">
+    <input type="text" name="data" aria-label="First name" class="form-control">
+<button type="submit">bottone prova</button>
+</form>
             </div>
             <div class="col-12 col-lg-4">
                 <!--start card-->
@@ -67,7 +72,6 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-
 
             </div>
             <div class="col-12 col-lg-4">

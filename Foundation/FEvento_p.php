@@ -101,6 +101,27 @@ class FEvento_p extends FDatabase
         return $result = parent::update($sql);
     }
 
+    public function loadevents($data)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE data_e > '".$data->format('Y-m-d')."' ;";
+        $result = parent::loadMultiple($sql);
+        $eventi = array();
+        if(($result!=null) && (count($result)>0) && (count($eventi)<3)){
+            foreach($result as $i){
+                $datluogo = FLuogo::getInstance();
+                $luogo = $datluogo->loadById($i['id_luogo']);
+                $datcategoria = FCategoria::getInstance();
+                $categoria = $datcategoria->loadById($i['id_categoria']);
+                $evento = new EEvento_p($i['nome'], new DateTime( $i['data_e'] ) , $luogo, $categoria,
+                    $i['descrizione'], $i['prezzo'],$i['posti_disponibili'],$i['posti_totali']);
+                $evento->setId($i['id']);
+                array_push($eventi, $evento);
+            }
+            return $eventi;
+        }
+        else return null;
+    }
+
 }
 
 ?>
