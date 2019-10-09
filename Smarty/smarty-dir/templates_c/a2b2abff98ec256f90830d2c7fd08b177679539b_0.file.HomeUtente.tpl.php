@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-26 09:49:35
+/* Smarty version 3.1.33, created on 2019-10-09 11:35:46
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomeUtente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d8c6d8f56e786_36248436',
+  'unifunc' => 'content_5d9da9f224a640_11431946',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a2b2abff98ec256f90830d2c7fd08b177679539b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomeUtente.tpl',
-      1 => 1569484067,
+      1 => 1570613125,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d8c6d8f56e786_36248436 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d9da9f224a640_11431946 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 
 <head>
   <meta charset="utf-8">
@@ -41,13 +41,13 @@ function content_5d8c6d8f56e786_36248436 (Smarty_Internal_Template $_smarty_tpl)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
+        <a class="btn navbar-btn mx-2 btn-outline-primary" href="#">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Notifiche </a>
+        <a class="btn navbar-btn mx-2 btn-outline-primary" href="#">Notifiche </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Utente/Logout">Logout <span class="sr-only">(current)</span></a>
+        <a class="btn navbar-btn mx-2 btn-outline-primary" href="/Never_home/Utente/Logout">Logout <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -56,18 +56,60 @@ function content_5d8c6d8f56e786_36248436 (Smarty_Internal_Template $_smarty_tpl)
     </form>
   </div>
 </nav>
-<br><br>
-
-<?php echo $_smarty_tpl->tpl_vars['utente']->value->getNome();?>
-
-<br>
-<?php echo $_smarty_tpl->tpl_vars['utente']->value->getCognome();?>
+<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
 
 
 
-<form action="/Never_home/Utente/FormCarta" method="post">
-  <button type="submit" class="btn btn-primary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
-</form>
+  <div class="badge badge-pill badge-dark text-wrap"  >
+    <h1>
+    <?php echo $_smarty_tpl->tpl_vars['utente']->value->getNome();?>
+ <?php echo $_smarty_tpl->tpl_vars['utente']->value->getCognome();?>
+ </h1>
+  </div>
+
+<br><br><br>
+
+<div class="container">
+  <div class="row mx-md-n5">
+     <div class="col-sm-6">
+        <form action="/Never_home/Utente/FormCarta" method="post">
+          <button type="submit" class="btn  btn-dark btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
+          <button type="submit" class="btn btn-dark btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
+        </form>
+     </div>
+    <div class="col-sm-6">
+      <div class="list-group ">
+        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Nome evento</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Descrizione evento</p>
+          <small>indirizzo</small>
+        </a>
+        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Nome evento</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Descrizone evento</p>
+          <small class="text-muted">Indirizzo evento</small>
+        </a>
+        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Nome evento</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Descrizione evento</p>
+          <small class="text-muted">Indirizzo evento</small>
+        </a>
+      </div>
+    </div>
+</div>
+
+
+</div>
+
 
 
   <div class="fixed-bottom">

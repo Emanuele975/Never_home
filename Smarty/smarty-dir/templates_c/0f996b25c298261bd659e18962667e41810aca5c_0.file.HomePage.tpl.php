@@ -1,26 +1,5 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-07 17:24:01
-  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d9b589164a537_40418928',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    '0f996b25c298261bd659e18962667e41810aca5c' => 
-    array (
-      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-      1 => 1570461838,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -39,18 +18,18 @@ function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl)
         <ul class="navbar-nav mr-auto">
             <li>
                 <div class="btn-group btn-dark" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Registrazione
                     </button>
-                    <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class=" dropdown-item" href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
+                    <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
+                        <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
                         <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
                     </div>
                 </div>
             </li>
             <li>
                 <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Login
                     </button>
                     <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -62,12 +41,16 @@ function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl)
         </ul>
         <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
-            <button class="btn btn-light" type="submit">Search</button>
+            <button class="btn btn-primary" type="submit">Search</button>
         </form>
     </div>
 </nav>
+<<<<<<< HEAD
 
 <div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
+=======
+<div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;"><div class="badge badge-pill badge-dark text-wrap"  ><h1>Trova il tuo evento</h1></div>
+>>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
     <div class="container">
         <div class="row">
             <br>
@@ -75,6 +58,7 @@ function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl)
         <div class="row mx-md-n5">
             <div class="col-12 col-lg-4">
                 <!--start card-->
+<<<<<<< HEAD
                 <div class="card-wrapper">
                     <div class="card card-img no-after">
                         <div class="img-responsive-wrapper">
@@ -100,12 +84,19 @@ function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl)
                                     <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                 </svg></a>
                         </div>
+=======
+                <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+>>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
                     </div>
                 </div>
 
             </div>
             <div class="col-12 col-lg-4">
                 <!--start card-->
+<<<<<<< HEAD
                 <div class="card-wrapper">
                     <div class="card card-img no-after">
                         <div class="img-responsive-wrapper">
@@ -128,6 +119,12 @@ function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl)
                                     <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                 </svg></a>
                         </div>
+=======
+                <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+>>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
                     </div>
                 </div>
 
@@ -135,6 +132,7 @@ function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <div class="col-12 col-lg-4">
                 <!--start card-->
+<<<<<<< HEAD
                 <div class="card-wrapper">
                     <div class="card card-img no-after">
                         <div class="img-responsive-wrapper">
@@ -155,9 +153,14 @@ function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl)
                                     <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
                                 </svg></a>
                         </div>
+=======
+                <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+>>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -180,7 +183,12 @@ function content_5d9b589164a537_40418928 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 <?php echo '<script'; ?>
+=======
+        </div>
+            <?php echo '<script'; ?>
+>>>>>>> b80200b7415771c6e5b4a8e545a6725d28d13ba6
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>

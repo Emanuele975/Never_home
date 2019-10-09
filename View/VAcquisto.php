@@ -13,7 +13,7 @@ class VAcquisto
         $this->smarty->setCacheDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/cache');
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
 
-        
+
     }
 
     public function FormAcquisto($evento,$img)

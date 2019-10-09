@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-03 14:52:11
+/* Smarty version 3.1.33, created on 2019-10-09 11:08:03
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Locale.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d95eefb6760e6_81497354',
+  'unifunc' => 'content_5d9da373b929a8_71074090',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '08880dbce1aa5b60bb514f2b300e94388c2beab6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Locale.tpl',
-      1 => 1570107111,
+      1 => 1570612080,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d95eefb6760e6_81497354 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d9da373b929a8_71074090 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -44,7 +44,7 @@ function content_5d95eefb6760e6_81497354 (Smarty_Internal_Template $_smarty_tpl)
         <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Notifiche </a>
+        <a class="nav-link active" href="#">Notifiche </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
@@ -57,7 +57,7 @@ function content_5d95eefb6760e6_81497354 (Smarty_Internal_Template $_smarty_tpl)
   </div>
 </nav>
 
-<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
+<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
 <div class="container ">
   <div class="row">
     <br>
@@ -65,12 +65,15 @@ function content_5d95eefb6760e6_81497354 (Smarty_Internal_Template $_smarty_tpl)
   <div class="row mx-md-n5">
     <div class="col-sm-8">
       <form action="/Never_home/Evento/FormEvento" method="post">
-      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoG" value="G" style="width: 200px;	height: 50px;">
+      <button type="button" class="btn btn-dark btn-lg btn-block" name="EventoG" value="G" style="width: 200px;	height: 50px;">
         Crea evento gratis
       </button>
-      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoP" value="P" style="width: 300px;	height: 50px;">
+      <button type="button" class="btn btn-dark btn-lg btn-block" name="EventoP" value="P" style="width: 300px;	height: 50px;">
         Crea evento a pagamento
       </button>
+        <button type="button" class="btn btn-dark btn-lg btn-block" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
+          I tuoi eventi
+        </button>
       </form>
     </div>
     <div class="col-sm-4">
