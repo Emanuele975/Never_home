@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 
 <head>
   <meta charset="utf-8">
@@ -18,13 +18,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
+        <a class="btn navbar-btn mx-2 btn-outline-primary" href="#">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Notifiche </a>
+        <a class="btn navbar-btn mx-2 btn-outline-primary" href="#">Notifiche </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Utente/Logout">Logout <span class="sr-only">(current)</span></a>
+        <a class="btn navbar-btn mx-2 btn-outline-primary" href="/Never_home/Utente/Logout">Logout <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -33,16 +33,58 @@
     </form>
   </div>
 </nav>
-<br><br>
-
-{$utente->getNome()}
-<br>
-{$utente->getCognome()}
+<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
 
 
-<form action="/Never_home/Utente/FormCarta" method="post">
-  <button type="submit" class="btn btn-primary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
-</form>
+
+  <div class="badge badge-pill badge-dark text-wrap"  >
+    <h1>
+    {$utente->getNome()} {$utente->getCognome()} </h1>
+  </div>
+
+<br><br><br>
+
+<div class="container">
+  <div class="row mx-md-n5">
+     <div class="col-sm-6">
+        <form action="/Never_home/Utente/FormCarta" method="post">
+          <button type="submit" class="btn  btn-dark btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
+          <button type="submit" class="btn btn-dark btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
+        </form>
+     </div>
+    <div class="col-sm-6">
+      <div class="list-group ">
+        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Nome evento</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Descrizione evento</p>
+          <small>indirizzo</small>
+        </a>
+        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Nome evento</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Descrizone evento</p>
+          <small class="text-muted">Indirizzo evento</small>
+        </a>
+        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Nome evento</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Descrizione evento</p>
+          <small class="text-muted">Indirizzo evento</small>
+        </a>
+      </div>
+    </div>
+</div>
+
+
+</div>
+
 
 
   <div class="fixed-bottom">
