@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-09 12:58:28
+/* Smarty version 3.1.33, created on 2019-10-11 09:33:02
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d9dbd5480ee23_04814223',
+  'unifunc' => 'content_5da0302e5894e2_62532171',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f996b25c298261bd659e18962667e41810aca5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-      1 => 1570618706,
+      1 => 1570779180,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9dbd5480ee23_04814223 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da0302e5894e2_62532171 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -32,6 +32,7 @@ function content_5d9dbd5480ee23_04814223 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/Never_home">NH</a>
 
@@ -123,13 +124,11 @@ function content_5d9dbd5480ee23_04814223 (Smarty_Internal_Template $_smarty_tpl)
 </h4>
                     <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['evento3']->value->getDescrizione();?>
 </p>
-                    <a href="/Never_home/Evento/HomeEvento/<?php echo $_smarty_tpl->tpl_vars['evento3']->value->getId();?>
-/<?php echo $_smarty_tpl->tpl_vars['evento3']->value->getF();?>
-" class="btn btn-primary">Vai all evento</a>
+                    <a href="/Never_home/Utente/caricabiglietti" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
             </div>
-            </div>
+        </div>
 
     </div>
     <?php echo '<script'; ?>

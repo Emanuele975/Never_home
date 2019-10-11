@@ -84,13 +84,13 @@ class FBiglietto extends FDatabase{
         if(($result!=null) && (count($result)>0) && (count($biglietti)<3)){
             foreach($result as $i){
                 $datevento=FEvento_p::getInstance();
-                $evento=$datevento->loadById($result['id_evento']);
+                $evento=$datevento->loadById($i['id_evento']);
                 $datacquisto=FAcquisto::getInstance();
-                $acquisto=$datacquisto->loadById($result['id_acquisto']);
+                $acquisto=$datacquisto->loadById($i['id_acquisto']);
                 $datutente=FUtente_R::getInstance();
-                $utente=$datutente->loadById($result['id_utente']);
-                $biglietto = new EBiglietto($result['prezzo'],$evento,$acquisto,$utente);
-                $biglietto->setid($result['id']);
+                $utente=$datutente->loadById($i['id_utente']);
+                $biglietto = new EBiglietto($i['prezzo'],$evento,$acquisto,$utente);
+                $biglietto->setid($i['id']);
                 array_push($biglietti, $biglietto);
             }
             return $biglietti;

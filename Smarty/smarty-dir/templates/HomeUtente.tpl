@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,26 +34,26 @@
     </form>
   </div>
 </nav>
+
 <div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
 
-
-
-  <div class="badge badge-pill badge-dark text-wrap"  >
+  <div class="badge badge-pill badge-dark text-wrap">
     <h1>
     {$utente->getNome()} {$utente->getCognome()} </h1>
   </div>
 
 <br><br><br>
+</div>
 
 <div class="container">
   <div class="row mx-md-n5">
-     <div class="col-sm-6">
+      <div class="col-sm-6">
         <form action="/Never_home/Utente/FormCarta" method="post">
           <button type="submit" class="btn  btn-dark btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
           <button type="submit" class="btn btn-dark btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
         </form>
      </div>
-    <div class="col-sm-6">
+      <div class="col-sm-6">
       <div class="list-group ">
         <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
@@ -80,28 +81,11 @@
         </a>
       </div>
     </div>
-</div>
-
-
-</div>
-
-
-
-  <div class="fixed-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">
-          <ul class="nav d-flex justify-content-center">
-            <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-          </ul>
-          <p class="mb-0 py-1">© 2014-2018 Pingendo. All rights reserved</p>
-        </div>
-      </div>
-    </div>
   </div>
+
+<br>
+</div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

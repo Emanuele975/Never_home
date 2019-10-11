@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/Never_home">NH</a>
 
@@ -84,11 +85,11 @@
                 <div class="card-body">
                     <h4 class="card-title">{$evento3->getNome()}</h4>
                     <p class="card-text">{$evento3->getDescrizione()}</p>
-                    <a href="/Never_home/Evento/HomeEvento/{$evento3->getId()}/{$evento3->getF()}" class="btn btn-primary">Vai all evento</a>
+                    <a href="/Never_home/Utente/caricabiglietti" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
             </div>
-            </div>
+        </div>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

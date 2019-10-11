@@ -17,16 +17,6 @@ class CGestioneHomepage
         $view->Home($eventi,$imgs);
     }
 
-    public function prova()
-    {
-        //$data = $_POST['data'];
-        //$data = new DateTime($data);
-        //$pm = FPersistenceManager::getInstance();
-        //echo count($pm->LoadEvents($data));
-        //$eventi = $pm->LoadEvents($data);
-        //echo $eventi[0]->toString();
-    }
-
     public function login(){
         $view=new Vlogin();
         $view->mostraFormLogin();
