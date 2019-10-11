@@ -8,8 +8,8 @@ class CGestioneUtente
         if($_SERVER['REQUEST_METHOD']=="GET"){
 
             if($sessione->isLoggedUtente()){
-                $view = new VHomePage();
-                $view->utentereg($sessione->getUtente());
+
+                $this->setHomeUtente($sessione->getUtente());
             } else {
                 if(isset($_SERVER['HTTP_REFERER'])) {
                     $referer = $_SERVER['HTTP_REFERER']; //indirizzo che stavo visitando
@@ -53,8 +53,8 @@ class CGestioneUtente
 
             //$location = $sessione->getPath(); //recupero il path salvato precedentemente
             //$sessione->removePath(); //cancello il path dai dati di sessione
-            $view2=new VHomePage();
-            $view2->utentereg($utente);
+
+            $this->setHomeUtente($utente);
         }
         else {
             $viewerr = new VLogin();
@@ -95,11 +95,6 @@ class CGestioneUtente
         header('Location: /Never_home');
     }
 
-    public function HomePage(){
-        $view= new VHomePage();
-        $view->Home();
-    }
-
     public function FormCarta()
     {
         $view = new VCarta();
@@ -125,19 +120,24 @@ class CGestioneUtente
 
     }
 
-    public function caricabiglietti()
+    public function setHomeUtente($utente)
     {
         $pm = FPersistenceManager::getInstance();
-        $biglietti = $pm->LoadBiglietti();
+        $biglietti = $pm->LoadBiglietti($utente->getId());
         $eventi = array();
-        foreach($biglietti as $i)
+        if (isset($biglietti))
         {
-            $evento = $pm->Load($i->getEvento()->getId(),$i->getEvento()->getF());
-            array_push($eventi, $evento);
+            foreach($biglietti as $i)
+            {
+                $evento = $pm->Load($i->getEvento()->getId(),$i->getEvento()->getF());
+                array_push($eventi, $evento);
 
+            }
         }
-        
-        $view->Home($eventi,$imgs);
+        else
+            $eventi[0]=null;
+        $view = new VUtente();
+        $view->HomeUtente($utente, $biglietti, $eventi);
     }
 
 

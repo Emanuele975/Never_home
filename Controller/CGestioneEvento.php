@@ -35,6 +35,7 @@ class CGestioneEvento
         $categoria = $pm->Loadcat($dati['Categoria']);
         $evento = new EEvento_g($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione']);
         $id = $pm->store($evento);
+        $evento->setId($id);
         $img = new EImmagine($dati['img'],$dati['tipo'],$id,'EEvento_g');
         $pm->store($img);
         $view = new Vlocale();
@@ -55,6 +56,7 @@ class CGestioneEvento
         $posti = $dati["Posti"];
         $evento = new EEvento_p($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione'],$prezzo,$posti,$posti);
         $id = $pm->store($evento);
+        $evento->setId($id);
         $img = new EImmagine($dati['img'],$dati['tipo'],$id,'EEvento_p');
         $pm->store($img);
         $view = new Vlocale();

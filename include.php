@@ -38,6 +38,7 @@
    include_once 'View/VCarta.php';
    include_once 'View/VEvento.php';
    include_once 'View/VError.php';
+   include_once 'View/VUtente.php';
 
    include_once 'Controller/CFrontController.php';
    include_once 'Controller/CGestioneLuogo.php';

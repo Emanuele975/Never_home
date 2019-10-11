@@ -21,14 +21,7 @@ class VHomePage
         $this->smarty->assign("img1",$imgs[0]);
         $this->smarty->assign("img2",$imgs[1]);
         $this->smarty->assign("img3",$imgs[2]);
-
         $this->smarty->display("HomePage.tpl");
-    }
-
-
-    public function utentereg($utente){
-        $this->smarty->assign('utente',$utente);
-        $this->smarty->display("HomeUtente.tpl");
     }
 
     public function mostraevento(EEvento $evento){
