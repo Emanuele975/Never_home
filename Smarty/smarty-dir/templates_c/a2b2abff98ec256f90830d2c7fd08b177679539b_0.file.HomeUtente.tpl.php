@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-09 12:11:44
+/* Smarty version 3.1.33, created on 2019-10-09 12:48:50
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomeUtente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d9db260aeccc7_24211910',
+  'unifunc' => 'content_5d9dbb1220d2e6_93747632',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a2b2abff98ec256f90830d2c7fd08b177679539b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomeUtente.tpl',
-      1 => 1570615903,
+      1 => 1570618127,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9db260aeccc7_24211910 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d9dbb1220d2e6_93747632 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 
@@ -33,7 +33,7 @@ function content_5d9db260aeccc7_24211910 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/Never_home">NH</a>
+  <a class="navbar-brand text-primary" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -60,7 +60,7 @@ function content_5d9db260aeccc7_24211910 (Smarty_Internal_Template $_smarty_tpl)
 
 
 
-  <div class="badge badge-pill badge-dark text-wrap"  >
+  <div class="badge badge-pill badge-dark text-primary"  >
     <h1>
     <?php echo $_smarty_tpl->tpl_vars['utente']->value->getNome();?>
  <?php echo $_smarty_tpl->tpl_vars['utente']->value->getCognome();?>
@@ -73,8 +73,8 @@ function content_5d9db260aeccc7_24211910 (Smarty_Internal_Template $_smarty_tpl)
   <div class="row mx-md-n5">
      <div class="col-sm-6">
         <form action="/Never_home/Utente/FormCarta" method="post">
-          <button type="submit" class="btn  btn-secondary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
-          <button type="submit" class="btn btn-dark btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
+          <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
+          <button type="submit" class="btn btn-dark text-primary btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
         </form>
      </div>
     <div class="col-sm-6">

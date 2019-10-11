@@ -10,7 +10,7 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/Never_home">NH</a>
+  <a class="navbar-brand text-primary" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -37,7 +37,7 @@
 
 
 
-  <div class="badge badge-pill badge-dark text-wrap"  >
+  <div class="badge badge-pill badge-dark text-primary"  >
     <h1>
     {$utente->getNome()} {$utente->getCognome()} </h1>
   </div>
@@ -48,8 +48,8 @@
   <div class="row mx-md-n5">
      <div class="col-sm-6">
         <form action="/Never_home/Utente/FormCarta" method="post">
-          <button type="submit" class="btn  btn-dark btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
-          <button type="submit" class="btn btn-dark btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
+          <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
+          <button type="submit" class="btn btn-dark text-primary btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
         </form>
      </div>
     <div class="col-sm-6">

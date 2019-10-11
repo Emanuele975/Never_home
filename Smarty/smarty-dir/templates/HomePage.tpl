@@ -10,7 +10,7 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/Never_home">NH</a>
+    <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
     <div class="collapse navbar-collapse"  id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -43,7 +43,8 @@
         </form>
     </div>
 </nav>
-<div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;"><div class="badge badge-pill badge-dark text-wrap"  ><h1>Trova il tuo evento</h1></div>
+<div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
+    <div class="badge badge-pill badge-dark text-primary"  ><h1><strong>Trova il tuo evento</strong></h1></div>
     <div class="container">
         <div class="row">
             <br>
@@ -59,11 +60,8 @@
                 </div>
 
             </div>
-            <form action='/Never_home/Homepage/prova' method="post" enctype="multipart/form-data">
-                <input type="text" name="data" aria-label="First name" class="form-control">
-                <button type="submit">bottone prova</button>
-            </form>
-        </div>
+
+
         <div class="col-12 col-lg-4">
             <!--start card-->
             <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
@@ -83,6 +81,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    </div>
 
 
         <div class="fixed-bottom">

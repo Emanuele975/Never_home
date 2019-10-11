@@ -42,13 +42,13 @@
   <div class="row mx-md-n5">
     <div class="col-sm-8">
       <form action="/Never_home/Evento/FormEvento" method="post">
-      <button type="button" class="btn btn-dark btn-lg btn-block" name="EventoG" value="G" style="width: 200px;	height: 50px;">
+      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoG" value="G" style="width: 200px;	height: 50px;">
         Crea evento gratis
       </button>
-      <button type="button" class="btn btn-dark btn-lg btn-block" name="EventoP" value="P" style="width: 300px;	height: 50px;">
+      <button type="submit" class="btn btn-dark btn-lg btn-block" name="EventoP" value="P" style="width: 300px;	height: 50px;">
         Crea evento a pagamento
       </button>
-        <button type="button" class="btn btn-dark btn-lg btn-block" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
+        <button type="submit" class="btn btn-dark btn-lg btn-block" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
           I tuoi eventi
         </button>
       </form>
