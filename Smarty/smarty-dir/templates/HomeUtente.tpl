@@ -44,7 +44,6 @@
   </div>
 
 <br><br><br>
-</div>
 
 <div class="container">
   <div class="row mx-md-n5">
@@ -56,35 +55,69 @@
      </div>
       <div class="col-sm-6">
       <div class="list-group ">
+        {if $evento1 eq null}
         <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Nome evento</h5>
-            <small>3 days ago</small>
+            <h5 class="mb-1">biglietto non trovato</h5>
+            <small></small>
           </div>
-          <p class="mb-1">Descrizione evento</p>
-          <small>indirizzo</small>
+          <p class="mb-1">visita un evento!</p>
+          <small></small>
         </a>
+        {else}
+          <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Nome: {$evento1->getNome()}</h5>
+              <small>Data: {$evento1->getData()->format('Y-m-d')}</small>
+            </div>
+            <p class="mb-1">Descrizione: {$evento1->getDescrizione()}</p>
+            <small>importo speso {$biglietto1->getPrezzo()}</small>
+          </a>
+        {/if}
+        {if $evento2 eq null}
         <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Nome evento</h5>
-            <small class="text-muted">3 days ago</small>
+            <h5 class="mb-1">biglietto non trovato</h5>
+            <small class="text-muted"></small>
           </div>
-          <p class="mb-1">Descrizone evento</p>
-          <small class="text-muted">Indirizzo evento</small>
+          <p class="mb-1">visita un evento!</p>
+          <small class="text-muted"></small>
         </a>
+        {else}
         <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Nome evento</h5>
-            <small class="text-muted">3 days ago</small>
+            <h5 class="mb-1">Nome: {$evento2->getNome()}</h5>
+            <small class="text-muted">Data: {$evento2->getData()->format('Y-m-d')}</small>
           </div>
-          <p class="mb-1">Descrizione evento</p>
-          <small class="text-muted">Indirizzo evento</small>
+          <p class="mb-1">Descrizione: {$evento2->getDescrizione()}</p>
+          <small class="text-muted">importo speso {$biglietto2->getPrezzo()}</small>
         </a>
+         {/if}
+        {if $evento3 eq null}
+        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">biglietto non trovato</h5>
+            <small class="text-muted"></small>
+          </div>
+          <p class="mb-1">visita un evento!</p>
+          <small class="text-muted"></small>
+        </a>
+        {else}
+          <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Nome: {$evento3->getNome()}</h5>
+              <small class="text-muted">Data: {$evento1->getData()->format('Y-m-d')}</small>
+            </div>
+            <p class="mb-1">Descrizione: {$evento1->getDescrizione()}</p>
+            <small class="text-muted">importo speso {$biglietto1->getPrezzo()}</small>
+          </a>
+        {/if}
       </div>
     </div>
   </div>
 
 <br>
+</div>
 </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

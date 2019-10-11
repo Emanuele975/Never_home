@@ -76,9 +76,9 @@ class FBiglietto extends FDatabase{
         else return  null;
     }
 
-    public function loadbiglietti()
+    public function loadbiglietti($id)
     {
-        $sql="SELECT * FROM ".static::getTables()." ;";
+        $sql="SELECT * FROM ".static::getTables()." WHERE id_utente = '" .$id. "' ; ";
         $result = parent::loadMultiple($sql);
         $biglietti = array();
         if(($result!=null) && (count($result)>0) && (count($biglietti)<3)){

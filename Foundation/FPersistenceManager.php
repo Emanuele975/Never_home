@@ -42,10 +42,10 @@ class FPersistenceManager
         return $result;
     }
 
-    public function LoadBiglietti()
+    public function LoadBiglietti($id)
     {
         $dat = FBiglietto::getInstance();
-        $result = $dat->loadbiglietti();
+        $result = $dat->loadbiglietti($id);
         return $result;
     }
 

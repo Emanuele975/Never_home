@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.33, created on 2019-10-09 12:51:21
-=======
-/* Smarty version 3.1.33, created on 2019-10-11 09:33:02
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+/* Smarty version 3.1.33, created on 2019-10-11 10:20:25
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-<<<<<<< HEAD
-  'unifunc' => 'content_5d9dbba9ac5250_51626984',
-=======
-  'unifunc' => 'content_5da0302e5894e2_62532171',
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+  'unifunc' => 'content_5da03b4989d687_93682114',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f996b25c298261bd659e18962667e41810aca5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-<<<<<<< HEAD
-      1 => 1570618280,
-=======
-      1 => 1570779180,
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+      1 => 1570782023,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5d9dbba9ac5250_51626984 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5da0302e5894e2_62532171 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+function content_5da03b4989d687_93682114 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -83,26 +67,17 @@ function content_5da0302e5894e2_62532171 (Smarty_Internal_Template $_smarty_tpl)
         </form>
     </div>
 </nav>
-<<<<<<< HEAD
+
 <div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
     <div class="badge badge-pill badge-dark text-primary"  ><h1><strong>Trova il tuo evento</strong></h1></div>
-=======
-
-<div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:100% 100%;"><div class="badge badge-pill badge-dark text-wrap"  ><h1>Trova il tuo evento</h1></div>
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
-    <div class="container">
+<div class="container">
         <div class="row">
             <br>
         </div>
         <div class="row mx-md-n5">
+
             <div class="col-12 col-lg-4">
                 <!--start card-->
-<<<<<<< HEAD
-                <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
-                    <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
-=======
                 <div class="card text-white bg-dark mb-3">
                     <?php $_smarty_tpl->_assignInScope('img_1', base64_encode($_smarty_tpl->tpl_vars['img1']->value->getData()));?>
                     <img class="card-img-top" src="data:<?php echo $_smarty_tpl->tpl_vars['img1']->value->getType();?>
@@ -116,15 +91,14 @@ function content_5da0302e5894e2_62532171 (Smarty_Internal_Template $_smarty_tpl)
                         <a href="/Never_home/Evento/HomeEvento/<?php echo $_smarty_tpl->tpl_vars['evento1']->value->getId();?>
 /<?php echo $_smarty_tpl->tpl_vars['evento1']->value->getF();?>
 " class="btn btn-primary">Vai all evento</a>
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
                     </div>
                 </div>
 
             </div>
-<<<<<<< HEAD
-
-=======
             <div class="col-12 col-lg-4">
+
+
+
             <!--start card-->
             <div class="card text-white bg-dark mb-3">
                 <?php $_smarty_tpl->_assignInScope('img_2', base64_encode($_smarty_tpl->tpl_vars['img2']->value->getData()));?>
@@ -141,48 +115,8 @@ function content_5da0302e5894e2_62532171 (Smarty_Internal_Template $_smarty_tpl)
 " class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
 
-        <div class="col-12 col-lg-4">
-            <!--start card-->
-            <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
             </div>
-<<<<<<< HEAD
-
-        </div>
-        <div class="col-12 col-lg-4">
-            <!--start card-->
-            <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-        <div class="fixed-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center" >
-                        <ul class="nav d-flex justify-content-center">
-                            <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-                        </ul>
-                        <p class="mb-0 py-1" >© 2014-2018 Pingendo. All rights reserved</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-=======
             <div class="col-12 col-lg-4">
             <!--start card-->
             <div class="card text-white bg-dark mb-3">
@@ -198,11 +132,13 @@ function content_5da0302e5894e2_62532171 (Smarty_Internal_Template $_smarty_tpl)
                     <a href="/Never_home/Utente/caricabiglietti" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
-            </div>
         </div>
+        </div>
+</div>
+</div>
 
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
-    </div>
+
+
     <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
