@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-26 11:07:34
+/* Smarty version 3.1.33, created on 2019-10-11 17:22:52
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormCarta.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d8c7fd6125a01_35395999',
+  'unifunc' => 'content_5da09e4c1cc711_06892418',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd31a393bed8890a6d4ecefb06ff536831e68a5b1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormCarta.tpl',
-      1 => 1569488836,
+      1 => 1570807368,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d8c7fd6125a01_35395999 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da09e4c1cc711_06892418 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -33,7 +33,7 @@ function content_5d8c7fd6125a01_35395999 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/Never_home">NH</a>
+  <a class="navbar-brand text-primary" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -41,18 +41,18 @@ function content_5d8c7fd6125a01_35395999 (Smarty_Internal_Template $_smarty_tpl)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
+        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Notifiche </a>
+        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Notifiche </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Luogo/Logout">Logout </a>
+        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Luogo/Logout">Logout </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-light" type="submit">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>
 </nav>

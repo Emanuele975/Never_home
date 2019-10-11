@@ -17,7 +17,7 @@
         <ul class="navbar-nav mr-auto">
             <li>
                 <div class="btn-group btn-dark" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Registrazione
                     </button>
                     <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
@@ -28,7 +28,7 @@
             </li>
             <li>
                 <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary mx-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Login
                     </button>
                     <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
