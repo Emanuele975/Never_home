@@ -42,6 +42,13 @@ class FPersistenceManager
         return $result;
     }
 
+    public function LoadBiglietti()
+    {
+        $dat = FBiglietto::getInstance();
+        $result = $dat->loadbiglietti();
+        return $result;
+    }
+
     public function LoadbyUserPswU($psw,$user)
     {
         $dat=FUtente_R::getInstance();

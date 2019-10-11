@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
@@ -43,64 +44,65 @@
         </form>
     </div>
 </nav>
+
 <div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
     <div class="badge badge-pill badge-dark text-primary"  ><h1><strong>Trova il tuo evento</strong></h1></div>
-    <div class="container">
+</div>
+
+
+
+<div class="container">
         <div class="row">
             <br>
         </div>
         <div class="row mx-md-n5">
+
             <div class="col-12 col-lg-4">
                 <!--start card-->
-                <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
+                <div class="card text-white bg-dark mb-3">
+                    {$img_1 = base64_encode($img1->getData())}
+                    <img class="card-img-top" src="data:{$img1->getType()};base64,{$img_1}" style="height: 300px" alt="Card image cap" >
                     <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h4 class="card-title">{$evento1->getNome()}</h4>
+                        <p class="card-text">{$evento1->getDescrizione()}</p>
+                        <a href="/Never_home/Evento/HomeEvento/{$evento1->getId()}/{$evento1->getF()}" class="btn btn-primary">Vai all evento</a>
                     </div>
                 </div>
 
             </div>
+            <div class="col-12 col-lg-4">
 
 
-        <div class="col-12 col-lg-4">
+
             <!--start card-->
-            <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
+            <div class="card text-white bg-dark mb-3">
+                {$img_2 = base64_encode($img2->getData())}
+                <img class="card-img-top" src="data:{$img2->getType()};base64,{$img_2}" style="height: 300px" alt="Card image cap" >
                 <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h4 class="card-title">{$evento2->getNome()}</h4>
+                    <p class="card-text">{$evento2->getDescrizione()}</p>
+                    <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
 
-        </div>
-        <div class="col-12 col-lg-4">
+            </div>
+            <div class="col-12 col-lg-4">
             <!--start card-->
-            <div class="card text-white bg-dark mb-3"> <img class="card-img-top" src="https://static.pingendo.com/cover-moon.svg" alt="Card image cap" >
+            <div class="card text-white bg-dark mb-3">
+                {$img_3 = base64_encode($img3->getData())}
+                <img class="card-img-top" src="data:{$img3->getType()};base64,{$img_3}" style="height: 300px" alt="Card image cap" >
                 <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h4 class="card-title">{$evento3->getNome()}</h4>
+                    <p class="card-text">{$evento3->getDescrizione()}</p>
+                    <a href="/Never_home/Utente/caricabiglietti" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-
-
-        <div class="fixed-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center" >
-                        <ul class="nav d-flex justify-content-center">
-                            <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-                        </ul>
-                        <p class="mb-0 py-1" >© 2014-2018 Pingendo. All rights reserved</p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
+</div>
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

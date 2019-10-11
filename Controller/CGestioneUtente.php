@@ -125,5 +125,20 @@ class CGestioneUtente
 
     }
 
+    public function caricabiglietti()
+    {
+        $pm = FPersistenceManager::getInstance();
+        $biglietti = $pm->LoadBiglietti();
+        $eventi = array();
+        foreach($biglietti as $i)
+        {
+            $evento = $pm->Load($i->getEvento()->getId(),$i->getEvento()->getF());
+            array_push($eventi, $evento);
+
+        }
+        
+        $view->Home($eventi,$imgs);
+    }
+
 
 }

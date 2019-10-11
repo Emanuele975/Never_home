@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.33, created on 2019-10-09 12:48:50
+=======
+/* Smarty version 3.1.33, created on 2019-10-11 09:41:38
+>>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomeUtente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
+<<<<<<< HEAD
   'unifunc' => 'content_5d9dbb1220d2e6_93747632',
+=======
+  'unifunc' => 'content_5da03232a7d528_04236040',
+>>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a2b2abff98ec256f90830d2c7fd08b177679539b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomeUtente.tpl',
+<<<<<<< HEAD
       1 => 1570618127,
+=======
+      1 => 1570779690,
+>>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_5d9dbb1220d2e6_93747632 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_5da03232a7d528_04236040 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 
@@ -73,8 +89,13 @@ function content_5d9dbb1220d2e6_93747632 (Smarty_Internal_Template $_smarty_tpl)
   <div class="row mx-md-n5">
      <div class="col-sm-6">
         <form action="/Never_home/Utente/FormCarta" method="post">
+<<<<<<< HEAD
           <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
           <button type="submit" class="btn btn-dark text-primary btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
+=======
+          <button type="submit" class="btn  btn-dark btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
+          <button type="submit" class="btn btn-dark btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
+>>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
         </form>
      </div>
     <div class="col-sm-6">
@@ -107,26 +128,9 @@ function content_5d9dbb1220d2e6_93747632 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 </div>
 
-
+<br>
 </div>
 
-
-
-  <div class="fixed-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">
-          <ul class="nav d-flex justify-content-center">
-            <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-          </ul>
-          <p class="mb-0 py-1">© 2014-2018 Pingendo. All rights reserved</p>
-        </div>
-      </div>
-    </div>
-  </div>
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >

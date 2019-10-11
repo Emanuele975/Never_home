@@ -34,7 +34,7 @@
   </div>
 </nav>
 
-<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
+<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:100% 100%;">
 <div class="container ">
   <div class="row">
     <br>
@@ -70,7 +70,9 @@
     </div>
   </div>
 </div>
+  <br><br><br><br>
 </div>
+
   <div class="fixed-bottom">
     <div class="container">
       <div class="row">
