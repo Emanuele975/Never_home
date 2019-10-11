@@ -2,6 +2,7 @@
 
 class CGestioneHomepage
 {
+
     public function impostaPagina(){
         $pm = FPersistenceManager::getInstance();
         $data = new DateTime('02/02/1990');
