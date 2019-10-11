@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-01 17:30:13
+/* Smarty version 3.1.33, created on 2019-10-11 12:27:08
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Evento.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d9371051fe7f5_85008179',
+  'unifunc' => 'content_5da058fc524f83_40304770',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a84918596cbcb832bea89ea5fad5df62cc15ea90' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Evento.tpl',
-      1 => 1569943807,
+      1 => 1570789624,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9371051fe7f5_85008179 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da058fc524f83_40304770 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -92,30 +92,57 @@ function content_5d9371051fe7f5_85008179 (Smarty_Internal_Template $_smarty_tpl)
 ">Acquista biglietto</button>
                     </form>
                 </div>
-            </div>
+
             <?php } else { ?>
                 <div class="mx-auto">evento gratuito </div>
             </div>
         <?php }?>
 
+
+           <!-- <ul class="list-group list-group-flush">
+                <li class="list-group-item">nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
+</li>
+                <li class="list-group-item">descrizione: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getCategoria()->toString();?>
+</li>
+                <li class="list-group-item"><?php if ($_smarty_tpl->tpl_vars['evento']->value->getTipo() == 'EEvento_p') {?>
+                    <div class="mx-auto">prezzo : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
+ </div></li>
+                <li class="list-group-item"><div class="mx-auto">
+                        <form action="/Never_home/Evento/FormAcquisto" enctype="multipart/form-data" method="post">
+                            <button  type="submit" class="btn btn-dark" name="evento" value="<?php echo $_smarty_tpl->tpl_vars['evento']->value->getId();?>
+">Acquista biglietto</button>
+                        </form>
+                    </div>
+
+
+                    <?php } else { ?>
+                    <div class="mx-auto">evento gratuito </div></li>
+                <?php }?>
+
+            </ul> -->
+
         </div>
-    </div>
 </div>
-<div class="fixed-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">
-                <ul class="nav d-flex justify-content-center">
-                    <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-                </ul>
-                <p class="mb-0 py-1">© 2014-2018 Pingendo. All rights reserved</p>
+<div class="container">
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="badge badge-pill badge-dark text-white">Inserisci commento:</h1>
+                        <form method="post" action="">
+                            <div class="form-group"> <textarea class="form-control" id="form30" rows="3" placeholder="Scrivi qui.. " required></textarea>
+                            </div> <button type="submit" class="btn btn-dark my-2">Invia</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+
+
 </div>
+
+
+
 <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >

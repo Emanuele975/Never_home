@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.33, created on 2019-10-09 12:48:50
-=======
-/* Smarty version 3.1.33, created on 2019-10-11 09:41:38
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+/* Smarty version 3.1.33, created on 2019-10-11 10:50:55
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomeUtente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-<<<<<<< HEAD
-  'unifunc' => 'content_5d9dbb1220d2e6_93747632',
-=======
-  'unifunc' => 'content_5da03232a7d528_04236040',
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+  'unifunc' => 'content_5da0426f85e068_53280207',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a2b2abff98ec256f90830d2c7fd08b177679539b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomeUtente.tpl',
-<<<<<<< HEAD
-      1 => 1570618127,
-=======
-      1 => 1570779690,
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+      1 => 1570783853,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5d9dbb1220d2e6_93747632 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5da03232a7d528_04236040 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+function content_5da0426f85e068_53280207 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 
@@ -48,6 +32,7 @@ function content_5da03232a7d528_04236040 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand text-primary" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,11 +57,11 @@ function content_5da03232a7d528_04236040 (Smarty_Internal_Template $_smarty_tpl)
     </form>
   </div>
 </nav>
+
 <div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
 
-
-
   <div class="badge badge-pill badge-dark text-primary"  >
+
     <h1>
     <?php echo $_smarty_tpl->tpl_vars['utente']->value->getNome();?>
  <?php echo $_smarty_tpl->tpl_vars['utente']->value->getCognome();?>
@@ -85,20 +70,16 @@ function content_5da03232a7d528_04236040 (Smarty_Internal_Template $_smarty_tpl)
 
 <br><br><br>
 
+
 <div class="container">
   <div class="row mx-md-n5">
-     <div class="col-sm-6">
+      <div class="col-sm-6">
         <form action="/Never_home/Utente/FormCarta" method="post">
-<<<<<<< HEAD
           <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
           <button type="submit" class="btn btn-dark text-primary btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
-=======
-          <button type="submit" class="btn  btn-dark btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
-          <button type="submit" class="btn btn-dark btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
         </form>
      </div>
-    <div class="col-sm-6">
+      <div class="col-sm-6">
       <div class="list-group ">
         <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
@@ -126,9 +107,10 @@ function content_5da03232a7d528_04236040 (Smarty_Internal_Template $_smarty_tpl)
         </a>
       </div>
     </div>
-</div>
+  </div>
 
 <br>
+</div>
 </div>
 
   <?php echo '<script'; ?>

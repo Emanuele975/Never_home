@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.33, created on 2019-10-09 12:26:11
-=======
-/* Smarty version 3.1.33, created on 2019-10-09 12:32:03
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+/* Smarty version 3.1.33, created on 2019-10-11 11:44:39
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Locale.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-<<<<<<< HEAD
-  'unifunc' => 'content_5d9db5c34e2412_70051377',
-=======
-  'unifunc' => 'content_5d9db723e592a9_47236998',
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+  'unifunc' => 'content_5da04f07878292_65012827',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '08880dbce1aa5b60bb514f2b300e94388c2beab6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Locale.tpl',
-<<<<<<< HEAD
-      1 => 1570616769,
-=======
-      1 => 1570617120,
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+      1 => 1570787072,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5d9db5c34e2412_70051377 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5d9db723e592a9_47236998 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 1f377020d95fc3d6e35181da93b9b93481db76a3
+function content_5da04f07878292_65012827 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -116,23 +100,10 @@ function content_5d9db723e592a9_47236998 (Smarty_Internal_Template $_smarty_tpl)
   </div>
 </div>
   <br><br><br><br>
-</div>
 
-  <div class="fixed-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">
-          <ul class="nav d-flex justify-content-center">
-            <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-          </ul>
-          <p class="mb-0 py-1">© 2014-2018 Pingendo. All rights reserved</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
+</div>
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
