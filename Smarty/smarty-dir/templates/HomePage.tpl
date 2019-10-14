@@ -112,46 +112,79 @@
         <div class="row mx-md-n5">
 
             <div class="col-12 col-lg-4">
+                {if $evento1 eq null}
                 <!--start card-->
                 <div class="card text-white bg-dark mb-3">
-                    {$img_1 = base64_encode($img1->getData())}
-                    <img class="card-img-top" src="data:{$img1->getType()};base64,{$img_1}" style="height: 300px" alt="Card image cap" >
+                    <img class="card-img-top" src="" style="" alt="Card image cap" >
                     <div class="card-body">
-                        <h4 class="card-title">{$evento1->getNome()}</h4>
-                        <p class="card-text">{$evento1->getDescrizione()}</p>
-                        <a href="/Never_home/Evento/HomeEvento/{$evento1->getId()}/{$evento1->getF()}" class="btn btn-primary">Vai all evento</a>
+                        <h4 class="card-title">Evento non trovato</h4>
+                        <p class="card-text"></p>
+                        <a href="" class="btn btn-primary">Vai all evento</a>
                     </div>
                 </div>
-
+                {else}
+                <div class="card text-white bg-dark mb-3">
+                        {$img_1 = base64_encode($img1->getData())}
+                        <img class="card-img-top" src="data:{$img1->getType()};base64,{$img_1}" style="height: 300px" alt="Card image cap" >
+                        <div class="card-body">
+                            <h4 class="card-title">{$evento1->getNome()}</h4>
+                            <p class="card-text">{$evento1->getDescrizione()}</p>
+                            <a href="/Never_home/Evento/HomeEvento/{$evento1->getId()}/{$evento1->getF()}" class="btn btn-primary">Vai all evento</a>
+                        </div>
+                    </div>
+                {/if}
             </div>
+
             <div class="col-12 col-lg-4">
-
-
-
+            {if $evento2 eq null}
             <!--start card-->
             <div class="card text-white bg-dark mb-3">
-                {$img_2 = base64_encode($img2->getData())}
-                <img class="card-img-top" src="data:{$img2->getType()};base64,{$img_2}" style="height: 300px" alt="Card image cap" >
+
+                <img class="card-img-top" src="" style="" alt="Card image cap" >
                 <div class="card-body">
-                    <h4 class="card-title">{$evento2->getNome()}</h4>
-                    <p class="card-text">{$evento2->getDescrizione()}</p>
-                    <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}" class="btn btn-primary">Vai all evento</a>
+                    <h4 class="card-title">Evento non trovato</h4>
+                    <p class="card-text"></p>
+                    <a href="" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
+            {else}
+                <div class="card text-white bg-dark mb-3">
+                    {$img_2 = base64_encode($img2->getData())}
+                    <img class="card-img-top" src="data:{$img2->getType()};base64,{$img_2}" style="height: 300px" alt="Card image cap" >
+                    <div class="card-body">
+                        <h4 class="card-title">{$evento2->getNome()}</h4>
+                        <p class="card-text">{$evento2->getDescrizione()}</p>
+                        <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}" class="btn btn-primary">Vai all evento</a>
+                    </div>
+                </div>
+            {/if}
 
             </div>
+
             <div class="col-12 col-lg-4">
+            {if $evento3 eq null}
             <!--start card-->
             <div class="card text-white bg-dark mb-3">
-                {$img_3 = base64_encode($img3->getData())}
-                <img class="card-img-top" src="data:{$img3->getType()};base64,{$img_3}" style="height: 300px" alt="Card image cap" >
+                <img class="card-img-top" src="" style="" alt="Card image cap" >
                 <div class="card-body">
-                    <h4 class="card-title">{$evento3->getNome()}</h4>
-                    <p class="card-text">{$evento3->getDescrizione()}</p>
-                    <a href="/Never_home/Utente/caricabiglietti" class="btn btn-primary">Vai all evento</a>
+                    <h4 class="card-title">Evento non trovato</h4>
+                    <p class="card-text"></p>
+                    <a href="" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
+            {else}
+                <div class="card text-white bg-dark mb-3">
+                    {$img_3 = base64_encode($img3->getData())}
+                    <img class="card-img-top" src="data:{$img3->getType()};base64,{$img_3}" style="height: 300px" alt="Card image cap" >
+                    <div class="card-body">
+                        <h4 class="card-title">{$evento3->getNome()}</h4>
+                        <p class="card-text">{$evento3->getDescrizione()}</p>
+                        <a href="/Never_home/Utente/caricabiglietti" class="btn btn-primary">Vai all evento</a>
+                    </div>
+                </div>
+            {/if}
         </div>
+
         </div>
 </div>
 </div>
