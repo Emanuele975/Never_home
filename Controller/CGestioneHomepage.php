@@ -18,9 +18,14 @@ class CGestioneHomepage
 
             }
         }
+        $sessione= Session::getInstance();
+
+        if($sessione->isLoggedUtente())
+            $view->Home($eventi,$imgs,"utente");
+        else if ($sessione->isLoggedLuogo())
+            $view->Home($eventi,$imgs,"luogo");
         else
-            $eventi = null;
-        $view->Home($eventi,$imgs);
+            $view->Home($eventi,$imgs,null);
     }
 
     public function login(){
@@ -32,5 +37,7 @@ class CGestioneHomepage
         $view=new VRegistrazione();
         $view->registrazione();
     }
+
+
 
 }
