@@ -3,18 +3,29 @@
 class CGestioneHomepage
 {
 
-    public function impostaPagina(){
+    public function impostaPagina()
+    {
         $pm = FPersistenceManager::getInstance();
         $data = new DateTime('02/02/1990');
+        $eventi = array();
         $eventi = $pm->LoadEvents($data);
         $view = new VHomePage();
         $imgs = array();
-        foreach($eventi as $i)
+        echo "nella function ";
+        if (isset($eventi))
         {
-            $img = $pm->getImgByidEvento($i->getId(),$i->getTipo());
-            array_push($imgs, $img);
+            foreach($eventi as $i)
+            {
+                $img = $pm->getImgByidEvento($i->getId(),$i->getTipo());
+                array_push($imgs, $img);
 
+            }
         }
+        else
+            {
+                $eventi=null;
+            }
+
         $view->Home($eventi,$imgs);
     }
 
@@ -28,4 +39,5 @@ class CGestioneHomepage
         $view->registrazione();
     }
 
+    
 }
