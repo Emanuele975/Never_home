@@ -21,11 +21,22 @@ class VEvento
         }
     }
 
-    public function Home($evento,$immagine)
+    public function Home($evento,$immagine,$commenti,$utenti)
     {
         $this->smarty->assign("evento",$evento);
         $this->smarty->assign("img",$immagine);
+        $this->smarty->assign("commenti",$commenti);
+        $this->smarty->assign("utenti",$utenti);
         $this->smarty->display("Evento.tpl");
+    }
+
+    public function getCommento()
+    {
+        $dati = array();
+        if(isset($_POST['commento'])){
+            $dati['commento'] = $_POST['commento'];
+        }
+        return $dati;
     }
 
 }

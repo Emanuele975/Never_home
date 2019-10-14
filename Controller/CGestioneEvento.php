@@ -13,15 +13,24 @@ class CGestioneEvento
     {
         $pm = FPersistenceManager::getInstance();
         $evento = $pm->Load($id,$classe);
-        if($evento!=null){
+        if($evento!=null)
+        {
             $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
-        } else {
+            $commenti = $pm->caricacommenti($evento->getId(),$evento->getTipo());
+            $utenti = array();
+            foreach ($commenti as $i)
+            {
+                $utente = $pm->Load($i->getUtente()->getId(),'FUtente_R');
+                array_push($utenti, $utente);
+            }
+        } else
+        {
             $msg = "non esiste questo evento";
             $view2 = new VError();
             $view2->mostraErrore($msg);
         }
         $view = new VEvento();
-        $view->Home($evento,$immagine);
+        $view->Home($evento,$immagine,$commenti,$utenti);
     }
 
     public function NuovoEventoGratis(){
@@ -166,6 +175,26 @@ class CGestioneEvento
         }
         $sessione->prenotaposti(0);
         $view->AcquistoEffettuato($msg);
+    }
+
+    public function newcommento($id,$classe)
+    {
+        $sessione = Session::getInstance();
+        if ($sessione->isLoggedUtente())
+        {
+            $pm = FPersistenceManager::getInstance();
+            $view = new VEvento();
+            $testo = $view->getCommento();
+            $evento = $pm->Load($id,$classe);
+            $commento = new ECommento($testo['commento'],$sessione->getUtente(),$evento);
+            $pm->store($commento);
+            $this->HomeEvento($id,$classe);
+        }
+        else
+        {
+            $view2 = new VError();
+            $view2->mostraErrore("utente non loggato");
+        }
     }
 
 }

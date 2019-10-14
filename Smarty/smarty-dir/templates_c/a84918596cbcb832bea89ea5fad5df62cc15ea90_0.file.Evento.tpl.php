@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-11 12:27:08
+/* Smarty version 3.1.33, created on 2019-10-14 17:30:44
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Evento.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da058fc524f83_40304770',
+  'unifunc' => 'content_5da494a46f5679_29241359',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a84918596cbcb832bea89ea5fad5df62cc15ea90' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Evento.tpl',
-      1 => 1570789624,
+      1 => 1571067041,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da058fc524f83_40304770 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da494a46f5679_29241359 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -98,29 +98,6 @@ function content_5da058fc524f83_40304770 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         <?php }?>
 
-
-           <!-- <ul class="list-group list-group-flush">
-                <li class="list-group-item">nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
-</li>
-                <li class="list-group-item">descrizione: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getCategoria()->toString();?>
-</li>
-                <li class="list-group-item"><?php if ($_smarty_tpl->tpl_vars['evento']->value->getTipo() == 'EEvento_p') {?>
-                    <div class="mx-auto">prezzo : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
- </div></li>
-                <li class="list-group-item"><div class="mx-auto">
-                        <form action="/Never_home/Evento/FormAcquisto" enctype="multipart/form-data" method="post">
-                            <button  type="submit" class="btn btn-dark" name="evento" value="<?php echo $_smarty_tpl->tpl_vars['evento']->value->getId();?>
-">Acquista biglietto</button>
-                        </form>
-                    </div>
-
-
-                    <?php } else { ?>
-                    <div class="mx-auto">evento gratuito </div></li>
-                <?php }?>
-
-            </ul> -->
-
         </div>
 </div>
 <div class="container">
@@ -130,9 +107,13 @@ function content_5da058fc524f83_40304770 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="row">
                     <div class="col-sm-12">
                         <h1 class="badge badge-pill badge-dark text-white">Inserisci commento:</h1>
-                        <form method="post" action="">
-                            <div class="form-group"> <textarea class="form-control" id="form30" rows="3" placeholder="Scrivi qui.. " required></textarea>
-                            </div> <button type="submit" class="btn btn-dark my-2">Invia</button>
+                        <form method="post" action="/Never_home/Evento/newcommento/<?php echo $_smarty_tpl->tpl_vars['evento']->value->getId();?>
+/<?php echo $_smarty_tpl->tpl_vars['evento']->value->getF();?>
+" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <textarea type="text" class="form-control" name="commento" id="form30" rows="3" placeholder="Scrivi qui.. " required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark my-2">Invia</button>
                         </form>
                     </div>
                 </div>
@@ -140,6 +121,39 @@ function content_5da058fc524f83_40304770 (Smarty_Internal_Template $_smarty_tpl)
 
 
 </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel-body text-dark">
+                    <br>
+                    <ul class="media-list">
+                        <?php
+$__section_commento_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['commenti']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_commento_0_total = $__section_commento_0_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_commento'] = new Smarty_Variable(array());
+if ($__section_commento_0_total !== 0) {
+for ($__section_commento_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] = 0; $__section_commento_0_iteration <= $__section_commento_0_total; $__section_commento_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']++){
+?>
+                            <li class="media py-2">
+                                <div class="media-body px-2">
+                                    <strong class="text-secondary"><b><?php echo $_smarty_tpl->tpl_vars['utenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getUsername();?>
+</b></strong>
+                                        <p> <?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getTesto();?>
+  </p>
+                                </div>
+                            </li>
+                        <?php
+}
+}
+?>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

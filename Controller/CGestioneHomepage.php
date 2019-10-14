@@ -9,12 +9,17 @@ class CGestioneHomepage
         $eventi = $pm->LoadEvents($data);
         $view = new VHomePage();
         $imgs = array();
-        foreach($eventi as $i)
+        if (isset($eventi))
         {
-            $img = $pm->getImgByidEvento($i->getId(),$i->getTipo());
-            array_push($imgs, $img);
+            foreach($eventi as $i)
+            {
+                $img = $pm->getImgByidEvento($i->getId(),$i->getTipo());
+                array_push($imgs, $img);
 
+            }
         }
+        else
+            $eventi = null;
         $view->Home($eventi,$imgs);
     }
 

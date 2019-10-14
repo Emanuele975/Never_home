@@ -69,25 +69,6 @@
             </div>
         {/if}
 
-
-           <!-- <ul class="list-group list-group-flush">
-                <li class="list-group-item">nome evento: {$evento->getNome()}</li>
-                <li class="list-group-item">descrizione: {$evento->getCategoria()->toString()}</li>
-                <li class="list-group-item">{if $evento->getTipo() eq 'EEvento_p'}
-                    <div class="mx-auto">prezzo : {$evento->getPrezzo()} </div></li>
-                <li class="list-group-item"><div class="mx-auto">
-                        <form action="/Never_home/Evento/FormAcquisto" enctype="multipart/form-data" method="post">
-                            <button  type="submit" class="btn btn-dark" name="evento" value="{$evento->getId()}">Acquista biglietto</button>
-                        </form>
-                    </div>
-
-
-                    {else}
-                    <div class="mx-auto">evento gratuito </div></li>
-                {/if}
-
-            </ul> -->
-
         </div>
 </div>
 <div class="container">
@@ -97,9 +78,11 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <h1 class="badge badge-pill badge-dark text-white">Inserisci commento:</h1>
-                        <form method="post" action="">
-                            <div class="form-group"> <textarea class="form-control" id="form30" rows="3" placeholder="Scrivi qui.. " required></textarea>
-                            </div> <button type="submit" class="btn btn-dark my-2">Invia</button>
+                        <form method="post" action="/Never_home/Evento/newcommento/{$evento->getId()}/{$evento->getF()}" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <textarea type="text" class="form-control" name="commento" id="form30" rows="3" placeholder="Scrivi qui.. " required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark my-2">Invia</button>
                         </form>
                     </div>
                 </div>
@@ -107,6 +90,28 @@
 
 
 </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel-body text-dark">
+                    <br>
+                    <ul class="media-list">
+                        {section name=commento loop=$commenti}
+                            <li class="media py-2">
+                                <div class="media-body px-2">
+                                    <strong class="text-secondary"><b>{$utenti[commento]->getUsername()}</b></strong>
+                                        <p> {$commenti[commento]->getTesto()}  </p>
+                                </div>
+                            </li>
+                        {/section}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
