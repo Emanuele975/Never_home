@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+{if $utente eq null }
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
@@ -44,6 +44,63 @@
         </form>
     </div>
 </nav>
+{elseif $utente eq  "utente"}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-primary" href="/Never_home">NH</a>
+
+        <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li>
+                    <div class="btn-group btn-dark" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Registrazione
+                        </button>
+                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
+                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
+                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login" role="button">Account</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+{else}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-primary" href="/Never_home">NH</a>
+
+        <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li>
+                    <div class="btn-group btn-dark" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Registrazione
+                        </button>
+                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
+                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
+                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Login" role="button">Account</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+{/if}
+
 
 <div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
     <div class="badge badge-pill badge-dark text-primary"  ><h1><strong>Trova il tuo evento</strong></h1></div>

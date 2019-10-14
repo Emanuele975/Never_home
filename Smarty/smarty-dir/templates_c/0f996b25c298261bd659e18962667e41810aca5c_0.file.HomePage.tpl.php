@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-11 17:14:29
+/* Smarty version 3.1.33, created on 2019-10-14 15:14:47
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da09c559c3b33_68404036',
+  'unifunc' => 'content_5da474c7cd8473_79906118',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f996b25c298261bd659e18962667e41810aca5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-      1 => 1570806868,
+      1 => 1571058885,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da09c559c3b33_68404036 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da474c7cd8473_79906118 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -32,7 +32,7 @@ function content_5da09c559c3b33_68404036 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 
 <body>
-
+<?php if ($_smarty_tpl->tpl_vars['utente']->value == null) {?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
@@ -67,6 +67,63 @@ function content_5da09c559c3b33_68404036 (Smarty_Internal_Template $_smarty_tpl)
         </form>
     </div>
 </nav>
+<?php } elseif ($_smarty_tpl->tpl_vars['utente']->value == "utente") {?>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-primary" href="/Never_home">NH</a>
+
+        <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li>
+                    <div class="btn-group btn-dark" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Registrazione
+                        </button>
+                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
+                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
+                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login" role="button">Account</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+<?php } else { ?>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-primary" href="/Never_home">NH</a>
+
+        <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li>
+                    <div class="btn-group btn-dark" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Registrazione
+                        </button>
+                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
+                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
+                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Login" role="button">Account</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+<?php }?>
+
 
 <div class="py-5 text-center " style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
     <div class="badge badge-pill badge-dark text-primary"  ><h1><strong>Trova il tuo evento</strong></h1></div>
