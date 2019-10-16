@@ -5,41 +5,37 @@ include_once 'EUtente_R.php';
 class ECommento {
     
     private $descrizione;
-    private $punteggio;
     private $testo;
     private $utente;
     private $evento;
     private $id;
+    private $bannato;
     
-    function __construct(String $descrizione,int $punteggio,String $testo,EUtente_R $utente,EEvento $evento) {
+    //function __construct(String $descrizione,String $testo,EUtente_R $utente,EEvento $evento,boolean $bannato) {
         
-        $this->descrizione=$descrizione;
-        $this->punteggio=$punteggio;
-        $this->testo=$testo;
-        $this->utente=$utente;
-        $this->evento=$evento;
+     //   $this->descrizione=$descrizione;
+       // $this->testo=$testo;
+        //$this->utente=$utente;
+        //$this->evento=$evento;
+        //$this->bannato=$bannato;
         
-    }
+    //}
 
-    function __construct1(String $descrizione,int $punteggio,String $testo,EUtente_R $utente,EEvento $evento,int $id) {
+    function __construct1(String $descrizione,String $testo,EUtente_R $utente,EEvento $evento,int $id,boolean $bannato) {
 
         $this->descrizione=$descrizione;
-        $this->punteggio=$punteggio;
         $this->testo=$testo;
         $this->utente=$utente;
         $this->evento=$evento;
         $this->id=$id;
+        $this->bannato=$bannato;
 
     }
 
     function setDescrizione(String $a){
         $this->descrizione=$a;
     }
-    
-    function setPunteggio (int $b){
-        $this->punteggio=$b;
-    }
-    
+
     function setTesto(String $c){
         $this->testo=$c;
     }
@@ -51,11 +47,7 @@ class ECommento {
     function getDescrizione(){
         return $this->descrizione;
     }
-    
-    function getPunteggio(){
-        return $this->punteggio;
-    }
-    
+
     function getTesto(){
         return $this->testo;
     }
@@ -78,14 +70,26 @@ class ECommento {
     }
 
     function getId(){
-        return $this->id;
+        $d=$this->id;
+        return $d;
+    }
+
+    function getBannato(){
+        $c=$this->bannato;
+        return $c;
+    }
+
+    function  setBannato(bool $c){
+
+        $this->bannato=$c;
+
     }
 
 
     
     function toString(){
         return "Descrizione: ".$this->descrizione."\n".
-                "Punteggio: ". $this->punteggio."\n".
+                "Bannato: ". $this->bannato."\n".
                 "Testo: ".$this->testo."\n";
                 //"Utente: ".$this->utente->toString();"\n".
                 //"Evento: ".$this->evento->toString()."\n";
