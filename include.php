@@ -39,12 +39,14 @@
    include_once 'View/VEvento.php';
    include_once 'View/VError.php';
    include_once 'View/VUtente.php';
+   include_once 'View/VAmministratore.php';
 
    include_once 'Controller/CFrontController.php';
    include_once 'Controller/CGestioneLuogo.php';
    include_once 'Controller/CGestioneHomepage.php';
    include_once 'Controller/CGestioneUtente.php';
    include_once 'Controller/CGestioneEvento.php';
+   include_once 'Controller/CGestioneAmministratore.php';
 
    include_once 'Session.php';
 
