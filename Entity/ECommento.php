@@ -2,17 +2,30 @@
 
 class ECommento {
     
+
+    private $descrizione;
     private $testo;
     private $utente;
     private $evento;
     private $id;
-    
-    function __construct(String $testo,EUtente_R $utente,EEvento $evento)
-    {
+    private $bannato;
+
+
+    function __construct1(String $descrizione,String $testo,EUtente_R $utente,EEvento $evento,int $id,boolean $bannato) {
+
+        $this->descrizione=$descrizione;
         $this->testo=$testo;
         $this->utente=$utente;
         $this->evento=$evento;
+        $this->id=$id;
+        $this->bannato=$bannato;
+
     }
+
+    function setDescrizione(String $a){
+        $this->descrizione=$a;
+    }
+
 
     function setTesto(String $c){
         $this->testo=$c;
@@ -21,6 +34,12 @@ class ECommento {
     function setEvento(EEvento $f){
         $this->evento=$f;
     }
+
+    
+    function getDescrizione(){
+        return $this->descrizione;
+    }
+
 
     function getTesto(){
         return $this->testo;
@@ -47,7 +66,19 @@ class ECommento {
     }
 
     function getId(){
-        return $this->id;
+        $d=$this->id;
+        return $d;
+    }
+
+    function getBannato(){
+        $c=$this->bannato;
+        return $c;
+    }
+
+    function  setBannato(bool $c){
+
+        $this->bannato=$c;
+
     }
 
     function setId($id)
@@ -56,7 +87,13 @@ class ECommento {
     }
 
     function toString(){
-        return "Testo: ".$this->testo."\n";
+
+        return "Descrizione: ".$this->descrizione."\n".
+                "Bannato: ". $this->bannato."\n".
+                "Testo: ".$this->testo."\n";
+                //"Utente: ".$this->utente->toString();"\n".
+                //"Evento: ".$this->evento->toString()."\n";
+
     }
 
     function getF(){

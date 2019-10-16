@@ -13,7 +13,7 @@ class VAmministratore
         $this->smarty->setCacheDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/cache');
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
-    public function HomeLocale()
+    public function HomeAdmin()
     {
         $this->smarty->display("Amministratore.tpl");
     }

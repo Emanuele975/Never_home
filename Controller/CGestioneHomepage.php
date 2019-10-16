@@ -26,6 +26,8 @@ class CGestioneHomepage
             $view->Home($eventi,$imgs,"utente");
         else if ($sessione->isLoggedLuogo())
             $view->Home($eventi,$imgs,"luogo");
+        else if ($sessione->isLoggedAdmin())
+            $view->Home($eventi,$imgs,"admin");
         else
             $view->Home($eventi,$imgs,null);
     }
