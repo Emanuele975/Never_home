@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.33, created on 2019-10-14 17:30:44
-=======
-/* Smarty version 3.1.33, created on 2019-10-11 17:18:32
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
+/* Smarty version 3.1.33, created on 2019-10-14 17:47:26
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Evento.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-<<<<<<< HEAD
-  'unifunc' => 'content_5da494a46f5679_29241359',
-=======
-  'unifunc' => 'content_5da09d482a3901_36338357',
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
+  'unifunc' => 'content_5da4988ea12cc8_02355386',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a84918596cbcb832bea89ea5fad5df62cc15ea90' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Evento.tpl',
-<<<<<<< HEAD
-      1 => 1571067041,
-=======
-      1 => 1570807110,
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
+      1 => 1571067813,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5da494a46f5679_29241359 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5da09d482a3901_36338357 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
+function content_5da4988ea12cc8_02355386 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -48,6 +32,7 @@ function content_5da09d482a3901_36338357 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand text-primary" href="/Never_home">NH</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,33 +73,6 @@ function content_5da09d482a3901_36338357 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div>
         <div class="col-sm">
-<<<<<<< HEAD
-            <div class="row my-4">
-                <div class="mx-auto"> nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
- </div>
-            </div>
-            <div class="row my-4">
-                <div class="mx-auto"> descrizione: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getCategoria()->toString();?>
- </div>
-            </div>
-            <div class="row my-4">
-                <?php if ($_smarty_tpl->tpl_vars['evento']->value->getTipo() == 'EEvento_p') {?>
-                <div class="mx-auto">prezzo : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getPrezzo();?>
- </div>
-            </div>
-            <div class="row my-4">
-                <div class="mx-auto">
-                    <form action="/Never_home/Evento/FormAcquisto" enctype="multipart/form-data" method="post">
-                    <button  type="submit" class="btn btn-dark" name="evento" value="<?php echo $_smarty_tpl->tpl_vars['evento']->value->getId();?>
-">Acquista biglietto</button>
-                    </form>
-                </div>
-
-            <?php } else { ?>
-                <div class="mx-auto">evento gratuito </div>
-            </div>
-        <?php }?>
-=======
            <ul class="list-group list-group-flush">
                 <li class="list-group-item">nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
 </li>
@@ -138,7 +96,6 @@ function content_5da09d482a3901_36338357 (Smarty_Internal_Template $_smarty_tpl)
                 <?php }?>
 
            </ul>
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
 
         </div>
 </div>
@@ -149,7 +106,6 @@ function content_5da09d482a3901_36338357 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="row">
                     <div class="col-sm-12">
                         <h1 class="badge badge-pill badge-dark text-white">Inserisci commento:</h1>
-<<<<<<< HEAD
                         <form method="post" action="/Never_home/Evento/newcommento/<?php echo $_smarty_tpl->tpl_vars['evento']->value->getId();?>
 /<?php echo $_smarty_tpl->tpl_vars['evento']->value->getF();?>
 " enctype="multipart/form-data">
@@ -157,11 +113,6 @@ function content_5da09d482a3901_36338357 (Smarty_Internal_Template $_smarty_tpl)
                                 <textarea type="text" class="form-control" name="commento" id="form30" rows="3" placeholder="Scrivi qui.. " required></textarea>
                             </div>
                             <button type="submit" class="btn btn-dark my-2">Invia</button>
-=======
-                        <form method="post" action="">
-                            <div class="form-group"> <textarea class="form-control border-dark" id="form30" rows="3" placeholder="Scrivi qui.. " required></textarea>
-                            </div> <button type="submit" class="btn btn-dark my-2">Invia</button>
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
                         </form>
                     </div>
                 </div>

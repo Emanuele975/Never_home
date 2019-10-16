@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.33, created on 2019-10-11 17:31:28
-=======
-/* Smarty version 3.1.33, created on 2019-10-11 16:16:01
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
+/* Smarty version 3.1.33, created on 2019-10-14 17:51:04
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Locale.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-<<<<<<< HEAD
-  'unifunc' => 'content_5da0a05039ce37_43647257',
-=======
-  'unifunc' => 'content_5da08ea1cd7424_80277226',
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
+  'unifunc' => 'content_5da499687c9fe1_39955854',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '08880dbce1aa5b60bb514f2b300e94388c2beab6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Locale.tpl',
-<<<<<<< HEAD
-      1 => 1570799727,
-=======
-      1 => 1570803358,
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
+      1 => 1571067625,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5da0a05039ce37_43647257 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5da08ea1cd7424_80277226 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
+function content_5da499687c9fe1_39955854 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -49,11 +33,7 @@ function content_5da08ea1cd7424_80277226 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<<<<<<< HEAD
-  <a class="navbar-brand" href="/Never_home">NH</a>
-=======
   <a class="navbar-brand text-primary" href="/Never_home">NH</a>
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -61,15 +41,6 @@ function content_5da08ea1cd7424_80277226 (Smarty_Internal_Template $_smarty_tpl)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-<<<<<<< HEAD
-        <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link " href="#">Notifiche </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
-=======
         <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
@@ -77,16 +48,11 @@ function content_5da08ea1cd7424_80277226 (Smarty_Internal_Template $_smarty_tpl)
       </li>
       <li class="nav-item active">
         <a class="nav-link  btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-<<<<<<< HEAD
-      <button class="btn btn-light" type="submit">Search</button>
-=======
       <button class="btn btn-primary" type="submit">Search</button>
->>>>>>> 8c78a5907d208f6165b6397d618b62d4df7c1606
     </form>
   </div>
 </nav>
