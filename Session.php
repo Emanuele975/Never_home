@@ -85,6 +85,8 @@ class Session
         return $luogo;
     }
 
+
+
     /**
      * Metodo che salva nei dati di sessione l'utente (quando il login utente ha successo)
      * @param $utente da salvare in $_SESSION

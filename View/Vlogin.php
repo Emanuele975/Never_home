@@ -39,6 +39,12 @@ class Vlogin
         $this->smarty->display("loginLuogo.tpl");
     }
 
+    public function mostraFormLoginAdmin($msg)
+    {
+        $this->smarty->assign("msg",$msg);
+        $this->smarty->display("loginAmministratore.tpl");
+    }
+
     public function mostraFormReg()
     {
         if (isset($_POST['name']) && $_POST["name"] = 'registrazione') {
