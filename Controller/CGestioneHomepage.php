@@ -33,9 +33,6 @@ class CGestioneHomepage
             $view->Home($eventi,$imgs,"admin");
         else
             $view->Home($eventi,$imgs,null);
-
-
-
     }
 
     public function login(){

@@ -1,25 +1,15 @@
 <?php
-include_once 'EEvento.php';
-include_once 'EUtente_R.php';
 
 class ECommento {
     
+
     private $descrizione;
     private $testo;
     private $utente;
     private $evento;
     private $id;
     private $bannato;
-    
-    //function __construct(String $descrizione,String $testo,EUtente_R $utente,EEvento $evento,boolean $bannato) {
-        
-     //   $this->descrizione=$descrizione;
-       // $this->testo=$testo;
-        //$this->utente=$utente;
-        //$this->evento=$evento;
-        //$this->bannato=$bannato;
-        
-    //}
+
 
     function __construct1(String $descrizione,String $testo,EUtente_R $utente,EEvento $evento,int $id,boolean $bannato) {
 
@@ -36,6 +26,7 @@ class ECommento {
         $this->descrizione=$a;
     }
 
+
     function setTesto(String $c){
         $this->testo=$c;
     }
@@ -43,20 +34,25 @@ class ECommento {
     function setEvento(EEvento $f){
         $this->evento=$f;
     }
+
     
     function getDescrizione(){
         return $this->descrizione;
     }
 
+
     function getTesto(){
         return $this->testo;
     }
+
     function getEvento(){
        $e=$this->evento;
        return $e;
      
     }
-    function getUtente(){
+
+    function getUtente()
+    {
         $u=$this->utente;
         return $u;
     }
@@ -85,16 +81,20 @@ class ECommento {
 
     }
 
+    function setId($id)
+    {
+        $this->id=$id;
+    }
 
-    
     function toString(){
+
         return "Descrizione: ".$this->descrizione."\n".
                 "Bannato: ". $this->bannato."\n".
                 "Testo: ".$this->testo."\n";
                 //"Utente: ".$this->utente->toString();"\n".
                 //"Evento: ".$this->evento->toString()."\n";
-    }
 
+    }
 
     function getF(){
         return "FCommento";
@@ -104,4 +104,5 @@ class ECommento {
 
         return '"$this->id","$this->getEvento()->getNome()","$this->getEvento()->getData()"';
     }
+
 }

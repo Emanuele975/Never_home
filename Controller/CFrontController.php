@@ -56,7 +56,7 @@ class CFrontController
             }else {
 
                 $errore="Pagina non trovata";
-                $view = new VErrore();
+                $view = new VError();
                 $view->mostraErrore($errore);
             }
 
