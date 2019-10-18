@@ -1,8 +1,6 @@
 <?php
 
 class ECommento {
-    
-
 
     private $testo;
     private $utente;
@@ -13,14 +11,12 @@ class ECommento {
 
     function __construct(String $testo,EUtente_R $utente,EEvento $evento) {
 
-
         $this->testo=$testo;
         $this->utente=$utente;
         $this->evento=$evento;
         $this->bannato=false;
 
     }
-
 
 
 
@@ -32,6 +28,9 @@ class ECommento {
         $this->evento=$f;
     }
 
+    function getDescrizione(){
+        return $this->descrizione;
+    }
 
     function getTesto(){
         return $this->testo;

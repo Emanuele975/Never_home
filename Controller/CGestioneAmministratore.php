@@ -37,7 +37,6 @@ class CGestioneAmministratore
 
     }
 
-
     public function Entra()
     {
         $view = new VLogin();
@@ -65,7 +64,6 @@ class CGestioneAmministratore
         }
     }
 
-
     public function Logout()
     {
         $sessione = Session::getInstance();
@@ -76,12 +74,15 @@ class CGestioneAmministratore
         header('Location: /Never_home');
     }
 
-
     public function Home()
     {
+        $pm = FPersistenceManager::getInstance();
+        $commenti = $pm->commentidabannare();
+        echo count($commenti);
         $view = new VAmministratore();
         $view->HomeAdmin();
     }
+
 }
 
 

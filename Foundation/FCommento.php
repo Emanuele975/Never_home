@@ -20,8 +20,6 @@ class FCommento extends FDatabase
         $stmt->bindValue(':id_utente', $commento->getUtente()->getId(), PDO::PARAM_INT);
         $stmt->bindValue(':id_evento', $commento->getEvento()->getId(), PDO::PARAM_INT);
         $stmt->bindValue(':bannato', $commento->getBannato(), PDO::PARAM_BOOL);
-
-
     }
 
     public static function getInstance(){
@@ -103,22 +101,83 @@ class FCommento extends FDatabase
         $result = parent::loadMultiple($sql);
         $commenti = array();
 
-        if(($result!=null) && (count($result)>0) && (count($commenti)<3)){
+        if(($result!=null)){
             foreach($result as $i) {
-                $datutente = FUtente_R::getInstance();
-                $utente = $datutente->loadById($i['id_utente']);
-                if ($tipo == "EEvento_g")
-                    $datevento = FEvento_g::getInstance();
-                else
-                    $datevento = FEvento_p::getInstance();
-                $evento = $datevento->loadById($i['id_evento']);
-                $commento = new ECommento(($i['testo']), $utente, $evento,$i['bannato']);
-                $commento->setId($i['id']);
-                array_push($commenti, $commento);
+                if(count($commenti)<5)
+                {
+                    $datutente = FUtente_R::getInstance();
+                    $utente = $datutente->loadById($i['id_utente']);
+                    if ($tipo == "EEvento_g")
+                        $datevento = FEvento_g::getInstance();
+                    else
+                        $datevento = FEvento_p::getInstance();
+                    $evento = $datevento->loadById($i['id_evento']);
+                    $commento = new ECommento(($i['testo']), $utente, $evento, $i['bannato']);
+                    $commento->setId($i['id']);
+                    array_push($commenti, $commento);
+                }
             }
             return $commenti;
         }
         else return null;
+    }
+
+    public function caricatuttogratis()
+    {
+        $sql = "SELECT * FROM " . $this->table1 . " ;";
+        $result = parent::loadMultiple($sql);
+        $commenti = array();
+        if (($result!=null))
+        {
+            foreach($result as $i) {
+                if (count($commenti)<8)
+                {
+                    $datutente = FUtente_R::getInstance();
+                    $utente = $datutente->loadById($i['id_utente']);
+                    $datevento = FEvento_g::getInstance();
+                    $evento = $datevento->loadById($i['id_evento']);
+                    $commento = new ECommento(($i['testo']), $utente, $evento, $i['bannato']);
+                    $commento->setId($i['id']);
+                    array_push($commenti, $commento);
+                }
+            }
+        }
+        return $commenti;
+    }
+
+    public function caricatuttopagamento($commenti)
+    {
+        $sql = "SELECT * FROM " . $this->table2 . " ;";
+        $result = parent::loadMultiple($sql);
+        if (($result!=null))
+        {
+            foreach($result as $i) {
+                if (count($commenti)<8)
+                {
+                    $datutente = FUtente_R::getInstance();
+                    $utente = $datutente->loadById($i['id_utente']);
+                    $datevento = FEvento_p::getInstance();
+                    $evento = $datevento->loadById($i['id_evento']);
+                    $commento = new ECommento(($i['testo']), $utente, $evento, $i['bannato']);
+                    $commento->setId($i['id']);
+                    array_push($commenti, $commento);
+                }
+            }
+        }
+        return $commenti;
+
+    }
+
+    public function commentidabannare()
+    {
+        $commenti1 = $this->caricatuttogratis();
+        parent::__construct();
+        $this->table1 = "commento_g";
+        $this->table2 = "commento_p";
+        $this->values="(:testo,:id,:id_utente,:id_evento,:bannato)";
+        $commenti = $this->caricatuttopagamento($commenti1);
+        return $commenti;
+
     }
 
 }
