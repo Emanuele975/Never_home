@@ -11,7 +11,6 @@ class CGestioneHomepage
         $eventi = $pm->LoadEvents($data);
         $view = new VHomePage();
         $imgs = array();
-        echo "nella function ";
         if (isset($eventi))
         {
             foreach($eventi as $i)
@@ -21,8 +20,6 @@ class CGestioneHomepage
 
             }
         }
-
-
         $sessione= Session::getInstance();
 
         if($sessione->isLoggedUtente())
