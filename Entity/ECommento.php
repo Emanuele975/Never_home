@@ -3,7 +3,7 @@
 class ECommento {
     
 
-    private $descrizione;
+
     private $testo;
     private $utente;
     private $evento;
@@ -11,20 +11,17 @@ class ECommento {
     private $bannato;
 
 
-    function __construct1(String $descrizione,String $testo,EUtente_R $utente,EEvento $evento,int $id,boolean $bannato) {
+    function __construct(String $testo,EUtente_R $utente,EEvento $evento) {
 
-        $this->descrizione=$descrizione;
+
         $this->testo=$testo;
         $this->utente=$utente;
         $this->evento=$evento;
-        $this->id=$id;
-        $this->bannato=$bannato;
+        $this->bannato=false;
 
     }
 
-    function setDescrizione(String $a){
-        $this->descrizione=$a;
-    }
+
 
 
     function setTesto(String $c){
@@ -33,11 +30,6 @@ class ECommento {
     
     function setEvento(EEvento $f){
         $this->evento=$f;
-    }
-
-    
-    function getDescrizione(){
-        return $this->descrizione;
     }
 
 
@@ -85,6 +77,8 @@ class ECommento {
     {
         $this->id=$id;
     }
+
+
 
     function toString(){
 
