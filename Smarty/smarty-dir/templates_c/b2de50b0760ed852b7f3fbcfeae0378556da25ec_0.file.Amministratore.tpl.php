@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-16 10:03:41
+/* Smarty version 3.1.33, created on 2019-10-18 15:15:02
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Amministratore.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da6cedd98de30_89488995',
+  'unifunc' => 'content_5da9bad6228d92_05691450',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2de50b0760ed852b7f3fbcfeae0378556da25ec' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Amministratore.tpl',
-      1 => 1571213020,
+      1 => 1571404497,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da6cedd98de30_89488995 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da9bad6228d92_05691450 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -57,28 +57,39 @@ function content_5da6cedd98de30_89488995 (Smarty_Internal_Template $_smarty_tpl)
   </div>
 </nav>
 
-<div class="py-5 text-center" >
-<div class="container ">
-  <div class="row">
-    <br>
-  </div>
-  <div class="row mx-md-n5">
-    <div class="col-sm-8">
-      <form action="/Never_home/Evento/FormEvento" method="post"> <!-- cambiare, non ci va evento ma la roba relativa all'amministratore -->
-      <button type="submit" class="btn btn-dark btn-lg btn-block" name="Commento" value="G" style="width: 200px;	height: 50px;">
-        Banna commento
-      </button>
-      <button type="submit" class="btn btn-dark btn-lg btn-block" name="Cetegoria" value="P" style="width: 300px;	height: 50px;">
-        Modifica categoria
-      </button>
-        <button type="submit" class="btn btn-dark btn-lg btn-block" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
-          ...
-        </button>
-      </form>
+<div class="py-5 text-left" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel-body text-dark">
+          <br>
+          <ul class="media-list">
+            <?php
+$__section_commento_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['commenti']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_commento_0_total = $__section_commento_0_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_commento'] = new Smarty_Variable(array());
+if ($__section_commento_0_total !== 0) {
+for ($__section_commento_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] = 0; $__section_commento_0_iteration <= $__section_commento_0_total; $__section_commento_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']++){
+?>
+              <li class="media py-2">
+                <div class="media-body px-2">
+                  <strong class="text-secondary"><b><?php echo $_smarty_tpl->tpl_vars['utenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getUsername();?>
+</b></strong>
+                  <p> <?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getTesto();?>
+  </p>
+                </div>
+                <button class="btn btn-dark my-2"> banna </button>
+              </li>
+            <?php
+}
+}
+?>
+          </ul>
+        </div>
+      </div>
     </div>
-
   </div>
-</div>
+
   <br><br><br><br>
 
 

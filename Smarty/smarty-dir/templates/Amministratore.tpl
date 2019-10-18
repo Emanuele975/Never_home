@@ -34,7 +34,7 @@
   </div>
 </nav>
 
-<div class="py-5 text-center" >
+<div class="py-5 text-left" >
   <div class="container">
     <div class="row">
       <div class="col-md-12">
