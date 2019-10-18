@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a2627b85-da2f-4a96-a18b-c51b843065dd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/CGestioneAmministratore.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/CGestioneAmministratore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entity/ECommento.php" beforeDir="false" afterPath="$PROJECT_DIR$/Entity/ECommento.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foundation/FCommento.php" beforeDir="false" afterPath="$PROJECT_DIR$/Foundation/FCommento.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foundation/FPersistenceManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Foundation/FPersistenceManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/Main.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/CGestioneAmministratore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+              <folding>
+                <element signature="n#Logout#0;n#CGestioneAmministratore#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foundation/FDatabase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="48" column="10" lean-forward="true" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
+              <folding>
+                <element signature="n#__construct#0;n#FDatabase#0;n#!!top" />
+                <element signature="n#store#0;n#FDatabase#0;n#!!top" />
+                <element signature="e#1128#1296#0#PHP" />
+                <element signature="n#loadMultiple#0;n#FDatabase#0;n#!!top" />
+                <element signature="e#1857#2045#0#PHP" />
+                <element signature="n#loadSingle#0;n#FDatabase#0;n#!!top" />
+                <element signature="n#delete#0;n#FDatabase#0;n#!!top" />
+                <element signature="n#update#0;n#FDatabase#0;n#!!top" />
+                <element signature="n#exist#0;n#FDatabase#0;n#!!top" />
+                <element signature="n#closeDbConnection#0;n#FDatabase#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Foundation/FPersistenceManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+              <folding>
+                <element signature="n#getInstance#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#store#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#delete#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#Load#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#LoadEvents#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#LoadBiglietti#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#LoadbyUserPswU#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#LoadbyUserPswL#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#esisteutente#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#esisteluogo#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#getImgByidEvento#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#EventobyLuogo#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#Loadcat#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#EventoByNome#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#CartaValida#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#decrementaposti#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#incrementaposti#0;n#FPersistenceManager#0;n#!!top" />
+                <element signature="n#caricacommenti#0;n#FPersistenceManager#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Foundation/FCommento.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="176" column="68" selection-start-line="176" selection-start-column="68" selection-end-line="176" selection-end-column="68" />
+              <folding>
+                <element signature="n#getInstance#0;n#FCommento#0;n#!!top" />
+                <element signature="n#getTables#0;n#FCommento#0;n#!!top" />
+                <element signature="n#getValues#0;n#FCommento#0;n#!!top" />
+                <element signature="n#delete1#0;n#FCommento#0;n#!!top" />
+                <element signature="n#caricacommenti#0;n#FCommento#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getim</find>
+      <find>VHome</find>
+      <find>utentere</find>
+      <find>VUtente</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Entity/EEvento_p.php" />
+        <option value="$PROJECT_DIR$/Foundation/FImmagine.php" />
+        <option value="$PROJECT_DIR$/Controller/CGestioneLuogo.php" />
+        <option value="$PROJECT_DIR$/View/VAcquisto.php" />
+        <option value="$PROJECT_DIR$/Smarty/smarty-dir/templates/Locale.tpl" />
+        <option value="$PROJECT_DIR$/Smarty/smarty-dir/templates_c/0f996b25c298261bd659e18962667e41810aca5c_0.file.HomePage.tpl.php" />
+        <option value="$PROJECT_DIR$/View/Vlocale.php" />
+        <option value="$PROJECT_DIR$/include.php" />
+        <option value="$PROJECT_DIR$/View/VUtente.php" />
+        <option value="$PROJECT_DIR$/Foundation/FBiglietto.php" />
+        <option value="$PROJECT_DIR$/Controller/CGestioneUtente.php" />
+        <option value="$PROJECT_DIR$/Smarty/smarty-dir/templates/HomeUtente.tpl" />
+        <option value="$PROJECT_DIR$/Smarty/smarty-dir/templates/HomePage.tpl" />
+        <option value="$PROJECT_DIR$/Smarty/smarty-dir/templates/EventoLocale.tpl" />
+        <option value="$PROJECT_DIR$/Controller/CFrontController.php" />
+        <option value="$PROJECT_DIR$/View/VHomePage.php" />
+        <option value="$PROJECT_DIR$/View/VEvento.php" />
+        <option value="$PROJECT_DIR$/Controller/CGestioneEvento.php" />
+        <option value="$PROJECT_DIR$/Smarty/smarty-dir/templates/Evento.tpl" />
+        <option value="$PROJECT_DIR$/Controller/CGestioneHomepage.php" />
+        <option value="$PROJECT_DIR$/Entity/ECommento.php" />
+        <option value="$PROJECT_DIR$/Foundation/FPersistenceManager.php" />
+        <option value="$PROJECT_DIR$/Controller/CGestioneAmministratore.php" />
+        <option value="$PROJECT_DIR$/Foundation/FDatabase.php" />
+        <option value="$PROJECT_DIR$/Foundation/FCommento.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../php" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="43" />
+    <option name="y" value="5" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Never_home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Never_home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Never_home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Never_home" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Never_home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Never_home" type="462c0819:PsiDirectoryNode" />
+              <item name="Foundation" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2627b85-da2f-4a96-a18b-c51b843065dd" name="Default Changelist" comment="" />
+      <created>1570614843346</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570614843346</updated>
+      <workItem from="1570614845689" duration="5018000" />
+      <workItem from="1570778723105" duration="17747000" />
+      <workItem from="1571039574951" duration="15608000" />
+      <workItem from="1571221784834" duration="2276000" />
+      <workItem from="1571385199696" duration="7276000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="53153000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17473525" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Foundation/FImmagine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="92" column="49" lean-forward="true" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/VAcquisto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates_c/08880dbce1aa5b60bb514f2b300e94388c2beab6_0.file.Locale.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates_c/8caec9ea72560ed830335091d2f3125c4612688b_0.file.RegLocale.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1664" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entity/EBiglietto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="n#__construct#0;n#EBiglietto#0;n#!!top" />
+            <element signature="n#setPrezzo#0;n#EBiglietto#0;n#!!top" />
+            <element signature="n#setid#0;n#EBiglietto#0;n#!!top" />
+            <element signature="n#setEvento#0;n#EBiglietto#0;n#!!top" />
+            <element signature="n#setAquisto#0;n#EBiglietto#0;n#!!top" />
+            <element signature="n#getPrezzo#0;n#EBiglietto#0;n#!!top" />
+            <element signature="n#getId#0;n#EBiglietto#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/UtenteLoggato.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/utente.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/RegUtente.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1219" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/RegLocale.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1168" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/LuogoLoggato.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-539" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/loginUtente.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-692" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/loginLuogo.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-726" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3038" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/FormNEp.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/FormCarta.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/FormAcquisto2.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/FormAcquisto1.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Vlocale.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/VUtente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding>
+            <element signature="n#__construct#0;n#VUtente#0;n#!!top" />
+            <element signature="n#HomeUtente#0;n#VUtente#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foundation/FBiglietto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="80" column="84" selection-start-line="80" selection-start-column="84" selection-end-line="80" selection-end-column="84" />
+          <folding>
+            <element signature="n#__construct#0;n#FBiglietto#0;n#!!top" />
+            <element signature="n#bind#0;n#FBiglietto#0;n#!!top" />
+            <element signature="n#getInstance#0;n#FBiglietto#0;n#!!top" />
+            <element signature="n#getTables#0;n#FBiglietto#0;n#!!top" />
+            <element signature="n#getValues#0;n#FBiglietto#0;n#!!top" />
+            <element signature="n#store1#0;n#FBiglietto#0;n#!!top" />
+            <element signature="n#delete#0;n#FBiglietto#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/HomeUtente.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/VNuovoEventoGratis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="9" selection-start-line="20" selection-start-column="8" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/CGestioneUtente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="122" column="42" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="42" />
+          <folding>
+            <element signature="n#Login#0;n#CGestioneUtente#0;n#!!top" />
+            <element signature="n#Entra#0;n#CGestioneUtente#0;n#!!top" />
+            <element signature="n#FormRegistrazione#0;n#CGestioneUtente#0;n#!!top" />
+            <element signature="n#Registrazione#0;n#CGestioneUtente#0;n#!!top" />
+            <element signature="n#Logout#0;n#CGestioneUtente#0;n#!!top" />
+            <element signature="n#FormCarta#0;n#CGestioneUtente#0;n#!!top" />
+            <element signature="n#AggiungiCarta#0;n#CGestioneUtente#0;n#!!top" />
+            <element signature="n#setHomeUtente#0;n#CGestioneUtente#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/EventoLocale.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entity/EEvento_p.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="n#__construct#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#setPrezzo#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#getPrezzo#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#setPosti_disponibili#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#getPosti_disponibili#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#setPosti_totali#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#getPosti_totali#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#disponibilita#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#decrementa#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#numerobiglietto#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#getTipo#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#toString#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#getF#0;n#EEvento_p#0;n#!!top" />
+            <element signature="n#getKey#0;n#EEvento_p#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/Locale.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="64" column="14" lean-forward="true" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/VHomePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="n#__construct#0;n#VHomePage#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/VError.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/FormNEg.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1419">
+          <caret line="106" column="8" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/CGestioneLuogo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
+          <folding>
+            <element signature="n#Form#0;n#CGestioneLuogo#0;n#!!top" />
+            <element signature="n#Login#0;n#CGestioneLuogo#0;n#!!top" />
+            <element signature="n#Entra#0;n#CGestioneLuogo#0;n#!!top" />
+            <element signature="n#Logout#0;n#CGestioneLuogo#0;n#!!top" />
+            <element signature="n#Home#0;n#CGestioneLuogo#0;n#!!top" />
+            <element signature="n#FormRegistrazione#0;n#CGestioneLuogo#0;n#!!top" />
+            <element signature="n#Registrazione#0;n#CGestioneLuogo#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/CFrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="57" column="45" lean-forward="true" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entity/EEvento_g.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foundation/FEvento_g.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1239">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foundation/FEvento_p.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="117" column="33" selection-start-line="117" selection-end-line="118" />
+          <folding>
+            <element signature="n#__construct#0;n#FEvento_p#0;n#!!top" />
+            <element signature="n#getInstance#0;n#FEvento_p#0;n#!!top" />
+            <element signature="n#getTables#0;n#FEvento_p#0;n#!!top" />
+            <element signature="n#getValues#0;n#FEvento_p#0;n#!!top" />
+            <element signature="n#delete_event#0;n#FEvento_p#0;n#!!top" />
+            <element signature="n#loadByNome#0;n#FEvento_p#0;n#!!top" />
+            <element signature="n#decrementaposti#0;n#FEvento_p#0;n#!!top" />
+            <element signature="n#incrementaposti#0;n#FEvento_p#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/HomePage.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/CGestioneHomepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/VEvento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding>
+            <element signature="n#__construct#0;n#VEvento#0;n#!!top" />
+            <element signature="n#Acquista#0;n#VEvento#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entity/EUtente_R.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates_c/807b524edd12c3422594cd1c7e667b4f8f056a48_0.file.loginUtente.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates_c/0f996b25c298261bd659e18962667e41810aca5c_0.file.HomePage.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates_c/a84918596cbcb832bea89ea5fad5df62cc15ea90_0.file.Evento.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2426">
+          <folding>
+            <element signature="e#6#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/smarty-dir/templates/Evento.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-454">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foundation/FUtente_R.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="75" selection-start-line="51" selection-start-column="75" selection-end-line="51" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/CGestioneEvento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="n#FormEvento#0;n#CGestioneEvento#0;n#!!top" />
+            <element signature="n#NuovoEventoGratis#0;n#CGestioneEvento#0;n#!!top" />
+            <element signature="n#NuovoEventoPagamento#0;n#CGestioneEvento#0;n#!!top" />
+            <element signature="n#CercadaNome#0;n#CGestioneEvento#0;n#!!top" />
+            <element signature="n#FormAcquisto#0;n#CGestioneEvento#0;n#!!top" />
+            <element signature="n#FormPagamento#0;n#CGestioneEvento#0;n#!!top" />
+            <element signature="n#Acquisto#0;n#CGestioneEvento#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entity/ECommento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+          <folding>
+            <element signature="n#toString#0;n#ECommento#0;n#!!top" />
+            <element signature="n#getF#0;n#ECommento#0;n#!!top" />
+            <element signature="n#getKey#0;n#ECommento#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foundation/FPersistenceManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+          <folding>
+            <element signature="n#getInstance#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#store#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#delete#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#Load#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#LoadEvents#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#LoadBiglietti#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#LoadbyUserPswU#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#LoadbyUserPswL#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#esisteutente#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#esisteluogo#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#getImgByidEvento#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#EventobyLuogo#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#Loadcat#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#EventoByNome#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#CartaValida#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#decrementaposti#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#incrementaposti#0;n#FPersistenceManager#0;n#!!top" />
+            <element signature="n#caricacommenti#0;n#FPersistenceManager#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foundation/FDatabase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="48" column="10" lean-forward="true" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
+          <folding>
+            <element signature="n#__construct#0;n#FDatabase#0;n#!!top" />
+            <element signature="n#store#0;n#FDatabase#0;n#!!top" />
+            <element signature="e#1128#1296#0#PHP" />
+            <element signature="n#loadMultiple#0;n#FDatabase#0;n#!!top" />
+            <element signature="e#1857#2045#0#PHP" />
+            <element signature="n#loadSingle#0;n#FDatabase#0;n#!!top" />
+            <element signature="n#delete#0;n#FDatabase#0;n#!!top" />
+            <element signature="n#update#0;n#FDatabase#0;n#!!top" />
+            <element signature="n#exist#0;n#FDatabase#0;n#!!top" />
+            <element signature="n#closeDbConnection#0;n#FDatabase#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/CGestioneAmministratore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+          <folding>
+            <element signature="n#Logout#0;n#CGestioneAmministratore#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foundation/FCommento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="176" column="68" selection-start-line="176" selection-start-column="68" selection-end-line="176" selection-end-column="68" />
+          <folding>
+            <element signature="n#getInstance#0;n#FCommento#0;n#!!top" />
+            <element signature="n#getTables#0;n#FCommento#0;n#!!top" />
+            <element signature="n#getValues#0;n#FCommento#0;n#!!top" />
+            <element signature="n#delete1#0;n#FCommento#0;n#!!top" />
+            <element signature="n#caricacommenti#0;n#FCommento#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

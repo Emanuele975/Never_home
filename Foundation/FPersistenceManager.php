@@ -131,4 +131,11 @@ class FPersistenceManager
         return $commenti;
     }
 
+    public function commentidabannare()
+    {
+        $dat = FCommento::getInstance();
+        $commenti = $dat->commentidabannare();
+        return $commenti;
+    }
+
 }
