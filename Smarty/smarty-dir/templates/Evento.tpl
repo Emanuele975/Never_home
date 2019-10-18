@@ -25,8 +25,8 @@
                 <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Notifiche </a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
             <button class="btn btn-primary" type="submit">Search</button>
         </form>
     </div>
@@ -100,8 +100,14 @@
                             <li class="media py-2">
                                 <div class="media-body px-2">
                                     <strong class="text-secondary"><b>{$utenti[commento]->getUsername()}</b></strong>
-                                        <p> {$commenti[commento]->getTesto()}  </p>
+                                {if $commenti[commento]->getBannato()==false}
+                                    {$commenti[commento]->getBannato()}
+                                    <p> il commento è stato bannato  </p>
                                 </div>
+                                {else}
+                                    <p> {$commenti[commento]->getTesto()}  </p>
+                                </div>
+                                {/if}
                             </li>
                         {/section}
                     </ul>

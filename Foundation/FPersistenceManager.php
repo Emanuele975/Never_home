@@ -124,10 +124,10 @@ class FPersistenceManager
         $dat->incrementaposti($id,$posti);
     }
 
-    public function caricacommenti($id,$tipo)
+    public function caricacommenti($id)
     {
         $dat = FCommento::getInstance();
-        $commenti = $dat->caricacommenti($id,$tipo);
+        $commenti = $dat->caricacommenti($id);
         return $commenti;
     }
 
@@ -136,6 +136,11 @@ class FPersistenceManager
         $dat = FCommento::getInstance();
         $commenti = $dat->commentidabannare();
         return $commenti;
+    }
+
+    public function bannacommento()
+    {
+        $dat = FCommento::getInstance();
     }
 
 }
