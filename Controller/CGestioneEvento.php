@@ -18,10 +18,13 @@ class CGestioneEvento
             $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
             $commenti = $pm->caricacommenti($evento->getId(),$evento->getTipo());
             $utenti = array();
-            foreach ($commenti as $i)
+            if (isset($commenti))
             {
-                $utente = $pm->Load($i->getUtente()->getId(),'FUtente_R');
-                array_push($utenti, $utente);
+                foreach ($commenti as $i)
+                {
+                    $utente = $pm->Load($i->getUtente()->getId(),'FUtente_R');
+                    array_push($utenti, $utente);
+                }
             }
         } else
         {

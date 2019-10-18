@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/Entity/ECommento.php" beforeDir="false" afterPath="$PROJECT_DIR$/Entity/ECommento.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Foundation/FCommento.php" beforeDir="false" afterPath="$PROJECT_DIR$/Foundation/FCommento.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Foundation/FPersistenceManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/Foundation/FPersistenceManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,10 +86,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Entity/ECommento.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-491">
+              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+              <folding>
+                <element signature="n#__construct#0;n#ECommento#0;n#!!top" />
+                <element signature="n#setDescrizione#0;n#ECommento#0;n#!!top" />
+                <element signature="n#setTesto#0;n#ECommento#0;n#!!top" />
+                <element signature="n#setEvento#0;n#ECommento#0;n#!!top" />
+                <element signature="n#getDescrizione#0;n#ECommento#0;n#!!top" />
+                <element signature="n#toString#0;n#ECommento#0;n#!!top" />
+                <element signature="n#getF#0;n#ECommento#0;n#!!top" />
+                <element signature="n#getKey#0;n#ECommento#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Foundation/FCommento.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="176" column="68" selection-start-line="176" selection-start-column="68" selection-end-line="176" selection-end-column="68" />
+            <state relative-caret-position="308">
+              <caret line="172" column="48" selection-start-line="172" selection-start-column="48" selection-end-line="172" selection-end-column="48" />
               <folding>
                 <element signature="n#getInstance#0;n#FCommento#0;n#!!top" />
                 <element signature="n#getTables#0;n#FCommento#0;n#!!top" />
@@ -137,11 +156,11 @@
         <option value="$PROJECT_DIR$/Controller/CGestioneEvento.php" />
         <option value="$PROJECT_DIR$/Smarty/smarty-dir/templates/Evento.tpl" />
         <option value="$PROJECT_DIR$/Controller/CGestioneHomepage.php" />
-        <option value="$PROJECT_DIR$/Entity/ECommento.php" />
         <option value="$PROJECT_DIR$/Foundation/FPersistenceManager.php" />
         <option value="$PROJECT_DIR$/Controller/CGestioneAmministratore.php" />
         <option value="$PROJECT_DIR$/Foundation/FDatabase.php" />
         <option value="$PROJECT_DIR$/Foundation/FCommento.php" />
+        <option value="$PROJECT_DIR$/Entity/ECommento.php" />
       </list>
     </option>
   </component>
@@ -173,6 +192,11 @@
               <item name="Never_home" type="b2602c69:ProjectViewProjectNode" />
               <item name="Never_home" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Never_home" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Never_home" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Never_home" type="b2602c69:ProjectViewProjectNode" />
@@ -219,12 +243,12 @@
       <workItem from="1570778723105" duration="17747000" />
       <workItem from="1571039574951" duration="15608000" />
       <workItem from="1571221784834" duration="2276000" />
-      <workItem from="1571385199696" duration="7276000" />
+      <workItem from="1571385199696" duration="7611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53153000" />
+    <option name="totallyTimeSpent" value="53488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -620,18 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Entity/ECommento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="n#toString#0;n#ECommento#0;n#!!top" />
-            <element signature="n#getF#0;n#ECommento#0;n#!!top" />
-            <element signature="n#getKey#0;n#ECommento#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Foundation/FPersistenceManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -690,14 +702,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Foundation/FCommento.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="176" column="68" selection-start-line="176" selection-start-column="68" selection-end-line="176" selection-end-column="68" />
+        <state relative-caret-position="308">
+          <caret line="172" column="48" selection-start-line="172" selection-start-column="48" selection-end-line="172" selection-end-column="48" />
           <folding>
             <element signature="n#getInstance#0;n#FCommento#0;n#!!top" />
             <element signature="n#getTables#0;n#FCommento#0;n#!!top" />
             <element signature="n#getValues#0;n#FCommento#0;n#!!top" />
             <element signature="n#delete1#0;n#FCommento#0;n#!!top" />
             <element signature="n#caricacommenti#0;n#FCommento#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entity/ECommento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-491">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding>
+            <element signature="n#__construct#0;n#ECommento#0;n#!!top" />
+            <element signature="n#setDescrizione#0;n#ECommento#0;n#!!top" />
+            <element signature="n#setTesto#0;n#ECommento#0;n#!!top" />
+            <element signature="n#setEvento#0;n#ECommento#0;n#!!top" />
+            <element signature="n#getDescrizione#0;n#ECommento#0;n#!!top" />
+            <element signature="n#toString#0;n#ECommento#0;n#!!top" />
+            <element signature="n#getF#0;n#ECommento#0;n#!!top" />
+            <element signature="n#getKey#0;n#ECommento#0;n#!!top" />
           </folding>
         </state>
       </provider>

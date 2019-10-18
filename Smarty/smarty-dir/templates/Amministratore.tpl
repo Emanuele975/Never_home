@@ -35,27 +35,27 @@
 </nav>
 
 <div class="py-5 text-center" >
-<div class="container ">
-  <div class="row">
-    <br>
-  </div>
-  <div class="row mx-md-n5">
-    <div class="col-sm-8">
-      <form action="/Never_home/Evento/FormEvento" method="post"> <!-- cambiare, non ci va evento ma la roba relativa all'amministratore -->
-      <button type="submit" class="btn btn-dark btn-lg btn-block" name="Commento" value="G" style="width: 200px;	height: 50px;">
-        Banna commento
-      </button>
-      <button type="submit" class="btn btn-dark btn-lg btn-block" name="Cetegoria" value="P" style="width: 300px;	height: 50px;">
-        Modifica categoria
-      </button>
-        <button type="submit" class="btn btn-dark btn-lg btn-block" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
-          ...
-        </button>
-      </form>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel-body text-dark">
+          <br>
+          <ul class="media-list">
+            {section name=commento loop=$commenti}
+              <li class="media py-2">
+                <div class="media-body px-2">
+                  <strong class="text-secondary"><b>{$utenti[commento]->getUsername()}</b></strong>
+                  <p> {$commenti[commento]->getTesto()}  </p>
+                </div>
+                <button class="btn btn-dark my-2"> banna </button>
+              </li>
+            {/section}
+          </ul>
+        </div>
+      </div>
     </div>
-
   </div>
-</div>
+
   <br><br><br><br>
 
 

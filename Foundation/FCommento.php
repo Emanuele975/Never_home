@@ -20,7 +20,6 @@ class FCommento extends FDatabase
         $stmt->bindValue(':id_utente', $commento->getUtente()->getId(), PDO::PARAM_INT);
         $stmt->bindValue(':id_evento', $commento->getEvento()->getId(), PDO::PARAM_INT);
         $stmt->bindValue(':bannato', $commento->getBannato(), PDO::PARAM_BOOL);
-
     }
 
     public static function getInstance(){
@@ -41,10 +40,11 @@ class FCommento extends FDatabase
     public function store1(ECommento $commento){
         if($commento->getEvento()->getTipo()=="EEvento_g")
             $sql = "INSERT INTO ".$this->table1." VALUES ".static::getValues().";";
-        else {
+        else
             $sql = "INSERT INTO " . $this->table2 . " VALUES " . static::getValues() . ";";
-        }
-        $id = parent::store($sql,'Fcommento',$commento);
+        //echo $sql;
+        $id = parent::store($sql,'FCommento',$commento);
+        echo $id;
         if($id)
             return $id;
         else

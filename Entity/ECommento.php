@@ -1,7 +1,6 @@
 <?php
 
 class ECommento {
-    
 
     private $testo;
     private $utente;
@@ -19,9 +18,7 @@ class ECommento {
 
     }
 
-    function setDescrizione(String $a){
-        $this->descrizione=$a;
-    }
+
 
     function setTesto(String $c){
         $this->testo=$c;
@@ -34,7 +31,6 @@ class ECommento {
     function getDescrizione(){
         return $this->descrizione;
     }
-
 
     function getTesto(){
         return $this->testo;
@@ -80,6 +76,8 @@ class ECommento {
     {
         $this->id=$id;
     }
+
+
 
     function toString(){
 
