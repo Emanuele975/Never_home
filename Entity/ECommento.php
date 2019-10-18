@@ -23,7 +23,6 @@ class ECommento {
         $this->descrizione=$a;
     }
 
-
     function setTesto(String $c){
         $this->testo=$c;
     }
@@ -32,7 +31,6 @@ class ECommento {
         $this->evento=$f;
     }
 
-    
     function getDescrizione(){
         return $this->descrizione;
     }
