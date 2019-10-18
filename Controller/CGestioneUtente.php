@@ -81,8 +81,10 @@ class CGestioneUtente
             $view2 = new VError();
             $view2->mostraErrore($msg);
         }
-        $view2 = new VAccount_utente();
-        $view2->utenteloggato($utente);
+        $sessione=Session::getInstance();
+        $sessione->Logout();
+        $sessione->setUtenteLoggato($utente);
+       $this->setHomeUtente($utente);
     }
 
     public function Logout()

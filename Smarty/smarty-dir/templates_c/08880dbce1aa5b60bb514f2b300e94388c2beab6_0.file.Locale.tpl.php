@@ -1,4 +1,27 @@
-﻿<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-10-18 17:17:11
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Locale.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5da9d777bdb516_52219035',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '08880dbce1aa5b60bb514f2b300e94388c2beab6' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Locale.tpl',
+      1 => 1571409602,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5da9d777bdb516_52219035 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
 
 <head>
@@ -55,20 +78,27 @@
     </div>
     <div class="col-sm-4">
       <div class="container">
-        {if $evento==null}
-          {else}
+        <?php if ($_smarty_tpl->tpl_vars['evento']->value == null) {?>
+          <?php } else { ?>
           <div class="list-group">
-            <a href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}" class="list-group-item list-group-item-action">
+            <a href="/Never_home/Evento/HomeEvento/<?php echo $_smarty_tpl->tpl_vars['evento']->value->getId();?>
+/<?php echo $_smarty_tpl->tpl_vars['evento']->value->getF();?>
+" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between" >
-                <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
-                <small class="text-muted">data evento : {$evento->getData()->format('d-m-Y')}</small>
+                <h5 class="mb-1">nome evento: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getNome();?>
+</h5>
+                <small class="text-muted">data evento : <?php echo $_smarty_tpl->tpl_vars['evento']->value->getData()->format('d-m-Y');?>
+</small>
               </div>
-              <p class="mb-1">descrizione: {$evento->getDescrizione()} </p>
+              <p class="mb-1">descrizione: <?php echo $_smarty_tpl->tpl_vars['evento']->value->getDescrizione();?>
+ </p>
             </a>
-            {$img2 = base64_encode($img->getData())}
-            <img class="img-fluid d-block " src="data:{$img->getType()};base64,{$img2}" style="width: 400px;	height: 250px;">
+            <?php $_smarty_tpl->_assignInScope('img2', base64_encode($_smarty_tpl->tpl_vars['img']->value->getData()));?>
+            <img class="img-fluid d-block " src="data:<?php echo $_smarty_tpl->tpl_vars['img']->value->getType();?>
+;base64,<?php echo $_smarty_tpl->tpl_vars['img2']->value;?>
+" style="width: 400px;	height: 250px;">
           </div>
-        {/if}
+        <?php }?>
       </div>
     </div>
   </div>
@@ -78,9 +108,16 @@
 
 
 </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-11 17:17:28
+/* Smarty version 3.1.33, created on 2019-10-18 15:47:45
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\RegLocale.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da09d081d3819_63185615',
+  'unifunc' => 'content_5da9c281108aa3_05871003',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8caec9ea72560ed830335091d2f3125c4612688b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\RegLocale.tpl',
-      1 => 1570807044,
+      1 => 1571406037,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da09d081d3819_63185615 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da9c281108aa3_05871003 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8">
@@ -92,6 +92,7 @@ function content_5da09d081d3819_63185615 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div
         </form>
+</div>
 </div>
 
 
