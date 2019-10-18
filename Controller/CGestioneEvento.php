@@ -90,8 +90,8 @@ class CGestioneEvento
                 $view2 = new VError();
                 $view2->mostraErrore($msg);
             }
-            $view3 = new VEvento();
-            $view3->Home($evento, $immagine, $msg);
+
+            $this->HomeEvento($evento->getId(),$evento->getF());
 
         }
         else{
