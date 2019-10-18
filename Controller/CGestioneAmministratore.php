@@ -78,9 +78,17 @@ class CGestioneAmministratore
     {
         $pm = FPersistenceManager::getInstance();
         $commenti = $pm->commentidabannare();
-        echo count($commenti);
+        $utenti = array();
+        if (isset($commenti))
+        {
+            foreach ($commenti as $i)
+            {
+                $utente = $pm->Load($i->getUtente()->getId(),'FUtente_R');
+                array_push($utenti, $utente);
+            }
+        }
         $view = new VAmministratore();
-        $view->HomeAdmin();
+        $view->HomeAdmin($commenti,$utenti);
     }
 
 }
