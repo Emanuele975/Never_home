@@ -91,6 +91,13 @@ class CGestioneAmministratore
         $view->HomeAdmin($commenti,$utenti);
     }
 
+    public function bannacommento($id)
+    {
+        $pm = FPersistenceManager::getInstance();
+        $pm->bannacommento($id);
+        $this->Home();
+    }
+
 }
 
 

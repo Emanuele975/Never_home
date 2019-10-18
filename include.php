@@ -31,7 +31,6 @@
    include_once 'View/VHomePage.php';
    include_once 'View/VRegistrazione.php';
    include_once 'View/Vlocale.php';
-   include_once 'View/VAccount_utente.php';
    include_once 'View/VNuovoEventoPagamento.php';
    include_once 'View/VRicerca.php';
    include_once 'View/VAcquisto.php';

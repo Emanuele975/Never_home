@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-16 12:51:44
+/* Smarty version 3.1.33, created on 2019-10-18 15:58:24
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Evento.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da6f640156539_93914992',
+  'unifunc' => 'content_5da9c500e50e73_53540794',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a84918596cbcb832bea89ea5fad5df62cc15ea90' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Evento.tpl',
-      1 => 1571067813,
+      1 => 1571407098,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da6f640156539_93914992 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da9c500e50e73_53540794 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -139,15 +139,21 @@ for ($__section_commento_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_secti
                                 <div class="media-body px-2">
                                     <strong class="text-secondary"><b><?php echo $_smarty_tpl->tpl_vars['utenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getUsername();?>
 </b></strong>
-                                        <p> <?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getTesto();?>
+                                <?php if ($_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getBannato() == false) {?>
+                                    <?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getBannato();?>
+
+                                    <p> il commento è stato bannato  </p>
+                                </div>
+                                <?php } else { ?>
+                                    <p> <?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getTesto();?>
   </p>
                                 </div>
+                                <?php }?>
                             </li>
                         <?php
 }
 }
 ?>
-
                     </ul>
                 </div>
             </div>

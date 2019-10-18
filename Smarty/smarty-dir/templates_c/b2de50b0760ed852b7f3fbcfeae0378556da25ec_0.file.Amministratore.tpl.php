@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-18 15:15:02
+/* Smarty version 3.1.33, created on 2019-10-18 16:47:31
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Amministratore.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da9bad6228d92_05691450',
+  'unifunc' => 'content_5da9d08379a8c0_49617810',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2de50b0760ed852b7f3fbcfeae0378556da25ec' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Amministratore.tpl',
-      1 => 1571404497,
+      1 => 1571409035,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da9bad6228d92_05691450 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da9d08379a8c0_49617810 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -75,10 +75,18 @@ for ($__section_commento_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_secti
                 <div class="media-body px-2">
                   <strong class="text-secondary"><b><?php echo $_smarty_tpl->tpl_vars['utenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getUsername();?>
 </b></strong>
+                <?php if ($_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getBannato() == true) {?>
+                  <p> il commento è stato bannato  </p>
+                </div>
+                <?php } else { ?>
                   <p> <?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getTesto();?>
   </p>
                 </div>
-                <button class="btn btn-dark my-2"> banna </button>
+                <?php }?>
+                <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/bannacommento/<?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getId();?>
+">
+                  <button class="btn btn-dark my-2" type="submit"> banna </button>
+                </form>
               </li>
             <?php
 }

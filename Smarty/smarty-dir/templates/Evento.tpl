@@ -100,8 +100,14 @@
                             <li class="media py-2">
                                 <div class="media-body px-2">
                                     <strong class="text-secondary"><b>{$utenti[commento]->getUsername()}</b></strong>
-                                        <p> {$commenti[commento]->getTesto()}  </p>
+                                {if $commenti[commento]->getBannato()==false}
+                                    {$commenti[commento]->getBannato()}
+                                    <p> il commento è stato bannato  </p>
                                 </div>
+                                {else}
+                                    <p> {$commenti[commento]->getTesto()}  </p>
+                                </div>
+                                {/if}
                             </li>
                         {/section}
                     </ul>
