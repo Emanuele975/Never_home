@@ -57,7 +57,7 @@
       <div class="col-sm-6">
       <div class="list-group ">
         {if $evento1 eq null}
-        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+        <a href="/Never_home" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">biglietto non trovato</h5>
             <small></small>
@@ -66,7 +66,7 @@
           <small></small>
         </a>
         {else}
-          <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <a href="/Never_home/Evento/HomeEvento/{$evento1->getId()}/{$evento1->getF()}" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">Nome: {$evento1->getNome()}</h5>
               <small>Data: {$evento1->getData()->format('Y-m-d')}</small>
@@ -76,7 +76,7 @@
           </a>
         {/if}
         {if $evento2 eq null}
-        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+        <a href="/Never_home" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">biglietto non trovato</h5>
             <small class="text-muted"></small>
@@ -85,7 +85,7 @@
           <small class="text-muted"></small>
         </a>
         {else}
-        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+        <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Nome: {$evento2->getNome()}</h5>
             <small class="text-muted">Data: {$evento2->getData()->format('Y-m-d')}</small>
@@ -95,7 +95,7 @@
         </a>
          {/if}
         {if $evento3 eq null}
-        <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+        <a href="/Never_home" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">biglietto non trovato</h5>
             <small class="text-muted"></small>
@@ -104,7 +104,7 @@
           <small class="text-muted"></small>
         </a>
         {else}
-          <a href="#" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <a href="/Never_home/Evento/HomeEvento/{$evento3->getId()}/{$evento3->getF()}" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">Nome: {$evento3->getNome()}</h5>
               <small class="text-muted">Data: {$evento1->getData()->format('Y-m-d')}</small>

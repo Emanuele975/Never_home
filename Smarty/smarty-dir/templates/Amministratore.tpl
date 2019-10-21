@@ -45,7 +45,7 @@
               <li class="media py-2">
                 <div class="media-body px-2">
                   <strong class="text-secondary"><b>{$utenti[commento]->getUsername()}</b></strong>
-                {if $commenti[commento]->getBannato()==true}
+                {if $commenti[commento]->getBannato()==1}
                   <p> il commento è stato bannato  </p>
                 </div>
                 {else}
@@ -53,7 +53,7 @@
                 </div>
                 {/if}
                 <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/bannacommento/{$commenti[commento]->getId()}">
-                  <button class="btn btn-dark my-2" type="submit"> banna </button>
+                  <button class="btn btn-dark my-2" type="submit" > banna </button>
                 </form>
               </li>
             {/section}

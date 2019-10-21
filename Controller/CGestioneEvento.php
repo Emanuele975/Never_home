@@ -46,12 +46,19 @@ class CGestioneEvento
         $data = new DateTime($data);
         $categoria = $pm->Loadcat($dati['Categoria']);
         $evento = new EEvento_g($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione']);
-        $id = $pm->store($evento);
-        $evento->setId($id);
-        $img = new EImmagine($dati['img'],$dati['tipo'],$id,'EEvento_g');
-        $pm->store($img);
-        $view = new Vlocale();
-        $view->HomeLocale($evento,$img);
+        if ($pm->esisteevento($dati['NomeE'],'FEvento_g'))
+        {
+            $view = new VError();
+            $view->mostraErrore("esiste già un evento con questo nome",null);
+        }
+        else {
+            $id = $pm->store($evento);
+            $evento->setId($id);
+            $img = new EImmagine($dati['img'], $dati['tipo'], $id, 'EEvento_g');
+            $pm->store($img);
+            $view = new Vlocale();
+            $view->HomeLocale($evento, $img);
+        }
     }
 
     public function NuovoEventoPagamento()
@@ -67,12 +74,17 @@ class CGestioneEvento
         $prezzo = $dati["Prezzo"];
         $posti = $dati["Posti"];
         $evento = new EEvento_p($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione'],$prezzo,$posti,$posti);
-        $id = $pm->store($evento);
-        $evento->setId($id);
-        $img = new EImmagine($dati['img'],$dati['tipo'],$id,'EEvento_p');
-        $pm->store($img);
-        $view = new Vlocale();
-        $view->HomeLocale($evento,$img);
+        if ($pm->esisteevento($dati['NomeE'],'FEvento_g'))
+        {
+            $id = $pm->store($evento);
+            $evento->setId($id);
+            $img = new EImmagine($dati['img'], $dati['tipo'], $id, 'EEvento_p');
+            $pm->store($img);
+            $view = new Vlocale();
+            $view->HomeLocale($evento, $img);
+        }
+        else
+        {}
     }
 
     public function CercadaNome()
