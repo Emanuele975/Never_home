@@ -103,6 +103,8 @@ class CGestioneLuogo
     {
         $view = new VRegistrazione();
         $dati = $view->getDatiLocale();
+        $errore = $view->
+        $path='/Never_home/Luogo/FormRegistrazione';
         $locale = new ELuogo($dati['nome'],$dati['indirizzo'],$dati['mail'],$dati['user'],$dati['psw']);
         $pm = FPersistenceManager::getInstance();
         $id = $pm->store($locale);

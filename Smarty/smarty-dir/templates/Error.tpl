@@ -11,22 +11,14 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/Never_home">NH</a>
+    <a class="navbar-brand text-primary" href="/Never_home">NH</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Notifiche </a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
-            </li>
+
         </ul>
         <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
@@ -34,8 +26,7 @@
         </form>
     </div>
 </nav>
-
-<div class="py-5">
+{if $path==null}<div class="py-5">
     <div class="container">
         <div class="row" style="">
             <div class="px-5 col-md-8 text-center mx-auto">
@@ -45,7 +36,23 @@
             </div>
         </div>
     </div>
+    </div>
+{else}
+<div class="py-5">
+    <div class="container">
+        <div class="row" style="">
+            <div class="px-5 col-md-8 text-center mx-auto">
+                <h3 class="text-primary display-1"> <b>ERRORE!</b></h3>
+                <h3 class="text-primary display-5">{$msg}<br></h3>
+                <a class="btn btn-dark" href="{$path}" role="button">RIPROVARE<br></a>
+                </div>
+        </div>
+       <!-- <a class="btn btn-dark" href="{$path}" role="button">Torna Indietro</a>-->
+    </div>
+
+
 </div>
+{/if}
 
 <div class="fixed-bottom">
     <div class="container">
