@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-11 17:21:15
+/* Smarty version 3.1.33, created on 2019-10-21 15:37:56
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\FormNEp.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da09deb6026f0_93185000',
+  'unifunc' => 'content_5dadb4b431b600_16034348',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30a5b48e6f289beeafd5a6b48e9e7d1e4e485e3f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\FormNEp.tpl',
-      1 => 1570807272,
+      1 => 1571665062,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da09deb6026f0_93185000 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dadb4b431b600_16034348 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -49,8 +49,8 @@ function content_5da09deb6026f0_93185000 (Smarty_Internal_Template $_smarty_tpl)
         <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Notifiche </a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>
@@ -58,17 +58,17 @@ function content_5da09deb6026f0_93185000 (Smarty_Internal_Template $_smarty_tpl)
 
 <br><br>
 
-<form action='/Never_home/Evento/NuovoEventoPagamento' method="post" enctype="multipart/form-data">
+<form action='/Never_home/Evento/NuovoEventoPagamento' method="post" enctype="multipart/form-data" novalidate>
 
   <div class="container">
 
-    <div class="row">
+    <div class="form-row">
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text">Nome Evento</span>
           </div>
-          <input type="text" name="NomeE" aria-label="First name" class="form-control">
+          <input type="text" name="NomeE" aria-label="First name" class="form-control" required>
         </div>
       </div>
       <div class="form-group col-md">
@@ -155,6 +155,51 @@ function content_5da09deb6026f0_93185000 (Smarty_Internal_Template $_smarty_tpl)
     </div>
   </div>
 
+</form>
+
+<form>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault01">First name</label>
+      <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault02">Last name</label>
+      <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefaultUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        </div>
+        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault03">City</label>
+      <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault04">State</label>
+      <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault05">Zip</label>
+      <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Agree to terms and conditions
+      </label>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 
   <div class="fixed-bottom">

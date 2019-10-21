@@ -46,7 +46,7 @@ class CGestioneEvento
         $data = new DateTime($data);
         $categoria = $pm->Loadcat($dati['Categoria']);
         $evento = new EEvento_g($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione']);
-        if ($pm->esisteevento($dati['NomeE'],'FEvento_g'))
+        if ($pm->esisteevento($dati['NomeE'],$data,'FEvento_g'))
         {
             $view = new VError();
             $view->mostraErrore("esiste già un evento con questo nome",null);
@@ -74,7 +74,12 @@ class CGestioneEvento
         $prezzo = $dati["Prezzo"];
         $posti = $dati["Posti"];
         $evento = new EEvento_p($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione'],$prezzo,$posti,$posti);
-        if ($pm->esisteevento($dati['NomeE'],'FEvento_g'))
+        if ($pm->esisteevento($dati['NomeE'],$data,'FEvento_p'))
+        {
+            $view = new VError();
+            $view->mostraErrore("esiste già un evento con questo nome",null);
+        }
+        else
         {
             $id = $pm->store($evento);
             $evento->setId($id);
@@ -83,8 +88,6 @@ class CGestioneEvento
             $view = new Vlocale();
             $view->HomeLocale($evento, $img);
         }
-        else
-        {}
     }
 
     public function CercadaNome()
