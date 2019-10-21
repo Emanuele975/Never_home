@@ -14,7 +14,7 @@ class ECommento {
         $this->testo=$testo;
         $this->utente=$utente;
         $this->evento=$evento;
-        $this->bannato=false;
+        $this->bannato=0;
 
     }
 
@@ -66,7 +66,7 @@ class ECommento {
         return $c;
     }
 
-    function  setBannato(bool $c){
+    function  setBannato($c){
 
         $this->bannato=$c;
 

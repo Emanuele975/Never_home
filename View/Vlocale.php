@@ -16,7 +16,8 @@ class Vlocale
 
     public function mostraformevento()
     {
-        if (isset($_POST['EventoG']) && $_POST["EventoG"] == "G") {
+        if (isset($_POST['EventoG']) && $_POST["EventoG"] == "G")
+        {
             $this->smarty->display("FormNEg.tpl");
         } else if (isset($_POST['EventoP']) && $_POST["EventoP"] == "P") {
             $this->smarty->display("FormNEp.tpl");

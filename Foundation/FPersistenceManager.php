@@ -68,6 +68,13 @@ class FPersistenceManager
         return $dat->esisteutente($user,$psw);
     }
 
+    public function esisteevento($nome,$f)
+    {
+        $dat = $f::getInstance();
+        $res = $dat->esisteevento($nome);
+        return $res;
+    }
+
     public function esisteluogo($user,$psw){
         $dat = FLuogo::getInstance();
         return $dat->esisteluogo($user,$psw);
@@ -138,9 +145,10 @@ class FPersistenceManager
         return $commenti;
     }
 
-    public function bannacommento()
+    public function bannacommento($id)
     {
         $dat = FCommento::getInstance();
+        $dat->banna($id);
     }
 
 }
