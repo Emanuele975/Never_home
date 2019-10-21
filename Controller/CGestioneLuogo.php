@@ -87,6 +87,8 @@ class CGestioneLuogo
         $evento = $pm->EventobyLuogo($luogo->getId());
         if ($evento!=null)
             $img = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
+        else
+            $img=null;
         $view=new Vlocale();
         $view->HomeLocale($evento,$img);
     }
@@ -110,8 +112,12 @@ class CGestioneLuogo
             $view2 = new VError();
             $view2->mostraErrore($msg);
         }
-        $view2 = new Vlocale();
-        $view2->LuogoLoggato($locale);
+        $sessione= Session::getInstance();
+        $sessione->logout();
+        $sessione->setLuogoLoggato($locale);
+        $this->Home();
+
+
     }
 
 }

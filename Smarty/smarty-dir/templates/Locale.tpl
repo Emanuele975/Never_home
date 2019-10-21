@@ -55,17 +55,20 @@
     </div>
     <div class="col-sm-4">
       <div class="container">
-        <div class="list-group">
-          <a href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between" >
-              <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
-              <small class="text-muted">data evento : {$evento->getData()->format('d-m-Y')}</small>
-            </div>
-            <p class="mb-1">descrizione </p>
-          </a>
-          {$img2 = base64_encode($img->getData())}
-          <img class="img-fluid d-block " src="data:{$img->getType()};base64,{$img2}" style="width: 400px;	height: 250px;">
-        </div>
+        {if $evento==null}
+          {else}
+          <div class="list-group">
+            <a href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between" >
+                <h5 class="mb-1">nome evento: {$evento->getNome()}</h5>
+                <small class="text-muted">data evento : {$evento->getData()->format('d-m-Y')}</small>
+              </div>
+              <p class="mb-1">descrizione: {$evento->getDescrizione()} </p>
+            </a>
+            {$img2 = base64_encode($img->getData())}
+            <img class="img-fluid d-block " src="data:{$img->getType()};base64,{$img2}" style="width: 400px;	height: 250px;">
+          </div>
+        {/if}
       </div>
     </div>
   </div>
