@@ -151,4 +151,18 @@ class FPersistenceManager
         $dat->banna($id);
     }
 
+    public function esisteUsername($username){
+        $fu = FUtente_R::getInstance();
+        $esito = $fu->esisteUsername($username);
+        return $esito;
+    }
+
+    public function validaUsername(){
+        $pm = FPersistentManager::getInstance();
+        $esito = $pm->esisteUsername($_POST['username']);
+        if($esito){
+            return false;
+        } else { return true;}
+    }
+
 }

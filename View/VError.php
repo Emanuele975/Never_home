@@ -14,14 +14,12 @@ class VError
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
-    public function mostraErrore($msg,$path)
+
+    public function mostraErrore($msg)
     {
-        if ($path == null)
-            $this->smarty->assign("path",null);
-        else
-            $this->smarty->assign("path",$path);
         $this->smarty->assign("msg",$msg);
         $this->smarty->display("Error.tpl");
+
     }
 
 }
