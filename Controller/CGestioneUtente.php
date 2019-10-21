@@ -72,23 +72,29 @@ class CGestioneUtente
     {
         $view = new VRegistrazione();
         $dati = $view->getDatiUtente();
-        $utente = new EUtente_R($dati['nome'],$dati['cognome'],$dati['cf'],$dati['user'],$dati['psw'],0,$dati['mail']);
-        $pm = FPersistenceManager::getInstance();
-        $id = $pm->store($utente);
-        if ($id==null)
-        {
-            $msg = "registrazione non riuscita";
-            $view2 = new VError();
-            $view2->mostraErrore($msg);
+        $errore=$view->validaInput();
+        $path='/Never_home/Utente/FormRegistrazione';
+        if($errore){
+            $viewerr=new VError();
+            $viewerr->mostraErrore($errore,$path);
         }
-<<<<<<< HEAD
-        $sessione=Session::getInstance();
-        $sessione->Logout();
-        $sessione->setUtenteLoggato($utente);
-       $this->setHomeUtente($utente);
-=======
-        $this->setHomeUtente($utente);
->>>>>>> 64084506d37f67b97969c2a83cb7497143e88387
+        else {
+            $utente = new EUtente_R($dati['nome'], $dati['cognome'], $dati['cf'], $dati['user'], $dati['psw'], 0, $dati['mail']);
+            $pm = FPersistenceManager::getInstance();
+            $id = $pm->store($utente);
+            if ($id == null) {
+                $msg = "registrazione non riuscita";
+                $view2 = new VError();
+                $view2->mostraErrore($msg);
+            }
+            else
+
+            {$sessione = Session::getInstance();
+            $sessione->Logout();
+            $sessione->setUtenteLoggato($utente);
+            $this->setHomeUtente($utente);}
+            }
+
     }
 
     public function Logout()
