@@ -114,7 +114,6 @@ class CGestioneLuogo
         $view2->LuogoLoggato($locale);
     }
 
-
 }
 
 ?>

@@ -103,5 +103,15 @@ class FEvento_g extends FDatabase{
         else return null;
     }
 
+    public function esisteevento($nome)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' ;";
+        $result = parent::loadSingle($sql);
+        if ($result==null)
+            return false;
+        else
+            return true;
+    }
+
 }
 ?>

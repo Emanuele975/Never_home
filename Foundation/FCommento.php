@@ -17,7 +17,7 @@ class FCommento extends FDatabase
         $stmt->bindValue(':testo', $commento->getTesto(), PDO::PARAM_STR);
         $stmt->bindValue(':id_utente', $commento->getUtente()->getId(), PDO::PARAM_INT);
         $stmt->bindValue(':id_evento', $commento->getEvento()->getId(), PDO::PARAM_INT);
-        $stmt->bindValue(':bannato', $commento->getBannato(), PDO::PARAM_BOOL);
+        $stmt->bindValue(':bannato', $commento->getBannato(), PDO::PARAM_INT);
     }
 
     public static function getInstance(){
@@ -57,7 +57,8 @@ class FCommento extends FDatabase
             $utente = $datutente->loadById($result['id_utente']);
             $datevento = FEvento_p::getInstance();
             $evento = $datevento->loadById($result['id_evento']);
-            $commento = new ECommento(($result['testo']), $utente,$evento,$result['bannato']);
+            $commento = new ECommento(($result['testo']), $utente,$evento);
+            $commento->setBannato($result['bannato']);
             return $commento;
         }
         else return null;
@@ -87,7 +88,8 @@ class FCommento extends FDatabase
                     $utente = $datutente->loadById($i['id_utente']);
                     $datevento = FEvento_p::getInstance();
                     $evento = $datevento->loadById($i['id_evento']);
-                    $commento = new ECommento(($i['testo']), $utente, $evento, $i['bannato']);
+                    $commento = new ECommento(($i['testo']), $utente, $evento);
+                    $commento->setBannato($i['bannato']);
                     $commento->setId($i['id']);
                     array_push($commenti, $commento);
                 }
@@ -105,13 +107,14 @@ class FCommento extends FDatabase
         if (($result!=null))
         {
             foreach($result as $i) {
-                if (count($commenti)<8)
+                if (count($commenti)<8 && $i['bannato']==0)
                 {
                     $datutente = FUtente_R::getInstance();
                     $utente = $datutente->loadById($i['id_utente']);
                     $datevento = FEvento_p::getInstance();
                     $evento = $datevento->loadById($i['id_evento']);
                     $commento = new ECommento(($i['testo']), $utente, $evento, $i['bannato']);
+                    $commento->setBannato($i['bannato']);
                     $commento->setId($i['id']);
                     array_push($commenti, $commento);
                 }
@@ -119,6 +122,12 @@ class FCommento extends FDatabase
         }
 
         return $commenti;
+    }
+
+    public function banna($id)
+    {
+        $sql = "UPDATE " . $this->table . " SET bannato = 1 WHERE id = '" .$id. "';";
+        $result = parent::update($sql);
     }
 
 }
