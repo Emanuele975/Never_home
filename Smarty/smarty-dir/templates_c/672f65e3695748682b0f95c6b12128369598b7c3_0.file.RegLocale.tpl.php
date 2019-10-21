@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-18 13:11:27
+/* Smarty version 3.1.33, created on 2019-10-21 12:06:30
   from '/Applications/XAMPP/xamppfiles/htdocs/Never_home/Smarty/smarty-dir/templates/RegLocale.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da99ddfeafec7_82532912',
+  'unifunc' => 'content_5dad8326b4cc06_22637230',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '672f65e3695748682b0f95c6b12128369598b7c3' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/Never_home/Smarty/smarty-dir/templates/RegLocale.tpl',
-      1 => 1571392311,
+      1 => 1571413376,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da99ddfeafec7_82532912 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dad8326b4cc06_22637230 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8">
@@ -47,8 +47,8 @@ function content_5da99ddfeafec7_82532912 (Smarty_Internal_Template $_smarty_tpl)
                 <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">notifiche</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
             <button class="btn btn-primary" type="submit">Search</button>
         </form>
     </div>
@@ -92,6 +92,7 @@ function content_5da99ddfeafec7_82532912 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div
         </form>
+</div>
 </div>
 
 

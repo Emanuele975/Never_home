@@ -112,6 +112,19 @@ class CGestioneLuogo
             $view2 = new VError();
             $view2->mostraErrore($msg);
         }
+        if ($dati['user'] == $dati['user'])
+        {
+            $msg1 = "username già esistente";
+            $view3 = new VError();
+            $view3->mostraErrore($msg1);
+
+        }
+        if ($dati['mail'] == $dati['mail'])
+        {
+            $msg2 = "email già esistente";
+            $view4 = new VError();
+            $view4->mostraErrore();
+        }
         $sessione= Session::getInstance();
         $sessione->logout();
         $sessione->setLuogoLoggato($locale);
