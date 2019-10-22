@@ -22,9 +22,13 @@ class VRegistrazione
     public function getDatiUtente()
     {
         $dati = array();
-
+        $errore=null;
         if (isset($_POST['nome']))
         {
+            $accettato = preg_match('/[A-Za-z]$/', $_POST['nome']);
+            if(! $accettato){
+                $errore = $errore."Il nome non è valido.\n";
+            }
             $dati['nome'] = $_POST['nome'];
         }
         if (isset($_POST['cognome']))
@@ -89,13 +93,6 @@ class VRegistrazione
         $this->smarty->display("RegLocale.tpl");
     }
 
-    public function validaUsername(){
-        $pm =FPersistenceManager::getInstance();
-        $esito = $pm->esisteUsername($_POST['user']);
-        if($esito){
-            return false;
-        } else { return true;}
-    }
     public function validaMail(){
         $mail = $_POST['mail'];
         $accettato = preg_match('/^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/', $mail);
@@ -103,6 +100,7 @@ class VRegistrazione
             return true;
         } else { return false;}
     }
+
     public function validaNome(){
         $nome = $_POST['nome'];
         $accettato = preg_match('/[A-Za-z]$/', $nome);
@@ -119,11 +117,9 @@ class VRegistrazione
         } else { return false;}
     }
 
-    public function validaInput(){
+    public function validaInput()
+    {
         $errore="";
-        if(! $this->validaUsername()){
-            $errore = $errore."Username già presente.\n";
-        }
 
         if(! $this->validaMail()){
             $errore = $errore."La mail non è conforme.\n";
