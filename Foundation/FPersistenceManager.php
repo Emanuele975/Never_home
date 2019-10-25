@@ -157,12 +157,7 @@ class FPersistenceManager
         return $esito;
     }
 
-    public function validaUsername(){
-        $pm = FPersistentManager::getInstance();
-        $esito = $pm->esisteUsername($_POST['username']);
-        if($esito){
-            return false;
-        } else { return true;}
-    }
+
+
 
 }

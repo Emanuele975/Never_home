@@ -23,6 +23,10 @@ class VRegistrazione
     {
         $dati = array();
         $errore=null;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9b82ed5217dcb49243ab64525a236e2ffe8fb425
         if (isset($_POST['nome']))
         {
             $accettato = preg_match('/[A-Za-z]$/', $_POST['nome']);
@@ -30,10 +34,17 @@ class VRegistrazione
                 $errore = $errore."Il nome non è valido.\n";
             }
             $dati['nome'] = $_POST['nome'];
+            $accettato = preg_match('/[A-Za-z]$/', $_POST['nome']);
+            if(!$accettato)
+            $errore=$errore."Il nome non è valido.\n";
+
         }
         if (isset($_POST['cognome']))
         {
             $dati['cognome'] = $_POST['cognome'];
+            $accettato = preg_match('/[A-Za-z]$/', $_POST['cognome']);
+            if(! $accettato)
+                $errore=$errore."Il cognome non è valido.\n";
         }
         if (isset($_POST['user']))
         {
@@ -46,13 +57,19 @@ class VRegistrazione
         if (isset($_POST['mail']))
         {
             $dati['mail'] = $_POST['mail'];
+            $accettato = preg_match('/^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/', $_POST['mail']);
+            if(!$accettato)
+                $errore=$errore."La mail non è conforme.\n";
         }
         if (isset($_POST['cf']))
         {
             $dati['cf'] = $_POST['cf'];
         }
+        $dati['errore']=$errore;
 
         return $dati;
+
+
     }
 
     public function getDatiLocale()
@@ -93,6 +110,8 @@ class VRegistrazione
         $this->smarty->display("RegLocale.tpl");
     }
 
+<<<<<<< HEAD
+=======
     public function validaMail(){
         $mail = $_POST['mail'];
         $accettato = preg_match('/^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/', $mail);
@@ -132,5 +151,6 @@ class VRegistrazione
         }
         return $errore;
     }
+>>>>>>> 9b82ed5217dcb49243ab64525a236e2ffe8fb425
 
 }

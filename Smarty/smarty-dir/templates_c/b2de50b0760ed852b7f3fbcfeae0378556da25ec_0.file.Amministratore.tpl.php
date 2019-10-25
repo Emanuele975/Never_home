@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.33, created on 2019-10-25 09:44:54
+=======
+/* Smarty version 3.1.33, created on 2019-10-25 15:21:06
+>>>>>>> 7af8706b1f65b14d94677f000ff8e4e0167b13ac
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Amministratore.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
+<<<<<<< HEAD
   'unifunc' => 'content_5db2a7f6545621_05181588',
+=======
+  'unifunc' => 'content_5db2f6c2e4a199_51295439',
+>>>>>>> 7af8706b1f65b14d94677f000ff8e4e0167b13ac
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2de50b0760ed852b7f3fbcfeae0378556da25ec' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Amministratore.tpl',
+<<<<<<< HEAD
       1 => 1571647222,
+=======
+      1 => 1572009663,
+>>>>>>> 7af8706b1f65b14d94677f000ff8e4e0167b13ac
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_5db2a7f6545621_05181588 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_5db2f6c2e4a199_51295439 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> 7af8706b1f65b14d94677f000ff8e4e0167b13ac
 ?><!DOCTYPE html>
 <html>
 
@@ -93,6 +109,10 @@ for ($__section_commento_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_secti
 }
 ?>
           </ul>
+<<<<<<< HEAD
+=======
+        <a class="btn btn-dark" href="" role="button">Carica altri commenti<br></a>
+>>>>>>> 7af8706b1f65b14d94677f000ff8e4e0167b13ac
         </div>
       </div>
     </div>

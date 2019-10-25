@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-21 10:39:03
+/* Smarty version 3.1.33, created on 2019-10-25 15:17:55
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\Evento.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dad6ea7115247_56522969',
+  'unifunc' => 'content_5db2f603d77ab3_49484228',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a84918596cbcb832bea89ea5fad5df62cc15ea90' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\Evento.tpl',
-      1 => 1571647130,
+      1 => 1572009474,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dad6ea7115247_56522969 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5db2f603d77ab3_49484228 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -153,6 +153,9 @@ for ($__section_commento_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_secti
 }
 ?>
                     </ul>
+
+                <a class="btn btn-dark" href="" role="button">Carica altri commenti</a>
+
                 </div>
             </div>
         </div>

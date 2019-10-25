@@ -58,6 +58,7 @@
               </li>
             {/section}
           </ul>
+        <a class="btn btn-dark" href="" role="button">Carica altri commenti<br></a>
         </div>
       </div>
     </div>

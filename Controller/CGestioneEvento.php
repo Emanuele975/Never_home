@@ -29,8 +29,9 @@ class CGestioneEvento
         } else
         {
             $msg = "non esiste questo evento";
+            $path="/Never_home/Utente/Entra";
             $view2 = new VError();
-            $view2->mostraErrore($msg);
+            $view2->mostraErrore($msg,$path);
         }
         $view = new VEvento();
         $view->Home($evento,$immagine,$commenti,$utenti);
@@ -113,7 +114,7 @@ class CGestioneEvento
             } else {
                 $msg = "Non esistono eventi con questo nome";
                 $view2 = new VError();
-                $view2->mostraErrore($msg);
+                $view2->mostraErrore($msg,null);
             }
 
             $this->HomeEvento($evento->getId(),$evento->getF());
@@ -140,8 +141,9 @@ class CGestioneEvento
         else
         {
             $msg = "Utente non loggato";
+            $path="/Never_home";
             $view2 = new VError();
-            $view2->mostraErrore($msg,null);
+            $view2->mostraErrore($msg,$path);
         }
     }
 
@@ -168,7 +170,8 @@ class CGestioneEvento
         {
             $msg = "Utente non loggato";
             $view2 = new VError();
-            $view2->mostraErrore($msg);
+            $path="/Never_home";
+            $view2->mostraErrore($msg,$path);
         }
     }
 
@@ -199,7 +202,8 @@ class CGestioneEvento
             $pm->incrementaposti($utente->getId(),$sessione->getposti());
             $msg2 = "si sono verificati problemi nell acquisto";
             $view2 = new VError();
-            $view2->mostraErrore($msg2);
+            $path="/Never_home/Utente/Entra";
+            $view2->mostraErrore($msg2,$path);
         }
         $sessione->prenotaposti(0);
         $view->AcquistoEffettuato($msg);
@@ -221,7 +225,8 @@ class CGestioneEvento
         else
         {
             $view2 = new VError();
-            $view2->mostraErrore("utente non loggato",null);
+            $path="/Never_home";
+            $view2->mostraErrore("utente non loggato",$path);
         }
     }
 

@@ -71,23 +71,32 @@ class CGestioneUtente
     public function Registrazione()
     {
         $view = new VRegistrazione();
+        $pm = FPersistenceManager::getInstance();
         $dati = $view->getDatiUtente();
-        $errore=$view->validaInput();
         $path='/Never_home/Utente/FormRegistrazione';
-        if($errore){
+        if($dati['errore']!= null)
+        {
             $viewerr=new VError();
-            $viewerr->mostraErrore($errore,$path);
+            $viewerr->mostraErrore($dati['errore'],$path);
+
+        }
+        else if($pm->esisteUsername($dati['user'])){
+
+            $viewerr=new VError();
+            $viewerr->mostraErrore("Esiste già questa username",$path);
+
+
+
         }
 
         else {
             $utente = new EUtente_R($dati['nome'], $dati['cognome'], $dati['cf'], $dati['user'], $dati['psw'], 0, $dati['mail']);
-            $pm = FPersistenceManager::getInstance();
             $id = $pm->store($utente);
             if ($id == null)
             {
                 $msg = "registrazione non riuscita";
                 $view2 = new VError();
-                $view2->mostraErrore($msg);
+                $view2->mostraErrore($msg,$path);
             }
             else
             {
@@ -129,7 +138,8 @@ class CGestioneUtente
         {
             $msg = "errore nella registrazione della carta";
             $view2 = new VError();
-            $view2->mostraErrore($msg);
+            $path="/Never_home/Utente/FormCarta";
+            $view2->mostraErrore($msg,$path);
         }
         $view->cartacaricata();
 
