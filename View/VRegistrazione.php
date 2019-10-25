@@ -22,14 +22,22 @@ class VRegistrazione
     public function getDatiUtente()
     {
         $dati = array();
+        $errore=null;
 
         if (isset($_POST['nome']))
         {
             $dati['nome'] = $_POST['nome'];
+            $accettato = preg_match('/[A-Za-z]$/', $_POST['nome']);
+            if(!$accettato)
+            $errore=$errore."Il nome non è valido.\n";
+
         }
         if (isset($_POST['cognome']))
         {
             $dati['cognome'] = $_POST['cognome'];
+            $accettato = preg_match('/[A-Za-z]$/', $_POST['cognome']);
+            if(! $accettato)
+                $errore=$errore."Il cognome non è valido.\n";
         }
         if (isset($_POST['user']))
         {
@@ -42,13 +50,19 @@ class VRegistrazione
         if (isset($_POST['mail']))
         {
             $dati['mail'] = $_POST['mail'];
+            $accettato = preg_match('/^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/', $_POST['mail']);
+            if(!$accettato)
+                $errore=$errore."La mail non è conforme.\n";
         }
         if (isset($_POST['cf']))
         {
             $dati['cf'] = $_POST['cf'];
         }
+        $dati['errore']=$errore;
 
         return $dati;
+
+
     }
 
     public function getDatiLocale()
@@ -89,52 +103,5 @@ class VRegistrazione
         $this->smarty->display("RegLocale.tpl");
     }
 
-    public function validaUsername(){
-        $pm =FPersistenceManager::getInstance();
-        $esito = $pm->esisteUsername($_POST['user']);
-        if($esito){
-            return false;
-        } else { return true;}
-    }
-    public function validaMail(){
-        $mail = $_POST['mail'];
-        $accettato = preg_match('/^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/', $mail);
-        if($accettato){
-            return true;
-        } else { return false;}
-    }
-    public function validaNome(){
-        $nome = $_POST['nome'];
-        $accettato = preg_match('/[A-Za-z]$/', $nome);
-        if($accettato){
-            return true;
-        } else { return false;}
-    }
-
-    public function validaCognome(){
-        $nome = $_POST['cognome'];
-        $accettato = preg_match('/[A-Za-z]$/', $nome);
-        if($accettato){
-            return true;
-        } else { return false;}
-    }
-
-    public function validaInput(){
-        $errore="";
-        if(! $this->validaUsername()){
-            $errore = $errore."Username già presente.\n";
-        }
-
-        if(! $this->validaMail()){
-            $errore = $errore."La mail non è conforme.\n";
-        }
-        if(! $this->validaNome()){
-            $errore = $errore."Il nome non è valido.\n";
-        }
-        if(! $this->validaCognome()){
-            $errore = $errore."Il cognome non è valido.\n";
-        }
-        return $errore;
-    }
 
 }

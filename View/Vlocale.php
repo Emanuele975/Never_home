@@ -23,15 +23,6 @@ class Vlocale
             $this->smarty->display("FormNEp.tpl");
         }
     }
-
-    public function mostraevento(EEvento $evento)
-    {
-        $this->smarty->assign('evento',$evento);
-        $this->smarty->display("EventoLocale.tpl");
-    }
-
-    
-
     public function HomeLocale($evento,$img)
     {
         $this->smarty->assign("evento",$evento);
