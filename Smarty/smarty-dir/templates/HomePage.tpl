@@ -47,7 +47,7 @@
     </div>
 </nav>
 {elseif $utente eq  "utente"}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
@@ -74,7 +74,7 @@
         </div>
     </nav>
 {elseif $utente eq "luogo"}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
@@ -101,7 +101,7 @@
         </div>
     </nav>
 {else}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
@@ -127,7 +127,6 @@
             </form>
         </div>
     </nav>
-
 {/if}
 
 
@@ -216,6 +215,7 @@
 
         </div>
 </div>
+
 </div>
 
 

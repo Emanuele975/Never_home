@@ -141,7 +141,7 @@ class CGestioneEvento
         {
             $msg = "Utente non loggato";
             $view2 = new VError();
-            $view2->mostraErrore($msg);
+            $view2->mostraErrore($msg,null);
         }
     }
 
@@ -221,7 +221,7 @@ class CGestioneEvento
         else
         {
             $view2 = new VError();
-            $view2->mostraErrore("utente non loggato");
+            $view2->mostraErrore("utente non loggato",null);
         }
     }
 

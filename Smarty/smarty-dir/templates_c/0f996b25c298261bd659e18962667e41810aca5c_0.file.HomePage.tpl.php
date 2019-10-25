@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-21 15:47:05
+/* Smarty version 3.1.33, created on 2019-10-25 15:35:45
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dadb6d97e2d02_30926709',
+  'unifunc' => 'content_5db2fa3111eee9_74983216',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f996b25c298261bd659e18962667e41810aca5c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
-      1 => 1571412615,
+      1 => 1572010270,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dadb6d97e2d02_30926709 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5db2fa3111eee9_74983216 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -70,7 +70,7 @@ function content_5dadb6d97e2d02_30926709 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 </nav>
 <?php } elseif ($_smarty_tpl->tpl_vars['utente']->value == "utente") {?>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
@@ -97,7 +97,7 @@ function content_5dadb6d97e2d02_30926709 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </nav>
 <?php } elseif ($_smarty_tpl->tpl_vars['utente']->value == "luogo") {?>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
@@ -124,7 +124,7 @@ function content_5dadb6d97e2d02_30926709 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </nav>
 <?php } else { ?>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
@@ -150,7 +150,6 @@ function content_5dadb6d97e2d02_30926709 (Smarty_Internal_Template $_smarty_tpl)
             </form>
         </div>
     </nav>
-
 <?php }?>
 
 
@@ -255,6 +254,7 @@ function content_5dadb6d97e2d02_30926709 (Smarty_Internal_Template $_smarty_tpl)
 
         </div>
 </div>
+
 </div>
 
 

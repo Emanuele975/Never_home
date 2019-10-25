@@ -3,6 +3,7 @@
 class FCommento extends FDatabase
 {
     protected $table;
+
     protected static $instance=null;
 
     protected function __construct(){
@@ -79,7 +80,6 @@ class FCommento extends FDatabase
         $sql = "SELECT * FROM " . $this->table . " WHERE id_evento = '" . $id ."' ;";
         $result = parent::loadMultiple($sql);
         $commenti = array();
-
         if(($result!=null)){
             foreach($result as $i) {
                 if(count($commenti)<5)

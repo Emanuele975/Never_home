@@ -24,14 +24,6 @@ class Vlocale
         }
     }
 
-    public function mostraevento(EEvento $evento)
-    {
-        $this->smarty->assign('evento',$evento);
-        $this->smarty->display("EventoLocale.tpl");
-    }
-
-    
-
     public function HomeLocale($evento,$img)
     {
         $this->smarty->assign("evento",$evento);
