@@ -35,17 +35,17 @@
 
 <br><br>
 
-<form action='/Never_home/Evento/NuovoEventoPagamento' method="post" enctype="multipart/form-data">
+<form action='/Never_home/Evento/NuovoEventoPagamento' method="post" enctype="multipart/form-data" novalidate>
 
   <div class="container">
 
-    <div class="row">
+    <div class="form-row">
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text">Nome Evento</span>
           </div>
-          <input type="text" name="NomeE" aria-label="First name" class="form-control">
+          <input type="text" name="NomeE" aria-label="First name" class="form-control" required>
         </div>
       </div>
       <div class="form-group col-md">

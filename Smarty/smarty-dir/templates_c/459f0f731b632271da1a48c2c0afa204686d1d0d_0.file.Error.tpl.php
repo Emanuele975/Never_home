@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-18 13:15:16
+/* Smarty version 3.1.33, created on 2019-10-21 12:00:18
   from '/Applications/XAMPP/xamppfiles/htdocs/Never_home/Smarty/smarty-dir/templates/Error.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da99ec477c258_28354640',
+  'unifunc' => 'content_5dad81b26c7111_39013176',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '459f0f731b632271da1a48c2c0afa204686d1d0d' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/Never_home/Smarty/smarty-dir/templates/Error.tpl',
-      1 => 1571392311,
+      1 => 1571407537,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da99ec477c258_28354640 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dad81b26c7111_39013176 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -51,9 +51,9 @@ function content_5da99ec477c258_28354640 (Smarty_Internal_Template $_smarty_tpl)
                 <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-light" type="submit">Search</button>
+        <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
+            <button class="btn btn-primary" type="submit">Search</button>
         </form>
     </div>
 </nav>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-18 13:15:12
+/* Smarty version 3.1.33, created on 2019-10-18 17:44:23
   from '/Applications/XAMPP/xamppfiles/htdocs/Never_home/Smarty/smarty-dir/templates/Evento.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da99ec067d680_11334534',
+  'unifunc' => 'content_5da9ddd777cae3_83640642',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d4b5da6561c4794e37899e116115978fc02e75e' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/Never_home/Smarty/smarty-dir/templates/Evento.tpl',
-      1 => 1571393230,
+      1 => 1571413148,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da99ec067d680_11334534 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da9ddd777cae3_83640642 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -48,8 +48,8 @@ function content_5da99ec067d680_11334534 (Smarty_Internal_Template $_smarty_tpl)
                 <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Notifiche </a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
             <button class="btn btn-primary" type="submit">Search</button>
         </form>
     </div>
@@ -139,9 +139,16 @@ for ($__section_commento_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_secti
                                 <div class="media-body px-2">
                                     <strong class="text-secondary"><b><?php echo $_smarty_tpl->tpl_vars['utenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getUsername();?>
 </b></strong>
-                                        <p> <?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getTesto();?>
+                                <?php if ($_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getBannato() == false) {?>
+                                    <?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getBannato();?>
+
+                                    <p> il commento è stato bannato  </p>
+                                </div>
+                                <?php } else { ?>
+                                    <p> <?php echo $_smarty_tpl->tpl_vars['commenti']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_commento']->value['index'] : null)]->getTesto();?>
   </p>
                                 </div>
+                                <?php }?>
                             </li>
                         <?php
 }

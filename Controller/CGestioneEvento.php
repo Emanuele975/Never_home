@@ -41,18 +41,23 @@ class CGestioneEvento
         $view = new VNuovoEventoGratis();
         $dati = $view->recuperaDatiEvento();
         $pm = FPersistenceManager::getInstance();
-        $sessione = Session::getInstance();
-        $luogo=$sessione->getLuogo();
-        $data = $dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno'];
-        $data = new DateTime($data);
-        $categoria = $pm->Loadcat($dati['Categoria']);
-        $evento = new EEvento_g($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione']);
-        if ($pm->esisteevento($dati['NomeE'],'FEvento_g'))
+        if ($dati['errore']!=null)
+        {
+            $view = new VError();
+            $view->mostraErrore($dati['errore'],null);
+        }
+        elseif ($pm->esisteevento($dati['NomeE'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno']),'FEvento_g'))
         {
             $view = new VError();
             $view->mostraErrore("esiste già un evento con questo nome",null);
         }
         else {
+            $sessione = Session::getInstance();
+            $luogo=$sessione->getLuogo();
+            $data = $dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno'];
+            $data = new DateTime($data);
+            $categoria = $pm->Loadcat($dati['Categoria']);
+            $evento = new EEvento_g($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione']);
             $id = $pm->store($evento);
             $evento->setId($id);
             $img = new EImmagine($dati['img'], $dati['tipo'], $id, 'EEvento_g');
@@ -67,16 +72,26 @@ class CGestioneEvento
         $view = new VNuovoEventoPagamento();
         $dati = $view->recuperaDatiEvento();
         $pm = FPersistenceManager::getInstance();
-        $sessione = Session::getInstance();
-        $luogo=$sessione->getLuogo();
-        $data = $dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno'];
-        $data = new DateTime($data);
-        $categoria = $pm->Loadcat($dati['Categoria']);
-        $prezzo = $dati["Prezzo"];
-        $posti = $dati["Posti"];
-        $evento = new EEvento_p($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione'],$prezzo,$posti,$posti);
-        if ($pm->esisteevento($dati['NomeE'],'FEvento_g'))
+        if ($dati['errore']!=null)
         {
+            $view = new VError();
+            $view->mostraErrore($dati['errore'],null);
+        }
+        elseif ($pm->esisteevento($dati['NomeE'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno']),'FEvento_p'))
+        {
+            $view = new VError();
+            $view->mostraErrore("esiste già un evento con questo nome",null);
+        }
+        else
+        {
+            $sessione = Session::getInstance();
+            $luogo=$sessione->getLuogo();
+            $data = $dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno'];
+            $data = new DateTime($data);
+            $categoria = $pm->Loadcat($dati['Categoria']);
+            $prezzo = $dati["Prezzo"];
+            $posti = $dati["Posti"];
+            $evento = new EEvento_p($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione'],$prezzo,$posti,$posti);
             $id = $pm->store($evento);
             $evento->setId($id);
             $img = new EImmagine($dati['img'], $dati['tipo'], $id, 'EEvento_p');
@@ -84,8 +99,6 @@ class CGestioneEvento
             $view = new Vlocale();
             $view->HomeLocale($evento, $img);
         }
-        else
-        {}
     }
 
     public function CercadaNome()

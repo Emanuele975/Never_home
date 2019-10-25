@@ -68,10 +68,10 @@ class FPersistenceManager
         return $dat->esisteutente($user,$psw);
     }
 
-    public function esisteevento($nome,$f)
+    public function esisteevento($nome,$data,$f)
     {
         $dat = $f::getInstance();
-        $res = $dat->esisteevento($nome);
+        $res = $dat->esisteevento($nome,$data);
         return $res;
     }
 

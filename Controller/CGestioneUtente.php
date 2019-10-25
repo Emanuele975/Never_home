@@ -88,21 +88,24 @@ class CGestioneUtente
 
 
         }
+
         else {
             $utente = new EUtente_R($dati['nome'], $dati['cognome'], $dati['cf'], $dati['user'], $dati['psw'], 0, $dati['mail']);
             $id = $pm->store($utente);
-            if ($id == null) {
+            if ($id == null)
+            {
                 $msg = "registrazione non riuscita";
                 $view2 = new VError();
                 $view2->mostraErrore($msg,$path);
             }
             else
-
-            {$sessione = Session::getInstance();
+            {
+            $sessione = Session::getInstance();
             $sessione->Logout();
             $sessione->setUtenteLoggato($utente);
-            $this->setHomeUtente($utente);}
+            $this->setHomeUtente($utente);
             }
+        }
 
     }
 
