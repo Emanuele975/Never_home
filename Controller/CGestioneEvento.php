@@ -9,14 +9,16 @@ class CGestioneEvento
         $view->mostraformevento();
     }
 
-    public function HomeEvento($id,$classe)
+    public function HomeEvento($id,$classe,$num)
     {
         $pm = FPersistenceManager::getInstance();
         $evento = $pm->Load($id,$classe);
         if($evento!=null)
         {
             $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
-            $commenti = $pm->caricacommenti($evento->getId());
+            $commenti = $pm->caricacommenti($evento->getId(),$num);
+            $pieno = $commenti["pieno"];
+            unset($commenti['pieno']);
             $utenti = array();
             if (isset($commenti))
             {
@@ -34,7 +36,7 @@ class CGestioneEvento
             $view2->mostraErrore($msg,$path);
         }
         $view = new VEvento();
-        $view->Home($evento,$immagine,$commenti,$utenti);
+        $view->Home($evento,$immagine,$commenti,$utenti,$num,$pieno);
     }
 
     public function NuovoEventoGratis(){
@@ -220,7 +222,7 @@ class CGestioneEvento
             $evento = $pm->Load($id,$classe);
             $commento = new ECommento($testo['commento'],$sessione->getUtente(),$evento);
             $pm->store($commento);
-            $this->HomeEvento($id,$classe);
+            $this->HomeEvento($id,$classe,1);
         }
         else
         {

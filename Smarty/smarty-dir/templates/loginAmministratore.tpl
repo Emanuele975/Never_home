@@ -36,7 +36,7 @@
         <div class="mx-auto col-md-6 col-10 bg-white p-5">
           <h1 class="mb-4">Log in Amministratore</h1>
           {$msg}
-          <form action="/Never_home/Amministratore/Entra" method="post" enctype="multipart/form-data">
+          <form action="/Never_home/Amministratore/Entra/1" method="post" enctype="multipart/form-data">
             <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
             <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
               </small> </div> <button type="submit" class="btn btn-primary">Submit</button>

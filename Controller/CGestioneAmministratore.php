@@ -4,13 +4,13 @@
 class CGestioneAmministratore
 {
 
-    public function Login()
+    public function Login($num)
     {
         $sessione = Session::getInstance();
         if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
             if ($sessione->isLoggedAdmin()) {
-                $this->Home();
+                $this->Home($num);
             } else {
                 if (isset($_SERVER['HTTP_REFERER'])) {
                     $referer = $_SERVER['HTTP_REFERER']; //indirizzo che stavo visitando
@@ -27,21 +27,19 @@ class CGestioneAmministratore
                 //redirect alla home page
                 header('Location: /Never_home');
             } else {
-                $this->Entra();
+                $this->Entra($num);
             }
 
         } else {
             header('HTTP/1.1 405 Method Not Allowed');
             header('Allow: GET, POST');
         }
-
     }
 
-    public function Entra()
+    public function Entra($num)
     {
         $view = new VLogin();
         $credenziali = $view->recuperadatiLogin();
-
 
         if ($credenziali['user'] == 'admin' && $credenziali['psw'] == '123') {
             //login avvenuto con successo, mostrare la pagina che stava vedendo l'utente
@@ -56,7 +54,7 @@ class CGestioneAmministratore
 
             //$location = $sessione->getPath(); //recupero il path salvato precedentemente
             //$sessione->removePath(); //cancello il path dai dati di sessione
-            $this->Home();
+            $this->Home($num);
 
         } else {
             $viewerr = new VLogin();
@@ -74,10 +72,12 @@ class CGestioneAmministratore
         header('Location: /Never_home');
     }
 
-    public function Home()
+    public function Home($num)
     {
         $pm = FPersistenceManager::getInstance();
-        $commenti = $pm->commentidabannare();
+        $commenti = $pm->commentidabannare($num);
+        $pieno = $commenti["pieno"];
+        unset($commenti['pieno']);
         $utenti = array();
         if (isset($commenti))
         {
@@ -88,14 +88,21 @@ class CGestioneAmministratore
             }
         }
         $view = new VAmministratore();
-        $view->HomeAdmin($commenti,$utenti);
+        $view->HomeAdmin($commenti,$utenti,$num,$pieno);
     }
 
-    public function bannacommento($id)
+    public function bannacommento($id,$num)
     {
         $pm = FPersistenceManager::getInstance();
         $pm->bannacommento($id);
-        $this->Home();
+        $this->Home($num);
+    }
+
+    public function sbloccacommento($id,$num)
+    {
+        $pm = FPersistenceManager::getInstance();
+        $pm->sbloccacommento($id);
+        $this->Home($num);
     }
 
 }

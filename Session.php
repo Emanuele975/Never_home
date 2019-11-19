@@ -107,6 +107,22 @@ class Session
         $_SESSION['luogo'] = $l;
     }
 
+    public function setNum($num)
+    {
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
+        $_SESSION['num'] = $num;
+    }
+
+    public function getNum($num)
+    {
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
+        return $_SESSION['num'];
+    }
+
     public function setInfoVendita($prezzo,$quantita)
     {
         if(session_status()==PHP_SESSION_NONE){

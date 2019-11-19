@@ -34,7 +34,7 @@
                     <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
                         <a class="dark dropdown-item" href="/Never_home/Utente/Login">Login utente</a>
                         <a class="dark dropdown-item" href="/Never_home/Luogo/Login">Login locale</a>
-                        <a class="dark dropdown-item" href="/Never_home/Amministratore/Login">Login Amministratore</a>
+                        <a class="dark dropdown-item" href="/Never_home/Amministratore/Login/1">Login Amministratore</a>
 
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                     </div>
                 </li>
                 <li>
-                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Amministratore/Login" role="button">Account</a>
+                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Amministratore/Login/1" role="button">Account</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -157,7 +157,7 @@
                         <div class="card-body">
                             <h4 class="card-title">{$evento1->getNome()}</h4>
                             <p class="card-text">{$evento1->getDescrizione()}</p>
-                            <a href="/Never_home/Evento/HomeEvento/{$evento1->getId()}/{$evento1->getF()}" class="btn btn-primary">Vai all evento</a>
+                            <a href="/Never_home/Evento/HomeEvento/{$evento1->getId()}/{$evento1->getF()}/1" class="btn btn-primary">Vai all evento</a>
                         </div>
                     </div>
                 {/if}
@@ -182,7 +182,7 @@
                     <div class="card-body">
                         <h4 class="card-title">{$evento2->getNome()}</h4>
                         <p class="card-text">{$evento2->getDescrizione()}</p>
-                        <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}" class="btn btn-primary">Vai all evento</a>
+                        <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}/1" class="btn btn-primary">Vai all evento</a>
                     </div>
                 </div>
             {/if}

@@ -23,10 +23,6 @@ class VRegistrazione
     {
         $dati = array();
         $errore=null;
-<<<<<<< HEAD
-
-=======
->>>>>>> 9b82ed5217dcb49243ab64525a236e2ffe8fb425
         if (isset($_POST['nome']))
         {
             $accettato = preg_match('/[A-Za-z]$/', $_POST['nome']);
@@ -109,48 +105,5 @@ class VRegistrazione
     {
         $this->smarty->display("RegLocale.tpl");
     }
-
-<<<<<<< HEAD
-=======
-    public function validaMail(){
-        $mail = $_POST['mail'];
-        $accettato = preg_match('/^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/', $mail);
-        if($accettato){
-            return true;
-        } else { return false;}
-    }
-
-    public function validaNome(){
-        $nome = $_POST['nome'];
-        $accettato = preg_match('/[A-Za-z]$/', $nome);
-        if($accettato){
-            return true;
-        } else { return false;}
-    }
-
-    public function validaCognome(){
-        $nome = $_POST['cognome'];
-        $accettato = preg_match('/[A-Za-z]$/', $nome);
-        if($accettato){
-            return true;
-        } else { return false;}
-    }
-
-    public function validaInput()
-    {
-        $errore="";
-
-        if(! $this->validaMail()){
-            $errore = $errore."La mail non è conforme.\n";
-        }
-        if(! $this->validaNome()){
-            $errore = $errore."Il nome non è valido.\n";
-        }
-        if(! $this->validaCognome()){
-            $errore = $errore."Il cognome non è valido.\n";
-        }
-        return $errore;
-    }
->>>>>>> 9b82ed5217dcb49243ab64525a236e2ffe8fb425
 
 }

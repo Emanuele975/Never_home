@@ -110,8 +110,13 @@
                             </li>
                         {/section}
                     </ul>
+                {if $pieno==false}
+                <a class="btn btn-dark" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}/{$num+1}" role="button">Carica altri commenti</a>
+                {else}
+                {/if}
+                <br>
+                <br>
 
-                <a class="btn btn-dark" href="" role="button">Carica altri commenti</a>
 
                 </div>
             </div>
