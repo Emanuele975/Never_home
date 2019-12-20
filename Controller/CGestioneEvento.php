@@ -9,14 +9,19 @@ class CGestioneEvento
         $view->mostraformevento();
     }
 
-    public function HomeEvento($id,$classe)
+    public function HomeEvento($id,$classe,$num)
     {
         $pm = FPersistenceManager::getInstance();
         $evento = $pm->Load($id,$classe);
         if($evento!=null)
         {
             $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
-            $commenti = $pm->caricacommenti($evento->getId());
+            $commenti = $pm->caricacommenti($evento->getId(),$num);
+            if ($commenti==null)
+                $pieno=true;
+            else
+                $pieno = $commenti["pieno"];
+            unset($commenti['pieno']);
             $utenti = array();
             if (isset($commenti))
             {
@@ -34,7 +39,7 @@ class CGestioneEvento
             $view2->mostraErrore($msg,$path);
         }
         $view = new VEvento();
-        $view->Home($evento,$immagine,$commenti,$utenti);
+        $view->Home($evento,$immagine,$commenti,$utenti,$num,$pieno);
     }
 
     public function NuovoEventoGratis(){
@@ -115,14 +120,12 @@ class CGestioneEvento
             if($evento!=null){
                 $msg = "";
                 $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
+                $this->HomeEvento($evento->getId(),$evento->getF(),1);
             } else {
                 $msg = "Non esistono eventi con questo nome";
                 $view2 = new VError();
                 $view2->mostraErrore($msg,null);
             }
-
-            $this->HomeEvento($evento->getId(),$evento->getF());
-
         }
         else{
             header('HTTP/1.1 405 Method Not Allowed');
@@ -189,6 +192,7 @@ class CGestioneEvento
         $utente = $sessione->getUtente();
         $prezzo = $info['prezzo']*$info['quantita'];
         $id = $pm->CartaValida($dati['cf'],$dati['ccv'],$dati['data'],$dati['numero']);
+        echo $dati['data'];
         if ($id!=null)
         {
             $evento = $pm->Load($id_evento,'FEvento_p');
@@ -197,20 +201,20 @@ class CGestioneEvento
             $id_a = $pm->store($acquisto);
             $acquistobis = $pm->Load($id_a,'FAcquisto');
             $biglietto = new EBiglietto($prezzo,$evento,$acquistobis,$utente);
-            //echo $biglietto->getEvento()->getId().$biglietto->getAcquisto()->getId(). $biglietto->getUtente()->getId();
             $pm->store($biglietto);
             $msg = "acquisto effettuato con successo";
+            $sessione->prenotaposti(0);
+            $view->AcquistoEffettuato($msg);
         }
         else
         {
             $pm->incrementaposti($utente->getId(),$sessione->getposti());
             $msg2 = "si sono verificati problemi nell acquisto";
             $view2 = new VError();
-            $path="/Never_home/Utente/Entra";
+            $path="/Never_home";
+            $sessione->prenotaposti(0);
             $view2->mostraErrore($msg2,$path);
         }
-        $sessione->prenotaposti(0);
-        $view->AcquistoEffettuato($msg);
     }
 
     public function newcommento($id,$classe)
@@ -224,7 +228,7 @@ class CGestioneEvento
             $evento = $pm->Load($id,$classe);
             $commento = new ECommento($testo['commento'],$sessione->getUtente(),$evento);
             $pm->store($commento);
-            $this->HomeEvento($id,$classe);
+            $this->HomeEvento($id,$classe,1);
         }
         else
         {

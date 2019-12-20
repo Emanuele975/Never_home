@@ -1,7 +1,7 @@
 <?php
 /**
  * Class CFrontController si occupa di istanziare il giusto controllore e il relativo metodo basandosi sull'URL ricevuta
- * /myRecipes/web/controller/metodo/parametro
+ * /Never_home/controller/metodo/parametro
  */
 
 class CFrontController
@@ -9,7 +9,7 @@ class CFrontController
     /**
      * Metodo che dalla URL recupera il controllore da istanziare e il relativo metodo con eventuale parametro
      * Controllo come prima cosa se il client che fa la richiesta è web o mobile
-     * /myRecipes/web/controller/metodo/param
+     * /Never_home/controller/metodo/param
      */
     public function run()
     {
@@ -17,14 +17,9 @@ class CFrontController
         $path = $_SERVER['REQUEST_URI'];
         $array = explode('/', $path);
 
-
         array_shift($array);
 
-
-
         $count = count($array);
-
-
 
         if ($array[$count - 1] == null) {
             unset($array[$count - 1]);
@@ -41,32 +36,36 @@ class CFrontController
                         if (isset($array[4]))
                         {
                             $parametro2 = $array[4];
-                            $c->$metodo($parametro,$parametro2);
+                            if (isset($array[5]))
+                            {
+                                $parametro3 = $array[5];
+                                $c->$metodo($parametro,$parametro2,$parametro3);
+                            }
+                            else
+                            {
+                                $c->$metodo($parametro,$parametro2);
+                            }
                         }
                         else
                             $c->$metodo($parametro);
                     } else {
                         $c->$metodo();
                     }
-
                 } else {
                     header('HTTP/1.1 405 Method Not Allowed');
                     exit;
                 }
             }else {
-
                 $errore="Pagina non trovata";
                 $view = new VError();
                 $view->mostraErrore($errore);
             }
-
         } else { //richiesta per la Homepage
             $controller = new CGestioneHomepage();
             $controller->impostaPagina();
         }
-
-
     }
 
 }
+
 ?>

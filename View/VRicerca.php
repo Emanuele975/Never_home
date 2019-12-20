@@ -21,9 +21,7 @@ class VRicerca
         {
             $nome = $_POST['nomericerca'];
         }
-
         return $nome;
-
     }
 
     public function mostraRisultati($evento, $immagine, $msg)

@@ -3,6 +3,7 @@
 class FCommento extends FDatabase
 {
     protected $table;
+
     protected static $instance=null;
 
     protected function __construct(){
@@ -74,15 +75,20 @@ class FCommento extends FDatabase
             return false;
     }
 
-    public function caricacommenti($id)
+    public function caricacommenti($id,$num)
     {
         $sql = "SELECT * FROM " . $this->table . " WHERE id_evento = '" . $id ."' ;";
         $result = parent::loadMultiple($sql);
         $commenti = array();
-
+        if (count($result)<=$num*5)
+            $commenti['pieno'] = true;
+        else
+            $commenti['pieno']=false;
+        //echo count($result);
+        //echo $commenti['pieno'];
         if(($result!=null)){
             foreach($result as $i) {
-                if(count($commenti)<5)
+                if(count($commenti)<5*$num)
                 {
                     $datutente = FUtente_R::getInstance();
                     $utente = $datutente->loadById($i['id_utente']);
@@ -99,15 +105,19 @@ class FCommento extends FDatabase
         else return null;
     }
 
-    public function commentidabannare()
+    public function commentidabannare($num)
     {
         $sql = "SELECT * FROM " . $this->table . " ;";
         $result = parent::loadMultiple($sql);
         $commenti = array();
+        if (count($result)<=$num*8)
+            $commenti['pieno']=true;
+        else
+            $commenti['pieno']=false;
         if (($result!=null))
         {
             foreach($result as $i) {
-                if (count($commenti)<8 && $i['bannato']==0)
+                if (count($commenti)<($num*8))
                 {
                     $datutente = FUtente_R::getInstance();
                     $utente = $datutente->loadById($i['id_utente']);
@@ -127,6 +137,12 @@ class FCommento extends FDatabase
     public function banna($id)
     {
         $sql = "UPDATE " . $this->table . " SET bannato = 1 WHERE id = '" .$id. "';";
+        $result = parent::update($sql);
+    }
+
+    public function sblocca($id)
+    {
+        $sql = "UPDATE " . $this->table . " SET bannato = 0 WHERE id = '" .$id. "';";
         $result = parent::update($sql);
     }
 

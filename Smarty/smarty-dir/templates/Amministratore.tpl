@@ -48,17 +48,25 @@
                 {if $commenti[commento]->getBannato()==1}
                   <p> il commento è stato bannato  </p>
                 </div>
+                <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/sbloccacommento/{$commenti[commento]->getId()}/{$num}">
+                  <button class="btn btn-dark my-2" type="submit" > sblocca </button>
+                </form>
                 {else}
                   <p> {$commenti[commento]->getTesto()}  </p>
                 </div>
-                {/if}
-                <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/bannacommento/{$commenti[commento]->getId()}">
+                <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/bannacommento/{$commenti[commento]->getId()}/{$num}  ">
                   <button class="btn btn-dark my-2" type="submit" > banna </button>
                 </form>
+                {/if}
               </li>
             {/section}
           </ul>
-        <a class="btn btn-dark" href="" role="button">Carica altri commenti<br></a>
+        {if $pieno==false}
+        <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/Home/{$num+1}">
+          <button class="btn btn-dark" type="submit">Carica altri commenti<br></button>
+        </form>
+        {else}
+        {/if}
         </div>
       </div>
     </div>

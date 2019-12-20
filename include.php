@@ -1,4 +1,5 @@
 <?php
+/*
    include_once 'Entity/ELuogo.php';
    include_once 'Entity/ECategoria.php';
    include_once 'Entity/EEvento_p.php';
@@ -46,9 +47,33 @@
    include_once 'Controller/CGestioneUtente.php';
    include_once 'Controller/CGestioneEvento.php';
    include_once 'Controller/CGestioneAmministratore.php';
+*/
+    function my_autoloader($class_name) {
+        if($class_name == "CFrontController") {
+            include_once ('Controller/'.$class_name.'.php');
+        } else {
+            switch ($class_name[0]) {
+                case 'V':
+                    include_once ('View/'.$class_name.'.php');
+                    break;
+                case 'F':
+                    include_once ('Foundation/'.$class_name.'.php');
+                    break;
+                case 'E':
+                    include_once ('Entity/'.$class_name.'.php');
+                    break;
+                case 'C':
+                    include_once ('Controller/'.$class_name.'.php');
+                    break;
+            }
+        }
 
-   include_once 'Session.php';
+    }
 
-   include_once 'Smarty/smarty-libs/libs/Smarty.class.php';
+    include_once 'Session.php';
+
+    include_once 'Smarty/smarty-libs/libs/Smarty.class.php';
+
+    spl_autoload_register('my_autoloader');
 
 ?>

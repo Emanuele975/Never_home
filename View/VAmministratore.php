@@ -13,10 +13,12 @@ class VAmministratore
         $this->smarty->setCacheDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/cache');
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
-    public function HomeAdmin($commenti,$utenti)
+    public function HomeAdmin($commenti,$utenti,$num,$pieno)
     {
         $this->smarty->assign("utenti",$utenti);
         $this->smarty->assign("commenti",$commenti);
+        $this->smarty->assign("num",$num);
+        $this->smarty->assign("pieno",$pieno);
         $this->smarty->display("Amministratore.tpl");
     }
 

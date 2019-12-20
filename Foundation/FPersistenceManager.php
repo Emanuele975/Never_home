@@ -131,17 +131,17 @@ class FPersistenceManager
         $dat->incrementaposti($id,$posti);
     }
 
-    public function caricacommenti($id)
+    public function caricacommenti($id,$num)
     {
         $dat = FCommento::getInstance();
-        $commenti = $dat->caricacommenti($id);
+        $commenti = $dat->caricacommenti($id,$num);
         return $commenti;
     }
 
-    public function commentidabannare()
+    public function commentidabannare($num)
     {
         $dat = FCommento::getInstance();
-        $commenti = $dat->commentidabannare();
+        $commenti = $dat->commentidabannare($num);
         return $commenti;
     }
 
@@ -149,6 +149,12 @@ class FPersistenceManager
     {
         $dat = FCommento::getInstance();
         $dat->banna($id);
+    }
+
+    public function sbloccacommento($id)
+    {
+        $dat = FCommento::getInstance();
+        $dat->sblocca($id);
     }
 
     public function esisteUsername($username){

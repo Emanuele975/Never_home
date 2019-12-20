@@ -37,6 +37,9 @@
 
 <br><br>
 {$msg}
+<br><br>
+
+<a class="btn btn-dark" href="/Never_home" role="button">Torna alla home<br></a>
 
 
 <div class="fixed-bottom">
