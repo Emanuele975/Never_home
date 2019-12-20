@@ -70,15 +70,14 @@ class FCarta extends FDatabase{
     public function valida($CF, $ccv, $data, $numerocarta)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE numerocarta= '".$numerocarta."' and CF_titolare= '".$CF."'
-         and ccv='".$ccv."' ";
+        and ccv='".$ccv."' ";
         $result = parent::loadSingle($sql);
-        if ($result!=null) return $result['id'];
+        $d1 = new DateTime($result['data_di_scadenza']);
+        $d2 = new DateTime($data);
+        if ($result!=null && ($d1->format('Y-m-d') == $d2->format('Y-m-d')))
+            return $result['id'];
         else return false;
     }
     
-}    
-
-
-
-
+}
 ?>

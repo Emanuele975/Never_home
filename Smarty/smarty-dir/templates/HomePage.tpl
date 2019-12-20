@@ -207,7 +207,7 @@
                     <div class="card-body">
                         <h4 class="card-title">{$evento3->getNome()}</h4>
                         <p class="card-text">{$evento3->getDescrizione()}</p>
-                        <a href="/Never_home/Utente/caricabiglietti" class="btn btn-primary">Vai all evento</a>
+                        <a href="/Never_home/Evento/HomeEvento/{$evento3->getId()}/{$evento3->getF()}/1" class="btn btn-primary">Vai all evento</a>
                     </div>
                 </div>
             {/if}

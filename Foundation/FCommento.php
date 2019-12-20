@@ -81,9 +81,11 @@ class FCommento extends FDatabase
         $result = parent::loadMultiple($sql);
         $commenti = array();
         if (count($result)<=$num*5)
-            $commenti['pieno']=true;
+            $commenti['pieno'] = true;
         else
             $commenti['pieno']=false;
+        //echo count($result);
+        //echo $commenti['pieno'];
         if(($result!=null)){
             foreach($result as $i) {
                 if(count($commenti)<5*$num)

@@ -1,7 +1,7 @@
 <?php
 /**
  * Class CFrontController si occupa di istanziare il giusto controllore e il relativo metodo basandosi sull'URL ricevuta
- * /myRecipes/web/controller/metodo/parametro
+ * /Never_home/controller/metodo/parametro
  */
 
 class CFrontController
@@ -9,7 +9,7 @@ class CFrontController
     /**
      * Metodo che dalla URL recupera il controllore da istanziare e il relativo metodo con eventuale parametro
      * Controllo come prima cosa se il client che fa la richiesta è web o mobile
-     * /myRecipes/web/controller/metodo/param
+     * /Never_home/controller/metodo/param
      */
     public function run()
     {
