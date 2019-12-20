@@ -44,12 +44,14 @@ class CGestioneEvento
         if ($dati['errore']!=null)
         {
             $view = new VError();
-            $view->mostraErrore($dati['errore'],null);
+            $path="/Never_home/Evento/FormEvento";
+            $view->mostraErrore($dati['errore'],$path);
         }
         elseif ($pm->esisteevento($dati['NomeE'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno']),'FEvento_g'))
         {
             $view = new VError();
-            $view->mostraErrore("esiste già un evento con questo nome",null);
+            $path="/Never_home/Evento/FormEvento";
+            $view->mostraErrore("esiste già un evento con questo nome",$path);
         }
         else {
             $sessione = Session::getInstance();
@@ -75,12 +77,14 @@ class CGestioneEvento
         if ($dati['errore']!=null)
         {
             $view = new VError();
-            $view->mostraErrore($dati['errore'],null);
+            $path="/Never_home/Evento/FormEvento";
+            $view->mostraErrore($dati['errore'],$path);
         }
         elseif ($pm->esisteevento($dati['NomeE'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno']),'FEvento_p'))
         {
             $view = new VError();
-            $view->mostraErrore("esiste già un evento con questo nome",null);
+            $path="/Never_home/Evento/FormEvento";
+            $view->mostraErrore("esiste già un evento con questo nome",$path);
         }
         else
         {
