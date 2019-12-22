@@ -23,6 +23,7 @@ class VRegistrazione
     {
         $dati = array();
         $errore=null;
+
         if (isset($_POST['nome']))
         {
             $accettato = preg_match('/[A-Za-z]$/', $_POST['nome']);
@@ -105,5 +106,6 @@ class VRegistrazione
     {
         $this->smarty->display("RegLocale.tpl");
     }
+
 
 }
