@@ -89,6 +89,28 @@ class FEvento_p extends FDatabase
         else return null;
     }
 
+    public function loadByNav($nome)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE nome LIKE '%".$nome."%' ;";
+        $result = parent::loadMultiple($sql);
+        $eventi = array();
+        if(($result!=null)){
+            foreach($result as $i) {
+                $datluogo = FLuogo::getInstance();
+                $luogo = $datluogo->loadById($i['id_luogo']);
+                $datcategoria = FCategoria::getInstance();
+                $categoria = $datcategoria->loadById($i['id_categoria']);
+                $evento = new EEvento_g($i['nome'], new DateTime( $i['data_e'] ) ,
+                    $luogo, $categoria, $i['descrizione'],$i['prezzo'],$i['posti_disponibili'],$i['posti_totali']);
+                $evento->setId($i['id']);
+                array_push($eventi, $eventi);
+            }
+            return $eventi;
+        }
+        else return null;
+
+    }
+
     public function decrementaposti($id,$posti)
     {
         $sql = " UPDATE ".static::getTables()." SET posti_disponibili = posti_disponibili -  ".$posti." WHERE id = ".$id." ; ";

@@ -113,6 +113,26 @@ class FPersistenceManager
         return $evento;
     }
 
+    public function EventobyNav($nome)
+    {
+        $eventi = array();
+        $dat = FEvento_g::getInstance();
+        $eventi1 = $dat->loadByNav($nome);
+        if($eventi1!=null)
+            foreach($eventi1 as $i)
+            {
+                array_push($eventi,$i);
+            }
+        $dat = FEvento_p::getInstance();
+        $eventi2 = $dat->loadByNav($nome);
+        if($eventi2!=null)
+            foreach($eventi2 as $i)
+            {
+                array_push($eventi,$i);
+            }
+        return $eventi;
+    }
+
     public function CartaValida($CF, $ccv, $data, $numerocarta)
     {
         $dat = FCarta::getInstance();
@@ -162,8 +182,5 @@ class FPersistenceManager
         $esito = $fu->esisteUsername($username);
         return $esito;
     }
-
-
-
 
 }

@@ -112,7 +112,8 @@ class CGestioneEvento
             $view = new VRicerca();
             $nome = $view->getNomericerca(); //nome inserito nella barra di ricerca
             $pm = FPersistenceManager::getInstance();
-            $evento = $pm->EventoByNome($nome);
+            $eventi = $pm->EventoByNav($nome);
+            /*
             if($evento!=null){
                 $msg = "";
                 $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
@@ -122,11 +123,15 @@ class CGestioneEvento
                 $view2 = new VError();
                 $view2->mostraErrore($msg,null);
             }
+            */
+            echo count($eventi);
         }
         else{
             header('HTTP/1.1 405 Method Not Allowed');
             header('Allow: POST');
+
         }
+
     }
 
     public function FormAcquisto()

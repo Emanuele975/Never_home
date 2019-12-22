@@ -84,8 +84,6 @@ class FCommento extends FDatabase
             $commenti['pieno'] = true;
         else
             $commenti['pieno']=false;
-        //echo count($result);
-        //echo $commenti['pieno'];
         if(($result!=null)){
             foreach($result as $i) {
                 if(count($commenti)<5*$num)
