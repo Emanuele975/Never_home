@@ -1,4 +1,27 @@
-﻿<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-12-22 23:45:24
+  from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\HomePage.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5dfff2043a5ac2_62757288',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0f996b25c298261bd659e18962667e41810aca5c' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\HomePage.tpl',
+      1 => 1577054723,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5dfff2043a5ac2_62757288 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
 
 <head>
@@ -14,7 +37,7 @@
 </head>
 
 <body>
-{if $utente eq null }
+<?php if ($_smarty_tpl->tpl_vars['utente']->value == null) {?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand text-secondary" href="/Never_home">NH</a>
 
@@ -51,7 +74,7 @@
         </form>
     </div>
 </nav>
-{elseif $utente eq  "utente"}
+<?php } elseif ($_smarty_tpl->tpl_vars['utente']->value == "utente") {?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
@@ -78,7 +101,7 @@
             </form>
         </div>
     </nav>
-{elseif $utente eq "luogo"}
+<?php } elseif ($_smarty_tpl->tpl_vars['utente']->value == "luogo") {?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
@@ -105,7 +128,7 @@
             </form>
         </div>
     </nav>
-{else}
+<?php } else { ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
@@ -132,7 +155,7 @@
             </form>
         </div>
     </nav>
-{/if}
+<?php }?>
 
 
 <div class="py-5 text-center " style="background-size:cover;">
@@ -145,7 +168,7 @@
         <div class="row mx-md-n5">
 
             <div class="col-12 col-lg-4">
-                {if $evento1 eq null}
+                <?php if ($_smarty_tpl->tpl_vars['evento1']->value == null) {?>
                 <!--start card-->
                 <div class="card text-white bg-dark mb-3">
                     <img class="card-img-top" src="" style="" alt="Card image cap" >
@@ -155,21 +178,27 @@
                         <a href="" class="btn btn-primary">Vai all evento</a>
                     </div>
                 </div>
-                {else}
+                <?php } else { ?>
                 <div class="card text-white bg-dark mb-3">
-                        {$img_1 = base64_encode($img1->getData())}
-                        <img class="card-img-top" src="data:{$img1->getType()};base64,{$img_1}" style="height: 300px" alt="Card image cap" >
+                        <?php $_smarty_tpl->_assignInScope('img_1', base64_encode($_smarty_tpl->tpl_vars['img1']->value->getData()));?>
+                        <img class="card-img-top" src="data:<?php echo $_smarty_tpl->tpl_vars['img1']->value->getType();?>
+;base64,<?php echo $_smarty_tpl->tpl_vars['img_1']->value;?>
+" style="height: 300px" alt="Card image cap" >
                         <div class="card-body">
-                            <h4 class="card-title">{$evento1->getNome()}</h4>
-                            <p class="card-text">{$evento1->getDescrizione()}</p>
-                            <a href="/Never_home/Evento/HomeEvento/{$evento1->getId()}/{$evento1->getF()}/1" class="btn btn-primary">Vai all evento</a>
+                            <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento1']->value->getNome();?>
+</h4>
+                            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['evento1']->value->getDescrizione();?>
+</p>
+                            <a href="/Never_home/Evento/HomeEvento/<?php echo $_smarty_tpl->tpl_vars['evento1']->value->getId();?>
+/<?php echo $_smarty_tpl->tpl_vars['evento1']->value->getF();?>
+/1" class="btn btn-primary">Vai all evento</a>
                         </div>
                     </div>
-                {/if}
+                <?php }?>
             </div>
 
             <div class="col-12 col-lg-4">
-            {if $evento2 eq null}
+            <?php if ($_smarty_tpl->tpl_vars['evento2']->value == null) {?>
             <!--start card-->
             <div class="card text-white bg-dark mb-3">
 
@@ -180,22 +209,28 @@
                     <a href="" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
-            {else}
+            <?php } else { ?>
                 <div class="card text-white bg-dark mb-3">
-                    {$img_2 = base64_encode($img2->getData())}
-                    <img class="card-img-top" src="data:{$img2->getType()};base64,{$img_2}" style="height: 300px" alt="Card image cap" >
+                    <?php $_smarty_tpl->_assignInScope('img_2', base64_encode($_smarty_tpl->tpl_vars['img2']->value->getData()));?>
+                    <img class="card-img-top" src="data:<?php echo $_smarty_tpl->tpl_vars['img2']->value->getType();?>
+;base64,<?php echo $_smarty_tpl->tpl_vars['img_2']->value;?>
+" style="height: 300px" alt="Card image cap" >
                     <div class="card-body">
-                        <h4 class="card-title">{$evento2->getNome()}</h4>
-                        <p class="card-text">{$evento2->getDescrizione()}</p>
-                        <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}/1" class="btn btn-primary">Vai all evento</a>
+                        <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento2']->value->getNome();?>
+</h4>
+                        <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['evento2']->value->getDescrizione();?>
+</p>
+                        <a href="/Never_home/Evento/HomeEvento/<?php echo $_smarty_tpl->tpl_vars['evento2']->value->getId();?>
+/<?php echo $_smarty_tpl->tpl_vars['evento2']->value->getF();?>
+/1" class="btn btn-primary">Vai all evento</a>
                     </div>
                 </div>
-            {/if}
+            <?php }?>
 
             </div>
 
             <div class="col-12 col-lg-4">
-            {if $evento3 eq null}
+            <?php if ($_smarty_tpl->tpl_vars['evento3']->value == null) {?>
             <!--start card-->
             <div class="card text-white bg-dark mb-3">
                 <img class="card-img-top" src="" style="" alt="Card image cap" >
@@ -205,17 +240,23 @@
                     <a href="" class="btn btn-primary">Vai all evento</a>
                 </div>
             </div>
-            {else}
+            <?php } else { ?>
                 <div class="card text-white bg-dark mb-3">
-                    {$img_3 = base64_encode($img3->getData())}
-                    <img class="card-img-top" src="data:{$img3->getType()};base64,{$img_3}" style="height: 300px" alt="Card image cap" >
+                    <?php $_smarty_tpl->_assignInScope('img_3', base64_encode($_smarty_tpl->tpl_vars['img3']->value->getData()));?>
+                    <img class="card-img-top" src="data:<?php echo $_smarty_tpl->tpl_vars['img3']->value->getType();?>
+;base64,<?php echo $_smarty_tpl->tpl_vars['img_3']->value;?>
+" style="height: 300px" alt="Card image cap" >
                     <div class="card-body">
-                        <h4 class="card-title">{$evento3->getNome()}</h4>
-                        <p class="card-text">{$evento3->getDescrizione()}</p>
-                        <a href="/Never_home/Evento/HomeEvento/{$evento3->getId()}/{$evento3->getF()}/1" class="btn btn-primary">Vai all evento</a>
+                        <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['evento3']->value->getNome();?>
+</h4>
+                        <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['evento3']->value->getDescrizione();?>
+</p>
+                        <a href="/Never_home/Evento/HomeEvento/<?php echo $_smarty_tpl->tpl_vars['evento3']->value->getId();?>
+/<?php echo $_smarty_tpl->tpl_vars['evento3']->value->getF();?>
+/1" class="btn btn-primary">Vai all evento</a>
                     </div>
                 </div>
-            {/if}
+            <?php }?>
         </div>
 
         </div>
@@ -225,9 +266,16 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

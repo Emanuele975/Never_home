@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-15 22:38:14
+/* Smarty version 3.1.33, created on 2019-12-20 15:40:20
   from 'C:\xampp\htdocs\Never_home\Smarty\smarty-dir\templates\loginAmministratore.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da62e362a9764_47048494',
+  'unifunc' => 'content_5dfcdd542acf08_66910590',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ad95c70a331aac66c73134c51b5c0c94a213a791' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Never_home\\Smarty\\smarty-dir\\templates\\loginAmministratore.tpl',
-      1 => 1571168012,
+      1 => 1576839265,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da62e362a9764_47048494 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dfcdd542acf08_66910590 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -47,8 +47,8 @@ function content_5da62e362a9764_47048494 (Smarty_Internal_Template $_smarty_tpl)
         <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Homepage/Login">Login </a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>
@@ -60,7 +60,7 @@ function content_5da62e362a9764_47048494 (Smarty_Internal_Template $_smarty_tpl)
           <h1 class="mb-4">Log in Amministratore</h1>
           <?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
 
-          <form action="/Never_home/Amministratore/Entra" method="post" enctype="multipart/form-data">
+          <form action="/Never_home/Amministratore/Entra/1" method="post" enctype="multipart/form-data">
             <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
             <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
               </small> </div> <button type="submit" class="btn btn-primary">Submit</button>
