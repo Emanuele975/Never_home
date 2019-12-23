@@ -1,6 +1,5 @@
 <?php
 
-
 class FPersistenceManager
 {
     private static $instance = null;
@@ -162,6 +161,13 @@ class FPersistenceManager
     {
         $dat = FCommento::getInstance();
         $commenti = $dat->commentidabannare($num);
+        return $commenti;
+    }
+
+    public function testocommento($testo)
+    {
+        $dat = FCommento::getInstance();
+        $commenti = $dat->testocommento($testo);
         return $commenti;
     }
 

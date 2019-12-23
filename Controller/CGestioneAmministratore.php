@@ -91,6 +91,25 @@ class CGestioneAmministratore
         $view->HomeAdmin($commenti,$utenti,$num,$pieno);
     }
 
+    public function Cercacommentotesto()
+    {
+        $view = new VAmministratore();
+        $testo = $view->getTesto();
+        $utenti = array();
+        $pm = FPersistenceManager::getInstance();
+        $commenti = $pm->testocommento($testo);
+        if (isset($commenti))
+        {
+            foreach ($commenti as $i)
+            {
+                $utente = $pm->Load($i->getUtente()->getId(),'FUtente_R');
+                array_push($utenti, $utente);
+            }
+        }
+        $view = new VAmministratore();
+        $view->HomeAdmin($commenti,$utenti,1,true);
+    }
+
     public function bannacommento($id,$num)
     {
         $pm = FPersistenceManager::getInstance();

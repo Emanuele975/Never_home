@@ -37,6 +37,12 @@
 <div class="py-5 text-left" >
   <div class="container">
     <div class="row">
+      <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/Cercacommentotesto">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="testo">
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="row">
       <div class="col-md-12">
         <div class="panel-body text-dark">
           <br>
