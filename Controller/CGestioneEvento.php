@@ -3,6 +3,7 @@
 
 class CGestioneEvento
 {
+
     public function FormEvento()
     {
         $view = new Vlocale();
@@ -123,9 +124,7 @@ class CGestioneEvento
         else{
             header('HTTP/1.1 405 Method Not Allowed');
             header('Allow: POST');
-
         }
-
     }
 
     public function FormAcquisto()

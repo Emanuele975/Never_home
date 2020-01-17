@@ -132,6 +132,28 @@ class FCommento extends FDatabase
         return $commenti;
     }
 
+    public function testocommento($testo)
+    {
+        $sql = "SELECT * FROM " . $this->table . " WHERE testo LIKE '%".$testo."%' ;";
+        $result = parent::loadMultiple($sql);
+        $commenti = array();
+        if(($result!=null)){
+            foreach($result as $i) {
+                    $datutente = FUtente_R::getInstance();
+                    $utente = $datutente->loadById($i['id_utente']);
+                    $datevento = FEvento_p::getInstance();
+                    $evento = $datevento->loadById($i['id_evento']);
+                    $commento = new ECommento(($i['testo']), $utente, $evento);
+                    $commento->setBannato($i['bannato']);
+                    $commento->setId($i['id']);
+                    array_push($commenti, $commento);
+
+            }
+            return $commenti;
+        }
+        else return null;
+    }
+
     public function banna($id)
     {
         $sql = "UPDATE " . $this->table . " SET bannato = 1 WHERE id = '" .$id. "';";

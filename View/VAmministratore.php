@@ -22,4 +22,13 @@ class VAmministratore
         $this->smarty->display("Amministratore.tpl");
     }
 
+    public function getTesto()
+    {
+        if(isset($_POST['testo']))
+        {
+            $testo= $_POST['testo'];
+        }
+        return $testo;
+    }
+
 }
