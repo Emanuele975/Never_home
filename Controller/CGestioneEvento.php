@@ -117,18 +117,8 @@ class CGestioneEvento
             $nome = $view->getNomericerca(); //nome inserito nella barra di ricerca
             $pm = FPersistenceManager::getInstance();
             $eventi = $pm->EventoByNav($nome);
-            /*
-            if($evento!=null){
-                $msg = "";
-                $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
-                $this->HomeEvento($evento->getId(),$evento->getF(),1);
-            } else {
-                $msg = "Non esistono eventi con questo nome";
-                $view2 = new VError();
-                $view2->mostraErrore($msg,null);
-            }
-            */
-            echo count($eventi);
+            //echo $eventi[0]->getCategoria();
+            $view->mostraRisultati($eventi);
         }
         else{
             header('HTTP/1.1 405 Method Not Allowed');
