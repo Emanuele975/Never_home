@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+    <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+    <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -52,8 +53,8 @@
             </div>
             <div class="row my-4">
                 <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text " for="inputGroupSelect01">Quantità</label>
+                    <div class="input-group-prepend ">
+                        <label class="input-group-text bg-dark text-primary border-dark " for="inputGroupSelect01">Quantità</label>
                     </div>
                     <select class="custom-select " id="inputGroupSelect01" name="num">
                         <option selected>Choose...</option>

@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+  <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -19,11 +20,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="btn navbar-btn mx-2 btn-outline-primary" href="#">Account <span class="sr-only">(current)</span></a>
+        <a class="btn navbar-btn mx-2 btn-outline-primary" href="/Never_home">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="btn navbar-btn mx-2 btn-outline-primary" href="#">Notifiche </a>
-      </li>
+
       <li class="nav-item active">
         <a class="btn navbar-btn mx-2 btn-outline-primary" href="/Never_home/Utente/Logout">Logout <span class="sr-only">(current)</span></a>
       </li>
@@ -35,9 +34,9 @@
   </div>
 </nav>
 
-<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:cover;">
+<div class="py-5 text-center" style="background-size:cover;">
 
-  <div class="badge badge-pill badge-dark text-primary"  >
+  <div class="text-primary"  >
 
     <h1>
     {$utente->getNome()} {$utente->getCognome()} </h1>
@@ -57,7 +56,7 @@
       <div class="col-sm-6">
       <div class="list-group ">
         {if $evento1 eq null}
-        <a href="/Never_home" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+        <a href="/Never_home" class="list-group-item bg-dark border-dark card text-primary  ">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">biglietto non trovato</h5>
             <small></small>
@@ -66,7 +65,7 @@
           <small></small>
         </a>
         {else}
-          <a href="/Never_home/Evento/HomeEvento/{$evento1->getId()}/{$evento1->getF()}/1" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <a href="/Never_home/Evento/HomeEvento/{$evento1->getId()}/{$evento1->getF()}/1" class="list-group-item bg-dark border-dark card text-primary list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">Nome: {$evento1->getNome()}</h5>
               <small>Data: {$evento1->getData()->format('Y-m-d')}</small>
@@ -76,7 +75,7 @@
           </a>
         {/if}
         {if $evento2 eq null}
-        <a href="/Never_home" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+        <a href="/Never_home" class="list-group-item bg-dark border-dark card text-primary list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">biglietto non trovato</h5>
             <small class="text-muted"></small>
@@ -85,7 +84,7 @@
           <small class="text-muted"></small>
         </a>
         {else}
-        <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}/1" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+        <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}/1" class="list-group-item bg-dark border-dark card text-primary list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Nome: {$evento2->getNome()}</h5>
             <small class="text-muted">Data: {$evento2->getData()->format('Y-m-d')}</small>
@@ -95,7 +94,7 @@
         </a>
          {/if}
         {if $evento3 eq null}
-        <a href="/Never_home" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+        <a href="/Never_home" class="list-group-item bg-dark border-dark card text-primary list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">biglietto non trovato</h5>
             <small class="text-muted"></small>
@@ -104,7 +103,7 @@
           <small class="text-muted"></small>
         </a>
         {else}
-          <a href="/Never_home/Evento/HomeEvento/{$evento3->getId()}/{$evento3->getF()}/1" class="list-group-item bg-light border-dark card text-dark list-group-item-action flex-column align-items-start">
+          <a href="/Never_home/Evento/HomeEvento/{$evento3->getId()}/{$evento3->getF()}/1" class="list-group-item bg-dark border-dark card text-primary list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">Nome: {$evento3->getNome()}</h5>
               <small class="text-muted">Data: {$evento1->getData()->format('Y-m-d')}</small>

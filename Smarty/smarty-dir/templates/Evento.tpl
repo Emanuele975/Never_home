@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+    <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+    <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
     </div>
     <div class="row">
         <div class="col-sm">
-            <div class="card mb-3 border-dark" style="">
+            <div class="card mb-3 border-dark " style="">
                 {$img2 = base64_encode($img->getData())}
                 <img class="card-img-top" src="data:{$img->getType()};base64,{$img2}" style="width: 550px;	height: 300px;">
                 <div class="card-body">
@@ -56,7 +57,7 @@
                     <div class="mx-auto">prezzo : {$evento->getPrezzo()} </div></li>
                 <li class="list-group-item"><div class="mx-auto">
                         <form action="/Never_home/Evento/FormAcquisto" enctype="multipart/form-data" method="post">
-                            <button  type="submit" class="btn btn-dark" name="evento" value="{$evento->getId()}">Acquista biglietto</button>
+                            <button  type="submit" class="btn btn-outline-primary" name="evento" value="{$evento->getId()}">Acquista biglietto</button>
                         </form>
                     </div>
 
@@ -75,12 +76,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h1 class="badge badge-pill badge-dark text-white">Inserisci commento:</h1>
+                        <h1 class="badge  text-white">Inserisci commento:</h1>
                         <form method="post" action="/Never_home/Evento/newcommento/{$evento->getId()}/{$evento->getF()}" enctype="multipart/form-data">
                             <div class="form-group">
                                 <textarea type="text" class="form-control" name="commento" id="form30" rows="3" placeholder="Scrivi qui.. " required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-dark my-2">Invia</button>
+                            <button type="submit" class="btn btn-dark my-2 text-primary">Invia</button>
                         </form>
                     </div>
                 </div>
@@ -97,9 +98,9 @@
                     <br>
                     <ul class="media-list">
                         {section name=commento loop=$commenti}
-                            <li class="media py-2">
+                            <li class="media py-2 text-light">
                                 <div class="media-body px-2">
-                                    <strong class="text-secondary"><b>{$utenti[commento]->getUsername()}</b></strong>
+                                    <strong class="text-primary"><b>{$utenti[commento]->getUsername()}</b></strong>
                                 {if $commenti[commento]->getBannato()==1}
                                     <p> il commento è stato bannato  </p>
                                 </div>
@@ -111,7 +112,7 @@
                         {/section}
                     </ul>
                 {if $pieno==false}
-                <a class="btn btn-dark" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}/{$num+1}" role="button">Carica altri commenti</a>
+                <a class="btn btn-dark text-primary" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}/{$num+1}" role="button">Carica altri commenti</a>
                 {else}
                 {/if}
                 <br>

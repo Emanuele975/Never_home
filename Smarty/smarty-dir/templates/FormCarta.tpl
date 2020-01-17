@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+  <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -18,11 +19,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Account <span class="sr-only">(current)</span></a>
+        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Utente/Login">Account <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Notifiche </a>
-      </li>
+
       <li class="nav-item active">
         <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Luogo/Logout">Logout </a>
       </li>
@@ -44,7 +43,7 @@
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Numero carta</span>
+            <span class="input-group-text bg-dark text-primary border-dark">Numero carta</span>
           </div>
           <input type="text" name="numero" aria-label="Numero carta" class="form-control">
         </div>
@@ -52,18 +51,19 @@
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">CCV</span>
+            <span class="input-group-text bg-dark text-primary border-dark">CCV</span>
           </div>
           <input type="password" name="ccv" aria-label="CCV" class="form-control">
         </div>
       </div>
     </div>
+    <br>
 
     <div class="row">
       <div class="form-group col-md-6">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Data di scadenza</span>
+            <span class="input-group-text bg-dark text-primary border-dark">Data di scadenza</span>
           </div>
           <input type="text" name="data" aria-label="Data di scadenza" class="form-control">
         </div>
@@ -75,7 +75,7 @@
 
     <div class="row my-5">
       <div class="mx-auto">
-        <button type="submit" class="btn btn-dark" >Aggiungi carta</button>
+        <button type="submit" class="btn btn-primary " >Aggiungi carta</button>
       </div>
     </div>
   .

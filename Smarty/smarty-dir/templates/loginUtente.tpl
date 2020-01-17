@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+ <!-- <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+  <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -18,10 +19,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Luogo/Form">Registrati <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Homepage/Login">Login </a>
+        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home">Home <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -30,15 +28,15 @@
     </form>
   </div>
 </nav>
-  <div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
+  <div class="py-5 text-center" style="background-size:cover;">
     <div class="container">
       <div class="row">
-        <div class="mx-auto col-md-6 col-10 bg-white p-5">
-          <h1 class="mb-4">Log in Utente</h1>
+        <div class="mx-auto col-md-6 col-10 bg-dark p-5">
+          <h1 class="mb-4 text-primary">Log in Utente</h1>
           {$msg}
           <form action="/Never_home/Utente/Entra" method="post" enctype="multipart/form-data">
-            <div class="form-group"> <input type="text" class="form-control" placeholder="Username" name="user" id="form9"> </div>
-            <div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
+            <div class="form-group"> <input type="text" class="form-control text-dark" placeholder="Username" name="user" id="form9"> </div>
+            <div class="form-group mb-3"> <input type="password" class="form-control text-dark" placeholder="Password" name="psw" id="form10"> <small class="form-text text-muted text-right">
               </small> </div> <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>

@@ -4,12 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+  <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
+
 </head>
 
 <body>
@@ -23,7 +21,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Account <span class="sr-only">(current)</span></a>
+        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Luogo/Login">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Notifiche </a>
@@ -46,7 +44,7 @@
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Nome Evento</span>
+            <span class="input-group-text bg-dark text-primary border-dark">Nome Evento</span>
           </div>
           <input type="text" name="NomeE" aria-label="First name" class="form-control" required>
         </div>
@@ -54,7 +52,7 @@
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+            <label class="input-group-text bg-dark text-primary border-dark" for="inputGroupSelect01">Categoria</label>
           </div>
           <select class="custom-select" id="inputGroupSelect01" name="Categoria">
             <option selected>Choose...</option>
@@ -65,20 +63,21 @@
         </div>
       </div>
     </div>
+    <br>
 
     <div class="row">
       <div class="form-group col-md">
         <div class="input-group flex-nowrap">
           <div class="input-group-prepend">
-            <span class="input-group-text">Data evento</span>
+            <span class="input-group-text bg-dark text-primary border-dark">Data evento</span>
           </div>
           <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="addon-wrapping0">/</span>
+            <span class="input-group-text border-dark bg-dark text-primary" id="addon-wrapping0">/</span>
           </div>
           <input type="text" class="form-control" name="Mese" placeholder="MM" aria-label="MM" aria-describedby="addon-wrapping">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="addon-wrapping1">/</span>
+            <span class="input-group-text bg-dark border-dark text-primary" id="addon-wrapping1">/</span>
           </div>
           <input type="text" class="form-control" name="Anno" placeholder="AAAA" aria-label="AAAA" aria-describedby="addon-wrapping">
         </div>
@@ -86,18 +85,19 @@
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Prezzo</span>
+            <span class="input-group-text bg-dark border-dark text-primary">Prezzo</span>
           </div>
           <input type="text" name="Prezzo" aria-label="Prezzo" class="form-control">
         </div>
       </div>
     </div>
+    <br>
 
     <div class="row">
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Posti disponibili</span>
+            <span class="input-group-text border-dark bg-dark text-primary">Posti disponibili</span>
           </div>
           <input type="text" name="Posti" aria-label="Posti disponibili" class="form-control">
         </div>
@@ -105,7 +105,7 @@
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            <span class="input-group-text bg-dark border-dark text-primary" id="inputGroupFileAddon01">Upload</span>
           </div>
           <div class="custom-file">
             <input type="file" class="custom-file-input" id="inputGroupFile01"
@@ -121,12 +121,13 @@
         </script>
       </div>
     </div>
+    <br>
 
     <div class="row">
       <div class="form-group col-md-6">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Descrizione</span>
+            <span class="input-group-text bg-dark border-dark text-primary">Descrizione</span>
           </div>
           <textarea name="descrizione" class="form-control" aria-label="With textarea"></textarea>
         </div>
@@ -137,7 +138,7 @@
 
   <div class="row my-5">
     <div class="mx-auto">
-      <button type="submit" class="btn btn-dark" >Crea Evento</button>
+      <button type="submit" class="btn btn-outline-primary" >Crea Evento</button>
     </div>
   </div>
 

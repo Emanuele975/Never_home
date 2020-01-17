@@ -5,10 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+  <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -21,10 +19,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Account <span class="sr-only">(current)</span></a>
+        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Luogo/Login">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Notifiche </a>
+        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home">Home </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Luogo/Logout">Logout </a>
@@ -37,7 +35,7 @@
   </div>
 </nav>
 
-<div class="py-5 text-center" style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover;">
+<div class="container" style="background-size:cover;">
 <form action='/Never_home/Evento/NuovoEventoGratis' method="post" enctype="multipart/form-data">
 
   <br><br>
@@ -48,7 +46,7 @@
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Nome Evento</span>
+            <span class="input-group-text bg-dark text-primary border-dark">Nome Evento</span>
           </div>
           <input type="text" name="NomeE" aria-label="First name" class="form-control">
         </div>
@@ -56,7 +54,7 @@
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+            <label class="input-group-text bg-dark text-primary border-dark" for="inputGroupSelect01">Categoria</label>
           </div>
           <select class="custom-select" id="inputGroupSelect01" name="Categoria">
             <option selected>Choose...</option>
@@ -67,20 +65,21 @@
         </div>
       </div>
     </div>
+    <br>
 
     <div class="row">
       <div class="form-group col-md">
         <div class="input-group flex-nowrap">
           <div class="input-group-prepend">
-            <span class="input-group-text">Data evento</span>
+            <span class="input-group-text bg-dark text-primary border-dark">Data evento</span>
           </div>
           <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="addon-wrapping0">/</span>
+            <span class="input-group-text bg-dark text-primary border-dark" id="addon-wrapping0">/</span>
           </div>
           <input type="text" class="form-control" name="Mese" placeholder="MM" aria-label="MM" aria-describedby="addon-wrapping">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="addon-wrapping1">/</span>
+            <span class="input-group-text bg-dark border-dark text-primary" id="addon-wrapping1">/</span>
           </div>
           <input type="text" class="form-control" name="Anno" placeholder="AAAA" aria-label="AAAA" aria-describedby="addon-wrapping">
         </div>
@@ -89,7 +88,7 @@
         <div class="input-group">
           <div class="custom-file">
             <input type="file" class="form-control-file" id="inputGroupFile0" name="file_inviato" aria-describedby="inputGroupFileAddon0" >
-            <label class="custom-file-label" for="inputGroupFile0">Choose file</label>
+            <label class="custom-file-label border-dark" for="inputGroupFile0">Choose file</label>
           </div>
         </div>
         <script type="application/javascript">
@@ -101,12 +100,13 @@
 
       </div>
     </div>
+    <br>
 
     <div class="row">
       <div class="form-group col-md-6">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text">Descrizione</span>
+            <span class="input-group-text border-dark bg-dark text-primary">Descrizione</span>
           </div>
           <textarea name="descrizione" class="form-control" aria-label="With textarea"></textarea>
         </div>
@@ -117,7 +117,7 @@
 
     <div class="row my-5">
       <div class="mx-auto">
-        <button type="submit" class="btn btn-dark" >Crea Evento</button>
+        <button type="submit" class="btn btn-outline-primary" >Crea Evento</button>
       </div>
     </div>
   .
