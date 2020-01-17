@@ -24,11 +24,12 @@ class VRicerca
         return $nome;
     }
 
-    public function mostraRisultati($evento, $immagine, $msg)
+    public function mostraRisultati($eventi)
     {
-        $this->smarty->assign("evento",$evento);
-        $this->smarty->assign("img",$immagine);
-        $this->smarty->display("Evento.tpl");
+        echo count($eventi);
+        $this->smarty->assign("eventi",$eventi);
+        //$this->smarty->assign("img",$immagine);
+        $this->smarty->display("RicercaNome.tpl");
     }
 
 }
