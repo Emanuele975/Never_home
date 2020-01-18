@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+    <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+    <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -32,7 +33,7 @@
             <div class="px-5 col-md-8 text-center mx-auto">
                 <h3 class="text-primary display-1"> <b>ERRORE!</b></h3>
                 <h3 class="text-primary display-5">{$msg}<br></h3>
-                <h3 class="text-primary display-5">RIPROVARE<br></h3>
+                <h3 class="btn-outline-primary display-5">RIPROVARE<br></h3>
             </div>
         </div>
     </div>
@@ -44,7 +45,7 @@
             <div class="px-5 col-md-8 text-center mx-auto">
                 <h3 class="text-primary display-1"> <b>ERRORE!</b></h3>
                 <h3 class="text-primary display-5">{$msg}<br></h3>
-                <a class="btn btn-dark" href="{$path}" role="button">RIPROVARE<br></a>
+                <a class="btn btn-outline-primary" href="{$path}" role="button">RIPROVARE<br></a>
                 </div>
         </div>
        <!-- <a class="btn btn-dark" href="{$path}" role="button">Torna Indietro</a>-->

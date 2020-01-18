@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+    <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+    <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Account <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">notifiche</a>
+                <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home">Home</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -30,33 +31,33 @@
         </form>
     </div>
 </nav>
-<div class="container">
+<div class="container ">
     <br><br>
         <form action="/Never_home/Luogo/Registrazione" method="post">
             <div class="row">
-                <div class="col-md-6">
-                    <label for="inputEmail4">Nome</label>
+                <div class="col-md-6 text-primary">
+                    <label for="inputEmail4 ">Nome</label>
                     <input type="text" name="nome" class="form-control"  placeholder="Nome">
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 text-primary">
                     <label for="inputPassword3">Indirizzo</label>
                     <input type="text" class="form-control" name="indirizzo"  placeholder="Indirizzo">
                 </div>
 
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 text-primary">
                     <label for="inputAddress">Email</label>
                     <input type="email" name="mail" class="form-control"  placeholder="Email">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 text-primary">
                     <label for="inputAddress">Username</label>
                     <input type="text" name="user" class="form-control" placeholder="Username">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 text-primary">
                     <label for="inputAddress2">Password</label>
                     <input type="password" name="psw" class="form-control"  placeholder="Password">
                 </div>
@@ -65,7 +66,7 @@
 
             <div class="row my-5">
                 <div class="mx-auto">
-                    <button type="submit" class="btn btn-dark" >Registrati</button>
+                    <button type="submit" class="btn btn-dark text-primary" >Registrati</button>
                 </div>
             </div
         </form>

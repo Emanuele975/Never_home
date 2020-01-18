@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+    <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -31,35 +32,34 @@
         </form>
     </div>
 </nav>
-<ul class="list-unstyled">
-    <li class="media">
-        <img src="..." class="mr-3" alt="...">
-        <div class="media-body">
-            <h5 class="mt-0 mb-1">List-based media object</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        </div>
-    </li>
-    <li class="media my-4">
-        <img src="..." class="mr-3" alt="...">
-        <div class="media-body">
-            <h5 class="mt-0 mb-1">List-based media object</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        </div>
-    </li>
-    <li class="media">
-        <img src="..." class="mr-3" alt="...">
-        <div class="media-body">
-            <h5 class="mt-0 mb-1">List-based media object</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        </div>
-    </li>
-    <!-- INSERIRE L'IF PER LA PRESENZA DEL BOTTONE CHE CARICHERA' ALTRI EVENTI-->
-
-    <br><br>
-    <button type="button" class="btn btn-dark">Carica altri eventi</button>
 
 
-</ul>
+<div class="list-group">
+    {section name=evento loop=$eventi}
+
+        <a href="#" class="list-group-item list-group-item-action  ">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 text-primary">Nome Evento</h5>
+            <small>Data Evento</small>
+        </div>
+        <p class="mb-1">Descrizione Evento</p>
+        <small>Clicca per visualizzare</small>
+    </a>
+    {/section}
+</div>
+
+</body>
+
+</html>
+<!-- /Never_home/Evento/HomeEvento/{$eventi[evento]->getId()}/{$eventi[evento]->getF()}/1     DA METTERE DENTRO HREF-->
+
+
+
+
+
+
+
+
 
 
 
