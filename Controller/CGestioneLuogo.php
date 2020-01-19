@@ -103,8 +103,8 @@ class CGestioneLuogo
     {
         $view = new VRegistrazione();
         $dati = $view->getDatiLocale();
-        $errore = $view->
-        $path='/Never_home/Luogo/FormRegistrazione';
+        //$errore = $view->
+        $path = '/Never_home/Luogo/FormRegistrazione';
         $locale = new ELuogo($dati['nome'],$dati['indirizzo'],$dati['mail'],$dati['user'],$dati['psw']);
         $pm = FPersistenceManager::getInstance();
         $id = $pm->store($locale);
@@ -112,27 +112,25 @@ class CGestioneLuogo
         {
             $msg = "registrazione non riuscita";
             $view2 = new VError();
-            $view2->mostraErrore($msg);
+            $view2->mostraErrore($msg,$path);
         }
         if ($dati['user'] == $dati['user'])
         {
             $msg1 = "username già esistente";
             $view3 = new VError();
-            $view3->mostraErrore($msg1);
+            $view3->mostraErrore($msg1,$path);
 
         }
         if ($dati['mail'] == $dati['mail'])
         {
             $msg2 = "email già esistente";
             $view4 = new VError();
-            $view4->mostraErrore();
+            $view4->mostraErrore($msg,$path);
         }
         $sessione= Session::getInstance();
         $sessione->logout();
         $sessione->setLuogoLoggato($locale);
         $this->Home();
-
-
     }
 
 }

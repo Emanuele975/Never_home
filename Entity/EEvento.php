@@ -75,10 +75,6 @@
                     "la categoria: ".$this->categoria->toString();
         }
 
-        function getF(){
-            return "FEvento";
-        }
-
         function getKey(){
 
             return ' " $this->nome" , "$this->data_e"';

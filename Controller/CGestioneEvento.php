@@ -4,10 +4,10 @@
 class CGestioneEvento
 {
 
-    public function FormEvento()
+    public function FormEvento($tipo)
     {
         $view = new Vlocale();
-        $view->mostraformevento();
+        $view->mostraformevento($tipo);
     }
 
     public function HomeEvento($id,$classe,$num)
@@ -16,6 +16,7 @@ class CGestioneEvento
         $evento = $pm->Load($id,$classe);
         if($evento!=null)
         {
+            echo $evento->getId().$evento->getTipo();
             $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
             $commenti = $pm->caricacommenti($evento->getId(),$num);
             if ($commenti==null)
@@ -43,20 +44,20 @@ class CGestioneEvento
         $view->Home($evento,$immagine,$commenti,$utenti,$num,$pieno);
     }
 
-    public function NuovoEventoGratis(){
+    public function NuovoEventoGratis($tipo){
         $view = new VNuovoEventoGratis();
         $dati = $view->recuperaDatiEvento();
         $pm = FPersistenceManager::getInstance();
         if ($dati['errore']!=null)
         {
             $view = new VError();
-            $path="/Never_home/Evento/FormEvento";
+            $path="/Never_home/Evento/FormEvento/$tipo";
             $view->mostraErrore($dati['errore'],$path);
         }
         elseif ($pm->esisteevento($dati['NomeE'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno']),'FEvento_g'))
         {
             $view = new VError();
-            $path="/Never_home/Evento/FormEvento";
+            $path="/Never_home/Evento/FormEvento/$tipo";
             $view->mostraErrore("esiste già un evento con questo nome",$path);
         }
         else {
@@ -75,7 +76,7 @@ class CGestioneEvento
         }
     }
 
-    public function NuovoEventoPagamento()
+    public function NuovoEventoPagamento($tipo)
     {
         $view = new VNuovoEventoPagamento();
         $dati = $view->recuperaDatiEvento();
@@ -83,13 +84,13 @@ class CGestioneEvento
         if ($dati['errore']!=null)
         {
             $view = new VError();
-            $path="/Never_home/Evento/FormEvento";
+            $path="/Never_home/Evento/FormEvento/$tipo";
             $view->mostraErrore($dati['errore'],$path);
         }
         elseif ($pm->esisteevento($dati['NomeE'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno']),'FEvento_p'))
         {
             $view = new VError();
-            $path="/Never_home/Evento/FormEvento";
+            $path="/Never_home/Evento/FormEvento/$tipo";
             $view->mostraErrore("esiste già un evento con questo nome",$path);
         }
         else
@@ -142,7 +143,7 @@ class CGestioneEvento
         else
         {
             $msg = "Utente non loggato";
-            $path="/Never_home";
+            $path="/Never_home/Utente/Login";
             $view2 = new VError();
             $view2->mostraErrore($msg,$path);
         }

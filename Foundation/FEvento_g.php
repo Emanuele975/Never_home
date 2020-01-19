@@ -117,12 +117,11 @@ class FEvento_g extends FDatabase{
                 $evento = new EEvento_g($i['nome'], new DateTime( $i['data_e'] ) ,
                     $luogo, $categoria, $i['descrizione']);
                 $evento->setId($i['id']);
-                array_push($eventi, $eventi);
+                array_push($eventi, $evento);
             }
             return $eventi;
         }
         else return null;
-
     }
 
     public function esisteevento($nome,$data)

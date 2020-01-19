@@ -117,6 +117,7 @@ class FPersistenceManager
         $eventi = array();
         $dat = FEvento_g::getInstance();
         $eventi1 = $dat->loadByNav($nome);
+        //echo $eventi1[0]->getNome();
         if($eventi1!=null)
             foreach($eventi1 as $i)
             {

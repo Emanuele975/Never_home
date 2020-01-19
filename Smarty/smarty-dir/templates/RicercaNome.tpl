@@ -36,13 +36,12 @@
 
 <div class="list-group">
     {section name=evento loop=$eventi}
-
-        <a href="#" class="list-group-item list-group-item-action  ">
+        <a href="/Never_home/Evento/HomeEvento/{$eventi[evento]->getId()}/{$eventi[evento]->getF()}/1" class="list-group-item list-group-item-action  ">
         <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1 text-primary">Nome Evento</h5>
-            <small>Data Evento</small>
+            <h5 class="mb-1 text-primary">{$eventi[evento]->getNome()}</h5>
+            <small>{$eventi[evento]->getData()->format('d-m-Y')}</small>
         </div>
-        <p class="mb-1">Descrizione Evento</p>
+        <p class="mb-1">{$eventi[evento]->getDescrizione()}</p>
         <small>Clicca per visualizzare</small>
     </a>
     {/section}
@@ -52,25 +51,6 @@
 
 </html>
 <!-- /Never_home/Evento/HomeEvento/{$eventi[evento]->getId()}/{$eventi[evento]->getF()}/1     DA METTERE DENTRO HREF-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

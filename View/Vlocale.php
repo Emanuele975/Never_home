@@ -14,12 +14,13 @@ class Vlocale
         $this->smarty->setConfigDir($GLOBALS["ROOT"].'/Smarty/smarty-dir/configs');
     }
 
-    public function mostraformevento()
+    public function mostraformevento($tipo)
     {
-        if (isset($_POST['EventoG']) && $_POST["EventoG"] == "G")
+        $this->smarty->assign("tipo",$tipo);
+        if ($tipo == "G")
         {
             $this->smarty->display("FormNEg.tpl");
-        } else if (isset($_POST['EventoP']) && $_POST["EventoP"] == "P") {
+        } else if ($tipo == "P") {
             $this->smarty->display("FormNEp.tpl");
         }
     }

@@ -16,7 +16,6 @@ class VRicerca
 
     public function getNomericerca()
     {
-
         if (isset($_POST['nomericerca']))
         {
             $nome = $_POST['nomericerca'];
@@ -26,9 +25,8 @@ class VRicerca
 
     public function mostraRisultati($eventi)
     {
-        echo count($eventi);
+        //echo count($eventi);
         $this->smarty->assign("eventi",$eventi);
-        //$this->smarty->assign("img",$immagine);
         $this->smarty->display("RicercaNome.tpl");
     }
 

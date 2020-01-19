@@ -78,17 +78,11 @@ class CGestioneUtente
         {
             $viewerr=new VError();
             $viewerr->mostraErrore($dati['errore'],$path);
-
         }
         else if($pm->esisteUsername($dati['user'])){
-
             $viewerr=new VError();
             $viewerr->mostraErrore("Esiste già questa username",$path);
-
-
-
         }
-
         else {
             $utente = new EUtente_R($dati['nome'], $dati['cognome'], $dati['cf'], $dati['user'], $dati['psw'], 0, $dati['mail']);
             $id = $pm->store($utente);

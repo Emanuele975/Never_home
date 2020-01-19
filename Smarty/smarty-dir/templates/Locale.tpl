@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
- <!-- <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+  <!-- <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
   <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
@@ -40,17 +40,19 @@
   </div>
   <div class="row mx-md-n5">
     <div class="col-sm-8">
-      <form action="/Never_home/Evento/FormEvento" method="post">
-      <button type="submit" class="btn btn-dark btn-lg btn-block text-primary" name="EventoG" value="G" style="width: 200px;	height: 50px;">
+      <form action="/Never_home/Evento/FormEvento/G" method="post">
+      <button type="submit" class="btn btn-dark btn-lg btn-block text-primary" name="EventoG"  style="width: 200px;	height: 50px;">
         Crea evento gratis
       </button>
-      <button type="submit" class="btn btn-dark btn-lg btn-block text-primary" name="EventoP" value="P" style="width: 300px;	height: 50px;">
+      </form>
+      <form action="/Never_home/Evento/FormEvento/P" method="post">
+      <button type="submit" class="btn btn-dark btn-lg btn-block text-primary" name="EventoP"  style="width: 300px;	height: 50px;">
         Crea evento a pagamento
       </button>
+      </form>
         <button type="submit" class="btn btn-dark btn-lg btn-block text-primary" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
           I tuoi eventi
         </button>
-      </form>
     </div>
     <div class="col-sm-4">
       <div class="container ">
