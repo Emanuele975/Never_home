@@ -184,9 +184,17 @@ class FPersistenceManager
         $dat->sblocca($id);
     }
 
-    public function esisteUsername($username){
+    public function esisteUsername($username)
+    {
         $fu = FUtente_R::getInstance();
         $esito = $fu->esisteUsername($username);
+        return $esito;
+    }
+
+    public function esisteNomeLuogo($nome)
+    {
+        $db = FLuogo::getInstance();
+        $esito = $db->esisteNomeLuogo($nome);
         return $esito;
     }
 

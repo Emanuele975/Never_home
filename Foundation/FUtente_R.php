@@ -91,15 +91,14 @@ class FUtente_R extends FDatabase
 
     }
 
-    public function esisteusername($user){
-
+    public function esisteusername($user)
+    {
         $sql = "SELECT * FROM ".$this->table." WHERE username= '".$user."';";
         $result=parent::exist($sql);
         if($result != null)
             return true;
         else
             return false;
-
     }
 
 }

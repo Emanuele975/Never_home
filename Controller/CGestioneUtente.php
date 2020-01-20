@@ -3,39 +3,17 @@
 
 class CGestioneUtente
 {
-    public function Login(){
+    public function Login()
+    {
         $sessione = Session::getInstance();
-        if($_SERVER['REQUEST_METHOD']=="GET"){
-
-            if($sessione->isLoggedUtente()){
-
-                $this->setHomeUtente($sessione->getUtente());
-            } else {
-                if(isset($_SERVER['HTTP_REFERER'])) {
-                    $referer = $_SERVER['HTTP_REFERER']; //indirizzo che stavo visitando
-                    $loc = substr($referer, strpos($referer, "/Never_home")); //estrapolo la parte path della pagina che stavo visitando
-                } else { //arrivo al login digitando dalla URL
-                    $loc = "/Never_home";
-                }
-                $sessione->setPath($loc); //salvo nei dati di sessione il path che stavo visitando
-                $view = new Vlogin();
-                $view->mostraFormLoginUtente("");
-            }
+        if($sessione->isLoggedUtente())
+        {
+            $this->setHomeUtente($sessione->getUtente());
+        } else
+        {
+            $view = new Vlogin();
+            $view->mostraFormLoginUtente("");
         }
-        else if($_SERVER['REQUEST_METHOD']=="POST"){
-            if($sessione->isLoggedUtente()){
-                //redirect alla home page
-                header('Location: /Never_home');
-            } else {
-                $this->Entra();
-            }
-
-        }
-        else {
-            header('HTTP/1.1 405 Method Not Allowed');
-            header('Allow: GET, POST');
-        }
-
     }
 
     public function Entra(){
@@ -45,15 +23,10 @@ class CGestioneUtente
         $sessione = Session::getInstance();
         $id = $pm->esisteutente($credenziali['user'],$credenziali['psw']);
         if($id){
-            //login avvenuto con successo, mostrare la pagina che stava vedendo l'utente
-            // o la homepage se non stava vedendo pagine particolari
+            //login avvenuto con successo
             $utente = $pm->LoadByUserPswU($credenziali['psw'],$credenziali['user']);
             $sessione->logout();
             $sessione->setUtenteLoggato($utente);
-
-            //$location = $sessione->getPath(); //recupero il path salvato precedentemente
-            //$sessione->removePath(); //cancello il path dai dati di sessione
-
             $this->setHomeUtente($utente);
         }
         else {
@@ -94,10 +67,10 @@ class CGestioneUtente
             }
             else
             {
-            $sessione = Session::getInstance();
-            $sessione->Logout();
-            $sessione->setUtenteLoggato($utente);
-            $this->setHomeUtente($utente);
+                $sessione = Session::getInstance();
+                $sessione->Logout();
+                $sessione->setUtenteLoggato($utente);
+                $this->setHomeUtente($utente);
             }
         }
 
@@ -158,6 +131,5 @@ class CGestioneUtente
         $view = new VUtente();
         $view->HomeUtente($utente, $biglietti, $eventi);
     }
-
 
 }

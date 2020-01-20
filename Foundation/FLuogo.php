@@ -87,6 +87,16 @@ class FLuogo extends FDatabase
             return false;
     }
 
+    public function esisteNomeLuogo($nome)
+    {
+        $sql = "SELECT * FROM ".$this->table." WHERE nome= '".$nome."';";
+        $result=parent::exist($sql);
+        if($result != null)
+            return true;
+        else
+            return false;
+    }
+
 }
 
 ?>

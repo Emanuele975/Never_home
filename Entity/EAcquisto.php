@@ -1,7 +1,4 @@
 <?php
-include_once 'ECarta.php';
-include_once 'EUtente_R.php';
-//aggiungere id acquisto
 
 class EAcquisto{
     private $data;
@@ -36,7 +33,6 @@ class EAcquisto{
     function setCarta(ECarta $carta)
     {
             $this->carta=$carta;
-
     }
 
     function getCarta(){
@@ -90,7 +86,6 @@ class EAcquisto{
     }
 
     function getKey(){
-
         return $this->id;
     }
 

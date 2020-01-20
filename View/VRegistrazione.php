@@ -27,21 +27,18 @@ class VRegistrazione
         if (isset($_POST['nome']))
         {
             $accettato = preg_match('/[A-Za-z]$/', $_POST['nome']);
-            if(! $accettato){
+            if(! $accettato)
+            {
                 $errore = $errore."Il nome non è valido.\n";
             }
             $dati['nome'] = $_POST['nome'];
-            $accettato = preg_match('/[A-Za-z]$/', $_POST['nome']);
-            if(!$accettato)
-            $errore=$errore."Il nome non è valido.\n";
-
         }
         if (isset($_POST['cognome']))
         {
-            $dati['cognome'] = $_POST['cognome'];
             $accettato = preg_match('/[A-Za-z]$/', $_POST['cognome']);
             if(! $accettato)
                 $errore=$errore."Il cognome non è valido.\n";
+            $dati['cognome'] = $_POST['cognome'];
         }
         if (isset($_POST['user']))
         {
@@ -72,17 +69,29 @@ class VRegistrazione
     public function getDatiLocale()
     {
         $dati = array();
+        $errore=null;
 
         if (isset($_POST['nome']))
         {
+            $accettato = preg_match('/[A-Za-z]$/', $_POST['nome']);
+            if(! $accettato)
+            {
+                $errore = $errore."Il nome non è valido.\n";
+            }
             $dati['nome'] = $_POST['nome'];
         }
         if (isset($_POST['indirizzo']))
         {
+            $accettato = preg_match('/[A-Za-z]$/', $_POST['indirizzo']);
+            if(! $accettato)
+                $errore=$errore."l indirizzo non è valido.\n";
             $dati['indirizzo'] = $_POST['indirizzo'];
         }
         if (isset($_POST['mail']))
         {
+            $accettato = preg_match('/^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/', $_POST['mail']);
+            if(!$accettato)
+                $errore=$errore."La mail non è conforme.\n";
             $dati['mail'] = $_POST['mail'];
         }
         if (isset($_POST['user']))
@@ -93,7 +102,7 @@ class VRegistrazione
         {
             $dati['psw'] = $_POST['psw'];
         }
-
+        $dati['errore']=$errore;
         return $dati;
     }
 

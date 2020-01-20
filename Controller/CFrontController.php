@@ -1,15 +1,14 @@
 <?php
-/**
- * Class CFrontController si occupa di istanziare il giusto controllore e il relativo metodo basandosi sull'URL ricevuta
- * /Never_home/controller/metodo/parametro
- */
+/*
+  Class CFrontController si occupa di istanziare il giusto controllore e il relativo metodo basandosi sull'URL ricevuta
+  /Never_home/controller/metodo/parametro
+*/
 
 class CFrontController
 {
-    /**
-     * Metodo che dalla URL recupera il controllore da istanziare e il relativo metodo con eventuale parametro
-     * Controllo come prima cosa se il client che fa la richiesta è web o mobile
-     * /Never_home/controller/metodo/param
+    /*
+      Metodo che dalla URL recupera il controllore da istanziare e il relativo metodo con eventuale parametri
+      /Never_home/controller/metodo/param
      */
     public function run()
     {
