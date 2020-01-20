@@ -1341,6 +1341,7 @@ pre {
     background-color: #fff;
     border-color: white;
     outline: 0;
+      font-weight: bold;
     box-shadow: black; }
   .form-control::-webkit-input-placeholder {
     color: #000000;
@@ -1936,7 +1937,7 @@ fieldset:disabled a.btn {
     border-color: #e0a800; }
     .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-primary.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem rgba(3, 3, 0, 0.48); }
+      box-shadow: none; }
 
 .btn-outline-secondary {
   color: #c43c00;

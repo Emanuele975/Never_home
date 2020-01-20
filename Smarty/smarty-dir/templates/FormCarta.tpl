@@ -19,11 +19,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Utente/Login">Account <span class="sr-only">(current)</span></a>
+        <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login">Account <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Luogo/Logout">Logout </a>
+        <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Logout">Logout </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -61,11 +61,21 @@
 
     <div class="row">
       <div class="form-group col-md-6">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text bg-dark text-primary border-dark">Data di scadenza</span>
+        <div class="form-group col-md">
+          <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-dark text-primary border-dark">Data evento</span>
+            </div>
+            <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
+            <div class="input-group-prepend">
+              <span class="input-group-text border-dark bg-dark text-primary" id="addon-wrapping0">/</span>
+            </div>
+            <input type="text" class="form-control" name="Mese" placeholder="MM" aria-label="MM" aria-describedby="addon-wrapping">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-dark border-dark text-primary" id="addon-wrapping1">/</span>
+            </div>
+            <input type="text" class="form-control" name="Anno" placeholder="AAAA" aria-label="AAAA" aria-describedby="addon-wrapping">
           </div>
-          <input type="text" name="data" aria-label="Data di scadenza" class="form-control">
         </div>
       </div>
     </div>
