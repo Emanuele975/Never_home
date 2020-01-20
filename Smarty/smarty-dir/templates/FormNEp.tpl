@@ -15,7 +15,7 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
   <a class="navbar-brand text-primary" href="/Never_home">NH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -68,7 +68,7 @@
     </div>
     <br>
 
-    <div class="row">
+    <div class="form-row">
       <div class="form-group col-md">
         <div class="input-group flex-nowrap">
           <div class="input-group-prepend">
@@ -96,7 +96,7 @@
     </div>
     <br>
 
-    <div class="row">
+    <div class="form-row">
       <div class="form-group col-md">
         <div class="input-group">
           <div class="input-group-prepend">
@@ -126,7 +126,7 @@
     </div>
     <br>
 
-    <div class="row">
+    <div class="form-row">
       <div class="form-group col-md-6">
         <div class="input-group">
           <div class="input-group-prepend">

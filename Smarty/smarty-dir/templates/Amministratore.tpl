@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+  <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
+      <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search" name="nomericerca">
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
   </div>
@@ -36,32 +37,34 @@
 
 <div class="py-5 text-left" >
   <div class="container">
-    <div class="row">
-      <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/Cercacommentotesto">
+    <div class="row ml-5">
+      <strong> Cerca commento  :</strong>
+      <form class="form-inline my-2 my-lg-0 ml-3" method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/Cercacommentotesto">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="testo">
         <button class="btn btn-primary" type="submit">Search</button>
       </form>
     </div>
-    <div class="row">
+    <div class="row mr-5">
       <div class="col-md-12">
         <div class="panel-body text-dark">
           <br>
           <ul class="media-list">
             {section name=commento loop=$commenti}
               <li class="media py-2">
-                <div class="media-body px-2">
-                  <strong class="text-secondary"><b>{$utenti[commento]->getUsername()}</b></strong>
+
+                <div class="media-body px-2 text-light">
+                  <strong class="text-primary"><b>{$utenti[commento]->getUsername()}</b></strong>
                 {if $commenti[commento]->getBannato()==1}
                   <p> il commento è stato bannato  </p>
                 </div>
                 <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/sbloccacommento/{$commenti[commento]->getId()}/{$num}">
-                  <button class="btn btn-dark my-2" type="submit" > sblocca </button>
+                  <button class="btn btn-primary my-2" type="submit" > sblocca </button>
                 </form>
                 {else}
                   <p> {$commenti[commento]->getTesto()}  </p>
                 </div>
                 <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/bannacommento/{$commenti[commento]->getId()}/{$num}  ">
-                  <button class="btn btn-dark my-2" type="submit" > banna </button>
+                  <button class="btn btn-primary my-2" type="submit" > banna </button>
                 </form>
                 {/if}
               </li>
@@ -69,7 +72,7 @@
           </ul>
         {if $pieno==false}
         <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/Home/{$num+1}">
-          <button class="btn btn-dark" type="submit">Carica altri commenti<br></button>
+          <button class="btn btn-outline-primary" type="submit">Carica altri commenti<br></button>
         </form>
         {else}
         {/if}

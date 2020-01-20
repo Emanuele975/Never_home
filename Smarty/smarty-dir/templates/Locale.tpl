@@ -39,7 +39,7 @@
     <br>
   </div>
   <div class="row mx-md-n5">
-    <div class="col-sm-8">
+    <div class="col-sm-4">
       <form action="/Never_home/Evento/FormEvento/G" method="post">
       <button type="submit" class="btn btn-dark btn-lg btn-block text-primary" name="EventoG"  style="width: 200px;	height: 50px;">
         Crea evento gratis
