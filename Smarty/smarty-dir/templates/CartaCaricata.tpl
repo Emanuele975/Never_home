@@ -19,11 +19,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="btn btn-dark mx-2 btn-outline-primary" href="#">Account <span class="sr-only">(current)</span></a>
+                <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login">Account <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
+                <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Logout">Logout <span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -38,7 +38,7 @@
     <div class="row" style="">
         <div class="px-5 col-md-8 text-center mx-auto">
             <h3 class="text-primary display-1"> <b>Carta Caricata</b></h3>
-            <button class="btn-outline-primary " href="/Never_home">Torna alla home<br></button>
+            <a class=" btn btn-outline-primary " href="/Never_home">Torna alla home<br></a>
         </div>
     </div>
 </div>

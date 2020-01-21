@@ -19,11 +19,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="btn btn-dark mx-2 btn-outline-primary" href="#">Account <span class="sr-only">(current)</span></a>
+                <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login">Account <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-                <a class="btn btn-dark mx-2 btn-outline-primary" href="#">notifiche</a>
-            </li>
+
         </ul>
         <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
@@ -66,7 +64,7 @@
             </div>
             <div class="row my-4">
                 <div class="mx-auto">
-                    <button type="submit" class="btn btn-dark" name="id_evento" value={$evento->getId()}>
+                    <button type="submit" class="btn btn-dark border-primary text-primary" name="id_evento" value={$evento->getId()}>
                         Effettua prenotazione
                     </button>
                 </div>

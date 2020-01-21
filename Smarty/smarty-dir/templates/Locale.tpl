@@ -39,18 +39,21 @@
     <br>
   </div>
   <div class="row mx-md-n5">
+    <div class="col-sm-2"></div>
     <div class="col-sm-4">
       <form action="/Never_home/Evento/FormEvento/G" method="post">
-      <button type="submit" class="btn btn-dark btn-lg btn-block text-primary" name="EventoG"  style="width: 200px;	height: 50px;">
+      <button type="submit" class="btn btn-dark btn-lg border-primary   text-primary" name="EventoG"  style="width: 300px;	height: 50px;">
         Crea evento gratis
       </button>
       </form>
+      <br>
       <form action="/Never_home/Evento/FormEvento/P" method="post">
-      <button type="submit" class="btn btn-dark btn-lg btn-block text-primary" name="EventoP"  style="width: 300px;	height: 50px;">
+      <button type="submit" class="btn btn-dark btn-lg border-primary text-primary" name="EventoP"  style="width: 300px;	height: 50px;">
         Crea evento a pagamento
       </button>
       </form>
-        <button type="submit" class="btn btn-dark btn-lg btn-block text-primary" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
+      <br>
+        <button type="submit" class="btn btn-dark btn-lg  border-primary text-primary" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
           I tuoi eventi
         </button>
     </div>
@@ -72,6 +75,7 @@
         {/if}
       </div>
     </div>
+    <div class="col-sm-2"></div>
   </div>
 </div>
   <br><br><br><br>

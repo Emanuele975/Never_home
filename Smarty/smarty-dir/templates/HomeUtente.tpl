@@ -49,8 +49,8 @@
   <div class="row mx-md-n5">
       <div class="col-sm-6">
         <form action="/Never_home/Utente/FormCarta" method="post">
-          <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block" name="Carta" value="T">Aggiungi carta</button>
-          <button type="submit" class="btn btn-dark text-primary btn-lg btn-block" name="Modifica" value="S">Modifica profilo</button>
+          <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block border-primary" name="Carta" value="T">Aggiungi carta</button>
+          <button type="submit" class="btn btn-dark text-primary btn-lg btn-block border-primary" name="Modifica" value="S">Modifica profilo</button>
         </form>
      </div>
       <div class="col-sm-6">

@@ -54,19 +54,12 @@
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn  btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
+
                 <li>
                     <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login" role="button">Account</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="btn navbar-btn mx-2 btn-outline-primary" href="/Never_home/Utente/Logout">Logout <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -81,19 +74,12 @@
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
+
                 <li>
                     <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Login" role="button">Account</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -108,19 +94,12 @@
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
+                
                 <li>
                     <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Amministratore/Login/1" role="button">Account</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Amministratore/Logout">Logout <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -133,7 +112,7 @@
 
 
 <div class="py-5 text-center " style="background-size:cover;">
-    <div class="text-primary badge-dark"  ><h1><strong>  Trova il tuo evento  </strong></h1></div>
+    <div class="text-primary badge-dark"   ><h1><strong>  Trova il tuo evento  </strong></h1></div>
 
 
 

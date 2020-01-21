@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="btn btn-dark mx-2 btn-outline-primary" href="#">Account <span class="sr-only">(current)</span></a>
+                <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login">Account <span class="sr-only">(current)</span></a>
             </li>
 
         </ul>
@@ -74,12 +74,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h1 class="badge  text-white">Inserisci commento:</h1>
+                        <h7 class="badge  text-white">Inserisci commento:</h7>
                         <form method="post" action="/Never_home/Evento/newcommento/{$evento->getId()}/{$evento->getF()}" enctype="multipart/form-data">
                             <div class="form-group">
                                 <textarea type="text" class="form-control" name="commento" id="form30" rows="3" placeholder="Scrivi qui.. " required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-dark my-2 text-primary">Invia</button>
+                            <button type="submit" class="btn btn-dark my-2 text-primary border-primary">Invia</button>
                         </form>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                         {/section}
                     </ul>
                 {if $pieno==false}
-                <a class="btn btn-dark text-primary" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}/{$num+1}" role="button">Carica altri commenti</a>
+                <a class="btn btn-dark text-primary border-primary" href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}/{$num+1}" role="button">Carica altri commenti</a>
                 {else}
                 {/if}
                 <br>
