@@ -64,7 +64,7 @@
         <div class="form-group col-md">
           <div class="input-group flex-nowrap">
             <div class="input-group-prepend">
-              <span class="input-group-text bg-dark text-primary border-dark">Data evento</span>
+              <span class="input-group-text bg-dark text-primary border-dark">Data di scadenza</span>
             </div>
             <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
             <div class="input-group-prepend">

@@ -19,11 +19,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="#">Account <span class="sr-only">(current)</span></a>
+        <a class="btn btn-dark mx-2 btn-outline-primary" href="#">Account <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link btn btn-dark btn-outline-primary mx-2 text-primary" href="/Never_home/Luogo/Logout">Logout </a>
+        <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Logout">Logout </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -64,7 +64,7 @@
         <div class="form-group col-md">
           <div class="input-group flex-nowrap">
             <div class="input-group-prepend">
-              <span class="input-group-text bg-dark text-primary border-dark">Data evento</span>
+              <span class="input-group-text bg-dark text-primary border-dark">Data di scadenza</span>
             </div>
             <input type="text" name="Giorno" class="form-control" placeholder="GG" aria-label="GG" aria-describedby="addon-wrapping">
             <div class="input-group-prepend">

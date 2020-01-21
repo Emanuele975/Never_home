@@ -23,10 +23,11 @@ class VRicerca
         return $nome;
     }
 
-    public function mostraRisultati($eventi)
+    public function mostraRisultati($eventi,$utente)
     {
-        //echo count($eventi);
+        echo $utente;
         $this->smarty->assign("eventi",$eventi);
+        $this->smarty->assign("utente",$utente);
         $this->smarty->display("RicercaNome.tpl");
     }
 
