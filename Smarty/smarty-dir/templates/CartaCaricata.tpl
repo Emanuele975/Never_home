@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+   <!-- <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">-->
+    <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/Never_home">NH</a>
+    <a class="navbar-brand text-primary" href="/Never_home">NH</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,13 +19,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
+                <a class="btn btn-dark mx-2 btn-outline-primary" href="#">Account <span class="sr-only">(current)</span></a>
             </li>
+
             <li class="nav-item active">
-                <a class="nav-link" href="#">Notifiche </a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
+                <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Logout">Logout <span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -34,8 +33,15 @@
     </div>
 </nav>
 
-<br>
-carta caricata correttamente
+<br><br><br>
+<div class="container">
+    <div class="row" style="">
+        <div class="px-5 col-md-8 text-center mx-auto">
+            <h3 class="text-primary display-1"> <b>Carta Caricata</b></h3>
+            <button class="btn-outline-primary " href="/Never_home">Torna alla home<br></button>
+        </div>
+    </div>
+</div>
 <div class="fixed-bottom">
     <div class="container">
         <div class="row">
