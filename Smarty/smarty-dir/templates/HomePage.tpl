@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
     <!--<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css" type="text/css">-->
-    <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
+    <link rel="stylesheet" href="Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                         Registrazione
                     </button>
                     <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                        <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
+                        <a class=" dropdown-item " href="/ Never_home/Utente/FormRegistrazione">Registrazione utente</a>
                         <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
                     </div>
                 </div>
@@ -34,9 +34,9 @@
                         Login
                     </button>
                     <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dark dropdown-item" href="/Never_home/Utente/Login">Login utente</a>
-                        <a class="dark dropdown-item" href="/Never_home/Luogo/Login">Login locale</a>
-                        <a class="dark dropdown-item" href="/Never_home/Amministratore/Login/1">Login Amministratore</a>
+                        <a class="dark dropdown-item" href="Never_home/Utente/Login">Login utente</a>
+                        <a class="dark dropdown-item" href="Never_home/Luogo/Login">Login locale</a>
+                        <a class="dark dropdown-item" href="Never_home/Amministratore/Login/1">Login Amministratore</a>
 
                     </div>
                 </div>
