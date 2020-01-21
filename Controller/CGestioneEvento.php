@@ -169,7 +169,7 @@ class CGestioneEvento
             $view = new VAcquisto();
             $pm = FPersistenceManager::getInstance();
             $evento = $pm->Load($_POST['id_evento'],'FEvento_p');
-            if($evento->getPosti_disponibili() >= $_POST['num'])
+            if($evento->getPosti_disponibili() >= $_POST['num'] && $_POST['num']!="Choose...")
             {
                 $sessione->prenotaposti($_POST['num']);
                 $pm->decrementaposti($_POST['id_evento'],$_POST['num']);
@@ -178,6 +178,14 @@ class CGestioneEvento
                 $sessione = Session::getInstance();
                 $sessione->setInfoVendita($prezzo,$_POST['num']);
                 $view->FormPagamento($prezzotot,$_POST['id_evento']);
+            }
+            else
+            {
+                $evento = $_POST['id_evento'];
+                $msg = "scegli un numero di posti";
+                $view2 = new VError();
+                $path="/Never_home/Evento/HomeEvento/$evento/FEvento_p/1";
+                $view2->mostraErrore($msg,$path);
             }
         }
         else
@@ -198,30 +206,41 @@ class CGestioneEvento
         $info = $sessione->getInfoVendita();
         $utente = $sessione->getUtente();
         $prezzo = $info['prezzo']*$info['quantita'];
-        $id = $pm->CartaValida($dati['cf'],$dati['ccv'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno']),
-            $dati['numero']);
-        if ($id!=null)
+        if ($dati['errore']==null)
         {
-            $evento = $pm->Load($id_evento,'FEvento_p');
-            $carta = $pm->Load($id,'FCarta');
-            $acquisto = new EAcquisto(new DateTime('NOW'),$prezzo,$carta,$utente);
-            $id_a = $pm->store($acquisto);
-            $acquistobis = $pm->Load($id_a,'FAcquisto');
-            $biglietto = new EBiglietto($prezzo,$evento,$acquistobis,$utente);
-            $pm->store($biglietto);
-            $msg = "acquisto effettuato con successo";
-            $sessione->prenotaposti(0);
-            $view->AcquistoEffettuato($msg);
+            $id = $pm->CartaValida($dati['cf'],$dati['ccv'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno']),
+                $dati['numero']);
+            if ($id!=null)
+            {
+                $evento = $pm->Load($id_evento,'FEvento_p');
+                $carta = $pm->Load($id,'FCarta');
+                $acquisto = new EAcquisto(new DateTime('NOW'),$prezzo,$carta,$utente);
+                $id_a = $pm->store($acquisto);
+                $acquistobis = $pm->Load($id_a,'FAcquisto');
+                $biglietto = new EBiglietto($prezzo,$evento,$acquistobis,$utente);
+                $pm->store($biglietto);
+                $msg = "acquisto effettuato con successo";
+                $sessione->prenotaposti(0);
+                $view->AcquistoEffettuato($msg);
+            }
+            else
+            {
+                echo "nell else".$sessione->getposti()."++++";
+                $pm->incrementaposti($id_evento,$sessione->getposti());
+                $msg2 = "si sono verificati problemi nell acquisto";
+                $view2 = new VError();
+                $path="/Never_home";
+                $sessione->prenotaposti(0);
+                $view2->mostraErrore($msg2,$path);
+            }
         }
         else
         {
-            $pm->incrementaposti($utente->getId(),$sessione->getposti());
-            $msg2 = "si sono verificati problemi nell acquisto";
             $view2 = new VError();
             $path="/Never_home";
-            $sessione->prenotaposti(0);
-            $view2->mostraErrore($msg2,$path);
+            $view2->mostraErrore($dati['errore'],$path);
         }
+
     }
 
     public function newcommento($id,$classe)

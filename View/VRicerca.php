@@ -25,7 +25,6 @@ class VRicerca
 
     public function mostraRisultati($eventi,$utente)
     {
-        echo $utente;
         $this->smarty->assign("eventi",$eventi);
         $this->smarty->assign("utente",$utente);
         $this->smarty->display("RicercaNome.tpl");
