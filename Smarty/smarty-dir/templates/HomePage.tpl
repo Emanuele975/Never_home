@@ -94,7 +94,7 @@
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                
+
                 <li>
                     <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Amministratore/Login/1" role="button">Account</a>
                 </li>
