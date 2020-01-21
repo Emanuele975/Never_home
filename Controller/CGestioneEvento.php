@@ -186,8 +186,8 @@ class CGestioneEvento
         $info = $sessione->getInfoVendita();
         $utente = $sessione->getUtente();
         $prezzo = $info['prezzo']*$info['quantita'];
-        $id = $pm->CartaValida($dati['cf'],$dati['ccv'],$dati['data'],$dati['numero']);
-        echo $dati['data'];
+        $id = $pm->CartaValida($dati['cf'],$dati['ccv'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno']),
+            $dati['numero']);
         if ($id!=null)
         {
             $evento = $pm->Load($id_evento,'FEvento_p');

@@ -98,7 +98,8 @@ class CGestioneUtente
         $dati = $view->getDati();
         $sessione = Session::getInstance();
         $utente = $sessione->getUtente();
-        $carta = new ECarta($utente->getCF(),$dati['ccv'],new DateTime($dati['data']),$dati['numero']);
+        $carta = new ECarta($utente->getCF(),$dati['ccv'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno'])
+            ,$dati['numero']);
         $pm = FPersistenceManager::getInstance();
         $id = $pm->store($carta);
         if ($id==null)
