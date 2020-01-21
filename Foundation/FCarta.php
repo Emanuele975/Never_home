@@ -72,10 +72,13 @@ class FCarta extends FDatabase{
         $sql="SELECT * FROM ".static::getTables()." WHERE numerocarta= '".$numerocarta."' and CF_titolare= '".$CF."'
         and ccv='".$ccv."' ";
         $result = parent::loadSingle($sql);
-        $d1 = new DateTime($result['data_di_scadenza']);
-        $d2 = new DateTime($data);
-        if ($result!=null && ($d1->format('Y-m-d') == $d2->format('Y-m-d')))
+        //$d1 = new DateTime($result['data_di_scadenza']);
+        echo $result['data_di_scadenza']."++++++".$data->format('Y-m-d');
+        if ($result!=null && ($result['data_di_scadenza'] == $data->format('Y-m-d')))
+        {
+            echo "nell if";
             return $result['id'];
+        }
         else return false;
     }
     

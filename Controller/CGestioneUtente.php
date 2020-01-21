@@ -95,21 +95,31 @@ class CGestioneUtente
     public function AggiungiCarta()
     {
         $view = new VCarta();
+        $view2 = new VError();
         $dati = $view->getDati();
         $sessione = Session::getInstance();
-        $utente = $sessione->getUtente();
-        $carta = new ECarta($utente->getCF(),$dati['ccv'],new DateTime($dati['Mese'].'/'.$dati['Giorno'].'/'.$dati['Anno'])
-            ,$dati['numero']);
         $pm = FPersistenceManager::getInstance();
-        $id = $pm->store($carta);
-        if ($id==null)
-        {
-            $msg = "errore nella registrazione della carta";
-            $view2 = new VError();
-            $path="/Never_home/Utente/FormCarta";
-            $view2->mostraErrore($msg,$path);
+        if ($dati['errore'] != null) {
+            $path = "/Never_home/Utente/FormCarta";
+            $view2->mostraErrore($dati['errore'], $path);
+        } elseif ($pm->esistecarta($dati['numero'])) {
+            $path = "/Never_home/Utente/FormCarta";
+            $view2->mostraErrore("esiste già un evento con questo nome", $path);
         }
-        $view->cartacaricata();
+        else
+        {
+            $utente = $sessione->getUtente();
+            $carta = new ECarta($utente->getCF(), $dati['ccv'], new DateTime($dati['Mese'] . '/' . $dati['Giorno'] . '/' . $dati['Anno'])
+                , $dati['numero']);
+            $id = $pm->store($carta);
+            if ($id == null) {
+                $msg = "errore nella registrazione della carta";
+                $path = "/Never_home/Utente/FormCarta";
+                $view2->mostraErrore($msg, $path);
+            }
+            $view->cartacaricata();
+        }
+
 
     }
 
