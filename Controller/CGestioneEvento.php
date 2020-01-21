@@ -120,7 +120,19 @@ class CGestioneEvento
             $pm = FPersistenceManager::getInstance();
             $eventi = $pm->EventoByNav($nome);
             //echo $eventi[0]->getCategoria();
-            $view->mostraRisultati($eventi);
+            $sessione= Session::getInstance();
+            if($sessione->isLoggedUtente())
+                $view->mostraRisultati($eventi,"utente");
+            else if ($sessione->isLoggedLuogo())
+                $view->mostraRisultati($eventi,"luogo");
+            else if ($sessione->isLoggedAdmin())
+                $view->mostraRisultati($eventi,"admin");
+            else
+            {
+                echo "nell else";
+                $view->mostraRisultati($eventi,null);
+            }
+
         }
         else{
             header('HTTP/1.1 405 Method Not Allowed');
