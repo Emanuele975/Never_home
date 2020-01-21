@@ -23,20 +23,26 @@ class VCarta
     public function getDati()
     {
         $dati = array();
-
         if(isset($_POST['numero']))
         {
             $dati['numero'] = $_POST['numero'];
         }
-        if(isset($_POST['data']))
+        if(isset($_POST['Giorno']))
         {
-            $dati['data'] = $_POST['data'];
+            $dati['Giorno'] = $_POST['Giorno'];
+        }
+        if(isset($_POST['Mese']))
+        {
+            $dati['Mese'] = $_POST['Mese'];
+        }
+        if(isset($_POST['Anno']))
+        {
+            $dati['Anno'] = $_POST['Anno'];
         }
         if(isset($_POST['ccv']))
         {
             $dati['ccv'] = $_POST['ccv'];
         }
-
         return $dati;
     }
 
