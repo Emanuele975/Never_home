@@ -14,7 +14,9 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
@@ -42,7 +44,24 @@
     </nav>
 
 
+{if $eventi eq null}
 
+    <div class="py-5">
+        <div class="container">
+            <div class="row" style="">
+                <div class="px-5 col-md-8 text-center mx-auto">
+                    <h3 class="text-primary display-1"> <b>NON HAI ANCORA CREATO EVENTI</b></h3>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    {else}
 <div class="list-group">
     {section name=evento loop=$eventi}
         <a href="/Never_home/Evento/HomeEvento/{$eventi[evento]->getId()}/{$eventi[evento]->getF()}/1" class="list-group-item list-group-item-action  ">
@@ -61,7 +80,7 @@
         </a>
     {/section}
 </div>
-
+    {/if}
 </body>
 
 </html>
