@@ -105,6 +105,15 @@ class CGestioneLuogo
         }
     }
 
+    public function ituoieventi()
+    {
+        $sessione = Session::getInstance();
+        $luogo = $sessione->getLuogo();
+        $pm = FPersistenceManager::getInstance();
+        $eventi = $pm->ituoieventi($luogo->getId());
+        echo count($eventi);
+    }
+
 }
 
 ?>

@@ -117,7 +117,6 @@ class FPersistenceManager
         $eventi = array();
         $dat = FEvento_g::getInstance();
         $eventi1 = $dat->loadByNav($nome);
-        //echo $eventi1[0]->getNome();
         if($eventi1!=null)
             foreach($eventi1 as $i)
             {
@@ -196,6 +195,26 @@ class FPersistenceManager
         $db = FLuogo::getInstance();
         $esito = $db->esisteNomeLuogo($nome);
         return $esito;
+    }
+
+    public function tuoieventi($id)
+    {
+        $eventi = array();
+        $dat = FEvento_g::getInstance();
+        $eventi1 = $dat->loadByLuogo($id);
+        if($eventi1!=null)
+            foreach($eventi1 as $i)
+            {
+                array_push($eventi,$i);
+            }
+        $dat = FEvento_p::getInstance();
+        $eventi2 = $dat->loadByLuogo($id);
+        if($eventi2!=null)
+            foreach($eventi2 as $i)
+            {
+                array_push($eventi,$i);
+            }
+        return $eventi;
     }
 
 }
