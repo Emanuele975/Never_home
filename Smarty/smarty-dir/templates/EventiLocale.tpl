@@ -142,9 +142,14 @@
             <h5 class="mb-1 text-primary">{$eventi[evento]->getNome()}</h5>
             <small>{$eventi[evento]->getData()->format('d-m-Y')}</small>
         </div>
-        <p class="mb-1">{$eventi[evento]->getDescrizione()}</p>
-        <small>Clicca per visualizzare</small>
-    </a>
+            {if $eventi[evento]->getF() eq "FEvento_p"}
+                <p class="mb-1">Posti disponibili :{$eventi[evento]->getPosti_totali()}</p>
+                <p class="mb-1">Posti disponibili :{$eventi[evento]->getPosti_disponibili()}</p>
+            {else}
+                <p class="mb-1">Evento gratuito</p>
+
+            {/if}
+        </a>
     {/section}
 </div>
 
