@@ -50,8 +50,13 @@
       <div class="col-sm-6">
         <form action="/Never_home/Utente/FormCarta" method="post">
           <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block border-primary" name="Carta" value="T">Aggiungi carta</button>
-          <button type="submit" class="btn btn-dark text-primary btn-lg btn-block border-primary" name="Modifica" value="S">Modifica profilo</button>
         </form>
+        <br>
+        {if $pieno eq false}
+        <form action="/Never_home/Utente/ituoibiglietti" method="post">
+          <button type="submit" class="btn btn-dark text-primary btn-lg btn-block border-primary" name="Modifica" value="S">Visualizza tutti i tuoi biglietti</button>
+        </form>
+        {/if}
      </div>
       <div class="col-sm-6">
       <div class="list-group ">

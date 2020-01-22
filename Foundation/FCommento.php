@@ -36,8 +36,8 @@ class FCommento extends FDatabase
         return $this->values;
     }
 
-    public function store1(ECommento $commento){
-
+    public function store1(ECommento $commento)
+    {
         $sql = "INSERT INTO " . $this->table . " VALUES " . static::getValues() . ";";
         $id = parent::store($sql,'FCommento',$commento);
         echo $id;

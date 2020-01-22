@@ -81,6 +81,10 @@ class FBiglietto extends FDatabase{
         $sql="SELECT * FROM ".static::getTables()." WHERE id_utente = '" .$id. "' ; ";
         $result = parent::loadMultiple($sql);
         $biglietti = array();
+        if (count($result)<=3)
+            $biglietti['pieno'] = true;
+        else
+            $biglietti['pieno']=false;
         if(($result!=null) && (count($result)>0) && (count($biglietti)<3)){
             foreach($result as $i){
                 $datevento=FEvento_p::getInstance();
@@ -96,6 +100,29 @@ class FBiglietto extends FDatabase{
             return $biglietti;
         }
         else return null;
+    }
+
+    public function allbiglietti($id)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE id_utente = '" .$id. "' ; ";
+        $result = parent::loadMultiple($sql);
+        $biglietti = array();
+        if(($result!=null))
+        {
+            foreach($result as $i){
+                $datevento=FEvento_p::getInstance();
+                $evento=$datevento->loadById($i['id_evento']);
+                $datacquisto=FAcquisto::getInstance();
+                $acquisto=$datacquisto->loadById($i['id_acquisto']);
+                $datutente=FUtente_R::getInstance();
+                $utente=$datutente->loadById($i['id_utente']);
+                $biglietto = new EBiglietto($i['prezzo'],$evento,$acquisto,$utente);
+                $biglietto->setid($i['id']);
+                array_push($biglietti, $biglietto);
+            }
+        }
+        return $biglietti;
+
     }
 
 

@@ -127,6 +127,11 @@ class CGestioneUtente
     {
         $pm = FPersistenceManager::getInstance();
         $biglietti = $pm->LoadBiglietti($utente->getId());
+        if ($biglietti==null)
+            $pieno=true;
+        else
+            $pieno = $biglietti["pieno"];
+        unset($biglietti['pieno']);
         $eventi = array();
         if (isset($biglietti))
         {
@@ -140,7 +145,29 @@ class CGestioneUtente
         else
             $eventi[0]=null;
         $view = new VUtente();
-        $view->HomeUtente($utente, $biglietti, $eventi);
+        $view->HomeUtente($utente, $biglietti, $eventi, $pieno);
+    }
+
+    public function ituoibiglietti()
+    {
+        $pm = FPersistenceManager::getInstance();
+        $session = Session::getInstance();
+        $utente = $session->getUtente();
+        $biglietti = $pm->allbiglietti($utente->getId());
+        $eventi = array();
+        if (isset($biglietti))
+        {
+            foreach($biglietti as $i)
+            {
+                $evento = $pm->Load($i->getEvento()->getId(),$i->getEvento()->getF());
+                array_push($eventi, $evento);
+
+            }
+        }
+        else
+            $eventi[0]=null;
+        $view = new VUtente();
+        $view->ituoibigletti($biglietti, $eventi);
     }
 
 }

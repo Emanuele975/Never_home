@@ -14,9 +14,10 @@ class VUtente
         $this->smarty->setConfigDir('Smarty/smarty-dir/configs');
     }
 
-    public function HomeUtente($utente, $biglietti, $eventi){
+    public function HomeUtente($utente, $biglietti, $eventi, $pieno){
 
         $this->smarty->assign('utente',$utente);
+        $this->smarty->assign('pieno',$pieno);
         if (isset($biglietti[0]))
         {
             $this->smarty->assign('biglietto1',$biglietti[0]);
@@ -48,6 +49,14 @@ class VUtente
             $this->smarty->assign('evento3',null);
         }
         $this->smarty->display("HomeUtente.tpl");
+
+    }
+
+    public function ituoibigletti($biglietti, $eventi)
+    {
+        $this->smarty->assign('eventi', $eventi);
+        $this->smarty->assign('biglietti',$biglietti);
+        $this->smarty->display("BigliettiUtente.tpl");
 
     }
 

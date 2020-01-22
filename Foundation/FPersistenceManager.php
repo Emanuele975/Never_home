@@ -217,4 +217,11 @@ class FPersistenceManager
         return $eventi;
     }
 
+    public function allbiglietti($id)
+    {
+        $db = FBiglietto::getInstance();
+        $biglietti = $db->allbiglietti($id);
+        return $biglietti;
+    }
+
 }
