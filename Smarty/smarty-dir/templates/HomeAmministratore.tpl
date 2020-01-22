@@ -36,7 +36,9 @@
 <div class="row py-5" >
  <div class="col-sm-1"></div>
   <div class="col-sm-5">
-    <button class="btn btn-outline-primary" style="width: 300px; height: 100px;font-size: medium"  href="#">Gestione Commenti</button>
+    <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/GestioneCommenti/1">
+        <button class="btn btn-outline-primary" type="submit" style="width: 300px; height: 100px;font-size: medium"  href=" ">Gestione Commenti</button>
+    </form>
   </div>
   <div class="col-sm-5">
     <button class="btn btn-outline-primary" style="width: 300px;height: 100px; font-size: medium" href="#">Gestione Eventi</button>

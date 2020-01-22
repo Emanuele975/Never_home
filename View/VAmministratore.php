@@ -14,7 +14,7 @@ class VAmministratore
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
-    public function HomeAdmin($commenti,$utenti,$num,$pieno)
+    public function GestioneCommenti($commenti,$utenti,$num,$pieno)
     {
         $this->smarty->assign("utenti",$utenti);
         $this->smarty->assign("commenti",$commenti);

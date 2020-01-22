@@ -45,7 +45,7 @@ class CGestioneAmministratore
         header('Location: /Never_home');
     }
 
-    public function Home($num)
+    public function GestioneCommenti($num)
     {
         $pm = FPersistenceManager::getInstance();
         $commenti = $pm->commentidabannare($num);
@@ -61,7 +61,7 @@ class CGestioneAmministratore
             }
         }
         $view = new VAmministratore();
-        $view->HomeAdmin($commenti,$utenti,$num,$pieno);
+        $view->GestioneCommenti($commenti,$utenti,$num,$pieno);
     }
 
     public function HomeAmministratore()

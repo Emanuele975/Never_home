@@ -67,7 +67,7 @@
             {/section}
           </ul>
         {if $pieno==false}
-        <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/Home/{$num+1}">
+        <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/GestioneCommenti/{$num+1}">
           <button class="btn btn-outline-primary" type="submit">Carica altri commenti<br></button>
         </form>
         {else}
