@@ -10,7 +10,7 @@ class CGestioneAmministratore
     {
         $sessione = Session::getInstance();
         if ($sessione->isLoggedAdmin()) {
-            $this->Home($num);
+            $this->HomeAmministratore();
         } else {
             $view = new Vlogin();
             $view->mostraFormLoginAdmin("");
@@ -26,7 +26,7 @@ class CGestioneAmministratore
             //login utente avvenuto con successo, salvataggio nei dati di sessione
             $sessione = Session::getInstance();
             $sessione->setAdminLoggato();
-            $this->Home($num);
+            $this->HomeAmministratore();
         }
         else
         {
@@ -62,6 +62,12 @@ class CGestioneAmministratore
         }
         $view = new VAmministratore();
         $view->HomeAdmin($commenti,$utenti,$num,$pieno);
+    }
+
+    public function HomeAmministratore()
+    {
+        $view = new VAmministratore();
+        $view->setHome();
     }
 
     public function Cercacommentotesto()

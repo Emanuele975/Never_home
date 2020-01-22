@@ -13,6 +13,7 @@ class VAmministratore
         $this->smarty->setCacheDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/cache');
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
+
     public function HomeAdmin($commenti,$utenti,$num,$pieno)
     {
         $this->smarty->assign("utenti",$utenti);
@@ -29,6 +30,11 @@ class VAmministratore
             $testo= $_POST['testo'];
         }
         return $testo;
+    }
+
+    public function setHome()
+    {
+        $this->smarty->display("HomeAmministratore.tpl");
     }
 
 }
