@@ -10,7 +10,7 @@
 <body>
 {if $utente eq null }
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand text-primary" href="/Never_home">NH</a>
+    <a class="navbar-brand text-primary" href="/Never_home"></a>
 
     <div class="collapse navbar-collapse"  id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">

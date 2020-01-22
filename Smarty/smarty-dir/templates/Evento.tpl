@@ -44,7 +44,7 @@
         <div class="col-sm">
             <div class="card mb-3 border-dark " style="">
                 {$img2 = base64_encode($img->getData())}
-                <img class="card-img-top" src="data:{$img->getType()};base64,{$img2}" style="width: 550px;	height: 300px;">
+                <img class="card-img-top" src="data:{$img->getType()};base64,{$img2}" style="width: 500px;	height: 300px;">
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
