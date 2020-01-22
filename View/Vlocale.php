@@ -32,4 +32,10 @@ class Vlocale
         $this->smarty->display("Locale.tpl");
     }
 
+    public function ituoieventi($eventi)
+    {
+        $this->smarty->assign("eventi",$eventi);
+        $this->smarty->display("EventiLocale.tpl");
+    }
+
 }

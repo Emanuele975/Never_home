@@ -155,7 +155,7 @@ class FEvento_p extends FDatabase
             return true;
     }
 
-    public function tuoieventi($id)
+    public function ituoieventi($id)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE id_luogo = ".$id." ;";
         $result = parent::loadMultiple($sql);
@@ -166,8 +166,8 @@ class FEvento_p extends FDatabase
                 $luogo = $datluogo->loadById($i['id_luogo']);
                 $datcategoria = FCategoria::getInstance();
                 $categoria = $datcategoria->loadById($i['id_categoria']);
-                $evento = new EEvento_g($i['nome'], new DateTime( $i['data_e'] ) ,
-                    $luogo, $categoria, $i['descrizione']);
+                $evento = new EEvento_p($i['nome'], new DateTime( $i['data_e'] ) ,
+                    $luogo, $categoria, $i['descrizione'],$i['prezzo'],$i['posti_disponibili'],$i['posti_totali']);
                 $evento->setId($i['id']);
                 array_push($eventi, $evento);
             }

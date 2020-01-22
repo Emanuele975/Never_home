@@ -197,18 +197,18 @@ class FPersistenceManager
         return $esito;
     }
 
-    public function tuoieventi($id)
+    public function ituoieventi($id)
     {
         $eventi = array();
         $dat = FEvento_g::getInstance();
-        $eventi1 = $dat->loadByLuogo($id);
+        $eventi1 = $dat->ituoieventi($id);
         if($eventi1!=null)
             foreach($eventi1 as $i)
             {
                 array_push($eventi,$i);
             }
         $dat = FEvento_p::getInstance();
-        $eventi2 = $dat->loadByLuogo($id);
+        $eventi2 = $dat->ituoieventi($id);
         if($eventi2!=null)
             foreach($eventi2 as $i)
             {

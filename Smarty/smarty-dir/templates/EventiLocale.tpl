@@ -14,72 +14,7 @@
 
 <body>
 
-{if $utente eq null }
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand text-primary" href="/Never_home">NH</a>
-
-        <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn  btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn  btn-outline-primary mx-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Login
-                        </button>
-                        <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dark dropdown-item" href="/Never_home/Utente/Login">Login utente</a>
-                            <a class="dark dropdown-item" href="/Never_home/Luogo/Login">Login locale</a>
-                            <a class="dark dropdown-item" href="/Never_home/Amministratore/Login/1">Login Amministratore</a>
-
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
-                <input class="form-control mr-sm-2 "  type="search" placeholder="Search" aria-label="Search" name="nomericerca">
-                <button class="btn btn-primary"   type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-{elseif $utente eq  "utente"}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand text-primary" href="/Never_home">NH</a>
-
-        <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn  btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login" role="button">Account</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
-                <button class="btn btn-primary" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-{elseif $utente eq "luogo"}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
@@ -105,34 +40,7 @@
             </form>
         </div>
     </nav>
-{else}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
-        <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Amministratore/Login/1" role="button">Account</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
-                <button class="btn btn-primary" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-{/if}
 
 
 <div class="list-group">
@@ -142,6 +50,7 @@
             <h5 class="mb-1 text-primary">{$eventi[evento]->getNome()}</h5>
             <small>{$eventi[evento]->getData()->format('d-m-Y')}</small>
         </div>
+            {$eventi[evento]->getF()}
             {if $eventi[evento]->getF() eq "FEvento_p"}
                 <p class="mb-1">Posti disponibili :{$eventi[evento]->getPosti_totali()}</p>
                 <p class="mb-1">Posti disponibili :{$eventi[evento]->getPosti_disponibili()}</p>

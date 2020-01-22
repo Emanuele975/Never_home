@@ -81,7 +81,7 @@ class CGestioneLuogo
         {
             $view2->mostraErrore($dati['errore'],$path);
         }
-        else if ($pm->esisteNomeLuogo()($dati['nome']))
+        else if ($pm->esisteNomeLuogo(($dati['nome'])))
         {
             $msg1 = "nome già esistente";
             $view2->mostraErrore($msg1,$path);
@@ -111,7 +111,8 @@ class CGestioneLuogo
         $luogo = $sessione->getLuogo();
         $pm = FPersistenceManager::getInstance();
         $eventi = $pm->ituoieventi($luogo->getId());
-        echo count($eventi);
+        $view = new Vlocale();
+        $view->ituoieventi($eventi);
     }
 
 }
