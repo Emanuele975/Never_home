@@ -81,7 +81,7 @@ class CGestioneLuogo
         {
             $view2->mostraErrore($dati['errore'],$path);
         }
-        else if ($pm->esisteNomeLuogo()($dati['nome']))
+        else if ($pm->esisteNomeLuogo(($dati['nome'])))
         {
             $msg1 = "nome già esistente";
             $view2->mostraErrore($msg1,$path);

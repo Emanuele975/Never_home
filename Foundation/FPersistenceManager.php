@@ -197,7 +197,7 @@ class FPersistenceManager
         return $esito;
     }
 
-    public function tuoieventi($id)
+    public function ituoieventi($id)
     {
         $eventi = array();
         $dat = FEvento_g::getInstance();
