@@ -48,7 +48,7 @@
                 <a class="btn btn-outline-primary" href="{$path}" role="button">RIPROVARE<br></a>
                 </div>
         </div>
-       <!-- <a class="btn btn-dark" href="{$path}" role="button">Torna Indietro</a>-->
+
     </div>
 
 
