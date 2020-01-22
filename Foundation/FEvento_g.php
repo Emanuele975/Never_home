@@ -134,7 +134,7 @@ class FEvento_g extends FDatabase{
             return true;
     }
 
-    public function tuoieventi($id)
+    public function ituoieventi($id)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE id_luogo = ".$id." ;";
         $result = parent::loadMultiple($sql);

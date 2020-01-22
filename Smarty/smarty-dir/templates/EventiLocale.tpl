@@ -16,6 +16,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
         <a class="navbar-brand text-primary" href="/Never_home">NH</a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
@@ -59,6 +60,7 @@
 
 
 
+
     {else}
 <div class="list-group">
     {section name=evento loop=$eventi}
@@ -67,6 +69,7 @@
             <h5 class="mb-1 text-primary">{$eventi[evento]->getNome()}</h5>
             <small>{$eventi[evento]->getData()->format('d-m-Y')}</small>
         </div>
+            {$eventi[evento]->getF()}
             {if $eventi[evento]->getF() eq "FEvento_p"}
                 <p class="mb-1">Posti disponibili :{$eventi[evento]->getPosti_totali()}</p>
                 <p class="mb-1">Posti disponibili :{$eventi[evento]->getPosti_disponibili()}</p>

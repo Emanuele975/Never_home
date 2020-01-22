@@ -111,7 +111,8 @@ class CGestioneLuogo
         $luogo = $sessione->getLuogo();
         $pm = FPersistenceManager::getInstance();
         $eventi = $pm->ituoieventi($luogo->getId());
-        echo count($eventi);
+        $view = new Vlocale();
+        $view->ituoieventi($eventi);
     }
 
 }
