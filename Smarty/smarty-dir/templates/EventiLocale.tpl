@@ -21,17 +21,7 @@
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
+
                 <li>
                     <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Login" role="button">Account</a>
                 </li>
@@ -50,7 +40,8 @@
         <div class="container">
             <div class="row" style="">
                 <div class="px-5 col-md-8 text-center mx-auto">
-                    <h3 class="text-primary display-1"> <b>NON HAI ANCORA CREATO EVENTI</b></h3>
+                    <h1 class="text-primary "> NON HAI ANCORA CREATO EVENTI</h1>
+                    <a class="btn btn-outline-primary" href="/Never_home/Luogo/Login" role="button">Torna al profilo<br></a>
 
                 </div>
             </div>

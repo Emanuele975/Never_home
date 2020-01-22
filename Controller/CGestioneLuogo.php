@@ -61,7 +61,7 @@ class CGestioneLuogo
         else
             $img=null;
         $view=new Vlocale();
-        $view->HomeLocale($evento,$img);
+        $view->HomeLocale($evento,$img,$luogo->getNome());
     }
 
     public function FormRegistrazione()

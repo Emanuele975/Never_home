@@ -32,29 +32,33 @@
     </form>
   </div>
 </nav>
-<br><br>
-<!--<div class="py-5 text-center" style="background-image: url('https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');background-size:100% 100%;">-->
+<div class="py-5 text-center" style="background-size:cover;">
+
+  <p class=" text-primary font-weight-bold" style="font-size: 50px" >
+     {$nome}
+   </p>
+
+  <br>
+
 <div class="container ">
-  <div class="row">
-    <br>
-  </div>
+
   <div class="row mx-md-n5">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-4">
+
+    <div class="col-sm-6">
       <form action="/Never_home/Evento/FormEvento/G" method="post">
-      <button type="submit" class="btn btn-dark btn-lg border-primary   text-primary" name="EventoG"  style="width: 300px;	height: 50px;">
+      <button type="submit" class="btn btn-dark btn-lg border-primary btn-block  text-primary" name="EventoG"  >
         Crea evento gratis
       </button>
       </form>
       <br>
       <form action="/Never_home/Evento/FormEvento/P" method="post">
-      <button type="submit" class="btn btn-dark btn-lg border-primary text-primary" name="EventoP"  style="width: 300px;	height: 50px;">
+      <button type="submit" class="btn btn-dark btn-lg border-primary btn-block text-primary" name="EventoP"  >
         Crea evento a pagamento
       </button>
       </form>
       <br>
       <form action="/Never_home/Luogo/ituoieventi" method="post">
-        <button type="submit" class="btn btn-dark btn-lg  border-primary text-primary" name="Listaeventi" value="L" style="width: 300px;	height: 50px;">
+        <button type="submit" class="btn btn-dark btn-lg  border-primary btn-block text-primary" name="Listaeventi" value="L" >
           I tuoi eventi
         </button>
       </form>
@@ -62,9 +66,17 @@
     <div class="col-sm-4">
       <div class="container ">
         {if $evento==null}
-          {else}
           <div class="list-group">
-            <a href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}/1" class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item  ">
+              <div class="d-flex w-200 justify-content-between" >
+                <h4 class="mb-1 text-primary" style="width: 400px"> Nessun evento creato</h4>
+              </div>
+            </a>
+            <img   class="img-fluid d-block w-200 " src="/Never_home/images/download.png" style="width: 400px;	height: 200px;" >
+          </div>
+        {else}
+          <div class="list-group">
+            <a href="/Never_home/Evento/HomeEvento/{$evento->getId()}/{$evento->getF()}/1" class="list-group-item ">
               <div class="d-flex w-100 justify-content-between" >
                 <h5 class="mb-1 text-primary"> {$evento->getNome()}</h5>
                 <small class="text-primary"> {$evento->getData()->format('d-m-Y')}</small>

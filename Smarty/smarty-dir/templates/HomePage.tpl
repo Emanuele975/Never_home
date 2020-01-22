@@ -109,8 +109,9 @@
 
 
 <div class="py-5 text-center " style="background-size:cover;">
-    <div class="text-primary badge-dark"   ><h1><strong>  Trova il tuo evento  </strong></h1></div>
-
+    <p class=" text-primary font-weight-bold" style="font-size: 30px" >
+        TROVA IL TUO EVENTO
+    </p>
 
 
 <div class="container">

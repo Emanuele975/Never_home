@@ -25,10 +25,11 @@ class Vlocale
         }
     }
 
-    public function HomeLocale($evento,$img)
+    public function HomeLocale($evento,$img,$nome)
     {
         $this->smarty->assign("evento",$evento);
         $this->smarty->assign("img",$img);
+        $this->smarty->assign("nome",$nome);
         $this->smarty->display("Locale.tpl");
     }
 
