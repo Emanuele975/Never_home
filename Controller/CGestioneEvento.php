@@ -1,6 +1,5 @@
 <?php
 
-
 class CGestioneEvento
 {
 
@@ -275,6 +274,20 @@ class CGestioneEvento
     {
         $pm = FPersistenceManager::getInstance();
         $pm->delete($id,"FEvento_g");
+    }
+
+    public function prossimieventipagamento()
+    {
+        $pm = FPersistenceManager::getInstance();
+        $eventi = $pm->prossimieventipagamento();
+        return $eventi;
+    }
+
+    public function prossimieventigratuiti()
+    {
+        $pm = FPersistenceManager::getInstance();
+        $eventi = $pm->prossimieventigratuiti();
+        return $eventi;
     }
 
 }

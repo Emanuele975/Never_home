@@ -170,4 +170,22 @@ class CGestioneUtente
         $view->ituoibigletti($biglietti, $eventi);
     }
 
+    public function prossimieventipagamento()
+    {
+        $controller = new CGestioneEvento();
+        $eventi = $controller->prossimieventipagamento();
+        $view = new VRicerca();
+        $view->mostraRisultati($eventi,"utente");
+    }
+
+    public function prossimieventigratuiti()
+    {
+        $controller = new CGestioneEvento();
+        $eventi = $controller->prossimieventigratuiti();
+        $view = new VRicerca();
+        $view->mostraRisultati($eventi,"utente");
+    }
+
+
+
 }

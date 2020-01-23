@@ -238,6 +238,21 @@ class FPersistenceManager
         return $eventi;
     }
 
+    public function prossimieventigratuiti()
+    {
+        $eventi = array();
+        $dat = FEvento_g::getInstance();
+        $eventi = $dat->loadprossimi();
+
+    }
+
+    public function prossimieventipagamento()
+    {
+        $eventi = array();
+        $dat = FEvento_g::getInstance();
+        $eventi = $dat->loadprossimi();
+    }
+
 
 
 }

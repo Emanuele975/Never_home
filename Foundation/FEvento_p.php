@@ -176,6 +176,28 @@ class FEvento_p extends FDatabase
         else return null;
     }
 
+    public function loadprossimi()
+    {
+        $sql="SELECT * FROM ".static::getTables()." ORDER BY data_e ;";
+        $result = parent::loadMultiple($sql);
+        $eventi = array();
+        if(($result!=null) && (count($eventi)<=5)){
+            foreach($result as $i) {
+                $datluogo = FLuogo::getInstance();
+                $luogo = $datluogo->loadById($i['id_luogo']);
+                $datcategoria = FCategoria::getInstance();
+                $categoria = $datcategoria->loadById($i['id_categoria']);
+                $evento = new EEvento_p($i['nome'], new DateTime( $i['data_e'] ) ,
+                    $luogo, $categoria, $i['descrizione'],$i['prezzo'],$i['posti_disponibili'],$i['posti_totali']);
+                $evento->setId($i['id']);
+                echo $evento->getF();
+                array_push($eventi, $evento);
+            }
+            return $eventi;
+        }
+        else return null;
+    }
+
 }
 
 ?>
