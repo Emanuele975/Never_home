@@ -11,7 +11,9 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand text-primary" href="/Never_home">NH</a>
+  <a href="/Never_home">
+    <img class="navbar-brand "  src="/Never_home/images/logo%20never%20home.png" style="width: 70px;height: 60px;" >
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -19,7 +21,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="btn btn-dark mx-2 btn-outline-primary" href="#">Account <span class="sr-only">(current)</span></a>
+        <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login">Account <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
