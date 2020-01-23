@@ -12,7 +12,9 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand text-primary" href="/Never_home">NH</a>
+  <a href="/Never_home">
+    <img class="navbar-brand "  src="/Never_home/images/logo%20never%20home.png" style="width: 70px;height: 60px;" >
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -50,6 +52,14 @@
       <div class="col-sm-6">
         <form action="/Never_home/Utente/FormCarta" method="post">
           <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block border-primary" name="Carta" value="T">Aggiungi carta</button>
+        </form>
+        <br>
+        <form action="/Never_home/Utente/FormCarta" method="post">
+          <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block border-primary" name="Carta" value="T">Eventi Gratis</button>
+        </form>
+        <br>
+        <form action="/Never_home/Utente/FormCarta" method="post">
+          <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block border-primary" name="Carta" value="T">Eventi a Pagamento</button>
         </form>
         <br>
         {if $pieno eq false}
