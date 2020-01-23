@@ -37,4 +37,11 @@ class VAmministratore
         $this->smarty->display("HomeAmministratore.tpl");
     }
 
+    public function GestioneEventi($eventi)
+    {
+        $this->smarty->assign("eventi",$eventi);
+        $this->smarty->display("GestioneEventi.tpl");
+
+    }
+
 }

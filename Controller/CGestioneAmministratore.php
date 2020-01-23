@@ -64,6 +64,14 @@ class CGestioneAmministratore
         $view->GestioneCommenti($commenti,$utenti,$num,$pieno);
     }
 
+    public function GestioneEventi()
+    {
+        $pm = FPersistenceManager::getInstance();
+        $eventi = $pm->EventidaEliminare();
+        $view = new VAmministratore();
+        $view->GestioneEventi($eventi);
+    }
+
     public function HomeAmministratore()
     {
         $view = new VAmministratore();
@@ -93,14 +101,14 @@ class CGestioneAmministratore
     {
         $pm = FPersistenceManager::getInstance();
         $pm->bannacommento($id);
-        $this->Home($num);
+        $this->GestioneCommenti($num);
     }
 
     public function sbloccacommento($id,$num)
     {
         $pm = FPersistenceManager::getInstance();
         $pm->sbloccacommento($id);
-        $this->Home($num);
+        $this->GestioneCommenti($num);
     }
 
 }

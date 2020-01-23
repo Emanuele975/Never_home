@@ -224,4 +224,11 @@ class FPersistenceManager
         return $biglietti;
     }
 
+    public function EventidaEliminare()
+    {
+        $db = FEvento_g::getInstance();
+        $eventi = $db->EventidaEliminare();
+        return $eventi;
+    }
+
 }

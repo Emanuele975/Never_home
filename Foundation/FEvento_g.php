@@ -155,5 +155,26 @@ class FEvento_g extends FDatabase{
         else return null;
     }
 
+    public function EventidaEliminare()
+    {
+        $sql="SELECT * FROM ".static::getTables()." ;";
+        $result = parent::loadMultiple($sql);
+        $eventi = array();
+        if(($result!=null)){
+            foreach($result as $i) {
+                $datluogo = FLuogo::getInstance();
+                $luogo = $datluogo->loadById($i['id_luogo']);
+                $datcategoria = FCategoria::getInstance();
+                $categoria = $datcategoria->loadById($i['id_categoria']);
+                $evento = new EEvento_g($i['nome'], new DateTime( $i['data_e'] ) ,
+                    $luogo, $categoria, $i['descrizione']);
+                $evento->setId($i['id']);
+                array_push($eventi, $evento);
+            }
+            return $eventi;
+        }
+        else return null;
+    }
+
 }
 ?>
