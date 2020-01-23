@@ -15,7 +15,6 @@ class CGestioneEvento
         $evento = $pm->Load($id,$classe);
         if($evento!=null)
         {
-            echo $evento->getId().$evento->getTipo();
             $immagine = $pm->getImgByidEvento($evento->getId(),$evento->getTipo());
             $commenti = $pm->caricacommenti($evento->getId(),$num);
             if ($commenti==null)
@@ -71,7 +70,7 @@ class CGestioneEvento
             $img = new EImmagine($dati['img'], $dati['tipo'], $id, 'EEvento_g');
             $pm->store($img);
             $view = new Vlocale();
-            $view->HomeLocale($evento, $img);
+            $view->HomeLocale($evento, $img, $evento->getNome());
         }
     }
 
@@ -128,7 +127,6 @@ class CGestioneEvento
                 $view->mostraRisultati($eventi,"admin");
             else
             {
-                echo "nell else";
                 $view->mostraRisultati($eventi,null);
             }
 
@@ -231,7 +229,6 @@ class CGestioneEvento
             }
             else
             {
-                echo "nell else".$sessione->getposti()."++++";
                 $pm->incrementaposti($id_evento,$sessione->getposti());
                 $msg2 = "si sono verificati problemi nell acquisto";
                 $view2 = new VError();

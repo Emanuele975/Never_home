@@ -21,7 +21,6 @@ class FPersistenceManager
     }
 
     public function delete ($key,$f){
-        echo $f;
         $dat=$f::getInstance();
         $dat->delete($key);
 
@@ -240,17 +239,17 @@ class FPersistenceManager
 
     public function prossimieventigratuiti()
     {
-        $eventi = array();
         $dat = FEvento_g::getInstance();
         $eventi = $dat->loadprossimi();
+        return $eventi;
 
     }
 
     public function prossimieventipagamento()
     {
-        $eventi = array();
-        $dat = FEvento_g::getInstance();
+        $dat = FEvento_p::getInstance();
         $eventi = $dat->loadprossimi();
+        return $eventi;
     }
 
 
