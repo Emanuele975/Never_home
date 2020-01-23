@@ -48,33 +48,20 @@
         <div class="panel-body text-dark">
           <br>
           <ul class="media-list">
-            {section name=commento loop=$commenti}
+            {section name=evento loop=$eventi}
               <li class="media py-2">
 
                 <div class="media-body px-2 text-light">
-                  <strong class="text-primary"><b>{$utenti[commento]->getUsername()}</b></strong>
-                {if $commenti[commento]->getBannato()==1}
-                  <p> il commento è stato bannato  </p>
+                  <strong class="text-primary"><b>{$eventi[evento]->getNome()}</b></strong>
+                  <p> {$eventi[evento]->getDescrizione()} </p>
                 </div>
                 <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/sbloccacommento/{$commenti[commento]->getId()}/{$num}">
-                  <button class="btn btn-primary my-2" type="submit" > sblocca </button>
+                  <button class="btn btn-primary my-2" type="submit" > Elimina </button>
                 </form>
-                {else}
-                  <p> {$commenti[commento]->getTesto()}  </p>
-                </div>
-                <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/bannacommento/{$commenti[commento]->getId()}/{$num}  ">
-                  <button class="btn btn-primary my-2" type="submit" > banna </button>
-                </form>
-                {/if}
               </li>
             {/section}
           </ul>
-        {if $pieno==false}
-        <form method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/Home/{$num+1}">
-          <button class="btn btn-outline-primary" type="submit">Carica altri commenti<br></button>
-        </form>
-        {else}
-        {/if}
+
         </div>
       </div>
     </div>
