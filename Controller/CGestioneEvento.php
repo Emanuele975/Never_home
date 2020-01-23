@@ -3,12 +3,21 @@
 class CGestioneEvento
 {
 
+    /**
+     * @param $tipo
+     *
+     */
     public function FormEvento($tipo)
     {
         $view = new Vlocale();
         $view->mostraformevento($tipo);
     }
 
+    /**
+     * @param $id
+     * @param $classe
+     * @param $num
+     */
     public function HomeEvento($id,$classe,$num)
     {
         $pm = FPersistenceManager::getInstance();
@@ -38,8 +47,17 @@ class CGestioneEvento
             $view2 = new VError();
             $view2->mostraErrore($msg,$path);
         }
+        $sessione = Session::getInstance();
+        if($sessione->isLoggedUtente())
+            $tipo = "utente";
+        else if ($sessione->isLoggedLuogo())
+            $tipo = "luogo";
+        else if ($sessione->isLoggedAdmin())
+            $tipo = "admin";
+        else
+            $tipo = null;
         $view = new VEvento();
-        $view->Home($evento,$immagine,$commenti,$utenti,$num,$pieno);
+        $view->Home($evento,$immagine,$commenti,$utenti,$num,$pieno,$tipo);
     }
 
     public function NuovoEventoGratis($tipo){
