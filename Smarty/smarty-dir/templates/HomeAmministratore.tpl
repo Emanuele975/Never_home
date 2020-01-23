@@ -40,12 +40,12 @@
  <div class="col-sm-1"></div>
   <div class="col-sm-5">
     <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/GestioneCommenti/1">
-        <button class="btn btn-outline-primary" type="submit" style="width: 300px; height: 100px;font-size: medium"  href=" ">Gestione Commenti</button>
+        <button class="btn btn-outline-primary" type="submit" style="width: 300px; height: 100px;font-size: medium" >Gestione Commenti</button>
     </form>
   </div>
   <div class="col-sm-5">
-      <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/GestioneEventi/1">
-          <button class="btn btn-outline-primary" style="width: 300px;height: 100px; font-size: medium" href="#">Gestione Eventi</button>
+      <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Amministratore/GestioneEventi">
+          <button class="btn btn-outline-primary" style="width: 300px;height: 100px; font-size: medium">Gestione Eventi</button>
       </form>
   </div>
   <div class="col-sm-1"></div>

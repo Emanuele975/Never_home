@@ -140,6 +140,13 @@ class CGestioneEvento
         }
     }
 
+    public function CercadaNomeGratis($nome)
+    {
+        $pm = FPersistenceManager::getInstance();
+        $eventi = $pm->EventiForAdmin($nome);
+        return $eventi;
+    }
+
     public function FormAcquisto()
     {
         $sessione = Session::getInstance();
@@ -262,6 +269,12 @@ class CGestioneEvento
             $path="/Never_home";
             $view2->mostraErrore("utente non loggato",$path);
         }
+    }
+
+    public function EliminaEvento($id)
+    {
+        $pm = FPersistenceManager::getInstance();
+        $pm->delete($id,"FEvento_g");
     }
 
 }

@@ -21,7 +21,7 @@ class FPersistenceManager
     }
 
     public function delete ($key,$f){
-
+        echo $f;
         $dat=$f::getInstance();
         $dat->delete($key);
 
@@ -230,5 +230,14 @@ class FPersistenceManager
         $eventi = $db->EventidaEliminare();
         return $eventi;
     }
+
+    public function EventiForAdmin($nome)
+    {
+        $db = FEvento_g::getInstance();
+        $eventi = $db->EventiForAdmin($nome);
+        return $eventi;
+    }
+
+
 
 }

@@ -61,7 +61,16 @@ class FEvento_g extends FDatabase{
         }
         else return null;
     }
-    
+
+    public function delete($id)
+    {
+        $sql="DELETE FROM ".static::getTables()." WHERE id= '".$id."' ;";
+        if(parent::delete($sql))
+            return true;
+        else
+            return false;
+    }
+
     public function delete_event($nome, $data){
         $sql="DELETE FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e= '".$data."' ;";
         if(parent::delete($sql)) 
@@ -174,6 +183,28 @@ class FEvento_g extends FDatabase{
             return $eventi;
         }
         else return null;
+    }
+
+    public function EventiForAdmin($nome)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE nome LIKE '%".$nome."%' ;";
+        $result = parent::loadMultiple($sql);
+        $eventi = array();
+        if(($result!=null)){
+            foreach($result as $i) {
+                $datluogo = FLuogo::getInstance();
+                $luogo = $datluogo->loadById($i['id_luogo']);
+                $datcategoria = FCategoria::getInstance();
+                $categoria = $datcategoria->loadById($i['id_categoria']);
+                $evento = new EEvento_g($i['nome'], new DateTime( $i['data_e'] ) ,
+                    $luogo, $categoria, $i['descrizione']);
+                $evento->setId($i['id']);
+                array_push($eventi, $evento);
+            }
+            return $eventi;
+        }
+        else return null;
+
     }
 
 }

@@ -111,6 +111,23 @@ class CGestioneAmministratore
         $this->GestioneCommenti($num);
     }
 
+    public function EliminaEvento($id)
+    {
+        $controller = new CGestioneEvento();
+        $controller->EliminaEvento($id);
+        $this->GestioneEventi();
+    }
+
+    public function CercadaNomeGratis()
+    {
+        $view = new VRicerca();
+        $nome = $view->getNomericerca();
+        $controller = new CGestioneEvento();
+        $eventi = $controller->CercadaNomeGratis($nome);
+        $view2 = new VAmministratore();
+        $view2->GestioneEventi($eventi);
+    }
+
 }
 
 
