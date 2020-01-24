@@ -26,6 +26,10 @@
 
     include_once 'Smarty/smarty-libs/libs/Smarty.class.php';
 
+    include_once 'Installation.php';
+
+    include_once 'confSmarty.php';
+
     spl_autoload_register('my_autoloader');
 
 ?>

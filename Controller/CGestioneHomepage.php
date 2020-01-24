@@ -3,6 +3,10 @@
 class CGestioneHomepage
 {
 
+    /**
+     * metodo che imposta l homepage del sito
+     * @throws Exception
+     */
     public function impostaPagina()
     {
         $pm = FPersistenceManager::getInstance();
@@ -21,7 +25,6 @@ class CGestioneHomepage
             }
         }
         $sessione= Session::getInstance();
-
         if($sessione->isLoggedUtente())
             $view->Home($eventi,$imgs,"utente");
         else if ($sessione->isLoggedLuogo())
@@ -31,16 +34,5 @@ class CGestioneHomepage
         else
             $view->Home($eventi,$imgs,null);
     }
-
-    public function login(){
-        $view=new Vlogin();
-        $view->mostraFormLogin();
-    }
-
-    public function registrazione(){
-        $view=new VRegistrazione();
-        $view->registrazione();
-    }
-
 
 }

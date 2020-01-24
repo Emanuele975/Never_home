@@ -1,8 +1,13 @@
 <?php
-include 'config.inc.php';
 include_once "include.php";
-$fc = new CFrontController();
-$fc->run();
+if(Installation::VerifyInstallation()) {
+    $fc = new CFrontController();
+    $fc->run();
+}
+else
+{
+    Installation::begin();
+}
 
 
 

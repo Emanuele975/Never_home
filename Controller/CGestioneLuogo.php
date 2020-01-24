@@ -4,11 +4,9 @@
 class CGestioneLuogo
 {
 
-    public function Form(){
-        $view = new VNuovoEventoGratis();
-        $view->MostraForm();
-    }
-
+    /**
+     * metodo che mostra la form del login o la home se sono già loggato
+     */
     public function Login(){
         $sessione = Session::getInstance();
         if($sessione->isLoggedLuogo()){
@@ -20,6 +18,9 @@ class CGestioneLuogo
         }
     }
 
+    /**
+     * metodo che permette il login del luogo
+     */
     public function Entra(){
         $view = new VLogin();
         $credenziali = $view->recuperadatiLogin();
@@ -40,6 +41,9 @@ class CGestioneLuogo
         }
     }
 
+    /**
+     * metodo che permette il logout del luogo
+     */
     public function Logout()
     {
         $sessione = Session::getInstance();
@@ -50,6 +54,9 @@ class CGestioneLuogo
         header('Location: /Never_home');
     }
 
+    /**
+     * metodo che mostra la home del luogo
+     */
     public function Home()
     {
         $sessione = Session::getInstance();
@@ -64,12 +71,18 @@ class CGestioneLuogo
         $view->HomeLocale($evento,$img,$luogo->getNome());
     }
 
+    /**
+     * metodo che mostra la form per la registrazione
+     */
     public function FormRegistrazione()
     {
         $view = new VRegistrazione();
         $view->FormLocale();
     }
 
+    /**
+     * metodo per la registrazione del luogo
+     */
     public function Registrazione()
     {
         $view = new VRegistrazione();
@@ -105,6 +118,9 @@ class CGestioneLuogo
         }
     }
 
+    /**
+     * metodo che ritorna tutti gli eventi creati dal locale
+     */
     public function ituoieventi()
     {
         $sessione = Session::getInstance();
