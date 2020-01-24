@@ -5,6 +5,9 @@ class VAcquisto
 {
     private $smarty;
 
+    /**
+     * VAcquisto constructor.
+     */
     public function __construct()
     {
         $this->smarty = new Smarty();
@@ -14,6 +17,12 @@ class VAcquisto
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
+    /**
+     * mostra la form per l acquisto
+     * @param $evento evento di cui voglio vedere la form
+     * @param $img immagine dell evento
+     * @throws SmartyException
+     */
     public function FormAcquisto($evento,$img)
     {
         $this->smarty->assign("evento",$evento);
@@ -21,6 +30,12 @@ class VAcquisto
         $this->smarty->display("FormAcquisto1.tpl");
     }
 
+    /**
+     * mostra la form per il pagamento
+     * @param $prezzo prezzo da pagare
+     * @param $id id dell evento da acquistare
+     * @throws SmartyException
+     */
     public function FormPagamento($prezzo,$id)
     {
         $this->smarty->assign("id_evento",$id);
@@ -28,6 +43,10 @@ class VAcquisto
         $this->smarty->display("FormAcquisto2.tpl");
     }
 
+    /**
+     * prendo i dati dalla form
+     * @return array array contenente i dati presi dalla form
+     */
     public function getDati()
     {
         $dati = array();
@@ -82,6 +101,11 @@ class VAcquisto
         return $dati;
     }
 
+    /**
+     * template che ci mostra il messaggio di riuscita o non dell acquisto
+     * @param $msg messaggio da mostrare nel template
+     * @throws SmartyException
+     */
     public function AcquistoEffettuato($msg)
     {
         $this->smarty->assign("msg",$msg);

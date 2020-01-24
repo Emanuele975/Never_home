@@ -4,6 +4,9 @@ class FBiglietto extends FDatabase{
 
     protected static $instance= null;
 
+    /**
+     * FBiglietto constructor.
+     */
     protected function __construct()
     {
         parent::__construct();
@@ -12,6 +15,11 @@ class FBiglietto extends FDatabase{
 
     }
 
+    /**
+     * metodo che effettua il bind
+     * @param $stmt
+     * @param EBiglietto $biglietto
+     */
     public static function bind($stmt, EBiglietto $biglietto)
     {
         $stmt->bindValue(':prezzo', $biglietto->getPrezzo());
@@ -21,6 +29,10 @@ class FBiglietto extends FDatabase{
         $stmt->bindValue(':id_utente', $biglietto->getUtente()->getId(), PDO::PARAM_INT);
     }
 
+    /**
+     * metodo che ritorna l istanza di FBiglietto
+     * @return |null
+     */
     public static function getInstance()
     {
         if (static::$instance == null) {
@@ -29,16 +41,27 @@ class FBiglietto extends FDatabase{
         return static::$instance;
     }
 
+    /**
+     * metodo che ritorna il nome della tabella
+     * @return string
+     */
     public function getTables()
     {
         return $this->table;
     }
 
+    /**
+     * metodo che ritorna i campi della tabella
+     * @return string
+     */
     public function getValues()
     {
         return $this->values;
     }
 
+    /**
+     * metodo per caricare un biglietto nel db
+     */
     public function store1(EBiglietto $biglietto)
     {
         $sql = "INSERT INTO ".static::getTables()." VALUES ".static::getValues().";";
@@ -50,6 +73,11 @@ class FBiglietto extends FDatabase{
             return null;
     }
 
+    /**
+     * metodo per eliminare un biglietto dal db
+     * @param $id
+     * @return bool
+     */
     public function delete($id){
         $sql= " DELETE FROM " . static::getTables() . " WHERE id= '" . $id . "' ;";
         if(parent::delete($sql))
@@ -58,6 +86,11 @@ class FBiglietto extends FDatabase{
             return false;
     }
 
+    /**
+     * metodo per caricare un biglietto tramite l id
+     * @param $id
+     * @return EBiglietto|null
+     */
     public function loadById($id){
         $sql=" SELECT * FROM ".static::getTables(). "  WHERE id= '" .$id. "' ;";
         $result= parent::loadSingle($sql);
@@ -76,6 +109,11 @@ class FBiglietto extends FDatabase{
         else return  null;
     }
 
+    /**
+     * metodo per caricare i primi 3 biglietti di un utente
+     * @param $id
+     * @return array|null array di biglietti
+     */
     public function loadbiglietti($id)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE id_utente = '" .$id. "' ; ";
@@ -102,6 +140,11 @@ class FBiglietto extends FDatabase{
         else return null;
     }
 
+    /**
+     * metodo per caricare tutti i biglietti di un utente
+     * @param $id
+     * @return array
+     */
     public function allbiglietti($id)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE id_utente = '" .$id. "' ; ";

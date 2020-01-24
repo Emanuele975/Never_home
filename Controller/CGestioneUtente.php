@@ -3,6 +3,9 @@
 
 class CGestioneUtente
 {
+    /**
+     * metodo che mostra la form del login o la home se sono già loggato
+     */
     public function Login()
     {
         $sessione = Session::getInstance();
@@ -16,6 +19,9 @@ class CGestioneUtente
         }
     }
 
+    /**
+     * metodo che permette il login dell utente
+     */
     public function Entra(){
         $view = new VLogin();
         $credenziali = $view->recuperadatiLogin();
@@ -35,12 +41,18 @@ class CGestioneUtente
         }
     }
 
+    /**
+     * metodo che ritorna la form per la registrazione dell utente
+     */
     public function FormRegistrazione()
     {
         $view = new VRegistrazione();
         $view->FormUtente();
     }
 
+    /**
+     * metodo per la registrazione dell utente
+     */
     public function Registrazione()
     {
         $view = new VRegistrazione();
@@ -76,6 +88,9 @@ class CGestioneUtente
 
     }
 
+    /**
+     * metodo che permette il logout del luogo
+     */
     public function Logout()
     {
         $sessione = Session::getInstance();
@@ -86,12 +101,19 @@ class CGestioneUtente
         header('Location: /Never_home');
     }
 
+    /**
+     * metodo che mostra la form della carta di credito
+     */
     public function FormCarta()
     {
         $view = new VCarta();
         $view->FormCarta();
     }
 
+    /**
+     * metodo che permette l aggiunta di una carta di credito
+     * @throws Exception
+     */
     public function AggiungiCarta()
     {
         $view = new VCarta();
@@ -123,6 +145,10 @@ class CGestioneUtente
 
     }
 
+    /**
+     * metodo che setta la home dell utente
+     * @param $utente utente di cui voglio settare la home
+     */
     public function setHomeUtente($utente)
     {
         $pm = FPersistenceManager::getInstance();
@@ -148,6 +174,9 @@ class CGestioneUtente
         $view->HomeUtente($utente, $biglietti, $eventi, $pieno);
     }
 
+    /**
+     * metodo che ritorna tutti i biglietti acquistati dall utente
+     */
     public function ituoibiglietti()
     {
         $pm = FPersistenceManager::getInstance();
@@ -170,6 +199,9 @@ class CGestioneUtente
         $view->ituoibigletti($biglietti, $eventi);
     }
 
+    /**
+     * metodo che ritorna i prossimi 5 eventi a pagamento
+     */
     public function prossimieventipagamento()
     {
         $controller = new CGestioneEvento();
@@ -178,6 +210,9 @@ class CGestioneUtente
         $view->mostraRisultati($eventi,"utente");
     }
 
+    /**
+     * metodo che ritorna i prossimi 5 eventi gratuiti
+     */
     public function prossimieventigratuiti()
     {
         $controller = new CGestioneEvento();

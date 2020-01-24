@@ -4,8 +4,8 @@ class CGestioneEvento
 {
 
     /**
-     * @param $tipo
-     *
+     * Ritorna la form per l evento gratuito o l evento a pagamento
+     * @param $tipo specifica il tipo di evento
      */
     public function FormEvento($tipo)
     {
@@ -14,9 +14,10 @@ class CGestioneEvento
     }
 
     /**
-     * @param $id
-     * @param $classe
-     * @param $num
+     * Ritorna la home dell evento
+     * @param $id id dell evento
+     * @param $classe specifica il tipo di evento
+     * @param $num intero che serve per il caricamento dei commenti
      */
     public function HomeEvento($id,$classe,$num)
     {
@@ -60,6 +61,11 @@ class CGestioneEvento
         $view->Home($evento,$immagine,$commenti,$utenti,$num,$pieno,$tipo);
     }
 
+    /**
+     * metodo che crea un nuovo evento gratuito
+     * @param $tipo parametro che serve per il path in caso di errore
+     * @throws Exception
+     */
     public function NuovoEventoGratis($tipo){
         $view = new VNuovoEventoGratis();
         $dati = $view->recuperaDatiEvento();
@@ -92,6 +98,11 @@ class CGestioneEvento
         }
     }
 
+    /**
+     * metodo che crea un nuovo evento a pagamento
+     * @param $tipo parametro che serve per il path in caso di errore
+     * @throws Exception
+     */
     public function NuovoEventoPagamento($tipo)
     {
         $view = new VNuovoEventoPagamento();
@@ -128,6 +139,9 @@ class CGestioneEvento
         }
     }
 
+    /**
+     * metodo che serve per la ricerca degli eventi dalla navbar e mostra i risultati
+     */
     public function CercadaNome()
     {
         if(($_SERVER['REQUEST_METHOD']=="POST")){
@@ -135,7 +149,6 @@ class CGestioneEvento
             $nome = $view->getNomericerca(); //nome inserito nella barra di ricerca
             $pm = FPersistenceManager::getInstance();
             $eventi = $pm->EventoByNav($nome);
-            //echo $eventi[0]->getCategoria();
             $sessione= Session::getInstance();
             if($sessione->isLoggedUtente())
                 $view->mostraRisultati($eventi,"utente");
@@ -155,6 +168,11 @@ class CGestioneEvento
         }
     }
 
+    /**
+     * metodo che serve per la ricerca degli eventi gratuiti
+     * @param $nome parametro della ricerca
+     * @return mixed ritorno un array di eventi
+     */
     public function CercadaNomeGratis($nome)
     {
         $pm = FPersistenceManager::getInstance();
@@ -162,6 +180,9 @@ class CGestioneEvento
         return $eventi;
     }
 
+    /**
+     * metodo che serve per mostrare la form di acquisto
+     */
     public function FormAcquisto()
     {
         $sessione = Session::getInstance();
@@ -183,6 +204,9 @@ class CGestioneEvento
         }
     }
 
+    /**
+     * metodo che serve per mostrare la form di pagamento
+     */
     public function FormPagamento()
     {
         $sessione = Session::getInstance();
@@ -219,6 +243,11 @@ class CGestioneEvento
         }
     }
 
+    /**
+     * metodo per completare l acquisto di un biglietto
+     * @param $id_evento id dell evento di cui voglio acquistare il biglietto
+     * @throws Exception
+     */
     public function Acquisto($id_evento)
     {
         $view = new VAcquisto();
@@ -264,6 +293,11 @@ class CGestioneEvento
 
     }
 
+    /**
+     * metodo per la creazione di un nuovo commento
+     * @param $id id dell evento a cui appartiene il commento
+     * @param $classe tipo di evento a cui appartiene il commento
+     */
     public function newcommento($id,$classe)
     {
         $sessione = Session::getInstance();
@@ -285,12 +319,20 @@ class CGestioneEvento
         }
     }
 
+    /**
+     * metodo per l eliminazione di un evento
+     * @param $id id dell evento da eliminare
+     */
     public function EliminaEvento($id)
     {
         $pm = FPersistenceManager::getInstance();
         $pm->delete($id,"FEvento_g");
     }
 
+    /**
+     * metodo che ritorna i prossimi 5 eventi a pagamento
+     * @return mixed array di eventi
+     */
     public function prossimieventipagamento()
     {
         $pm = FPersistenceManager::getInstance();
@@ -298,6 +340,10 @@ class CGestioneEvento
         return $eventi;
     }
 
+    /**
+     * metodo che ritorna i prossimi 5 eventi gratuiti
+     * @return mixed array di eventi
+     */
     public function prossimieventigratuiti()
     {
         $pm = FPersistenceManager::getInstance();

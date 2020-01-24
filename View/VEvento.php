@@ -5,6 +5,9 @@ class VEvento
 {
     private $smarty;
 
+    /**
+     * VEvento constructor.
+     */
     public function __construct()
     {
         $this->smarty = new Smarty();
@@ -14,13 +17,17 @@ class VEvento
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
-    public function Acquista()
-    {
-        if (isset($_POST['name']) && $_POST["name"] = 'acquista') {
-            $this->smarty->display("FormAcquisto1.tpl");
-        }
-    }
-
+    /**
+     * metodo che mostra la home dell evento
+     * @param $evento evento che voglio visualizzare
+     * @param $immagine immagine dell evento
+     * @param $commenti commenti dell evento
+     * @param $utenti utenti che hanno rilasciato i commenti
+     * @param $num parametro per la corretta visualizzazione dei commenti
+     * @param $pieno parametro per la corretta visualizzazione dei commenti
+     * @param $utente tipo di utente che visualizza l evento
+     * @throws SmartyException
+     */
     public function Home($evento,$immagine,$commenti,$utenti,$num,$pieno,$utente)
     {
         $this->smarty->assign("num",$num);
@@ -33,6 +40,10 @@ class VEvento
         $this->smarty->display("Evento.tpl");
     }
 
+    /**
+     * metodo che prende il testo del commento inserito
+     * @return array commento inserito
+     */
     public function getCommento()
     {
         $dati = array();
