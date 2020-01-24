@@ -10,7 +10,11 @@ class FEvento_g extends FDatabase{
         $this->table = "evento_g";
         $this->values="(:nome,:data_e,:id_luogo,:id_categoria,:descrizione,:id)";
     }
-    
+
+    /**metodo che fa il bind
+     * @param $stmt
+     * @param EEvento_g $evento
+     */
     public static function bind($stmt,EEvento_g $evento){
         $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':nome', $evento->getNome(), PDO::PARAM_STR);
@@ -20,22 +24,34 @@ class FEvento_g extends FDatabase{
         $stmt->bindValue(':descrizione', $evento->getDescrizione(), PDO::PARAM_STR);
         
     }
-    
+
+    /**prende un'istanza dal database
+     * @return |null
+     */
     public static function getInstance(){ 
         if(static::$instance==null){  
             static::$instance=new FEvento_g(); 
         }
         return static::$instance;
     }
-    
+
+    /**ritorna il nome della tabella
+     */
     public function getTables(){
         return $this->table;
     }
-    
+
+    /** ritorna il nome degli attributi
+     * @return string
+     */
     public function getValues(){
         return $this->values;
     }
-    
+
+    /**carica un oggetto nel database
+     * @param EEvento_g $evento
+     * @return string|null
+     */
     public function store1(EEvento_g $evento){
         $sql = "INSERT INTO ".static::getTables()." VALUES ".static::getValues().";";
         $id = parent::store($sql,'FEvento_g',$evento);
@@ -44,7 +60,12 @@ class FEvento_g extends FDatabase{
         else 
             return null;
     }
-    
+
+    /** carica gli eventi gratis in base al loro id
+     * @param $id
+     * @return EEvento_g|null
+     * @throws Exception
+     */
     public function loadById($id)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE id= '".$id."' ;";
@@ -62,6 +83,10 @@ class FEvento_g extends FDatabase{
         else return null;
     }
 
+    /**elimina un oggetto dal database in base al suo id
+     * @param $id
+     * @return bool
+     */
     public function delete($id)
     {
         $sql="DELETE FROM ".static::getTables()." WHERE id= '".$id."' ;";
@@ -71,6 +96,11 @@ class FEvento_g extends FDatabase{
             return false;
     }
 
+    /**elimina un evento dal database, dati nome e data
+     * @param $nome
+     * @param $data
+     * @return bool
+     */
     public function delete_event($nome, $data){
         $sql="DELETE FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e= '".$data."' ;";
         if(parent::delete($sql)) 
@@ -79,6 +109,11 @@ class FEvento_g extends FDatabase{
             return false;
     }
 
+    /** carica un evento dal database in base all'id del luogo
+     * @param $id
+     * @return EEvento_g|null
+     * @throws Exception
+     */
     public function loadByLuogo($id)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE id_luogo= '".$id."' ;";
@@ -95,6 +130,11 @@ class FEvento_g extends FDatabase{
         else return null;
     }
 
+    /**carica un evento dal database in base al nome
+     * @param $nome
+     * @return EEvento_g|null
+     * @throws Exception
+     */
     public function loadByNome($nome)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' ;";
@@ -133,6 +173,11 @@ class FEvento_g extends FDatabase{
         else return null;
     }
 
+    /**metodo che verifica se esiste un evento
+     * @param $nome
+     * @param $data
+     * @return bool
+     */
     public function esisteevento($nome,$data)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e = '".$data->format('Y-m-d')."' ;";
@@ -143,6 +188,11 @@ class FEvento_g extends FDatabase{
             return true;
     }
 
+    /**carica gli eventi gratis relativi all'id del luogo
+     * @param $id
+     * @return array|null
+     * @throws Exception
+     */
     public function ituoieventi($id)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE id_luogo = ".$id." ;";
@@ -164,6 +214,10 @@ class FEvento_g extends FDatabase{
         else return null;
     }
 
+    /**metodo che ritorna un array di eventi da eliminare
+     * @return array|null
+     * @throws Exception
+     */
     public function EventidaEliminare()
     {
         $sql="SELECT * FROM ".static::getTables()." ;";

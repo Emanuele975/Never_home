@@ -6,12 +6,19 @@ class FCommento extends FDatabase
 
     protected static $instance=null;
 
+    /**construct
+     * FCommento constructor.
+     */
     protected function __construct(){
         parent::__construct();
         $this->table = "commento_p";
         $this->values="(:testo,:id,:id_utente,:id_evento,:bannato)";
     }
 
+    /**metodo che fa il bind
+     * @param $stmt
+     * @param ECommento $commento
+     */
     public static function bind($stmt,ECommento $commento)
     {
         $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
@@ -21,6 +28,9 @@ class FCommento extends FDatabase
         $stmt->bindValue(':bannato', $commento->getBannato(), PDO::PARAM_INT);
     }
 
+    /**metodo che prende l'istanza di FCommento
+     * @return |null
+     */
     public static function getInstance(){
         if(static::$instance==null){
             static::$instance=new FCommento();
@@ -65,6 +75,10 @@ class FCommento extends FDatabase
         else return null;
     }
 
+    /** funzione che dato un id elimina un commento
+     * @param $id
+     * @return bool
+     */
     public function delete1($id)
     {
         $sql = "DELETE FROM ".$this->table." WHERE id= '".$id."' ;";
@@ -75,6 +89,11 @@ class FCommento extends FDatabase
             return false;
     }
 
+    /** funzione che carica tutti i commenti sotto un evento, anche quando clicchiamo sul pulsante per caricare altri commenti
+     * @param $id
+     * @param $num
+     * @return array|null
+     */
     public function caricacommenti($id,$num)
     {
         $sql = "SELECT * FROM " . $this->table . " WHERE id_evento = '" . $id ."' ;";
@@ -103,6 +122,12 @@ class FCommento extends FDatabase
         else return null;
     }
 
+
+    /** funzione che restituisce un array di commenti da bannare
+
+     * @param $num
+     * @return array
+     */
     public function commentidabannare($num)
     {
         $sql = "SELECT * FROM " . $this->table . " ;";
@@ -132,6 +157,10 @@ class FCommento extends FDatabase
         return $commenti;
     }
 
+    /** funzione che ritorna un array di testi di commenti
+     * @param $testo
+     * @return array|null
+     */
     public function testocommento($testo)
     {
         $sql = "SELECT * FROM " . $this->table . " WHERE testo LIKE '%".$testo."%' ;";
@@ -154,12 +183,18 @@ class FCommento extends FDatabase
         else return null;
     }
 
+    /** funzione che dato un id banna quel commento
+     * @param $id
+     */
     public function banna($id)
     {
         $sql = "UPDATE " . $this->table . " SET bannato = 1 WHERE id = '" .$id. "';";
         $result = parent::update($sql);
     }
 
+    /** funzione che dato un id sblocca quel commento
+     * @param $id
+     */
     public function sblocca($id)
     {
         $sql = "UPDATE " . $this->table . " SET bannato = 0 WHERE id = '" .$id. "';";

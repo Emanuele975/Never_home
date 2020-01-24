@@ -69,6 +69,10 @@ class FImmagine extends FDatabase
         } else return null;
     }
 
+    /** funzione di caricamento dell'immagine
+     * @param EImmagine $img
+     * @return string|null
+     */
     public function store1(EImmagine $img)
     {
         $sql = "INSERT INTO ".static::getTables()." VALUES ".static::getValues().";" ;
@@ -87,6 +91,11 @@ class FImmagine extends FDatabase
         return $this->values;
     }
 
+    /** funzione che ritorna, dati id e classe, l'immagine (o null)
+     * @param $id
+     * @param $classe
+     * @return EImmagine|null
+     */
     public function getImgByidEvento($id,$classe)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE id_esterno= '".$id."' 

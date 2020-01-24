@@ -21,32 +21,7 @@
         </a>
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn  btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn  btn-outline-primary mx-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Login
-                        </button>
-                        <div class="dark dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dark dropdown-item" href="/Never_home/Utente/Login">Login utente</a>
-                            <a class="dark dropdown-item" href="/Never_home/Luogo/Login">Login locale</a>
-                            <a class="dark dropdown-item" href="/Never_home/Amministratore/Login/1">Login Amministratore</a>
-
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <ul class="navbar-nav mr-auto"></ul>
             <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
                 <input class="form-control mr-sm-2 "  type="search" placeholder="Search" aria-label="Search" name="nomericerca">
                 <button class="btn btn-primary"   type="submit">Search</button>
@@ -61,17 +36,7 @@
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn  btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
+
                 <li>
                     <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Utente/Login" role="button">Account</a>
                 </li>
@@ -90,17 +55,7 @@
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
+
                 <li>
                     <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Login" role="button">Account</a>
                 </li>
@@ -119,17 +74,7 @@
 
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="btn-group btn-dark" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-outline-primary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Registrazione
-                        </button>
-                        <div class=" dark dropdown-menu " aria-labelledby="btnGroupDrop1">
-                            <a class=" dropdown-item " href="/Never_home/Utente/FormRegistrazione">Registrazione utente</a>
-                            <a class=" dropdown-item" href="/Never_home/Luogo/FormRegistrazione">Registrazione locale</a>
-                        </div>
-                    </div>
-                </li>
+               
                 <li>
                     <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Amministratore/Login/1" role="button">Account</a>
                 </li>
@@ -159,4 +104,3 @@
 </body>
 
 </html>
-<!-- /Never_home/Evento/HomeEvento/{$eventi[evento]->getId()}/{$eventi[evento]->getF()}/1     DA METTERE DENTRO HREF-->

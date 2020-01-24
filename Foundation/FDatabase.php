@@ -9,7 +9,10 @@ class FDatabase
     protected $db;
     protected $table;
     protected $values;
-    
+
+    /**metodo costruttore del database
+     * FDatabase constructor.
+     */
     protected function __construct()
     {                              
         try{
@@ -87,6 +90,10 @@ class FDatabase
         }
     }
 
+    /**funzione che elimina un oggetto dal database
+     * @param $sql
+     * @return bool
+     */
     public function delete($sql){
         try{
             $this->db->beginTransaction();
@@ -104,6 +111,10 @@ class FDatabase
         }
     }
 
+    /** metodo che aggiorna una determinata riga nel database
+     * @param $sql
+     * @return bool
+     */
     public function update($sql){
         try{
               $this->db->beginTransaction();
@@ -121,6 +132,10 @@ class FDatabase
         }
     }
 
+    /**metodo che vede se esiste una detrminata riga nel database
+     * @param $sql
+     * @return array|null
+     */
     public function exist($sql){
         try{
             $stmt=$this->db->prepare($sql);
@@ -137,6 +152,9 @@ class FDatabase
         }
     }
 
+    /**chiude la connessione del database
+     *
+     */
     public function closeDbConnection(){
         static::$instance=null;
     }

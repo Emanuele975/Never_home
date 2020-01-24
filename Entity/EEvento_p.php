@@ -37,15 +37,25 @@
         function getPosti_totali(){
             return $this->posti_totali;
         }
-        
+
+        /** ritorna il numero dei posti disponibili
+         * @param int $num
+         * @return bool
+         */
         function disponibilita(int $num){
             return $this->posti_disponibili>=$num;
         }
-        
+
+        /** sapendo quanti biglietti ho acquistato decremento quel numero dai posti disponibili
+         * @param int $num
+         */
         function decrementa(int $num){
             $this->posti_disponibili = $this->posti_disponibili-$num;
         }
-        
+
+        /** ritorna il numero totali dei posti
+         * @return int
+         */
         function numerobiglietto(){
             return $this->posti_totali-$this->posti_disponibili;
         }
