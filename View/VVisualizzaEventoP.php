@@ -13,6 +13,10 @@ class VVisualizzaEventoP
         $this->smarty->setConfigDir($GLOBALS["ROOT"].'/Smarty/smarty-dir/configs');
     }
 
+    /** questa funzione è responsabile della visualizzazione di un evento a pagamento
+     * @param $evento
+     * @throws SmartyException
+     */
     public function visualizza($evento){
         $this->smarty->assign("evento",$evento);
         $this->smarty->display("Evento.tpl");

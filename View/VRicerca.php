@@ -14,6 +14,9 @@ class VRicerca
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
+    /** questa funzione ritorna il nome inserito nella barra di ricerca
+     * @return mixed
+     */
     public function getNomericerca()
     {
         if (isset($_POST['nomericerca']))
@@ -23,6 +26,11 @@ class VRicerca
         return $nome;
     }
 
+    /** questa funzione mostra i risultati ottenuti dalla ricerca
+     * @param $eventi
+     * @param $utente
+     * @throws SmartyException
+     */
     public function mostraRisultati($eventi,$utente)
     {
         $this->smarty->assign("eventi",$eventi);

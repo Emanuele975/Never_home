@@ -14,6 +14,10 @@ class Vlocale
         $this->smarty->setConfigDir($GLOBALS["ROOT"].'/Smarty/smarty-dir/configs');
     }
 
+    /** questa funzione mostra il template per creare un nuovo evento
+     * @param $tipo
+     * @throws SmartyException
+     */
     public function mostraformevento($tipo)
     {
         $this->smarty->assign("tipo",$tipo);
@@ -25,6 +29,12 @@ class Vlocale
         }
     }
 
+    /** questa funzione crea la home del locale con i vari eventi creati da esso
+     * @param $evento
+     * @param $img
+     * @param $nome
+     * @throws SmartyException
+     */
     public function HomeLocale($evento,$img,$nome)
     {
         $this->smarty->assign("evento",$evento);
@@ -33,6 +43,10 @@ class Vlocale
         $this->smarty->display("Locale.tpl");
     }
 
+    /** questa funzione mostra al locale loggato i vari eventi creati da esso
+     * @param $eventi
+     * @throws SmartyException
+     */
     public function ituoieventi($eventi)
     {
         $this->smarty->assign("eventi",$eventi);
