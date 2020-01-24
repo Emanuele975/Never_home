@@ -28,9 +28,6 @@
         <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Login">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home">Home </a>
-      </li>
-      <li class="nav-item active">
         <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Logout">Logout </a>
       </li>
     </ul>
