@@ -11,6 +11,10 @@ class FEvento_p extends FDatabase
         ,:descrizione,:id)";
     }
 
+    /**metodo che fa il bind
+     * @param $stmt
+     * @param EEvento_p $evento
+     */
     public static function bind($stmt,EEvento_p $evento){
         $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':nome', $evento->getNome(), PDO::PARAM_STR);
@@ -24,6 +28,9 @@ class FEvento_p extends FDatabase
 
     }
 
+    /** metodo che  prende un'istanza della classe dal database
+     * @return |null
+     */
     public static function getInstance(){
         if(static::$instance==null){
             static::$instance=new FEvento_p();
@@ -31,6 +38,9 @@ class FEvento_p extends FDatabase
         return static::$instance;
     }
 
+    /**
+     * @return string
+     */
     public function getTables(){
         return $this->table;
     }

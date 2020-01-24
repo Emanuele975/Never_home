@@ -6,12 +6,19 @@ class FCommento extends FDatabase
 
     protected static $instance=null;
 
+    /**construct
+     * FCommento constructor.
+     */
     protected function __construct(){
         parent::__construct();
         $this->table = "commento_p";
         $this->values="(:testo,:id,:id_utente,:id_evento,:bannato)";
     }
 
+    /**metodo che fa il bind
+     * @param $stmt
+     * @param ECommento $commento
+     */
     public static function bind($stmt,ECommento $commento)
     {
         $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
@@ -21,6 +28,9 @@ class FCommento extends FDatabase
         $stmt->bindValue(':bannato', $commento->getBannato(), PDO::PARAM_INT);
     }
 
+    /**metodo che prende l'istanza di FCommento
+     * @return |null
+     */
     public static function getInstance(){
         if(static::$instance==null){
             static::$instance=new FCommento();
@@ -103,6 +113,10 @@ class FCommento extends FDatabase
         else return null;
     }
 
+    /**
+     * @param $num
+     * @return array
+     */
     public function commentidabannare($num)
     {
         $sql = "SELECT * FROM " . $this->table . " ;";

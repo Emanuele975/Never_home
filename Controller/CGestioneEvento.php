@@ -135,7 +135,6 @@ class CGestioneEvento
             $nome = $view->getNomericerca(); //nome inserito nella barra di ricerca
             $pm = FPersistenceManager::getInstance();
             $eventi = $pm->EventoByNav($nome);
-            //echo $eventi[0]->getCategoria();
             $sessione= Session::getInstance();
             if($sessione->isLoggedUtente())
                 $view->mostraRisultati($eventi,"utente");
