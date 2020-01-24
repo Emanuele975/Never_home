@@ -5,6 +5,9 @@ class VError
 {
     private $smarty;
 
+    /**
+     * VError constructor.
+     */
     public function __construct()
     {
         $this->smarty = new Smarty();
@@ -14,7 +17,12 @@ class VError
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
-
+    /**
+     * mostra il template di errore
+     * @param $msg messaggio nel template di errore
+     * @param $path percorso a cui vengo reindirizzato premendo il pulsante del template
+     * @throws SmartyException
+     */
     public function mostraErrore($msg,$path)
     {
         $this->smarty->assign("path",$path);

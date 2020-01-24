@@ -3,10 +3,10 @@
 
 class CGestioneAmministratore
 {
-    /*
-     *
+    /**
+     * metodo che mostra la form del login o la home se sono già loggato
      */
-    public function Login($num)
+    public function Login()
     {
         $sessione = Session::getInstance();
         if ($sessione->isLoggedAdmin()) {
@@ -17,7 +17,10 @@ class CGestioneAmministratore
         }
     }
 
-    public function Entra($num)
+    /**
+     * metodo che permette il login dell amministratore
+     */
+    public function Entra()
     {
         $view = new VLogin();
         $credenziali = $view->recuperadatiLogin();
@@ -35,6 +38,9 @@ class CGestioneAmministratore
         }
     }
 
+    /**
+     * metodo che permetti il logout dell amministratore
+     */
     public function Logout()
     {
         $sessione = Session::getInstance();
@@ -45,6 +51,10 @@ class CGestioneAmministratore
         header('Location: /Never_home');
     }
 
+    /**
+     * metodo che permette di accedere alla sezione gestione commenti
+     * @param $num parametro per il caricamento dei commenti
+     */
     public function GestioneCommenti($num)
     {
         $pm = FPersistenceManager::getInstance();
@@ -64,6 +74,9 @@ class CGestioneAmministratore
         $view->GestioneCommenti($commenti,$utenti,$num,$pieno);
     }
 
+    /**
+     * metodo che permette di accedere alla sezione gestione eventi
+     */
     public function GestioneEventi()
     {
         $pm = FPersistenceManager::getInstance();
@@ -72,12 +85,18 @@ class CGestioneAmministratore
         $view->GestioneEventi($eventi);
     }
 
+    /**
+     * metodo che mostra la form amministratore
+     */
     public function HomeAmministratore()
     {
         $view = new VAmministratore();
         $view->setHome();
     }
 
+    /**
+     * metodo per mostrare i commenti che contengono una certa stringa
+     */
     public function Cercacommentotesto()
     {
         $view = new VAmministratore();
@@ -97,6 +116,11 @@ class CGestioneAmministratore
         $view->HomeAdmin($commenti,$utenti,1,true);
     }
 
+    /**
+     * metodo per bannare un commento
+     * @param $id id del commento da bannare
+     * @param $num parametro per il caricamento dei commenti
+     */
     public function bannacommento($id,$num)
     {
         $pm = FPersistenceManager::getInstance();
@@ -104,6 +128,11 @@ class CGestioneAmministratore
         $this->GestioneCommenti($num);
     }
 
+    /**
+     * metodo per sbloccare un commento
+     * @param $id id del commento da bannare
+     * @param $num parametro per il caricamento dei commenti
+     */
     public function sbloccacommento($id,$num)
     {
         $pm = FPersistenceManager::getInstance();
@@ -111,6 +140,10 @@ class CGestioneAmministratore
         $this->GestioneCommenti($num);
     }
 
+    /**
+     * metodo per eliminare un evento
+     * @param $id id dell evento da eliminare
+     */
     public function EliminaEvento($id)
     {
         $controller = new CGestioneEvento();
@@ -118,6 +151,9 @@ class CGestioneAmministratore
         $this->GestioneEventi();
     }
 
+    /**
+     * metodo per cercare un evento gratuito dal nome
+     */
     public function CercadaNomeGratis()
     {
         $view = new VRicerca();

@@ -83,13 +83,14 @@
     </div>
 
 
-  </div>
+
 
     <div class="row my-5">
       <div class="mx-auto">
         <button type="submit" class="btn btn-primary " >Aggiungi carta</button>
       </div>
     </div>
+  </div>
   .
 </form>
 

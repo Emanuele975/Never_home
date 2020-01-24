@@ -5,6 +5,9 @@ class FAcquisto extends FDatabase
 
     protected static $instance = null;
 
+    /**
+     * FAcquisto constructor.
+     */
    protected function __construct()
     {
 
@@ -14,6 +17,11 @@ class FAcquisto extends FDatabase
 
     }
 
+    /**
+     * metodo che effettua il bind
+     * @param $stmt
+     * @param EAcquisto $acquisto
+     */
     public static function bind($stmt, EAcquisto $acquisto){
         $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':data', $acquisto->getData()->format('Y-m-d'), PDO::PARAM_STR);
@@ -22,6 +30,10 @@ class FAcquisto extends FDatabase
         $stmt->bindValue(':id_utente', $acquisto->getUtente()->getId(), PDO::PARAM_INT);
         }
 
+    /**
+     * metodo che ritorna l istanza di FAcquisto
+     * @return |null
+     */
     public static function getInstance()
     {
         if (static::$instance == null) {
@@ -30,16 +42,29 @@ class FAcquisto extends FDatabase
         return static::$instance;
     }
 
+    /**
+     * metodo che ritorna il nome della tabella
+     * @return string
+     */
     public function getTables()
     {
         return $this->table;
     }
 
+    /**
+     * metodo che ritorna i campi della tabella
+     * @return string
+     */
     public function getValues()
     {
         return $this->values;
     }
 
+    /**
+     * metodo che salva l acquisto nel db
+     * @param EAcquisto $acquisto acquisto da salvare nel db
+     * @return string|null
+     */
     public function store1(EAcquisto $acquisto)
     {
         $sql = " INSERT INTO " . static::getTables() . " VALUES " . static::getValues() . ";";
@@ -50,6 +75,12 @@ class FAcquisto extends FDatabase
             return null;
     }
 
+    /**
+     * metodo per caricare un acquisto dall id
+     * @param $id id dell acquisto
+     * @return EAcquisto|null
+     * @throws Exception
+     */
     public function loadById($id){
         $sql = "SELECT * FROM " . static::getTables() . " WHERE id= '" . $id . "' ;";
         $result = parent::loadSingle($sql);
@@ -66,6 +97,11 @@ class FAcquisto extends FDatabase
             return null;
     }
 
+    /**
+     * metodo per cancellare l acquisto
+     * @param $id
+     * @return bool
+     */
     public function delete($id){
         $sql = " DELETE FROM " . static::getTables() . "    WHERE id= '" . $id . "' ;";
         if (parent::delete($sql))

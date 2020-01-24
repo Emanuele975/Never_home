@@ -6,6 +6,9 @@ class VCarta
 
     private $smarty;
 
+    /**
+     * VCarta constructor.
+     */
     public function __construct()
     {
         $this->smarty = new Smarty();
@@ -15,11 +18,19 @@ class VCarta
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
+    /**
+     * metodo che mostra la form per l inserimento della carta
+     * @throws SmartyException
+     */
     public function FormCarta()
     {
         $this->smarty->display("FormCarta.tpl");
     }
 
+    /**
+     * metodo che prende i dati della carta inseriti nella form
+     * @return array dati presenti nella form
+     */
     public function getDati()
     {
         $dati = array();
@@ -69,6 +80,10 @@ class VCarta
         return $dati;
     }
 
+    /**
+     * mostra il template che ci conferma che la carta è stata caricata
+     * @throws SmartyException
+     */
     public function cartacaricata()
     {
         $this->smarty->display("CartaCaricata.tpl");

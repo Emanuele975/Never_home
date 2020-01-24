@@ -6,9 +6,10 @@
 
 class CFrontController
 {
-    /*
-      Metodo che dalla URL recupera il controllore da istanziare e il relativo metodo con eventuale parametri
-      /Never_home/controller/metodo/param
+
+    /**
+     * Metodo che dalla URL recupera il controllore da istanziare e il relativo metodo con eventuale parametri
+     * /Never_home/controller/metodo/param1/param2/param3
      */
     public function run()
     {
