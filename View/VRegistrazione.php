@@ -14,10 +14,12 @@ class VRegistrazione
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
+
     public function FormUtente()
     {
         $this->smarty->display("RegUtente.tpl");
     }
+
 
     public function getDatiUtente()
     {
@@ -66,6 +68,7 @@ class VRegistrazione
 
     }
 
+
     public function getDatiLocale()
     {
         $dati = array();
@@ -106,10 +109,12 @@ class VRegistrazione
         return $dati;
     }
 
+
     public function registrazioneUtente()
     {
         $this->smarty->display("RegUtente.tpl");
     }
+
 
     public function FormLocale()
     {

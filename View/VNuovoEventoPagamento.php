@@ -14,6 +14,7 @@ class VNuovoEventoPagamento
         $this->smarty->setConfigDir('Smarty/smarty-dir/configs');
     }
 
+
     public function recuperaDatiEvento(){
 
         $dati = array();

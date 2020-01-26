@@ -14,6 +14,7 @@ class Vlogin
         $this->smarty->setConfigDir($GLOBALS["ROOT"] . '/Smarty/smarty-dir/configs');
     }
 
+
     public function recuperadatiLogin()
     {
 
@@ -27,11 +28,13 @@ class Vlogin
 
     }
 
+
     public function mostraFormLoginUtente($msg)
     {
         $this->smarty->assign("msg",$msg);
         $this->smarty->display("loginUtente.tpl");
     }
+
 
     public function mostraFormLoginLuogo($msg)
     {
@@ -39,11 +42,13 @@ class Vlogin
         $this->smarty->display("loginLuogo.tpl");
     }
 
+
     public function mostraFormLoginAdmin($msg)
     {
         $this->smarty->assign("msg",$msg);
         $this->smarty->display("loginAmministratore.tpl");
     }
+
 
     public function mostraFormReg()
     {

@@ -14,6 +14,7 @@ class VHomePage
         $this->smarty->setConfigDir('Smarty/smarty-dir/configs');
     }
 
+
     public function Home($eventi,$imgs,$utente){
         if (isset($eventi[0]))
         {
@@ -50,6 +51,7 @@ class VHomePage
         $this->smarty->display("HomePage.tpl");
 
     }
+
 
     public function mostraevento(EEvento $evento){
         $this->smarty->assign('evento',$evento);

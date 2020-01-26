@@ -14,6 +14,7 @@ class VUtente
         $this->smarty->setConfigDir('Smarty/smarty-dir/configs');
     }
 
+
     public function HomeUtente($utente, $biglietti, $eventi, $pieno){
 
         $this->smarty->assign('utente',$utente);

@@ -14,6 +14,7 @@ class VNuovoEventoGratis
         $this->smarty->setConfigDir('Smarty/smarty-dir/configs');
     }
 
+
     public function recuperaDatiEvento(){
 
         $dati = array();
@@ -88,6 +89,7 @@ class VNuovoEventoGratis
         return $dati;
     }
 
+
     public function validaMail(){
         $mail = $_POST['mail'];
         $accettato = preg_match('/^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/', $mail);
@@ -95,6 +97,7 @@ class VNuovoEventoGratis
             return true;
         } else { return false;}
     }
+
 
     public function validaNome(){
         $nome = $_POST['nome'];
@@ -104,6 +107,7 @@ class VNuovoEventoGratis
         } else { return false;}
     }
 
+
     public function validaCognome(){
         $nome = $_POST['cognome'];
         $accettato = preg_match('/[A-Za-z]$/', $nome);
@@ -111,6 +115,7 @@ class VNuovoEventoGratis
             return true;
         } else { return false;}
     }
+
 
     public function validaInput()
     {

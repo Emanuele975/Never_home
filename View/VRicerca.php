@@ -23,6 +23,7 @@ class VRicerca
         return $nome;
     }
 
+
     public function mostraRisultati($eventi,$utente)
     {
         $this->smarty->assign("eventi",$eventi);

@@ -14,6 +14,10 @@ class Vlocale
         $this->smarty->setConfigDir($GLOBALS["ROOT"].'/Smarty/smarty-dir/configs');
     }
 
+    /** metodo che mostra la form dell'evento in base al tipo di evento che si vuole creare
+     * @param $tipo
+     * @throws SmartyException
+     */
     public function mostraformevento($tipo)
     {
         $this->smarty->assign("tipo",$tipo);
@@ -25,6 +29,7 @@ class Vlocale
         }
     }
 
+
     public function HomeLocale($evento,$img,$nome)
     {
         $this->smarty->assign("evento",$evento);
@@ -32,6 +37,7 @@ class Vlocale
         $this->smarty->assign("nome",$nome);
         $this->smarty->display("Locale.tpl");
     }
+
 
     public function ituoieventi($eventi)
     {
