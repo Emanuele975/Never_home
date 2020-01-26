@@ -27,9 +27,7 @@
       <li class="nav-item active">
         <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Login">Account <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home">Home </a>
-      </li>
+
       <li class="nav-item active">
         <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Logout">Logout </a>
       </li>
@@ -64,9 +62,10 @@
           </div>
           <select class="custom-select" id="inputGroupSelect01" name="Categoria">
             <option selected>Choose...</option>
-            <option value="Teatro">Teatro</option>
+            <option value="Discoteca">Discoteca</option>
             <option value="Concerto">Concerto</option>
-            <option value="Partita">Partita</option>
+            <option value="Cinema">Cinema</option>
+            <option value="Teatro">Teatro</option>
           </select>
         </div>
       </div>

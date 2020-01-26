@@ -124,9 +124,7 @@
 
 
 <div class="container">
-        <div class="row">
-            <br>
-        </div>
+
         <div class="row mx-md-n5">
 
             <div class="col-12 col-lg-4">
@@ -201,7 +199,7 @@
                     </div>
                 </div>
             {/if}
-        </div>
+            </div>
 
         </div>
 </div>
