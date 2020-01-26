@@ -89,7 +89,27 @@
 
 
 <div class="list-group">
-    {section name=evento loop=$eventi}
+    {if $eventi eq null}
+    <div class="py-5 text-center " style="background-size:cover;">
+        <p class=" text-primary font-weight-bold" style="font-size: 30px" >
+           NESSUN RISULTATO
+        </p>
+        <a class="btn btn-outline-primary" href="/Never_Home" role="button">RIPROVARE<br></a>
+        {else}
+        {section name=evento loop=$eventi}
+            <a href="/Never_home/Evento/HomeEvento/{$eventi[evento]->getId()}/{$eventi[evento]->getF()}/1" class="list-group-item list-group-item-action  ">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1 text-primary">{$eventi[evento]->getNome()}</h5>
+                    <small>{$eventi[evento]->getData()->format('d-m-Y')}</small>
+                </div>
+                <p class="mb-1">{$eventi[evento]->getDescrizione()}</p>
+                <small>Clicca per visualizzare</small>
+            </a>
+        {/section}
+    </div>
+</div>
+    {/if}
+    <!--{section name=evento loop=$eventi}
         <a href="/Never_home/Evento/HomeEvento/{$eventi[evento]->getId()}/{$eventi[evento]->getF()}/1" class="list-group-item list-group-item-action  ">
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1 text-primary">{$eventi[evento]->getNome()}</h5>
@@ -98,8 +118,9 @@
         <p class="mb-1">{$eventi[evento]->getDescrizione()}</p>
         <small>Clicca per visualizzare</small>
     </a>
-    {/section}
-</div>
+    {/section}-->
+<!--</div>
+</div>-->
 
 </body>
 

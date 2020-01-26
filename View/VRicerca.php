@@ -22,11 +22,13 @@ class VRicerca
         return $nome;
     }
 
+
     /** questa funzione mostra i risultati ottenuti dalla ricerca
      * @param $eventi
      * @param $utente
      * @throws SmartyException
      */
+
     public function mostraRisultati($eventi,$utente)
     {
         $this->smarty->assign("eventi",$eventi);

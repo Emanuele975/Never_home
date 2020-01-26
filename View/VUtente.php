@@ -10,6 +10,7 @@ class VUtente
         $this->smarty = confSmarty::configuration();
     }
 
+
     /** questa funzione mostra la schermata di home all'utente, con i vari eventi disponibili
      * @param $utente
      * @param $biglietti
@@ -17,6 +18,7 @@ class VUtente
      * @param $pieno
      * @throws SmartyException
      */
+
     public function HomeUtente($utente, $biglietti, $eventi, $pieno){
 
         $this->smarty->assign('utente',$utente);

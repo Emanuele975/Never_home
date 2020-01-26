@@ -29,7 +29,7 @@
         <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Login">Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="btn btn-dark mx-2 btn-outline-primary" href="#">Notifiche </a>
+        <a class="btn btn-dark mx-2 btn-outline-primary" href="/Never_home/Luogo/Logout">Logout </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
@@ -139,12 +139,13 @@
       </div>
     </div>
 
-  </div>
+
 
   <div class="row my-5">
     <div class="mx-auto">
       <button type="submit" class="btn btn-outline-primary" >Crea Evento</button>
     </div>
+  </div>
   </div>
 
 </form>

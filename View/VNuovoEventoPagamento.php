@@ -10,9 +10,11 @@ class VNuovoEventoPagamento
         $this->smarty = confSmarty::configuration();
     }
 
+
     /** questa funzione ritorna tutti i dati relativi ad un evento a pagamento
      * @return array
      */
+
     public function recuperaDatiEvento(){
 
         $dati = array();

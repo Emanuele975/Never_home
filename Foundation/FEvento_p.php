@@ -118,7 +118,7 @@ class FEvento_p extends FDatabase
                 $evento = new EEvento_p($i['nome'], new DateTime( $i['data_e'] ) ,
                     $luogo, $categoria, $i['descrizione'],$i['prezzo'],$i['posti_disponibili'],$i['posti_totali']);
                 $evento->setId($i['id']);
-                echo $evento->getF();
+                //echo $evento->getF();
                 array_push($eventi, $evento);
             }
             return $eventi;
