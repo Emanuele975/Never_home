@@ -15,6 +15,14 @@ class VHomePage
     }
 
 
+
+    /** questa funzione crea la schermata di home, con i vari eventi disponibili
+     * @param $eventi
+     * @param $imgs
+     * @param $utente
+     * @throws SmartyException
+     */
+
     public function Home($eventi,$imgs,$utente){
         if (isset($eventi[0]))
         {
@@ -52,6 +60,11 @@ class VHomePage
 
     }
 
+
+    /** questa funzione
+     * @param EEvento $evento
+     * @throws SmartyException
+     */
 
     public function mostraevento(EEvento $evento){
         $this->smarty->assign('evento',$evento);

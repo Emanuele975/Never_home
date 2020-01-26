@@ -68,7 +68,11 @@ class FLuogo extends FDatabase
         }
         else return null;
     }
-    
+
+    /** elimina un indirizzo
+     * @param $indirizzo
+     * @return bool
+     */
     public function delete($indirizzo){
         $sql="DELETE FROM ".static::getTables()." WHERE indirizzo= '".$indirizzo."' ;";
         if(parent::delete($sql)) 
@@ -77,6 +81,11 @@ class FLuogo extends FDatabase
             return false;
     }
 
+    /** funzione booleana, passando una password e uno username verifica se esiste un luogo o meno
+     * @param $user
+     * @param $psw
+     * @return bool
+     */
     public function esisteluogo($user,$psw)
     {
         $sql = "SELECT * FROM ".static::getTables()." WHERE username= '".$user."'and password= '".$psw."' ;";
@@ -87,6 +96,10 @@ class FLuogo extends FDatabase
             return false;
     }
 
+    /** funzione booleana, passando un nome verifica se esiste un luogo o meno
+     * @param $nome
+     * @return bool
+     */
     public function esisteNomeLuogo($nome)
     {
         $sql = "SELECT * FROM ".$this->table." WHERE nome= '".$nome."';";

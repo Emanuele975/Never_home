@@ -72,6 +72,10 @@ class FUtente_R extends FDatabase
         else return null;
     }
 
+    /** la funzione elimina un utente dato il suo codice fiscale
+     * @param $CF
+     * @return bool
+     */
     public function delete($CF){
         $sql="DELETE FROM ".static::getTables()." WHERE CF= '".$CF."' ;";
         if(parent::delete($sql))
@@ -80,6 +84,11 @@ class FUtente_R extends FDatabase
             return false;
     }
 
+    /** è una funzione booleana, verifica se esiste l'utente o meno
+     * @param $user
+     * @param $psw
+     * @return bool
+     */
     public function esisteutente($user,$psw)
     {
         $sql = "SELECT * FROM ".static::getTables()." WHERE username= '".$user."'and password= '".$psw."' ;";
@@ -91,6 +100,10 @@ class FUtente_R extends FDatabase
 
     }
 
+    /** è una funzione booleana, verifica se esiste lo username o meno
+     * @param $user
+     * @return bool
+     */
     public function esisteusername($user)
     {
         $sql = "SELECT * FROM ".$this->table." WHERE username= '".$user."';";

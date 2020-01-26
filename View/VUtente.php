@@ -15,6 +15,14 @@ class VUtente
     }
 
 
+    /** questa funzione mostra la schermata di home all'utente, con i vari eventi disponibili
+     * @param $utente
+     * @param $biglietti
+     * @param $eventi
+     * @param $pieno
+     * @throws SmartyException
+     */
+
     public function HomeUtente($utente, $biglietti, $eventi, $pieno){
 
         $this->smarty->assign('utente',$utente);
@@ -53,6 +61,11 @@ class VUtente
 
     }
 
+    /** questa funzione mostra all'utente i suoi biglietti
+     * @param $biglietti
+     * @param $eventi
+     * @throws SmartyException
+     */
     public function ituoibigletti($biglietti, $eventi)
     {
         $this->smarty->assign('eventi', $eventi);

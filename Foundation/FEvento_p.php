@@ -74,6 +74,11 @@ class FEvento_p extends FDatabase
         else return null;
     }
 
+    /** funzione che elimina un evento
+     * @param $nome
+     * @param $data
+     * @return bool
+     */
     public function delete_event($nome, $data){
         $sql="DELETE FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e= '".$data."' ;";
         if(parent::delete($sql))
@@ -122,12 +127,22 @@ class FEvento_p extends FDatabase
 
     }
 
+    /** questa funzione decrementa dai posti disponibili i posti occupati
+     * @param $id
+     * @param $posti
+     * @return bool
+     */
     public function decrementaposti($id,$posti)
     {
         $sql = " UPDATE ".static::getTables()." SET posti_disponibili = posti_disponibili -  ".$posti." WHERE id = ".$id." ; ";
         return $result = parent::update($sql);
     }
 
+    /** questa funziona aggiunge ai posti disponibili altri posti
+     * @param $id
+     * @param $posti
+     * @return bool
+     */
     public function incrementaposti($id,$posti)
     {
         $sql = " UPDATE ".static::getTables()." SET posti_disponibili = posti_disponibili +  ".$posti." WHERE id = ".$id." ; ";
@@ -155,6 +170,11 @@ class FEvento_p extends FDatabase
         else return null;
     }
 
+    /** questa funzione è un booleano che ci dice se un evento esiste o meno
+     * @param $nome
+     * @param $data
+     * @return bool
+     */
     public function esisteevento($nome,$data)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE nome= '".$nome."' and data_e = '".$data->format('Y-m-d')."' ;";
@@ -165,6 +185,11 @@ class FEvento_p extends FDatabase
             return true;
     }
 
+    /** questa funzione è responsabile del caricamento di tutti gli eventi di un utente
+     * @param $id
+     * @return array|null
+     * @throws Exception
+     */
     public function ituoieventi($id)
     {
         $sql="SELECT * FROM ".static::getTables()." WHERE id_luogo = ".$id." ;";
@@ -186,6 +211,10 @@ class FEvento_p extends FDatabase
         else return null;
     }
 
+    /** questa funzione carica altri eventi disponibili
+     * @return array|null
+     * @throws Exception
+     */
     public function loadprossimi()
     {
         $sql="SELECT * FROM ".static::getTables()." ORDER BY data_e ;";

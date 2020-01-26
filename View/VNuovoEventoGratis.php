@@ -15,6 +15,10 @@ class VNuovoEventoGratis
     }
 
 
+    /** questa funzione ritorna tutti i dati relativi ad un evento gratuito
+     * @return array
+     */
+
     public function recuperaDatiEvento(){
 
         $dati = array();
@@ -90,6 +94,10 @@ class VNuovoEventoGratis
     }
 
 
+    /** questa funzione booleana verifica se un email è accettabile o meno
+     * @return bool
+     */
+
     public function validaMail(){
         $mail = $_POST['mail'];
         $accettato = preg_match('/^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$/', $mail);
@@ -98,6 +106,10 @@ class VNuovoEventoGratis
         } else { return false;}
     }
 
+
+    /** questa funzione booleana verifica se un nome è accetabile o meno
+     * @return bool
+     */
 
     public function validaNome(){
         $nome = $_POST['nome'];
@@ -108,6 +120,10 @@ class VNuovoEventoGratis
     }
 
 
+    /** questa funzione booleana verifica se un cognome è accetabile o meno
+     * @return bool
+     */
+
     public function validaCognome(){
         $nome = $_POST['cognome'];
         $accettato = preg_match('/[A-Za-z]$/', $nome);
@@ -116,6 +132,10 @@ class VNuovoEventoGratis
         } else { return false;}
     }
 
+
+    /** questa funzione ritorna tutti i valori di input se corretti altrimenti ritorna errore
+     * @return string
+     */
 
     public function validaInput()
     {

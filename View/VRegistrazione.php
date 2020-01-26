@@ -21,6 +21,10 @@ class VRegistrazione
     }
 
 
+    /** questa funzione ritorna tutti i dati dell'utente
+     * @return array
+     */
+
     public function getDatiUtente()
     {
         $dati = array();
@@ -69,6 +73,10 @@ class VRegistrazione
     }
 
 
+    /** questa funzione ritorna tutti i dati del locale
+     * @return array
+     */
+
     public function getDatiLocale()
     {
         $dati = array();
@@ -110,11 +118,19 @@ class VRegistrazione
     }
 
 
+    /** questa funzione richiama il template per la registrazione dell'utente
+     * @throws SmartyException
+     */
+
     public function registrazioneUtente()
     {
         $this->smarty->display("RegUtente.tpl");
     }
 
+
+    /** questa funzione richiama il template della registrazione del locale
+     * @throws SmartyException
+     */
 
     public function FormLocale()
     {

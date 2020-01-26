@@ -75,6 +75,10 @@ class FCommento extends FDatabase
         else return null;
     }
 
+    /** funzione che dato un id elimina un commento
+     * @param $id
+     * @return bool
+     */
     public function delete1($id)
     {
         $sql = "DELETE FROM ".$this->table." WHERE id= '".$id."' ;";
@@ -85,6 +89,11 @@ class FCommento extends FDatabase
             return false;
     }
 
+    /** funzione che carica tutti i commenti sotto un evento, anche quando clicchiamo sul pulsante per caricare altri commenti
+     * @param $id
+     * @param $num
+     * @return array|null
+     */
     public function caricacommenti($id,$num)
     {
         $sql = "SELECT * FROM " . $this->table . " WHERE id_evento = '" . $id ."' ;";
@@ -113,7 +122,9 @@ class FCommento extends FDatabase
         else return null;
     }
 
-    /**
+
+    /** funzione che restituisce un array di commenti da bannare
+
      * @param $num
      * @return array
      */
@@ -146,6 +157,10 @@ class FCommento extends FDatabase
         return $commenti;
     }
 
+    /** funzione che ritorna un array di testi di commenti
+     * @param $testo
+     * @return array|null
+     */
     public function testocommento($testo)
     {
         $sql = "SELECT * FROM " . $this->table . " WHERE testo LIKE '%".$testo."%' ;";
@@ -168,12 +183,18 @@ class FCommento extends FDatabase
         else return null;
     }
 
+    /** funzione che dato un id banna quel commento
+     * @param $id
+     */
     public function banna($id)
     {
         $sql = "UPDATE " . $this->table . " SET bannato = 1 WHERE id = '" .$id. "';";
         $result = parent::update($sql);
     }
 
+    /** funzione che dato un id sblocca quel commento
+     * @param $id
+     */
     public function sblocca($id)
     {
         $sql = "UPDATE " . $this->table . " SET bannato = 0 WHERE id = '" .$id. "';";

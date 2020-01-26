@@ -8,6 +8,14 @@
         private $password;
         private $id;
 
+        /** costruttore del luogo
+         * ELuogo constructor.
+         * @param String $nome
+         * @param String $indirizzo
+         * @param String $email
+         * @param String $username
+         * @param String $password
+         */
         function __construct(String $nome,String $indirizzo,String $email,String $username,String $password){
             $this->nome=$nome;
             $this->indirizzo=$indirizzo;
