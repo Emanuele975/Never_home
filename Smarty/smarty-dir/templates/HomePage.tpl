@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="\Never_home\Smarty\smarty-dir\templates\css\wireframe.css?ts=<?=time()?>&quot" type="text/css">
+    <link rel="stylesheet" href="/Never_home/Smarty/smarty-dir/templates/css/wireframe.css?ts=<?=time()?>&quot" type="text/css">
 </head>
 
 <body>

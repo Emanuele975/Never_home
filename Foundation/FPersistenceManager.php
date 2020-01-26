@@ -139,7 +139,7 @@ class FPersistenceManager
      */
     public function EventobyLuogo($id)
     {
-        $dat = FEvento_g::getInstance();
+        $dat = FEvento_p::getInstance();
         $evento = $dat->loadByLuogo($id);
         return $evento;
     }
@@ -340,6 +340,16 @@ class FPersistenceManager
         $dat = FEvento_p::getInstance();
         $eventi = $dat->loadprossimi();
         return $eventi;
+    }
+
+    public function esistecarta($numero)
+    {
+        $dat = FCarta::getInstance();
+        $carta = $dat->esistecarta($numero);
+        if ($carta==null)
+            return false;
+        else
+            return true;
     }
 
 

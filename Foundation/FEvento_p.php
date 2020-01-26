@@ -237,6 +237,23 @@ class FEvento_p extends FDatabase
         else return null;
     }
 
+    public function loadByLuogo($id)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE id_luogo= '".$id."' ;";
+        $result = parent::loadSingle($sql);
+        if($result!=null){
+            $datluogo = FLuogo::getInstance();
+            $luogo = $datluogo->loadById($result['id_luogo']);
+            $datcategoria = FCategoria::getInstance();
+            $categoria = $datcategoria->loadById($result['id_categoria']);
+            $evento = new EEvento_p($result['nome'], new DateTime( $result['data_e'] ) , $luogo, $categoria,
+                $result['descrizione'], $result['prezzo'],$result['posti_disponibili'],$result['posti_totali']);
+            $evento->setId($result['id']);
+            return $evento;
+        }
+        else return null;
+    }
+
 }
 
 ?>

@@ -131,11 +131,15 @@ class CGestioneEvento
             $posti = $dati["Posti"];
             $evento = new EEvento_p($dati['NomeE'],$data,$luogo,$categoria,$dati['descrizione'],$prezzo,$posti,$posti);
             $id = $pm->store($evento);
+            if ($id==null)
+            {
+                echo "l id è nullo";
+            }
             $evento->setId($id);
             $img = new EImmagine($dati['img'], $dati['tipo'], $id, 'EEvento_p');
             $pm->store($img);
             $view = new Vlocale();
-            $view->HomeLocale($evento, $img);
+            $view->HomeLocale($evento, $img, $evento->getNome());
         }
     }
 
@@ -265,7 +269,10 @@ class CGestioneEvento
             {
                 $evento = $pm->Load($id_evento,'FEvento_p');
                 $carta = $pm->Load($id,'FCarta');
-                $acquisto = new EAcquisto(new DateTime('NOW'),$prezzo,$carta,$utente);
+                $data1 = new DateTime('NOW');
+                $data2 = $data1->format("Y-m-d");
+                $data = new DateTime($data2);
+                $acquisto = new EAcquisto($data,$prezzo,$carta,$utente);
                 $id_a = $pm->store($acquisto);
                 $acquistobis = $pm->Load($id_a,'FAcquisto');
                 $biglietto = new EBiglietto($prezzo,$evento,$acquistobis,$utente);

@@ -117,6 +117,20 @@ class FCarta extends FDatabase{
         }
         else return false;
     }
+
+    public function esistecarta($numero)
+    {
+        $sql="SELECT * FROM ".static::getTables()." WHERE numerocarta= '".$numero."' ;";
+        $result = parent::loadSingle($sql);
+        if($result!=null){
+            $carta = new ECarta($result['CF_titolare'],$result['ccv'],new DateTime($result['data_di_scadenza']),
+                $result['numerocarta']);
+            $carta->setId($result['id']);
+            return $carta;
+        }
+        else return null;
+
+    }
     
 }
 ?>

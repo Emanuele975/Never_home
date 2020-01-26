@@ -23,9 +23,9 @@ class FAcquisto extends FDatabase
      * @param EAcquisto $acquisto
      */
     public static function bind($stmt, EAcquisto $acquisto){
-        $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':data', $acquisto->getData()->format('Y-m-d'), PDO::PARAM_STR);
         $stmt->bindValue(':importo', $acquisto->getImporto());
+        $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
         $stmt->bindValue(':id_carta', $acquisto->getCarta()->getId(), PDO::PARAM_INT);
         $stmt->bindValue(':id_utente', $acquisto->getUtente()->getId(), PDO::PARAM_INT);
         }

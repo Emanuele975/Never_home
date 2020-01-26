@@ -19,6 +19,7 @@ class Installation{
         $smarty=confSmarty::configuration();
         if($_SERVER['REQUEST_METHOD']=="GET"){ //alla richiesta della pagina
             setcookie('verifica_cookie', 'verifica',time()+3600);
+            $smarty->assign("root",dirname(__FILE__));
             $smarty->display('InstallationForm.tpl'); //e si mostra il form di installazione
         }
         else{ //... ovvero method= POST
@@ -37,7 +38,7 @@ class Installation{
             }
             // verifica JS
             if (!isset($_COOKIE['checkjs'])){
-                $noJS = false;
+                $noJS = true;
                 $smarty->assign('nojs', $noJS);
             }
             // se almeno uno dei controlli non è andato a buon fine, si mostra la pagina di installazione con i relativi errori.
@@ -68,7 +69,7 @@ class Installation{
             $db->exec($query);
             $db->commit();
             $file = fopen('config.inc.php', 'w');
-            $script = '<?php $host= \'localhost\'; $database= \'' . $_POST['nomedb'] . '\'; $username= \'' . $_POST['nomeutente'] . '\'; $password= \'' . $_POST['password'] . '\';
+            $script = '<?php $host= \'localhost\'; $GLOBALS[\'database\']= \'' . $_POST['nomedb'] . '\'; $GLOBALS[\'username\']= \'' . $_POST['nomeutente'] . '\'; $GLOBALS[\'password\']= \'' . $_POST['password'] . '\';
                 $GLOBALS["ROOT"]=dirname(__FILE__); ?>';
             fwrite($file, $script);
             fclose($file);
@@ -103,7 +104,7 @@ class Installation{
     }
 
 // Funzione che verifica la presenza del cookie di installazione e quindi se quest'ultima è stata effettuata.
-    static function VerifyInstallation():bool{
+    static function VerifyInstallation(){
         if(file_exists('config.inc.php')) return true;
         else return false;
     }

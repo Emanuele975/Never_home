@@ -3,9 +3,9 @@
 class FDatabase
 {
     protected $host= 'localhost';
-    protected $database= 'never_home';
-    protected $username= 'root';
-    protected $password= '';
+    protected $database= "";
+    protected $username= "";
+    protected $password= "";
     protected $db;
     protected $table;
     protected $values;
@@ -16,7 +16,8 @@ class FDatabase
     protected function __construct()
     {                              
         try{
-            $this->db=new PDO("mysql:host=$this->host; dbname=$this->database", $this->username,  $this->password);
+            $data = $GLOBALS['database'];
+            $this->db = new PDO ("mysql:dbname=".$data.";host=localhost; charset=utf8;", $GLOBALS['username'], $GLOBALS['password']);
         }
         catch(PDOException $e)
         {

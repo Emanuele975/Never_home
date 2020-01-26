@@ -8,6 +8,7 @@ class CGestioneUtente
      */
     public function Login()
     {
+        echo $_SERVER['REQUEST_URI'];
         $sessione = Session::getInstance();
         if($sessione->isLoggedUtente())
         {
@@ -71,6 +72,7 @@ class CGestioneUtente
         else {
             $utente = new EUtente_R($dati['nome'], $dati['cognome'], $dati['cf'], $dati['user'], $dati['psw'], 0, $dati['mail']);
             $id = $pm->store($utente);
+            $utente->setId($id);
             if ($id == null)
             {
                 $msg = "registrazione non riuscita";
