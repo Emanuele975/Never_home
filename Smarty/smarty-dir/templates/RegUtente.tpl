@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a href="/Never_home">
-        <img class="navbar-brand "  src="/Never_home/images/logo%20never%20home.png" style="width: 70px;height: 60px;" >
+        <img class="navbar-brand "  src="/Never_home/images/logoneverhome.png" style="width: 70px;height: 60px;" >
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -70,22 +70,6 @@
         </form>
 </div>
 
-
-    <div class="fixed-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">
-                    <ul class="nav d-flex justify-content-center">
-                        <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-                    </ul>
-                    <p class="mb-0 py-1">© 2014-2018 Pingendo. All rights reserved</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

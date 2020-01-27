@@ -11,7 +11,7 @@ class FCommento extends FDatabase
      */
     protected function __construct(){
         parent::__construct();
-        $this->table = "commento_p";
+        $this->table = "Commento_p";
         $this->values="(:testo,:id,:id_utente,:id_evento,:bannato)";
     }
 

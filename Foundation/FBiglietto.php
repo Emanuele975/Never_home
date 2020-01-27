@@ -10,7 +10,7 @@ class FBiglietto extends FDatabase{
     protected function __construct()
     {
         parent::__construct();
-        $this->table = "biglietto";
+        $this->table = "Biglietto";
         $this->values = "(:prezzo, :id , :id_evento , :id_acquisto , :id_utente )";
 
     }

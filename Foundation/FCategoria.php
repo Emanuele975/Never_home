@@ -10,7 +10,7 @@ class FCategoria extends FDatabase{
      */
     protected function __construct(){
         parent::__construct();
-        $this->table = "categoria";
+        $this->table = "Categoria";
         $this->values="(:nome,:descrizione)";
     }
 

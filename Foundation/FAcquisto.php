@@ -12,7 +12,7 @@ class FAcquisto extends FDatabase
     {
 
         parent::__construct();
-        $this->table = "acquisto";
+        $this->table = "Acquisto";
         $this->values = "(:data,:importo,:id,:id_carta,:id_utente)";
 
     }

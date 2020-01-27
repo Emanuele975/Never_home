@@ -8,7 +8,7 @@ class FUtente_R extends FDatabase
 
     protected function __construct(){
         parent::__construct();
-        $this->table = "utente_r";
+        $this->table = "Utente_R";
         $this->values="(:nome,:cognome,:CF,:username,:password,:punti,:email,:id)";
     }
 

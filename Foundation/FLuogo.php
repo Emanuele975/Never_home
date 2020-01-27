@@ -7,7 +7,7 @@ class FLuogo extends FDatabase
     
     protected function __construct(){
         parent::__construct();
-        $this->table = "luogo";
+        $this->table = "Luogo";
         $this->values="(:nome,:indirizzo,:email,:username,:password,:id)";
     }
     

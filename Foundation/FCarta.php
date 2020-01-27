@@ -10,7 +10,7 @@ class FCarta extends FDatabase{
      */
     protected function __construct(){
         parent::__construct();
-        $this->table = "carta";
+        $this->table = "Carta";
         $this->values="(:CF_titolare,:ccv,:data_di_scadenza,:numerocarta,:id)";
     }
 

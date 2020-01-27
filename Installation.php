@@ -70,7 +70,7 @@ class Installation{
             $db->commit();
             $file = fopen('config.inc.php', 'w');
             $script = '<?php $host= \'localhost\'; $GLOBALS[\'database\']= \'' . $_POST['nomedb'] . '\'; $GLOBALS[\'username\']= \'' . $_POST['nomeutente'] . '\'; $GLOBALS[\'password\']= \'' . $_POST['password'] . '\';
-                $GLOBALS["ROOT"]=dirname(__FILE__); ?>';
+                ?>';
             fwrite($file, $script);
             fclose($file);
             $db=null;

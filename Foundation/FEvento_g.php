@@ -7,7 +7,7 @@ class FEvento_g extends FDatabase{
     
     protected function __construct(){
         parent::__construct();
-        $this->table = "evento_g";
+        $this->table = "Evento_g";
         $this->values="(:nome,:data_e,:id_luogo,:id_categoria,:descrizione,:id)";
     }
 
