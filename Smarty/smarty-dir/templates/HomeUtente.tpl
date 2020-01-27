@@ -103,10 +103,10 @@
         <a href="/Never_home/Evento/HomeEvento/{$evento2->getId()}/{$evento2->getF()}/1" class="list-group-item bg-dark border-dark card text-primary list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Nome: {$evento2->getNome()}</h5>
-            <small class="text-muted">Data: {$evento2->getData()->format('Y-m-d')}</small>
+            <small class="text-primary">Data: {$evento2->getData()->format('Y-m-d')}</small>
           </div>
-          <p class="mb-1">Descrizione: {$evento2->getDescrizione()}</p>
-          <small class="text-muted">importo speso {$biglietto2->getPrezzo()}</small>
+          <p class="mb-1 ">Descrizione: {$evento2->getDescrizione()}</p>
+          <small class="text-primary">importo speso {$biglietto2->getPrezzo()}</small>
         </a>
          {/if}
         {if $evento3 eq null}
@@ -125,7 +125,7 @@
               <small class="text-muted">Data: {$evento1->getData()->format('Y-m-d')}</small>
             </div>
             <p class="mb-1">Descrizione: {$evento1->getDescrizione()}</p>
-            <small class="text-muted">importo speso {$biglietto1->getPrezzo()}</small>
+            <small class="text-primary">importo speso {$biglietto1->getPrezzo()}</small>
           </a>
         {/if}
       </div>

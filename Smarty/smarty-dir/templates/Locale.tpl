@@ -66,7 +66,7 @@
     <div class="col-sm-4">
       <div class="container ">
         {if $evento==null}
-          <div class="list-group">
+          <div class="list-group bg-">
             <a href="#" class="list-group-item  ">
               <div class="d-flex w-200 justify-content-between" >
                 <h4 class="mb-1 text-primary" style="width: 400px"> Nessun evento creato</h4>
