@@ -22,7 +22,7 @@ class CGestioneAmministratore
      */
     public function Entra()
     {
-        $view = new VLogin();
+        $view = new Vlogin();
         $credenziali = $view->recuperadatiLogin();
         if ($credenziali['user'] == 'admin' && $credenziali['psw'] == '123')
         {

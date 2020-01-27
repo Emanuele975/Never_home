@@ -62,7 +62,7 @@ class FLuogo extends FDatabase
         $result = parent::loadSingle($sql);
         if($result!=null){
             $luogo = new ELuogo($result['nome'],$result['indirizzo'],($result['email']),
-                $result['username'],$result['password'],);
+                $result['username'],$result['password']);
             $luogo->setId($result['id']);
             return $luogo;
         }

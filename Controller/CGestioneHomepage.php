@@ -9,7 +9,6 @@ class CGestioneHomepage
      */
     public function impostaPagina()
     {
-        echo $_SERVER['REQUEST_URI'];
         $pm = FPersistenceManager::getInstance();
         $data = new DateTime('01/01/2020');
         $eventi = array();

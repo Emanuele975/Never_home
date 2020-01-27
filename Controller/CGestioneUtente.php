@@ -24,7 +24,7 @@ class CGestioneUtente
      * metodo che permette il login dell utente
      */
     public function Entra(){
-        $view = new VLogin();
+        $view = new Vlogin();
         $credenziali = $view->recuperadatiLogin();
         $pm = FPersistenceManager::getInstance();
         $sessione = Session::getInstance();

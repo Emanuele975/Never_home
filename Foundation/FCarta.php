@@ -109,7 +109,6 @@ class FCarta extends FDatabase{
         and ccv='".$ccv."' ";
         $result = parent::loadSingle($sql);
         //$d1 = new DateTime($result['data_di_scadenza']);
-        echo $result['data_di_scadenza']."++++++".$data->format('Y-m-d');
         if ($result!=null && ($result['data_di_scadenza'] == $data->format('Y-m-d')))
         {
             echo "nell if";
