@@ -1,11 +1,9 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-
+RewriteBase /
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . /Never_home/index.php [L]
-
-</IfModule>
-
-<IfModule mod_headers.c>
-  Header set Access-Control-Allow-Origin "*"
 </IfModule>
