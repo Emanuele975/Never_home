@@ -34,17 +34,14 @@
     </form>
   </div>
 </nav>
+<br><br><br><br>
 <div class="container">
   <ul class="list-group list-group-flush">
-  <li class="list-group-item">Titolare Carta : {$carta->getCF_titolare()}</li>
-  <li class="list-group-item">CCV : {$carta->getCcv()}</li>
-  <li class="list-group-item">Data di Scadenza : {$carta->getData_di_scadenza()}</li>
-    <li class="list-group-item">Numero Carta : {$carta->getNumerocarta()}</li>
-
-
-
+    <li class="list-group-item text" ><h3>Titolare Carta : {$carta->getCF_titolare()}</h3></li>
+    <li class="list-group-item"><h3>CCV : {$carta->getCcv()}</h3></li>
+    <li class="list-group-item"><h3>Data di Scadenza : {$carta->getData_di_scadenza()->format('Y-m-d')}</h3></li>
+    <li class="list-group-item"><h3>Numero Carta : {$carta->getNumerocarta()}</h3></li>
   </ul>
-
 </div>
 
 
