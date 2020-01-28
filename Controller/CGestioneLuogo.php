@@ -22,7 +22,7 @@ class CGestioneLuogo
      * metodo che permette il login del luogo
      */
     public function Entra(){
-        $view = new VLogin();
+        $view = new Vlogin();
         $credenziali = $view->recuperadatiLogin();
         $pm = FPersistenceManager::getInstance();
         $sessione = Session::getInstance();

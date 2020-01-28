@@ -51,9 +51,15 @@
 <div class="container">
   <div class="row mx-md-n5">
       <div class="col-sm-6">
+        {if $carta eq null}
         <form action="/Never_home/Utente/FormCarta" method="post">
           <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block border-primary" name="Carta" value="T">Aggiungi carta</button>
         </form>
+        {else}
+        <form action="/Never_home/Utente/mostracarta" method="post">
+          <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block border-primary" name="Carta" value="T">Visualizza Carta</button>
+        </form>
+        {/if}
         <br>
         <form action="/Never_home/Utente/prossimieventigratuiti" method="post">
           <button type="submit" class="btn  btn-dark text-primary btn-lg btn-block border-primary" name="Carta" value="T">Eventi Gratis</button>

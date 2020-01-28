@@ -8,7 +8,6 @@ class CGestioneUtente
      */
     public function Login()
     {
-        echo $_SERVER['REQUEST_URI'];
         $sessione = Session::getInstance();
         if($sessione->isLoggedUtente())
         {
@@ -24,7 +23,7 @@ class CGestioneUtente
      * metodo che permette il login dell utente
      */
     public function Entra(){
-        $view = new VLogin();
+        $view = new Vlogin();
         $credenziali = $view->recuperadatiLogin();
         $pm = FPersistenceManager::getInstance();
         $sessione = Session::getInstance();
@@ -123,16 +122,20 @@ class CGestioneUtente
         $dati = $view->getDati();
         $sessione = Session::getInstance();
         $pm = FPersistenceManager::getInstance();
+        $utente = $sessione->getUtente();
         if ($dati['errore'] != null) {
             $path = "/Never_home/Utente/FormCarta";
             $view2->mostraErrore($dati['errore'], $path);
         } elseif ($pm->esistecarta($dati['numero'])) {
             $path = "/Never_home/Utente/FormCarta";
-            $view2->mostraErrore("esiste già un evento con questo nome", $path);
+            $view2->mostraErrore("esiste già una carta con questo numero", $path);
+        }
+        elseif ($pm->utenteconcarta($utente->getCF())) {
+            $path = "/Never_home/Utente/FormCarta";
+            $view2->mostraErrore("hai già collegato una carta al tuo account", $path);
         }
         else
         {
-            $utente = $sessione->getUtente();
             $carta = new ECarta($utente->getCF(), $dati['ccv'], new DateTime($dati['Mese'] . '/' . $dati['Giorno'] . '/' . $dati['Anno'])
                 , $dati['numero']);
             $id = $pm->store($carta);
@@ -172,8 +175,9 @@ class CGestioneUtente
         }
         else
             $eventi[0]=null;
+        $carta = $pm->caricacarta($utente->getCF());
         $view = new VUtente();
-        $view->HomeUtente($utente, $biglietti, $eventi, $pieno);
+        $view->HomeUtente($utente, $biglietti, $eventi, $pieno, $carta);
     }
 
     /**
@@ -221,6 +225,17 @@ class CGestioneUtente
         $eventi = $controller->prossimieventigratuiti();
         $view = new VRicerca();
         $view->mostraRisultati($eventi,"utente");
+    }
+
+    public function mostracarta()
+    {
+        $sessione = Session::getInstance();
+        $pm = FPersistenceManager::getInstance();
+        $utente = $sessione->getUtente();
+        $carta = $pm->caricacarta($utente->getCF());
+        $view = new VUtente();
+        $view->mostracarta($carta);
+
     }
 
 
