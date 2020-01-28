@@ -19,10 +19,11 @@ class VUtente
      * @throws SmartyException
      */
 
-    public function HomeUtente($utente, $biglietti, $eventi, $pieno){
+    public function HomeUtente($utente, $biglietti, $eventi, $pieno, $carta){
 
         $this->smarty->assign('utente',$utente);
         $this->smarty->assign('pieno',$pieno);
+        $this->smarty->assign("carta",$carta);
         if (isset($biglietti[0]))
         {
             $this->smarty->assign('biglietto1',$biglietti[0]);
@@ -68,6 +69,12 @@ class VUtente
         $this->smarty->assign('biglietti',$biglietti);
         $this->smarty->display("BigliettiUtente.tpl");
 
+    }
+
+    public function mostracarta($carta)
+    {
+        $this->smarty->assign('carta',$carta);
+        $this->smarty->display("DettagliCarta.tpl");
     }
 
 

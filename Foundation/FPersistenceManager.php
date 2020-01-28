@@ -352,6 +352,24 @@ class FPersistenceManager
             return true;
     }
 
+    public function utenteconcarta($cf)
+    {
+        $dat = FCarta::getInstance();
+        $carta = $dat->utenteconcarta($cf);
+        if ($carta==null)
+            return false;
+        else
+            return true;
+    }
+
+    public function caricacarta($cf)
+    {
+        $dat = FCarta::getInstance();
+        $carta = $dat->utenteconcarta($cf);
+        return $carta;
+    }
+
+
 
 
 }

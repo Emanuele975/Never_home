@@ -10,7 +10,7 @@ class CGestioneHomepage
     public function impostaPagina()
     {
         $pm = FPersistenceManager::getInstance();
-        $data = new DateTime('01/01/2020');
+        $data = new DateTime('NOW');
         $eventi = array();
         $eventi = $pm->LoadEvents($data);
         $view = new VHomePage();
