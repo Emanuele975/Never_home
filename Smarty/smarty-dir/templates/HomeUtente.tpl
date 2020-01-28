@@ -68,6 +68,7 @@
           <button type="submit" class="btn btn-dark text-primary btn-lg btn-block border-primary" name="Modifica" value="S">Visualizza tutti i tuoi biglietti</button>
         </form>
         {/if}
+
      </div>
       <div class="col-sm-6">
       <div class="list-group ">
