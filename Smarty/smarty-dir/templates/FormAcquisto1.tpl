@@ -26,8 +26,8 @@
 
         </ul>
         <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
-            <button class="btn btn-primary" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Cerca" name="nomericerca">
+            <button class="btn btn-primary" type="submit">Cerca</button>
         </form>
     </div>
 </nav>
@@ -40,7 +40,7 @@
                 {$img2 = base64_encode($img->getData())}
                 <img class="card-img-top" src="data:{$img->getType()};base64,{$img2}" style="width: 550px;	height: 300px;">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">{$evento->getDescrizione()}</p>
                 </div>
             </div>
         </div>

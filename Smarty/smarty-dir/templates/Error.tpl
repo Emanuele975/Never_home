@@ -24,8 +24,8 @@
 
         </ul>
         <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="nomericerca">
-            <button class="btn btn-primary" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Cerca" name="nomericerca">
+            <button class="btn btn-primary" type="submit">Cerca</button>
         </form>
     </div>
 </nav>

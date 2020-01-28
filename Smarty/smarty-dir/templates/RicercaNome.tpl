@@ -23,8 +23,8 @@
         <div class="collapse navbar-collapse"  id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto"></ul>
             <form class="form-inline my-2 my-lg-0" method="post" enctype="multipart/form-data" action="/Never_home/Evento/CercadaNome">
-                <input class="form-control mr-sm-2 "  type="search" placeholder="Search" aria-label="Search" name="nomericerca">
-                <button class="btn btn-primary"   type="submit">Search</button>
+                <input class="form-control mr-sm-2 "  type="search" placeholder="Search" aria-label="Cerca" name="nomericerca">
+                <button class="btn btn-primary"   type="submit">Cerca</button>
             </form>
         </div>
     </nav>
@@ -109,18 +109,6 @@
     </div>
 </div>
     {/if}
-    <!--{section name=evento loop=$eventi}
-        <a href="/Never_home/Evento/HomeEvento/{$eventi[evento]->getId()}/{$eventi[evento]->getF()}/1" class="list-group-item list-group-item-action  ">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1 text-primary">{$eventi[evento]->getNome()}</h5>
-            <small>{$eventi[evento]->getData()->format('d-m-Y')}</small>
-        </div>
-        <p class="mb-1">{$eventi[evento]->getDescrizione()}</p>
-        <small>Clicca per visualizzare</small>
-    </a>
-    {/section}-->
-<!--</div>
-</div>-->
 
 </body>
 
