@@ -369,6 +369,13 @@ class FPersistenceManager
         return $carta;
     }
 
+    public function esisteUserLuogo($user)
+    {
+        $db = FLuogo::getInstance();
+        $esito = $db->esisteUserLuogo($user);
+        return $esito;
+    }
+
 
 
 

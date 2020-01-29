@@ -110,6 +110,18 @@ class FLuogo extends FDatabase
             return false;
     }
 
+    public function esisteUserLuogo($user)
+    {
+        $sql = "SELECT * FROM ".$this->table." WHERE username= '".$user."';";
+        $result=parent::exist($sql);
+        if($result != null)
+            return true;
+        else
+            return false;
+    }
+
+
+
 }
 
 ?>

@@ -99,6 +99,11 @@ class CGestioneLuogo
             $msg1 = "nome già esistente";
             $view2->mostraErrore($msg1,$path);
         }
+        else if ($pm->esisteUserLuogo(($dati['user'])))
+        {
+            $msg1 = "username già esistente";
+            $view2->mostraErrore($msg1,$path);
+        }
         else
         {
             $locale = new ELuogo($dati['nome'],$dati['indirizzo'],$dati['mail'],$dati['user'],$dati['psw']);
