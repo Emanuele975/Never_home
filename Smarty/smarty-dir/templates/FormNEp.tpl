@@ -61,9 +61,10 @@
           </div>
           <select class="custom-select" id="inputGroupSelect01" name="Categoria">
             <option selected>Choose...</option>
-            <option value="Teatro">Teatro</option>
+            <option value="Discoteca">Discoteca</option>
             <option value="Concerto">Concerto</option>
-            <option value="Partita">Partita</option>
+            <option value="Cinema">Cinema</option>
+            <option value="Teatro">Teatro</option>
           </select>
         </div>
       </div>

@@ -12,7 +12,7 @@ class FCommento extends FDatabase
     protected function __construct(){
         parent::__construct();
         $this->table = "Commento_p";
-        $this->values="(:testo,:id,:id_utente,:id_evento,:bannato)";
+        $this->values="(:bannato,:testo,:id,:id_utente,:id_evento)";
     }
 
     /**metodo che fa il bind
@@ -22,10 +22,10 @@ class FCommento extends FDatabase
     public static function bind($stmt,ECommento $commento)
     {
         $stmt->bindValue(':id',NULL, PDO::PARAM_INT); //l'id � posto a NULL poich� viene dato automaticamente dal DBMS (AUTOINCREMENT_ID)
+        $stmt->bindValue(':bannato', $commento->getBannato(), PDO::PARAM_INT);
         $stmt->bindValue(':testo', $commento->getTesto(), PDO::PARAM_STR);
         $stmt->bindValue(':id_utente', $commento->getUtente()->getId(), PDO::PARAM_INT);
         $stmt->bindValue(':id_evento', $commento->getEvento()->getId(), PDO::PARAM_INT);
-        $stmt->bindValue(':bannato', $commento->getBannato(), PDO::PARAM_INT);
     }
 
     /**metodo che prende l'istanza di FCommento
@@ -50,7 +50,6 @@ class FCommento extends FDatabase
     {
         $sql = "INSERT INTO " . $this->table . " VALUES " . static::getValues() . ";";
         $id = parent::store($sql,'FCommento',$commento);
-        echo $id;
         if($id)
             return $id;
         else

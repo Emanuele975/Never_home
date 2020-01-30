@@ -4,6 +4,10 @@ class FPersistenceManager
 {
     private static $instance = null;
 
+    /**
+     * funzione che ritorna l istanza del persistence manager
+     * @return null
+     */
     public static function getInstance(){ //restituisce l'unica istanza (creandola se non esiste gia)
         if(static::$instance==null){
             static::$instance=new FPersistenceManager();
@@ -11,6 +15,11 @@ class FPersistenceManager
         return static::$instance;
     }
 
+    /**
+     * funzione che carica un oggetto sul db
+     * @param $eobj oggetto da caricare
+     * @return mixed
+     */
     public function store ($eobj){
 
        $f=$eobj->getF();
@@ -20,9 +29,10 @@ class FPersistenceManager
 
     }
 
-    /** funzione che elimina la chiave
-     * @param $key
-     * @param $f
+    /**
+     * funzione che elimina un oggetto
+     * @param $key chiave
+     * @param $f classe foundation
      */
     public function delete ($key,$f){
         $dat=$f::getInstance();
@@ -30,9 +40,10 @@ class FPersistenceManager
 
     }
 
-    /** funzione di caricamento
-     * @param $key
-     * @param $f
+    /**
+     * funzione che carica un oggetto dal db
+     * @param $key chiave
+     * @param $f foundation
      * @return mixed
      */
     public function Load($key,$f)
@@ -42,8 +53,9 @@ class FPersistenceManager
         return $obj;
     }
 
-    /** funzione di caricamento degli eventi
-     * @param $data
+    /**
+     * funzione di caricamento degli eventi dal db
+     * @param $data array di eventi caricati dal db
      * @return mixed
      */
     public function LoadEvents($data)
@@ -53,8 +65,9 @@ class FPersistenceManager
         return $result;
     }
 
-    /** funzione di caricamento dei biglietti
-     * @param $id
+    /**
+     * funzione di caricamento dei biglietti dal db
+     * @param $id id dell utente di cui voglio caricare i biglietti
      * @return mixed
      */
     public function LoadBiglietti($id)
@@ -64,9 +77,10 @@ class FPersistenceManager
         return $result;
     }
 
-    /** funzione di caricamento della password dell'utente
-     * @param $psw
-     * @param $user
+    /**
+     * funzione di caricamento dell utente tramite username e psw
+     * @param $psw password dell utente
+     * @param $user username dell utente
      * @return mixed
      */
     public function LoadbyUserPswU($psw,$user)
@@ -76,9 +90,10 @@ class FPersistenceManager
         return $obj;
     }
 
-    /** funzione di caricamento della password del locale
-     * @param $psw
-     * @param $user
+    /**
+     * funzione di caricamento del locale tramite username e password
+     * @param $psw password del locale
+     * @param $user username del locale
      * @return mixed
      */
     public function LoadbyUserPswL($psw,$user)
@@ -88,9 +103,10 @@ class FPersistenceManager
         return $obj;
     }
 
-    /** funzione che dati username e password vede se esiste già un utente
-     * @param $user
-     * @param $psw
+    /**
+     * funzione che dati username e password vede se esiste già un utente
+     * @param $user username dell utente
+     * @param $psw password dell utente
      * @return mixed
      */
     public function esisteutente($user,$psw){
@@ -98,10 +114,11 @@ class FPersistenceManager
         return $dat->esisteutente($user,$psw);
     }
 
-    /** funzione che dati nome e data vede se esiste già un evento
-     * @param $nome
-     * @param $data
-     * @param $f
+    /**
+     * funzione che dati nome e data vede se esiste già un evento
+     * @param $nome nome evento
+     * @param $data data evento
+     * @param $f classe foundation
      * @return mixed
      */
     public function esisteevento($nome,$data,$f)
@@ -111,9 +128,10 @@ class FPersistenceManager
         return $res;
     }
 
-    /** funzione che dati uno username e una password vede se esiste già un locale
-     * @param $user
-     * @param $psw
+    /**
+     * funzione che dati uno username e una password vede se esiste già un locale
+     * @param $user username locale
+     * @param $psw password locale
      * @return mixed
      */
     public function esisteluogo($user,$psw){
@@ -121,9 +139,10 @@ class FPersistenceManager
         return $dat->esisteluogo($user,$psw);
     }
 
-    /** funzione che passati id e classe ritorna l'immagine di un evento
-     * @param $id
-     * @param $classe
+    /**
+     * funzione che passati id e classe ritorna l'immagine di un evento
+     * @param $id id classe esterna
+     * @param $classe classe esterna
      * @return mixed
      */
     public function getImgByidEvento($id,$classe)
@@ -133,7 +152,8 @@ class FPersistenceManager
         return $img;
     }
 
-    /** funzione che dato un id di un luogo ritorna un evento creato da esso
+    /**
+     * funzione che dato un id di un luogo ritorna un evento creato da esso
      * @param $id
      * @return mixed
      */
@@ -144,7 +164,8 @@ class FPersistenceManager
         return $evento;
     }
 
-    /** funzione che dato un nome ritorna la categoria a esso associata
+    /**
+     * funzione che dato un nome ritorna la categoria a esso associata
      * @param $nome
      * @return mixed
      */
@@ -155,7 +176,8 @@ class FPersistenceManager
         return $categoria;
     }
 
-    /** funzione che dato un nome ritorna l'evento con quel nome
+    /**
+     * funzione che dato un nome ritorna l'evento con quel nome
      * @param $nome
      * @return mixed
      */
@@ -171,7 +193,8 @@ class FPersistenceManager
         return $evento;
     }
 
-    /** funzione che cercato un nome ritorna un evento con quel nome
+    /**
+     * funzione che data una stringa ritorna un evento con quella stringa nel nome
      * @param $nome
      * @return array
      */
@@ -195,7 +218,8 @@ class FPersistenceManager
         return $eventi;
     }
 
-    /** funzione che dati tutti i parametri di una carta verifica se è valida e ritorna la carta
+    /**
+     * funzione che dati tutti i parametri di una carta verifica se è valida e ritorna la carta
      * @param $CF
      * @param $ccv
      * @param $data
@@ -208,7 +232,8 @@ class FPersistenceManager
         return $dat->valida($CF, $ccv, $data, $numerocarta);
     }
 
-    /** funzione che decrementa i posti
+    /**
+     * funzione che decrementa i posti
      * @param $id
      * @param $posti
      */
@@ -218,7 +243,8 @@ class FPersistenceManager
         $dat->decrementaposti($id,$posti);
     }
 
-    /** funzione che incrementa i posti
+    /**
+     * funzione che incrementa i posti
      * @param $id
      * @param $posti
      */
@@ -228,7 +254,8 @@ class FPersistenceManager
         $dat->incrementaposti($id,$posti);
     }
 
-    /** funzione che ritorna/carica i commenti
+    /**
+     * funzione che carica i commenti dal db
      * @param $id
      * @param $num
      * @return mixed
@@ -240,7 +267,8 @@ class FPersistenceManager
         return $commenti;
     }
 
-    /** funzione che banna i commenti
+    /**
+     * funzione che carica i commenti per essere gestiti dall amministratore
      * @param $num
      * @return mixed
      */
@@ -251,8 +279,11 @@ class FPersistenceManager
         return $commenti;
     }
 
-
-
+    /**
+     * funzione che data una stringa ritorna un commento con quella stringa nel testo
+     * @param $testo
+     * @return mixed
+     */
     public function testocommento($testo)
     {
         $dat = FCommento::getInstance();
@@ -260,18 +291,31 @@ class FPersistenceManager
         return $commenti;
     }
 
+    /**
+     * funzione utilizzata per bannare un commento
+     * @param $id
+     */
     public function bannacommento($id)
     {
         $dat = FCommento::getInstance();
         $dat->banna($id);
     }
 
+    /**
+     * funzione utilizzata per sbloccare un commento
+     * @param $id
+     */
     public function sbloccacommento($id)
     {
         $dat = FCommento::getInstance();
         $dat->sblocca($id);
     }
 
+    /**
+     * funzione che verifica se esiste un utente con quella username
+     * @param $username
+     * @return mixed
+     */
     public function esisteUsername($username)
     {
         $fu = FUtente_R::getInstance();
@@ -279,6 +323,11 @@ class FPersistenceManager
         return $esito;
     }
 
+    /**
+     * funzione che verifica se esiste un luogo con quel nome
+     * @param $nome
+     * @return mixed
+     */
     public function esisteNomeLuogo($nome)
     {
         $db = FLuogo::getInstance();
@@ -286,6 +335,11 @@ class FPersistenceManager
         return $esito;
     }
 
+    /**
+     * funzione che carica gli eventi di un locale
+     * @param $id
+     * @return array
+     */
     public function ituoieventi($id)
     {
         $eventi = array();
@@ -306,6 +360,11 @@ class FPersistenceManager
         return $eventi;
     }
 
+    /**
+     * funzione che carica tutti i biglietti dell utente
+     * @param $id
+     * @return mixed
+     */
     public function allbiglietti($id)
     {
         $db = FBiglietto::getInstance();
@@ -313,6 +372,10 @@ class FPersistenceManager
         return $biglietti;
     }
 
+    /**
+     * funzione che mostra gli eventi gratis da eliminare
+     * @return mixed
+     */
     public function EventidaEliminare()
     {
         $db = FEvento_g::getInstance();
@@ -320,6 +383,10 @@ class FPersistenceManager
         return $eventi;
     }
 
+    /**
+     * @param $nome
+     * @return mixed
+     */
     public function EventiForAdmin($nome)
     {
         $db = FEvento_g::getInstance();
@@ -327,6 +394,10 @@ class FPersistenceManager
         return $eventi;
     }
 
+    /**
+     * funzione che mostra i prossimi eventi gratuiti
+     * @return mixed
+     */
     public function prossimieventigratuiti()
     {
         $dat = FEvento_g::getInstance();
@@ -335,6 +406,10 @@ class FPersistenceManager
 
     }
 
+    /**
+     * funzione che mostra i prossimi eventi a pagamento
+     * @return mixed
+     */
     public function prossimieventipagamento()
     {
         $dat = FEvento_p::getInstance();
@@ -342,6 +417,11 @@ class FPersistenceManager
         return $eventi;
     }
 
+    /**
+     * funzione che verifica se esiste una carta con quel numero
+     * @param $numero
+     * @return bool
+     */
     public function esistecarta($numero)
     {
         $dat = FCarta::getInstance();
@@ -352,6 +432,11 @@ class FPersistenceManager
             return true;
     }
 
+    /**
+     * funzione che verifica se esiste un utente con quella carta
+     * @param $cf
+     * @return bool
+     */
     public function utenteconcarta($cf)
     {
         $dat = FCarta::getInstance();
@@ -362,6 +447,11 @@ class FPersistenceManager
             return true;
     }
 
+    /**
+     * funzione che carica la carta dell utente
+     * @param $cf
+     * @return mixed
+     */
     public function caricacarta($cf)
     {
         $dat = FCarta::getInstance();
@@ -369,6 +459,11 @@ class FPersistenceManager
         return $carta;
     }
 
+    /**
+     * funzione che verifica se esiste un luogo con quella username
+     * @param $user
+     * @return mixed
+     */
     public function esisteUserLuogo($user)
     {
         $db = FLuogo::getInstance();

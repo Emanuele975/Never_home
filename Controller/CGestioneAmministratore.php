@@ -113,7 +113,7 @@ class CGestioneAmministratore
             }
         }
         $view = new VAmministratore();
-        $view->HomeAdmin($commenti,$utenti,1,true);
+        $view->GestioneCommenti($commenti,$utenti,1,true);
     }
 
     /**

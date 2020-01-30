@@ -94,7 +94,7 @@ class CGestioneEvento
             $img = new EImmagine($dati['img'], $dati['tipo'], $id, 'EEvento_g');
             $pm->store($img);
             $view = new Vlocale();
-            $view->HomeLocale($evento, $img, $evento->getNome());
+            $view->HomeLocale($evento, $img, $luogo->getNome());
         }
     }
 
@@ -139,7 +139,7 @@ class CGestioneEvento
             $img = new EImmagine($dati['img'], $dati['tipo'], $id, 'EEvento_p');
             $pm->store($img);
             $view = new Vlocale();
-            $view->HomeLocale($evento, $img, $evento->getNome());
+            $view->HomeLocale($evento, $img, $luogo->getNome());
         }
     }
 
